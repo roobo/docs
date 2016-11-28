@@ -1,4 +1,3 @@
-
 # 1.1 API服务的域名URL
 
 ---
@@ -24,23 +23,14 @@ http://ros.ai
 # Code范例
 
 ```go
-
 {
-
  "reference_time":1447499684824,
-
  "timezone":"Asia/Shanghai",
-
  "location":{
-
  "latitude":"31.215",
-
  "longitude":"121.609"
-
  }
-
 }
-
 ```
 
 # 地址链接
