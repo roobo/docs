@@ -1,69 +1,51 @@
 # 1.1.1 API服务的域名URL
 
-
-
 ---
-
-
 
 # 服务地址
 
-
-
 ---
 
-
-
 > 服务地址如下
-```
+> \`\`\`
 
-http://ros.ai
+[http:\/\/ros.ai](http://ros.ai)
 
-```
+ 
+  #  参数说明
 
-# 参数说明
+    | Field | Type |
 
-| Field | Type |
+    | --- | --- |
 
-| --- | --- |
-
-| | |
-
+    | | |
 
 
-# Code范例
 
-```go
 
-{
- "reference_time":1447499684824,
+  #  Code范例
 
- "timezone":"Asia/Shanghai",
+    ```go
 
- "location":{
+    {
+     "reference_time":1447499684824,
 
- "latitude":"31.215",
+     "timezone":"Asia/Shanghai",
 
- "longitude":"121.609"
+     "location":{
 
- }
+     "latitude":"31.215",
 
-}
+     "longitude":"121.609"
 
-```
+     }
 
+    }
 
 
 # 地址链接
 
-
-
 若使用该服务需登入[ros.ai](http://ros.ai)开发者后台， 点击『登录』
 
-
-
 ![](/assets/QQ图片20161127160800.png)
-
-
-
 
