@@ -16,7 +16,6 @@ http://ros.ai
 
 | Field | Type |
 | --- | --- |
-|  |  |
 
 # Code范例
 
