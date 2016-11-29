@@ -14,8 +14,6 @@ http://ros.ai
 
 # 参数说明
 
-| Field | Type |
-| --- | --- |
 
 # Code范例
 
