@@ -12,6 +12,6 @@
 
 
 * [DOMAINS](DOMAINS/README.md)
- * [天气查询](DOMAINS/ros.service/天气查询.md)
+ * [天气查询](DOMAINS/天气查询.md)
  * 
 
