@@ -24,5 +24,5 @@
     * [UnitConversion](DOMAINS/UnitConversion.md)
     * [VolumeControl](DOMAINS/VolumeControl.md)
     * [Weather](DOMAINS/Weather.md)
-* example.md
+* [example.md](examplemd.md)
 
