@@ -3,6 +3,7 @@
 * [/v1/entities/query](#/v1/entities/query)
 * [/v1/entities/put](#/v1/entities/put)
 * [/v1/entities/delete](#/v1/entities/delete)
+* [/v1/entities/entries/delete](#/v1/entities/entries/delete)
 
 ### Overview {#Overview}
 
