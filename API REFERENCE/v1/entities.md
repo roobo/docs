@@ -25,8 +25,8 @@
 _Sample Request_
 ```
 {
-    "token":"xx",
-    "agentId":"yy",
+    "token":"f7caaf310da3dcb24bacdc7944456210",
+    "agentId":"2ZmNzYyOTA5MzJjZ",
     "id":219
 }
 ```
@@ -38,26 +38,23 @@ _Sample Response_
         "errorType":"success"
     },
     "id":219,
-    "name":"abc",
+    "name":"city",
     "entries": [
          {
-            "value":"12",
+            "value":"北京市",
             "synonyms": [
-                "12",
-                "33",
-                "44",
-                "55",
-                "66",
-                "77",
-                "88",
-                "99",
-                "1090"
+                "北京市",
+                "北京",
+                "北平市",
+                "北平"
             ]
         },
          {
-            "value":"22",
+            "value":"西安市",
             "synonyms": [
-                "22"
+                "西安市",
+                "西安",
+                "长安"
             ]
         }
     ]
