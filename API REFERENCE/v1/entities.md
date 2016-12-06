@@ -1,3 +1,4 @@
+### /v1/entities
 * [Overview](#Overview)
 * [URLs](#URLs)
 * [POST /v1/entities/query](#entitiesapi_1)
