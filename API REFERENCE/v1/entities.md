@@ -1,12 +1,15 @@
 * [Overview](#Overview)
 
-
 * [URLs](#URLs)
 
 
 ### Overview {#Overview}
 
 ---
+
+| Method | Definition |
+| :--- | :--- |
+| POST /v1/entities/query |  |
 
 112
 
