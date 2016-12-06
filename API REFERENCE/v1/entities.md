@@ -1,9 +1,9 @@
 * [Overview](#Overview)
 * [URLs](#URLs)
-* [POST /v1/entities/query](#/v1/entities/query)
-* [POST /v1/entities/put](#/v1/entities/put)
-* [POST /v1/entities/delete](#/v1/entities/delete)
-* [POST /v1/entities/entries/delete](#/v1/entities/entries/delete)
+* [POST /v1/entities/query](#entitiesapi_1)
+* [POST /v1/entities/put](#entitiesapi_2)
+* [POST /v1/entities/delete](#entitiesapi_3)
+* [POST /v1/entities/entries/delete](#entitiesapi_4)
 
 ### Overview {#Overview}
 
