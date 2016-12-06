@@ -22,12 +22,45 @@
 ### /v1/entities/query {#/v1/entities/query}
 
 ---
-
+_Sample Request_
 ```
 {
     "token":"xx",
     "agentId":"yy",
     "id":219
+}
+```
+_Sample Response_
+```
+{
+    "status": {
+        "code":0,
+        "errorType":"success"
+    },
+    "id":219,
+    "name":"abc",
+    "entries": [
+         {
+            "value":"12",
+            "synonyms": [
+                "12",
+                "33",
+                "44",
+                "55",
+                "66",
+                "77",
+                "88",
+                "99",
+                "1090"
+            ]
+        },
+         {
+            "value":"22",
+            "synonyms": [
+                "22"
+            ]
+        }
+    ]
 }
 ```
 
