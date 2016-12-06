@@ -2,7 +2,7 @@
 
 * [OVERVIEW](README.md)
 * [API REFERENCE](API REFERENCE/README.md)
-    * [v1\/entities](API REFERENCE/v1/entities.md)
+    * [v1/entities](API REFERENCE/v1/entities.md)
 * [KEY CONCEPTS](KEY CONCEPTS/README.md)
 * [DOMAINS](DOMAINS/README.md)
     * [AudioNews](DOMAINS/AudioNews.md)
