@@ -17,3 +17,5 @@
 | POST /v1/entities/put/delete | 删除指定实体 |
 | POST /v1/entities/entries/delete | 给指定实体删除一个实体项列表 |
 
+### /v1/entities/query {#/v1/entities/query}
+---
