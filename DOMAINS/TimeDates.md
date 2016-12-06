@@ -173,9 +173,9 @@
         "data":{
             "timezone":"Asia/Shanghai",
             "city":"北京",
-            "timestamp":1481020587.0
+            "timestamp":1481023558.0
         },
-        "hint":"北京现在是晚上6点36分"
+        "hint":"北京现在是晚上7点25分"
     }
 }
 >
