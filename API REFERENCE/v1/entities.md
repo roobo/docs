@@ -128,3 +128,32 @@ _Sample Response_
 }
 ```
 
+### /v1/entities/entries/delete {#/v1/entities/entries/delete}
+
+---
+
+_Sample Request_
+```
+{
+    "token":"f7caaf310da3dcb24bacdc7944456210",
+    "agentId":"2ZmNzYyOTA5MzJjZ",
+    "id":219 
+}
+{
+    "token":"f7caaf310da3dcb24bacdc7944456210",
+    "agentId":"2ZmNzYyOTA5MzJjZ",
+    "id":219,
+    "entries": [
+        "西安市"
+    ]
+}
+```
+_Sample Response_
+```
+{
+    "status": {
+        "code":0,
+        "errorType":"success"
+    }
+}
+```
