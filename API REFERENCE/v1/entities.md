@@ -10,7 +10,7 @@
 | Method | Definition |
 | :--- | :--- |
 | POST /v1/entities/query |  |
-| POST  |  |
+| POST /v1/entities/put  |  |
 |  |  |
 |  |  |
 
