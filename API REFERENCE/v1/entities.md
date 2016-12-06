@@ -105,4 +105,25 @@ _Sample Response_
 }
 ```
 
+### /v1/entities/delete {#/v1/entities/delete}
+
+---
+
+_Sample Request_
+```
+{
+    "token":"f7caaf310da3dcb24bacdc7944456210",
+    "agentId":"2ZmNzYyOTA5MzJjZ",
+    "id":219 
+}
+```
+_Sample Response_
+```
+{
+    "status": {
+        "code":0,
+        "errorType":"success"
+    }
+}
+```
 
