@@ -4,6 +4,7 @@
 * [URLs](#URLs)
 * [Query Parameters and JSON Fields](#query_1)
 * [POST /v1/query](#query_2)
+* [POST Response](#query_3)
 
 ### Overview {#Overview}
 
@@ -39,10 +40,16 @@
 _Sample Request_
 
 ```
+POST http://api.ros.ai/v1/query
+
+Headers:
+Content-Type: application/json; charset=utf-8
+
 {
+    "query":"唱首周杰伦的东风破",
+    "sessionId":"1234567890",
     "token":"f7caaf310da3dcb24bacdc7944456210",
-    "agentId":"2ZmNzYyOTA5MzJjZ",
-    "id":219
+    "agentId":"2ZmNzYyOTA5MzJjZ"
 }
 ```
 
@@ -50,135 +57,56 @@ _Sample Response_
 
 ```
 {
-    "status": {
-        "code":0,
-        "errorType":"success"
-    },
-    "id":219,
-    "name":"city",
-    "entries": [
-         {
-            "value":"北京市",
-            "synonyms": [
-                "北京市",
-                "北京",
-                "北平市",
-                "北平"
-            ]
-        },
-        {
-            "value":"西安市",
-            "synonyms": [
-                "西安市",
-                "西安"
-            ]
-        }
-    ]
-}
-```
-
-### /v1/entities/put {#entitiesapi_2}
-
----
-
-_Sample Request_
-
-```
-{
-    "token":"f7caaf310da3dcb24bacdc7944456210",
-    "agentId":"2ZmNzYyOTA5MzJjZ",
-    "name":"city",
-    "entries": [
-         {
-            "value":"北京",
-            "synonyms": [
-                "北京市",
-                "北京",
-                "北平市",
-                "北平"
-            ]
-        },
-         {
-            "value":"西安市",
-            "synonyms": [
-                "西安市",
-                "西安",
-                "长安"
-            ]
-        }
-    ]
-}
-```
-
-_Sample Response_
-
-```
-{
-    "status": {
-        "code":0,
-        "errorType":"success"
-    },
-    "id":219
-}
-```
-
-### /v1/entities/delete {#entitiesapi_3}
-
----
-
-_Sample Request_
-
-```
-{
-    "token":"f7caaf310da3dcb24bacdc7944456210",
-    "agentId":"2ZmNzYyOTA5MzJjZ",
-    "id":219 
-}
-```
-
-_Sample Response_
-
-```
-{
-    "status": {
-        "code":0,
-        "errorType":"success"
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "唱首周杰伦的东风破",
+  "semantic": {
+    "service": "Media",
+    "action": "Play",
+    "params": {
+      "artist": {
+        "orgin": "周杰伦",
+        "norm": "周杰伦",
+        "code": 0
+      },
+      "name": {
+        "orgin": "东风破",
+        "norm": "东风破",
+        "code": 0
+      }
     }
+  },
+  "result": {
+    "hint": "准备播放",
+    "data": {
+      "album": "The Era 2010 超时代演唱会",
+      "artist": "周杰伦",
+      "audio": "http://stream11.qqmusic.qq.com/30846764.mp3",
+      "extra": {
+        "httpheaders": {
+          "Cookie": "pgv_pvid=181; qqmusic_uin=10376; qqmusic_key=1480598554; qqmusic_fromtag=0"
+        },
+        "style": "流行"
+      },
+      "image": "http://i.gtimg.cn/music/photo/mid_album_300/L/r/002o2a5G46ETLr.jpg",
+      "keywords": null,
+      "name": "东风破",
+      "resId": "music:2529245",
+      "sid": "1788061692-1481073812964",
+      "start": 0,
+      "trigger": "voice",
+      "triggerId": null,
+      "type": "MUSIC"
+    },
+    "formatType": "audio"
+  }
 }
 ```
 
-### /v1/entities/entries/delete {#entitiesapi_4}
+### Response {#query_3}
 
----
-
-_Sample Request_
-
-```
-{
-    "token":"f7caaf310da3dcb24bacdc7944456210",
-    "agentId":"2ZmNzYyOTA5MzJjZ",
-    "id":219 
-}
-{
-    "token":"f7caaf310da3dcb24bacdc7944456210",
-    "agentId":"2ZmNzYyOTA5MzJjZ",
-    "id":219,
-    "entries": [
-        "西安市"
-    ]
-}
-```
-
-_Sample Response_
-
-```
-{
-    "status": {
-        "code":0,
-        "errorType":"success"
-    }
-}
-```
 
 
 
