@@ -1,4 +1,5 @@
 ### /v1/query
+
 * [Overview](#Overview)
 * [URLs](#URLs)
 * [Query Parameters and JSON Fields](#query_1)
@@ -8,7 +9,7 @@
 
 ---
 
-对输入的自然语言进行意图识别，返回意图名称及其参数。
+对输入的自然语言文本进行意图识别，返回意图名称及其参数。
 
 ### URLs {#URLs}
 
@@ -20,12 +21,16 @@
 
 ### Query Parameters and JSON Fields {#query_1}
 
+| Name | Type | Description | Required |
+| :--- | :--- | :--- | :--- |
+| query | String | 文本自然语言，不能超过255个字符（） | Required |
 
 ### /v1/query {#query_2}
 
 ---
 
 _Sample Request_
+
 ```
 {
     "token":"f7caaf310da3dcb24bacdc7944456210",
@@ -33,7 +38,9 @@ _Sample Request_
     "id":219
 }
 ```
+
 _Sample Response_
+
 ```
 {
     "status": {
@@ -68,6 +75,7 @@ _Sample Response_
 ---
 
 _Sample Request_
+
 ```
 {
     "token":"f7caaf310da3dcb24bacdc7944456210",
@@ -94,7 +102,9 @@ _Sample Request_
     ]
 }
 ```
+
 _Sample Response_
+
 ```
 {
     "status": {
@@ -110,6 +120,7 @@ _Sample Response_
 ---
 
 _Sample Request_
+
 ```
 {
     "token":"f7caaf310da3dcb24bacdc7944456210",
@@ -117,7 +128,9 @@ _Sample Request_
     "id":219 
 }
 ```
+
 _Sample Response_
+
 ```
 {
     "status": {
@@ -132,6 +145,7 @@ _Sample Response_
 ---
 
 _Sample Request_
+
 ```
 {
     "token":"f7caaf310da3dcb24bacdc7944456210",
@@ -147,7 +161,9 @@ _Sample Request_
     ]
 }
 ```
+
 _Sample Response_
+
 ```
 {
     "status": {
@@ -156,3 +172,6 @@ _Sample Response_
     }
 }
 ```
+
+
+
