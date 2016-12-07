@@ -4,6 +4,7 @@
 * [API REFERENCE](API REFERENCE/README.md)
     * [\/v1\/entities](API REFERENCE/v1/entities.md)
     * [\/v1\/query](API REFERENCE/v1query.md)
+    * Status and Error Codes
 * [KEY CONCEPTS](KEY CONCEPTS/README.md)
 * [DOMAINS](DOMAINS/README.md)
     * [AudioNews](DOMAINS/AudioNews.md)
