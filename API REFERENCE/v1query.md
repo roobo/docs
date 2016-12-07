@@ -1,4 +1,4 @@
-### /v1/entities
+### /v1/query
 * [Overview](#Overview)
 * [URLs](#URLs)
 * [POST /v1/entities/query](#entitiesapi_1)
@@ -10,7 +10,7 @@
 
 ---
 
-获取、创建、更新、删除 实体or实体项。
+对输入的自然语言进行意图识别，返回意图名称及其参数。
 
 ### URLs {#URLs}
 
