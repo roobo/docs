@@ -1,27 +1,8 @@
 ### Status and Error Codes
 
-
-
-
-
-
-### Overview {#Overview}
-
 ---
 
-对输入的自然语言文本进行意图识别，返回意图名称及其参数。
-
-### URLs {#URLs}
-
----
-
-| Method | Definition |
-| :--- | :--- |
-| POST /v1/query | 接收返回均使用JSON表示 |
-
-### Query Parameters and JSON Fields {#query_1}
-
----
+here
 
 | Name | Type | Description | Required |
 | :--- | :--- | :--- | :--- |
@@ -32,25 +13,14 @@
 | contexts | String | Context对象数组，若client输入上文，替换server上文 | Optional |
 | location | String | Location对象，可以包含经纬度以及详细地址 | Optional |
 
-### /v1/query {#query_2}
+
+
 
 ---
 
-_Sample Request_
 
-```
-POST http://api.ros.ai/v1/query
 
-Headers:
-Content-Type: application/json; charset=utf-8
 
-{
-    "query":"唱首周杰伦的东风破",
-    "sessionId":"1234567890",
-    "token":"f7caaf310da3dcb24bacdc7944456210",
-    "agentId":"2ZmNzYyOTA5MzJjZ"
-}
-```
 
 _Sample Response_
 
