@@ -113,6 +113,3 @@ _Sample Response_
 | query | String | 对输入query进行处理的结果（字符集＋纠错） |
 | semantic | [Semantic](Semantic.html#semantic_1) | 语义结果，包括意图名称和参数 |
 | result | [Result](Result.html#result_1) | 数据结果 |
-
-
-
