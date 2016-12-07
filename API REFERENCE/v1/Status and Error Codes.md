@@ -4,14 +4,17 @@
 
 here
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| query | String | 文本自然语言 \(&lt;=255 char\) | Required |
-| sessionId | String | 用于区分client并为其管理上下文信息 \(&lt;=128 char\) | Required |
-| agentId | String | 应用唯一凭证 \(&lt;=64 char\) | Required |
-| token | String | 访问凭证 \(&lt;=64 char\) | Required |
-| contexts | String | Context对象数组，若client输入上文，替换server上文 | Optional |
-| location | String | Location对象，可以包含经纬度以及详细地址 | Optional |
+| Status Code | Error Type | Description |
+| :--- | :--- | :--- |
+| 0 | success | 成功 |
+| 1 | no\_result | 无结果 |
+| 400 | bad\_request | 不合法的输入 |
+| 401 | unauthorized | 权限校验失败 |
+| 500 | internal | 系统错误，重试可能有效 |
+| 501 | not_supported | 语义 |
+| 503 | too_many_requests | 在一定时间内访问次数超限 |
+| 601 | service_unreachable | 第三方服务不可用 |
+| 602 | service_unknown_format | 第三方服务返回的数据格式有误 |
 
 ---
 
@@ -24,7 +27,6 @@ _Sample Response_
     "errorDetails":"token校验不通过"
 }
 ```
-
 
 
 
