@@ -2,7 +2,6 @@
 
 ---
 
-here
 
 | Status Code | Error Type | Description |
 | :--- | :--- | :--- |
