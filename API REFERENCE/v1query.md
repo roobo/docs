@@ -109,7 +109,7 @@ _Sample Response_
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| Status | Status Object | 返回成功失败信息 |
+| Status | [Status](#query_2) Object | 返回成功失败信息 |
 |  |  |  |
 |  |  |  |
 |  |  |  |
