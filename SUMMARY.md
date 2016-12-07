@@ -2,9 +2,10 @@
 
 * [OVERVIEW](README.md)
 * [API REFERENCE](API REFERENCE/README.md)
-    * [/v1/entities](API REFERENCE/v1/entities.md)
-    * [/v1/query](API REFERENCE/v1/query.md)
+    * [\/v1\/entities](API REFERENCE/v1/entities.md)
+    * [\/v1\/query](API REFERENCE/v1/query.md)
     * [Status and Error Codes](API REFERENCE/v1/Status and Error Codes.md)
+    * [Location](API REFERENCE/location.md)
 * [KEY CONCEPTS](KEY CONCEPTS/README.md)
 * [DOMAINS](DOMAINS/README.md)
     * [AudioNews](DOMAINS/AudioNews.md)
