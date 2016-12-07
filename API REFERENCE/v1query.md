@@ -23,7 +23,7 @@
 
 | Name | Type | Description | Required |
 | :--- | :--- | :--- | :--- |
-| query | String | 文本自然语言，不能超过255个字符（） | Required |
+| query | String | 文本自然语言，不能超过255个字符(char） | Required |
 
 ### /v1/query {#query_2}
 
