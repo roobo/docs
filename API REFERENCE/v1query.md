@@ -21,8 +21,14 @@
 
 ### Query Parameters and JSON Fields {#query_1}
 
+---
+
 | Name | Type | Description | Required |
 | :--- | :--- | :--- | :--- |
+| query | String | 文本自然语言，不能超过255个字符(char） | Required |
+| sessionId | String |  | Required |
+| query | String | 文本自然语言，不能超过255个字符(char） | Required |
+| query | String | 文本自然语言，不能超过255个字符(char） | Required |
 | query | String | 文本自然语言，不能超过255个字符(char） | Required |
 
 ### /v1/query {#query_2}
