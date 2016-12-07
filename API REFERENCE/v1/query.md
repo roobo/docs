@@ -109,10 +109,10 @@ _Sample Response_
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| status | [Status](Status and Error Codes.md#query_1) Object | 返回成功失败信息 |
-| query |  |  |
-| semantic |  |  |
-| result |  |  |
+| status | [Status](Status and Error Codes.md#query_1) Object | 成功失败信息 |
+| query | String | 对输入query进行处理的结果（字符集＋纠错） |
+| semantic | Semantic |  |
+| result | Result |  |
 
 
 
