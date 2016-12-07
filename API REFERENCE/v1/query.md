@@ -31,7 +31,7 @@
 | agentId | String | 应用唯一凭证 \(&lt;=64 char\) | Required |
 | token | String | 访问凭证 \(&lt;=64 char\) | Required |
 | contexts | String | Context对象数组，若client输入上文，替换server上文 | Optional |
-| location | String | Location对象，可以包含经纬度以及详细地址 | Optional |
+| location | [Location](Location.html#location_1) | Location对象，可以包含经纬度以及详细地址 | Optional |
 
 ### /v1/query {#query_2}
 
@@ -109,7 +109,7 @@ _Sample Response_
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| status | [Status](Status and Error Codes.html#status_1) Object | 成功失败信息 |
+| status | [Status](Status and Error Codes.html#status_1) | 成功失败信息 |
 | query | String | 对输入query进行处理的结果（字符集＋纠错） |
 | semantic | Semantic Object | 语义结果，包括意图名称和参数 |
 | result | Result Object | 数据结果 |
