@@ -107,6 +107,9 @@ _Sample Response_
 
 ### Response {#query_3}
 
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| Status |  |  |
 
 
 
