@@ -1,7 +1,8 @@
 ### /v1/query
 * [Overview](#Overview)
 * [URLs](#URLs)
-* [POST /v1/query](#query_1)
+* [Query Parameters and JSON Fields](#query_1)
+* [POST /v1/query](#query_2)
 
 ### Overview {#Overview}
 
@@ -15,12 +16,12 @@
 
 | Method | Definition |
 | :--- | :--- |
-| POST /v1/entities/query | 获取指定实体的所有实体项 |
-| POST /v1/entities/put | 创建or更新实体 |
-| POST /v1/entities/delete | 删除指定实体 |
-| POST /v1/entities/entries/delete | 给指定实体删除一个实体项列表 |
+| POST /v1/query | 接收返回均使用JSON表示 |
 
-### /v1/query {#query_1}
+### Query Parameters and JSON Fields {#query_1}
+
+
+### /v1/query {#query_2}
 
 ---
 
