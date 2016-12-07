@@ -16,12 +16,11 @@
 
 _Sample Response_
 
-```
-{
-    "context":"GetWeather",
-    "service":"Weather"
-}
+| formattype | example |
+| :--- | :--- |
+|  |  |
+
 ```
 
-
+```
 
