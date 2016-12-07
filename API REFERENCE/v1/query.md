@@ -111,7 +111,7 @@ _Sample Response_
 | :--- | :--- | :--- |
 | status | [Status](Status and Error Codes.md#query_1) Object | 成功失败信息 |
 | query | String | 对输入query进行处理的结果（字符集＋纠错） |
-| semantic | Semantic Object |  |
+| semantic | Semantic Object | 语义结果，包括意图名称和参数 |
 | result | Result Object |  |
 
 
