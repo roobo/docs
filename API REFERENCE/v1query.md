@@ -1,10 +1,7 @@
 ### /v1/query
 * [Overview](#Overview)
 * [URLs](#URLs)
-* [POST /v1/entities/query](#entitiesapi_1)
-* [POST /v1/entities/put](#entitiesapi_2)
-* [POST /v1/entities/delete](#entitiesapi_3)
-* [POST /v1/entities/entries/delete](#entitiesapi_4)
+* [POST /v1/query](#query_1)
 
 ### Overview {#Overview}
 
@@ -23,7 +20,7 @@
 | POST /v1/entities/delete | 删除指定实体 |
 | POST /v1/entities/entries/delete | 给指定实体删除一个实体项列表 |
 
-### /v1/entities/query {#entitiesapi_1}
+### /v1/query {#query_1}
 
 ---
 
