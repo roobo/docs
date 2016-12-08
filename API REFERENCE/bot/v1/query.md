@@ -109,7 +109,7 @@ _Sample Response_
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
-| status | [Status](Status and Error Codes.html#status_1) | 成功失败信息 |
+| status | [Status](API REFERENCE/Status and Error Codes.md.html#status_1) | 成功失败信息 |
 | query | String | 对输入query进行处理的结果（字符集＋纠错） |
 | semantic | [Semantic](Semantic.html#semantic_1) | 语义结果，包括意图名称和参数 |
 | result | [Result](Result.html#result_1) | 数据结果 |
