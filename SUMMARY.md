@@ -14,6 +14,8 @@
     * [Contexts](KEY CONCEPTS/Contexts.md)
     * [Entities](KEY CONCEPTS/Entities.md)
     * [Intents and Parameters](KEY CONCEPTS/Intents and Parameters.md)
+    * [Templates and Patterns](KEY CONCEPTS/Templates.md)
+    * [Global Variable](KEY CONCEPTS/Global Variable.md)
     * [Domain Priority](KEY CONCEPTS/Domain Priority.md)
     * [Machine Learning Settings](KEY CONCEPTS/Machine Learning Settings.md)
 * [DOMAINS](DOMAINS/README.md)
