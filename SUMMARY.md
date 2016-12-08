@@ -1,6 +1,8 @@
 # Summary
 
 * [OVERVIEW](README.md)
+* [个性化服务](个性化服务/README.md)
+    * [机器人属性](个性化服务/机器人属性.md)
 * [API REFERENCE](API REFERENCE/README.md)
     * [/bot/v1/entities](API REFERENCE/bot_v1_entities.md)
     * [/bot/v1/query](API REFERENCE/bot_v1_query.md)
