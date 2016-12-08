@@ -17,9 +17,10 @@
     * [Templates and Patterns](KEY CONCEPTS/Templates.md)
     * [Global Variable](KEY CONCEPTS/Global Variable.md)
     * [Machine Learning Settings](KEY CONCEPTS/Machine Learning Settings.md)
-
 * [Mechanisms](Mechanisms/README.md)
+    * [语义匹配过程](Mechanisms/语义匹配过程.md)
     * [场景选择策略](Mechanisms/场景选择策略.md)
+    * [场景发布流程](Mechanisms/场景发布流程.md)
 * [DOMAINS](DOMAINS/README.md)
     * [AudioNews](DOMAINS/AudioNews.md)
     * [Calculator](DOMAINS/Calculator.md)
