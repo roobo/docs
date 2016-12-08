@@ -1,9 +1,9 @@
-### /v1/query
+### /bot/v1/query
 
 * [Overview](#Overview)
 * [URLs](#URLs)
 * [Query Parameters and JSON Fields](#query_1)
-* [POST /v1/query](#query_2)
+* [POST /bot/v1/query](#query_2)
 * [POST Response](#query_3)
 
 ### Overview {#Overview}
@@ -18,7 +18,7 @@
 
 | Method | Definition |
 | :--- | :--- |
-| POST /v1/query | 接收返回均使用JSON表示 |
+| POST /bot/v1/query | 接收返回均使用JSON表示 |
 
 ### Query Parameters and JSON Fields {#query_1}
 
@@ -40,7 +40,7 @@
 _Sample Request_
 
 ```
-POST http://api.ros.ai/v1/query
+POST http://api.ros.ai/bot/v1/query
 
 Headers:
 Content-Type: application/json; charset=utf-8
