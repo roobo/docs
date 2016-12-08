@@ -1,18 +1,18 @@
-## Calculator
+## QALearning
 
 * [服务说明](#服务说明)
 * [意图说明](#意图说明)
- * [Calc](#1Calc)
- * [Reciprocal](#2Reciprocal)
- * [Exponent](#3Exponent)
- * [Sqrt](#4Sqrt)
- * [CalcNext](#5CalcNext)
+ * [Add](#1Add)
+ * [Update](#2Update)
+ * [Delete](#3Delete)
+ * [SetAnswer](#4SetAnswer)
+ * [Quit](#5Quit)
 
 ### 服务说明 {#服务说明}
 
 ---
 
-\(**Calculator**\)
+\(**QALearning**\)
 
 ### 意图说明 {#意图说明}
 
@@ -22,61 +22,13 @@
 
 | 名称 | 功能 | 上文 | 下文 |
 | :---: | :---: | :---: | :---: |
-| Calc |  |  | calc_next |
-| Reciprocal |  |  |  |
-| Exponent |  |  |  |
-| Sqrt |  |  |  |
-| CalcNext |  | calc_next | calc_next |
+| Add |  |  | self_study |
+| Update |  |  | self_study |
+| Delete |  |  | self_study |
+| SetAnswer |  | answer | self_study |
+| Quit |  | self_study |  ||
 
-#### Calc {#1Calc}
-
----
-
-* **参数描述**
-
-| 参数名称 | 参数类型 | 参数描述 |
-| :---: | :---: | :---: |
-| compute | @sys.compute |  ||
-
-* **返回字段描述**
-
-| 字段名称 | 字段描述 |
-| :---: | :---: |
-|  |  ||
-
-* **返回数据描述**
-
-```go
-{
-    "status":{
-        "errorType":"success",
-        "code":0
-    },
-    "query":"1加1等于几",
-    "semantic":{
-        "action":"Calc",
-        "params":{
-            "compute":{
-                "code":0,
-                "norm":"(1)+(1)=2",
-                "orgin":"1加1"
-            }
-        },
-        "service":"Calculator"
-    },
-    "result":{
-        "formatType":"prop",
-        "data":{
-            "result":"2",
-            "arithmetic":"(1)+(1)"
-        },
-        "hint":"等于2"
-    }
-}
-
-```
-
-#### Reciprocal {#2Reciprocal}
+#### Add {#1Add}
 
 ---
 
@@ -84,7 +36,7 @@
 
 | 参数名称 | 参数类型 | 参数描述 |
 | :---: | :---: | :---: |
-| number | @sys.number |  ||
+| answer | @sys.any |  ||
 
 * **返回字段描述**
 
@@ -97,7 +49,7 @@
  \(**无**\)
 
 
-#### Exponent {#3Exponent}
+#### Update {#2Update}
 
 ---
 
@@ -105,9 +57,7 @@
 
 | 参数名称 | 参数类型 | 参数描述 |
 | :---: | :---: | :---: |
-| expname | @sys.entity.calc_exponent |  |
-| expnum | @sys.number |  |
-| number | @sys.number |  ||
+| answer | @sys.any |  ||
 
 * **返回字段描述**
 
@@ -120,7 +70,7 @@
  \(**无**\)
 
 
-#### Sqrt {#4Sqrt}
+#### Delete {#3Delete}
 
 ---
 
@@ -128,9 +78,8 @@
 
 | 参数名称 | 参数类型 | 参数描述 |
 | :---: | :---: | :---: |
-| number | @sys.number |  |
-| sqrtname | @sys.entity.calc_sqrtname |  |
-| sqrtnum | @sys.number |  ||
+| answer | @sys.any |  |
+| question | @sys.any |  ||
 
 * **返回字段描述**
 
@@ -143,7 +92,7 @@
  \(**无**\)
 
 
-#### CalcNext {#5CalcNext}
+#### SetAnswer {#4SetAnswer}
 
 ---
 
@@ -151,7 +100,26 @@
 
 | 参数名称 | 参数类型 | 参数描述 |
 | :---: | :---: | :---: |
-| formula | @sys.entity.calc_arithmetic |  ||
+| answer | @sys.any |  ||
+
+* **返回字段描述**
+
+| 字段名称 | 字段描述 |
+| :---: | :---: |
+|  |  ||
+
+* **返回数据描述**
+
+ \(**无**\)
+
+
+#### Quit {#5Quit}
+
+---
+
+* **参数描述**
+
+  \(无\)
 
 * **返回字段描述**
 
