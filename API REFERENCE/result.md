@@ -18,17 +18,32 @@
 
     * _text_
 
+      ```
+此时，data必须包含，且只支持一行，系统组织方式为，先读hint，再读data["content"]列，再读hintlast,nextop。
 
-* _image_
+    "result":{
+        "hint":"请听笑话",
+        "data":{
+            "content":"从前......."
+        },
+        "formatType":"text",
+        "nextop":[
+            "再来一个",
+            "不好玩"
+        ]
+    }
+      ```
 
-* _video_
+    * _image_
 
-* _audio_
+    * _video_
 
-* _abstract_
+    * _audio_
 
-* _prop_
+    * _abstract_
 
-* _list_
+    * _prop_
+
+    * _list_
 
 
