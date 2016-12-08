@@ -14,7 +14,21 @@
 
 ---
 
-_Sample Response_
+* **formattype**
 
+    * _text_
+
+
+* _image_
+
+* _video_
+
+* _audio_
+
+* _abstract_
+
+* _prop_
+
+* _list_
 
 
