@@ -16,9 +16,5 @@
 
 _Sample Response_
 
-| formattype | example |
-| :--- | :--- |
-|  |  |
-
 
 
