@@ -8,7 +8,7 @@
     * [Location](API REFERENCE/location.md)
     * [Context](API REFERENCE/context.md)
     * [Result](API REFERENCE/result.md)
-    * [Status and Error Codes](API REFERENCE/v1/Status and Error Codes.md)
+    * [Status and Error Codes](API REFERENCE/Status and Error Codes.md)
 * [KEY CONCEPTS](KEY CONCEPTS/README.md)
     * [Agents](KEY CONCEPTS/Agents.md)
     * [Contexts](KEY CONCEPTS/Contexts.md)
