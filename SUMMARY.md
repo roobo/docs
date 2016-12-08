@@ -16,8 +16,10 @@
     * [Intents and Parameters](KEY CONCEPTS/Intents and Parameters.md)
     * [Templates and Patterns](KEY CONCEPTS/Templates.md)
     * [Global Variable](KEY CONCEPTS/Global Variable.md)
-    * [Domain Priority](KEY CONCEPTS/Domain Priority.md)
     * [Machine Learning Settings](KEY CONCEPTS/Machine Learning Settings.md)
+
+* [Mechanisms](Mechanisms/README.md)
+    * [场景选择策略](Mechanisms/场景选择策略.md)
 * [DOMAINS](DOMAINS/README.md)
     * [AudioNews](DOMAINS/AudioNews.md)
     * [Calculator](DOMAINS/Calculator.md)
