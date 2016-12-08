@@ -3,8 +3,7 @@
 * [Overview](#overview)
 * [URLs](#URLs)
 * [Parameters and JSON Fields](#parameters)
-* [POST /bot/v1/service](#post)
-* [POST Response](#post_response)
+* [Sample](#sample)
 
 ### Overview {#overview}
 ---
@@ -18,7 +17,7 @@
 
 ### Parameters and JSON Fields {#parameters}
 ---
-
+#### 请求参数
 | Name | Type | Description | Required |
 | :--- | :--- | :--- | :--- |
 | agentId | String | 应用唯一凭证 \(&lt;=64 char\) | Required |
@@ -26,8 +25,14 @@
 | function | String | 要调用的服务接口名称 | Required|
 | sessionId | String | 用于区分client并为其管理上下文信息 \(&lt;=128 char\) | Optional |
 | location | [Location](location.html#location_1) | Location对象，可以包含经纬度以及详细地址 | Optional |
-| params | JSON Object | 接口所需调用参数的对象，参数描述见具体服务的接口说明 | Optional |
+| params | JSON Object | 接口所需调用参数的对象，字段描述见具体服务的接口说明 | Optional |
 
-### POST /bot/v1/service {#post}
+#### 响应参数
+| Name | Type | Description |
+| :--- | :--- | :--- | :--- |
+| status | [Status](Status and Error Codes.md.html#status_1) | 成功失败信息 |
+| result | JSON Object | 接口调用返回结果，字段描述见具体服务的接口说明 |
 
-### POST Response {#post_response}
+### 接口调用示例 {#post}
+#### 请求数据
+#### 响应数据
