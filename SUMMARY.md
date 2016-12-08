@@ -2,8 +2,9 @@
 
 * [OVERVIEW](README.md)
 * [API REFERENCE](API REFERENCE/README.md)
-    * [/v1/entities](API REFERENCE/v1/entities.md)
-    * [/v1/query](API REFERENCE/v1/query.md)
+    * [/bot/v1/entities](API REFERENCE/bot/v1/entities.md)
+    * [/bot/v1/query](API REFERENCE/bot/v1/query.md)
+    * [/bot/v1/service](API REFERENCE/bot/v1/service.md)
     * [Location](API REFERENCE/location.md)
     * [Context](API REFERENCE/context.md)
     * [Result](API REFERENCE/result.md)
