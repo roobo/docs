@@ -42,10 +42,18 @@ Headers:
 Content-Type: application/json; charset=utf-8
 
 {
-    "query":"唱首周杰伦的东风破",
-    "sessionId":"1234567890",
-    "token":"f7caaf310da3dcb24bacdc7944456210",
-    "agentId":"2ZmNzYyOTA5MzJjZ"
+    "agentid": "63",
+    "sessionid": "1476002533",
+    "token": "943acb75fc4797249b50d085b8c437e9",
+    "function": "GetHotels",
+    "params": {
+        "location_city": "北京",
+        "location_district": "丰台区",
+        "hotel_name": "empty",
+        "room_price": "200",
+        "checkin_date": "2016-12-24",
+        "checkout_date": "2016-12-26"
+    }
 }
 ```
 #### 响应数据
