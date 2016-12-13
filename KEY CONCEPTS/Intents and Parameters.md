@@ -6,7 +6,8 @@
  
 ---
 
-。
+Intents顾名思义，意图的意思。
+Parameters
 
 ### Sample{#Sample}
 
