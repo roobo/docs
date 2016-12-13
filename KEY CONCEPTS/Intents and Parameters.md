@@ -1,0 +1,19 @@
+### Intents and Parameters
+* [Concept](#Concept)
+* [Sample](#Sample)
+
+### Concept{#Concept}
+ 
+---
+
+Intents，意图。是Agent对外部环境进行的反应，也就是一个Intent对应一个Action。
+Parameters，参数。从外部环境中获取到的，Intent做出反应需要的参数列表。
+
+### Sample{#Sample}
+
+---
+同样的例子：
+问：今天天气怎么样？
+答：今天有点冷。
+
+在问题中，Intent为查看天气，那么查看哪天的天气呢？ “今天”作为Parameter传递给意图
