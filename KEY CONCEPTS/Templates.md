@@ -17,4 +17,4 @@ Templates，模板。一套规则，当这个规则被满足时，模板对应�
 
 Template：@sys.date:date天气怎么样
 问题：今天天气怎么样，满足了该模板，并且参数date被填充了：今天
-那么该Template对应的Intent对应的动作就会被激发，同时带着参数“今天”
+那么该Template对应的Intent对应的动作就会被激发，同时，该动作获得参数“今天”。
