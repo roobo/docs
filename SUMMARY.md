@@ -20,7 +20,7 @@
     * [问答相关](KEY CONCEPTS/问答相关.md)
 * [个性化服务](个性化服务/README.md)
     * [机器人属性](个性化服务/机器人属性.md)
-* [用户属性](个性化服务/用户属性.md)
+    * [用户属性](个性化服务/用户属性.md)
 * [Mechanisms](Mechanisms/README.md)
     * [场景选择策略](Mechanisms/场景选择策略.md)
     * [场景发布流程](Mechanisms/场景发布流程.md)
