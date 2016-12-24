@@ -30,7 +30,7 @@
 | sessionId | String | 用于区分client并为其管理上下文信息 \(&lt;=128 char\) | Required |
 | agentId | String | 应用唯一凭证 \(&lt;=64 char\) | Required |
 | token | String | 访问凭证 \(&lt;=64 char\) | Required |
-| contexts | [][Context](context.html#context_1) | Context对象数组，若client输入上文，替换server上文 | Optional |
+| contexts | \[\][Context](context.html#context_1) | Context对象数组，若client输入上文，替换server上文 | Optional |
 | location | [Location](location.html#location_1) | Location对象，可以包含经纬度以及详细地址 | Optional |
 
 ### /v1/query {#query_2}
@@ -40,7 +40,7 @@
 _Sample Request_
 
 ```
-POST http://api.ros.ai/bot/v1/query
+POST https://api.ros.ai/bot/v1/query
 
 Headers:
 Content-Type: application/json; charset=utf-8
@@ -113,3 +113,6 @@ _Sample Response_
 | query | String | 对输入query进行处理的结果（字符集＋纠错） |
 | semantic | [Semantic](Semantic.html#semantic_1) | 语义结果，包括意图名称和参数 |
 | result | [Result](result.html#result_1) | 数据结果 |
+
+
+
