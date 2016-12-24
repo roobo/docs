@@ -33,7 +33,7 @@
 | contexts | \[\][Context](context.html#context_1) | Context对象数组，若client输入上文，替换server上文 | Optional |
 | location | [Location](location.html#location_1) | Location对象，可以包含经纬度以及详细地址 | Optional |
 
-### /v1/query {#query_2}
+### /bot/v1/query {#query_2}
 
 ---
 
