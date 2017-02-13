@@ -25,7 +25,7 @@
 | director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
 | country | string | optional | 制片地区 | 播放港台电影(country=港台) |
 | name | string | optional | 片名 | 放无间道看看(name=无间道) |
-| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+| popularity | string | optional | 评价 | 热门电影(popularity=热门) |
 | director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
 | director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
 | director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
