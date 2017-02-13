@@ -11,7 +11,6 @@
 * [Resume](#Resume)
 
 
-
 #### Video: Play {#Play}
 
 ---
@@ -60,3 +59,17 @@
 
 ---
 
+#### Video: Search {#Search}
+
+---
+
+#### Video: Stop {#Stop}
+
+---
+
+#### Video: Pause {#Pause}
+
+---
+#### Video: Resume {#Resume}
+
+---
