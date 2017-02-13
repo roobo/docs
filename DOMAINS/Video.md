@@ -22,7 +22,17 @@
 | category | string | optional | 视频分类 | 播放电影(category=电影) |
 | mode | string | optional | 播放模式 | 循环播放勇敢的心(mode=循环) |
 | actor | string | optional | 演员 | 播放靳东和陈乔恩主演的电视剧鬼吹灯(actor=靳东,陈乔恩) |
-| mode | string | optional | 播放模式 | 循环播放勇敢的心(mode=循环) |
+| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+| country | string | optional | 制片地区 | 播放港台电影(country=港台) |
+| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+
+
+
 
 
 
