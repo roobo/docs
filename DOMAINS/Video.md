@@ -28,9 +28,8 @@
 | name | string | optional | 片名 | 放无间道看看(name=无间道) |
 | popularity | string | optional | 评价 | 我要看热门评价高的电影(popularity=热门,好评) |
 | tag | string | optional | 标签 | 播放恐怖的经典电影(tag=恐怖,经典) |
-| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
-| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
-| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+| datetime | string | optional | 日期 | 播放李安执导的电影(director=李安) |
+| episode | string | optional | 季/集 | 播放李安执导的电影(director=李安) |
 
 
 
