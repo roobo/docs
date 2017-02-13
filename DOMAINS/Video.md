@@ -24,7 +24,7 @@
 | actor | string | optional | 演员 | 播放靳东和陈乔恩主演的电视剧鬼吹灯(actor=靳东,陈乔恩) |
 | director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
 | country | string | optional | 制片地区 | 播放港台电影(country=港台) |
-| director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
+| name | string | optional | 片名 | 放无间道看看(name=无间道) |
 | director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
 | director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
 | director | string | optional | 导演 | 播放李安执导的电影(director=李安) |
