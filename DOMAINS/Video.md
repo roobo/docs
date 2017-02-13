@@ -33,13 +33,16 @@
 
 
 
-```
-_datetime_
+
+_datetime_ 格式含义
+| Name | Data type | Required/Optional | Description | Request examples |
+| :---: | :---: | :---: |:---: |:---: |
+| category | string | optional | 视频分类 | 播放电影(category=电影) |
 
 
 _episode_
 
-```
+
 
 
 
