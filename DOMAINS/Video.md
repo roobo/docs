@@ -46,13 +46,13 @@
 * _episode_ 季/集格式
 | Request examples | Response format |
 | :---: | :---: |
-| category | string |
-| category | string |
-| category | string |
-| category | string |
-| category | string |
-| category | string |
-| category | string |
+| 第一季 | 1/ |
+| 第一季第一集 | 1/1 |
+| 倒数第一集 | /-1 |
+| 最新一集 | /-1 |
+| 下一季 | ++1/ |
+| 上一集 | /--1 |
+| 第一季最新一集 | 1/-1 |
 
 
 #### Video: Alter {#Alter}
