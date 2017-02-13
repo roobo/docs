@@ -32,15 +32,21 @@
 | episode | string | optional | 季/集 | 播放破产姐妹第二季第一集(episode=2/1) |
 
 
+* _datetime_ 时间格式
+| Request examples | Response format |
+| :---: | :---: |
+| 2008年 | 2008-- |
+| 2008年4月 | 2008-04- |
+| 2008年4月15号 | 2008-04-15 |
+| 4月 | 2017-04- |
+| 4月15号 | 2017-04-15 |
+| 八十年 | 1980--/1989-- |
 
 
-_datetime_ 格式含义
+* _episode_ 季/集格式
 | Name | Data type | Required/Optional | Description | Request examples |
 | :---: | :---: | :---: |:---: |:---: |
 | category | string | optional | 视频分类 | 播放电影(category=电影) |
-
-
-_episode_
 
 
 
