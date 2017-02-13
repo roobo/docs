@@ -4,9 +4,10 @@
 视频点播
 ```
 * [Play](#Play)
-* [GetMarket](#2GetMarket)
-* [GetStock](#3GetStock)
-* [GetStock](#4GetStock)
+* [Alter](#Alter)
+* [Stop](#Stop)
+* [Pause](#Pause)
+* [Resume](#Resume)
 
 
 
@@ -101,7 +102,7 @@
 
 * **返回数据描述**
 
-```go
+```
 {
     "status":{
         "errorDetails":"invalid character '<' looking for beginning of value",
