@@ -1,7 +1,7 @@
 ## Video
 
 ```
-视频点播
+视频控制、点播、搜索
 ```
 * [Play](#Play)
 * [Alter](#Alter)
@@ -16,6 +16,9 @@
 #### Video: Play {#Play}
 
 ---
+```
+点播
+```
 
 * _Data_
 
@@ -62,6 +65,10 @@
 ---
 
 #### Video: Search {#Search}
+---
+```
+搜索
+```
 
 * _Data_
 
@@ -79,15 +86,32 @@
 | episode | string | optional | 季/集 | 播放破产姐妹第二季第一集(episode=2/1) |
 
 
-
-
 #### Video: Stop {#Stop}
-
 ---
+```
+播放控制：停止
+```
 
 #### Video: Pause {#Pause}
-
 ---
+```
+播放控制：暂停
+```
+
 #### Video: Resume {#Resume}
-
 ---
+```
+播放控制：恢复
+```
+
+#### Video: FastForward {#FastForward}
+---
+```
+播放控制：快进
+```
+
+#### Video: FastBackward {#FastBackward}
+---
+```
+播放控制：快退
+```
