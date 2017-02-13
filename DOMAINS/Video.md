@@ -5,6 +5,7 @@
 ```
 * [Play](#Play)
 * [Alter](#Alter)
+* [Search](#Search)
 * [Stop](#Stop)
 * [Pause](#Pause)
 * [Resume](#Resume)
