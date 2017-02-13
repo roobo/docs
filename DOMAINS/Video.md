@@ -44,12 +44,15 @@
 
 
 * _episode_ 季/集格式
-| Name | Data type | Required/Optional | Description | Request examples |
-| :---: | :---: | :---: |:---: |:---: |
-| category | string | optional | 视频分类 | 播放电影(category=电影) |
-
-
-
+| Request examples | Response format |
+| :---: | :---: |
+| category | string |
+| category | string |
+| category | string |
+| category | string |
+| category | string |
+| category | string |
+| category | string |
 
 
 #### Video: Alter {#Alter}
