@@ -63,6 +63,23 @@
 #### Video: Alter {#Alter}
 
 ---
+```
+参数变更
+```
+* _Data_
+
+| Name | Data type | Required/Optional | Description | Request examples |
+| :---: | :---: | :---: |:---: |:---: |
+| category | string | optional | 视频分类 | 唐国强的电视剧(category=电视剧) |
+| actor | string | optional | 演员 | 搜索徐峥的去年的电影(actor=徐峥) |
+| director | string | optional | 导演 | 搜索王宝强导演的电影(director=王宝强) |
+| country | string | optional | 制片地区 | 港台电影(country=港台) |
+| name | string | optional | 片名 | 搜索锦绣未央(name=锦绣未央) |
+| popularity | string | optional | 评价 | 推荐热门的电影(popularity=热门) |
+| tag | string | optional | 标签 | 搞笑电影(tag=搞笑) |
+| datetime | string | optional | 日期 | 推荐一个去年四月发行的电影(datetime=2016-04-) |
+| episode | string | optional | 季/集 | 破产姐妹最新一季最后一集(episode=-1/-1) |
+
 
 #### Video: Search {#Search}
 ---
