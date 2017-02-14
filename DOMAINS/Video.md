@@ -80,9 +80,9 @@
 | country | string | optional | 制片地区 | 港台电影(country=港台) |
 | name | string | optional | 片名 | 搜索锦绣未央(name=锦绣未央) |
 | popularity | string | optional | 评价 | 推荐热门的电影(popularity=热门) |
-| tag | string | optional | 标签 | 播放恐怖的经典电影(tag=恐怖,经典) |
-| datetime | string | optional | 日期 | 播放周星驰2008年的电影(datetime=2008--) |
-| episode | string | optional | 季/集 | 播放破产姐妹第二季第一集(episode=2/1) |
+| tag | string | optional | 标签 | 搞笑电影(tag=搞笑) |
+| datetime | string | optional | 日期 | 推荐一个去年四月发行的电影(datetime=2016-04-) |
+| episode | string | optional | 季/集 | 破产姐妹最新一季最后一集(episode=-1/-1) |
 
 
 #### Video: Stop {#Stop}
