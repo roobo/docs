@@ -79,7 +79,7 @@
 | director | string | optional | 导演 | 搜索王宝强导演的电影(director=王宝强) |
 | country | string | optional | 制片地区 | 港台电影(country=港台) |
 | name | string | optional | 片名 | 搜索锦绣未央(name=锦绣未央) |
-| popularity | string | optional | 评价 | 我要看热门评价高的电影(popularity=热门,好评) |
+| popularity | string | optional | 评价 | 推荐热门的电影(popularity=热门) |
 | tag | string | optional | 标签 | 播放恐怖的经典电影(tag=恐怖,经典) |
 | datetime | string | optional | 日期 | 播放周星驰2008年的电影(datetime=2008--) |
 | episode | string | optional | 季/集 | 播放破产姐妹第二季第一集(episode=2/1) |
