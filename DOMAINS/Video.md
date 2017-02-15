@@ -20,7 +20,7 @@
 点播
 ```
 
-* _Data_
+* _result/data_
 
 | Name | Data type | Required/Optional | Description | Request examples |
 | :---: | :---: | :---: |:---: |:---: |
@@ -68,7 +68,7 @@
 ```
 变更的参数
 ```
-* _Data_
+* _result/data_
 
 | Name | Data type | Required/Optional | Description | Request examples |
 | :---: | :---: | :---: |:---: |:---: |
@@ -86,7 +86,7 @@
 搜索
 ```
 
-* _Data_
+* _result/data_
 
 | Name | Data type | Required/Optional | Description | Request examples |
 | :---: | :---: | :---: |:---: |:---: |
