@@ -21,7 +21,7 @@
 换台
 ```
 
-* _Data_
+* _semantic/params_
 
 | Name | Data type | Required/Optional | Description | Request examples |
 | :---: | :---: | :---: |:---: |:---: |
@@ -35,7 +35,7 @@
 ```
 换源
 ```
-* _Data_
+* _semantic/params_
 
 | Name | Data type | Required/Optional | Description | Request examples |
 | :---: | :---: | :---: |:---: |:---: |
