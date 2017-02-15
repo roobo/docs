@@ -1,7 +1,7 @@
 ## TV
 
 ```
-主要用于电视的换台换源
+电视遥控器常用功能
 ```
 * [Channel](#Channel)
 * [Source](#Source)
