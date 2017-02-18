@@ -79,6 +79,7 @@
 | tag | string | optional | 标签 | 换个搞笑节目\(tag=搞笑\) |
 | datetime | string | optional | 日期 | 换个去年的电影\(datetime=2016--\) |
 | episode | string | optional | 季/集 | 换一集\(episode=-/-\),下一集\(episode=/++1\) |
+| channel | string | optional | 视频渠道 | 换个优酷的视频 |
 
 #### Video: Search {#Search}
 
