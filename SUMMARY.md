@@ -2,8 +2,9 @@
 
 * [简介](README.md)
 * [API参考](API REFERENCE/README.md)
-  * [entities](API REFERENCE/bot_v1_entities.md)
   * [query](API REFERENCE/bot_v1_query.md)
+  * [contexts](/API REFERENCE/bot_v1_contexts.md)
+  * [entities](/API REFERENCE/bot_v1_entities.md)
   * [service](API REFERENCE/bot_v1_service.md)
   * [Location](API REFERENCE/location.md)
   * [Context](API REFERENCE/context.md)
@@ -45,7 +46,6 @@
 * [其它](Mechanisms/README.md)
   * [场景选择策略](Mechanisms/场景选择策略.md)
   * [场景发布流程](Mechanisms/场景发布流程.md)
-
 
 
 
