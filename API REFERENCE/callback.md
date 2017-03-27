@@ -2,6 +2,13 @@
 
 ---
 
+| Name | Type | Description | Required |
+| :--- | :--- | :--- | :--- |
+| service | String | 服务名 | Required |
+| action | String | 意图（服务自定义） | Required |
+
+---
+
 _Sample Response_
 
 ```
