@@ -7,8 +7,10 @@
   * [entities](/API REFERENCE/bot_v1_entities.md)
   * [service](API REFERENCE/bot_v1_service.md)
   * [Location](API REFERENCE/location.md)
+  * [Callback](/API REFERENCE/callback.md)
   * [Context](API REFERENCE/context.md)
   * [Result](API REFERENCE/result.md)
+
   * [Status and Error Codes](API REFERENCE/Status and Error Codes.md)
 * [关键概念](KEY CONCEPTS/README.md)
   * [Agents](KEY CONCEPTS/Agents.md)
