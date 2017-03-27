@@ -32,6 +32,7 @@
 | token | String | 访问凭证 \(&lt;=64 char\) | Required |
 | contexts | \[\][Context](context.html#context_1) | Context对象数组，若client输入上文，替换server上文 | Optional |
 | location | [Location](location.html#location_1) | Location对象，可以包含经纬度以及详细地址 | Optional |
+| callback | Callback | 回调对象 | Optional |
 
 ### /bot/v1/query {#query_2}
 
