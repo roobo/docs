@@ -192,7 +192,7 @@
 
 ```
 "timeout":{
-    "timeInMillseconds": 5000,
+    "timeInMs": 5000,
     "action": "get"
 }
 ```
