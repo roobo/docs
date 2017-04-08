@@ -1,29 +1,26 @@
-# Summary
 
-* [简介](README.md)
+* [API参考](bot/ApiReference/README.md)
 
-* [API参考](API/README.md)
+  * [query](bot/ApiReference/bot_v1_query.md)
+  * [contexts](bot/ApiReference/bot_v1_contexts.md)
+  * [entities](bot/ApiReference/bot_v1_entities.md)
+  * [service](bot/ApiReference/bot_v1_service.md)
+  * [Location](bot/ApiReference/location.md)
+  * [Callback](bot/ApiReference/callback.md)
+  * [Context](bot/ApiReference/context.md)
+  * [Result](bot/ApiReference/result.md)
+  * [ErrorCode](bot/ApiReference/ErrorCode.md)
 
-  * [query](API/bot_v1_query.md)
-  * [contexts](/API/bot_v1_contexts.md)
-  * [entities](/API/bot_v1_entities.md)
-  * [service](API/bot_v1_service.md)
-  * [Location](API/location.md)
-  * [Callback](/API/callback.md)
-  * [Context](API/context.md)
-  * [Result](API/result.md)
-  * [Status and Error Codes](API/Status and Error Codes.md)
+* [关键概念](关键概念/README.md)
 
-* [关键概念](KEY CONCEPTS/README.md)
-
-  * [应用](/KEY CONCEPTS/Agents.md)
-  * [上下文](/API REFERENCE/context.md)
-  * [意图与意图参数](/KEY CONCEPTS/Intents and Parameters.md)
-  * [模版](KEY CONCEPTS/Templates.md)
-  * [实体](KEY CONCEPTS/实体.md)
-  * [子模版](KEY CONCEPTS/子模版.md)
-  * [全局变量](KEY CONCEPTS/全局变量.md)
-  * [问答相关](KEY CONCEPTS/问答相关.md)
+  * [应用](bot/关键概念/Agents.md)
+  * [上下文](bot/关键概念/context.md)
+  * [意图与意图参数](bot/关键概念/意图与意图参数.md)
+  * [模版](bot/关键概念/Templates.md)
+  * [实体](bot/关键概念/实体.md)
+  * [子模版](bot/关键概念/子模版.md)
+  * [全局变量](bot/关键概念/全局变量.md)
+  * [问答相关](bot/关键概念/问答相关.md)
 
 * [快速上手](快速上手/README.md)
   * [机器人属性](快速上手/机器人属性.md)
@@ -51,3 +48,4 @@
   * [VolumeControl](场景/VolumeControl.md)
   * [Weather](场景/Weather.md)
   
+
