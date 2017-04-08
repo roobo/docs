@@ -10,19 +10,22 @@
   * [Location](API REFERENCE/location.md)
   * [Callback](/API REFERENCE/callback.md)
   * [Context](API REFERENCE/context.md)
+
   * [Result](API REFERENCE/result.md)
 
   * [Status and Error Codes](API REFERENCE/Status and Error Codes.md)
 
 * [关键概念](KEY CONCEPTS/README.md)
-  * [Agents](KEY CONCEPTS/Agents.md)
-  * [Contexts](KEY CONCEPTS/Contexts.md)
-  * [Intents and Parameters](KEY CONCEPTS/Intents and Parameters.md)
-  * [Templates](KEY CONCEPTS/Templates.md)
+
+  * [应用](/KEY CONCEPTS/Agents.md)
+  * [上下文](/API REFERENCE/context.md)
+  * [意图与意图参数](/KEY CONCEPTS/Intents and Parameters.md)
+  * [模版](KEY CONCEPTS/Templates.md)
   * [实体](KEY CONCEPTS/实体.md)
   * [子模版](KEY CONCEPTS/子模版.md)
   * [全局变量](KEY CONCEPTS/全局变量.md)
   * [问答相关](KEY CONCEPTS/问答相关.md)
+
 * [个性化服务](个性化服务/README.md)
   * [机器人属性](个性化服务/机器人属性.md)
 * [场景列表](DOMAINS/README.md)
