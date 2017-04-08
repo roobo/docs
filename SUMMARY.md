@@ -27,7 +27,9 @@
   * [问答相关](KEY CONCEPTS/问答相关.md)
 
 * [个性化服务](个性化服务/README.md)
+
   * [机器人属性](个性化服务/机器人属性.md)
+
 * [场景列表](DOMAINS/README.md)
   * [Video](DOMAINS/Video.md)
   * [TV](DOMAINS/TV.md)
