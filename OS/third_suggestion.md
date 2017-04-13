@@ -1,4 +1,4 @@
-### /bot/v1/suggestion
+### /third/suggestion
 
 * [概述](#1-概述)
 * [URLs](#2-URLs)
@@ -18,7 +18,7 @@
 
 | Method | Definition |
 | :--- | :--- |
-| POST /bot/v1/suggestion | 接收返回均使用JSON表示 |
+| POST /third/suggestion | 接收返回均使用JSON表示 |
 
 
 ### 3 请求参数
@@ -49,7 +49,7 @@
 _Sample Request_
 
 ```
-POST http://api.ros.ai/bot/v1/suggestion
+POST http://ip:port/third/suggestion
 
 Headers:
 Content-Type: application/json; charset=utf-8
@@ -75,10 +75,10 @@ _Sample Response_
     "errorType": "success"
   },
   "semantic": {
-    "service": "guide__to__music",
+    "service": "guide2__music",
     "action": "Play",
     "outputContext": {
-	  "service": "guide__to__music",
+	  "service": "guide2__music",
 	  "context": "yes_or_no",
 	  "parameters": { # 结构自定义
 		"id":"73323sxe3"
@@ -88,10 +88,11 @@ _Sample Response_
   "result": {
     "hint": "周杰伦发布了新歌《告白气球》，要不要听听？",
     "data": {
-      "type": "RUN_ONCE" # RUN_INCTX
+      "type": "RUN_ONCE"
     }
   }
 }
 ```
 
-
+> 引导场景名规范：`guide2__$变量`，`guide2__`为固定前缀
+> type是一个枚举类型，有两个取值，分别是RUN_ONCE（一次运行），RUN_INCTX（上下文）
