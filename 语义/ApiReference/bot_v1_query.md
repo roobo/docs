@@ -1,18 +1,18 @@
 ### /bot/v1/query
 
-* [概述](#Overview)
-* [URLs](#URLs)
-* [请求参数](#aa)
-* [回复参数](#bb)
-* [实例](#cc)
+* [概述](#1-概述)
+* [URLs](#2-URLs)
+* [请求参数](#3-请求参数)
+* [回复参数](#4-回复参数)
+* [实例](#5-实例)
 
-### <span id="Overview">概述</span>
+### 1 概述
 
 ---
 
 对输入的自然语言文本进行意图识别。
 
-### <span id="URLs">URLs</span>
+### 2 URLs
 
 ---
 
@@ -20,7 +20,7 @@
 | :--- | :--- |
 | POST /bot/v1/query | 接收返回均使用JSON表示 |
 
-### <span id="aa">请求参数</span>
+### 3 请求参数
 
 ---
 
@@ -34,7 +34,7 @@
 | location | Location | 地理位置 | Optional |
 | callback | Callback | 回调参数 | Optional |
 
-### <span id="bb">回复参数</span>
+### 4 回复参数
 
 ---
 
@@ -46,7 +46,7 @@
 | results | Result | 数据部分 | Optional |
 
 
-### <span id="cc">实例</span>
+### 5 实例
 
 ---
 

@@ -1,18 +1,18 @@
 ### /bot/v1/suggestion
 
-* [概述](#Overview)
-* [URLs](#URLs)
-* [请求参数](#aa)
-* [回复参数](#dd)
-* [POST /bot/v1/suggestion](#bb)
+* [概述](#1-概述)
+* [URLs](#2-URLs)
+* [请求参数](#3-请求参数)
+* [回复参数](#4-回复参数)
+* [实例](#5-实例)
 
-### <span id="Overview">概述</span>
+### 1 概述
 
 ---
 
 引导建议。
 
-### <span id="URLs">URLs</span>
+### 2 URLs
 
 ---
 
@@ -21,7 +21,7 @@
 | POST /bot/v1/suggestion | 接收返回均使用JSON表示 |
 
 
-### <span id="aa">请求参数</span>
+### 3 请求参数
 
 ---
 
@@ -32,7 +32,7 @@
 | sessionId | String | 会话id | Required |
 | chances | []Chance | 时机数组 | Required |
 
-### <span id="dd">回复参数</span>
+### 4 回复参数
 
 ---
 
@@ -42,14 +42,14 @@
 | semantic | []Semantic | 引导语义 | Required |
 | result | []Result | 引导过程 | Required |
 
-### <span id="bb">/bot/v1/suggestion</span>
+### 5 实例
 
 ---
 
 _Sample Request_
 
 ```
-POST https://api.ros.ai/bot/v1/suggestion
+POST http://api.ros.ai/bot/v1/suggestion
 
 Headers:
 Content-Type: application/json; charset=utf-8
@@ -93,4 +93,5 @@ _Sample Response_
   }
 }
 ```
+
 
