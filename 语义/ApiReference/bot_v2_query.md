@@ -1,4 +1,4 @@
-### /bot/v1/query
+### /bot/v2/query
 
 * [概述](#Overview)
 * [URLs](#URLs)
@@ -18,7 +18,7 @@
 
 | Method | Definition |
 | :--- | :--- |
-| POST /bot/v1/query | 接收返回均使用JSON表示 |
+| POST /bot/v2/query | 接收返回均使用JSON表示 |
 
 ### <span id="aa">请求参数</span>
 
@@ -43,8 +43,7 @@
 | status | Status | 状态码 | Required |
 | query | String | 输出query（纠错后） | Required |
 | semantic | Semantic | 语义部分 | Required |
-| results | Result | 数据部分 | Optional |
-
+| results | [] Result | 数据部分（***v2协议变更点***） | Optional |
 
 ### <span id="cc">实例</span>
 
@@ -53,7 +52,7 @@
 _Sample Request_
 
 ```
-POST http://api.ros.ai/bot/v1/query
+POST http://api.ros.ai/bot/v2/query
 
 Headers:
 Content-Type: application/json; charset=utf-8
