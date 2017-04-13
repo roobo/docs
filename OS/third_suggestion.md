@@ -94,5 +94,11 @@ _Sample Response_
 }
 ```
 
-> 引导场景名规范：`guide2__$变量`，`guide2__`为固定前缀
-> type是一个枚举类型，有两个取值，分别是RUN_ONCE（一次运行），RUN_INCTX（上下文）
+    
+
+```
+说明：   
+     1. 引导场景名规范：`guide2__$变量`，`guide2__`为固定前缀。
+     2. type是一个枚举类型，有两个取值，分别是RUN_ONCE（一次运行），RUN_INCTX（上下文）。
+```
+
