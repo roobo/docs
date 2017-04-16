@@ -70,27 +70,27 @@ _Sample Response_
 
 ```
 {
-  "status": {
-    "code": 0,
-    "errorType": "success"
-  },
-  "semantic": {
-    "service": "guide2__music",
-    "action": "Play",
-    "outputContext": {
-	  "service": "guide2__music",
-	  "context": "yes_or_no",
-	  "parameters": { # 结构自定义
-		"id":"73323sxe3"
-      }
-	}
-  },
-  "result": {
-    "hint": "周杰伦发布了新歌《告白气球》，要不要听听？",
-    "data": {
-      "type": "RUN_ONCE"
+    "status": {
+        "code": 0,
+        "errorType": "success"
+    },
+    "semantic": {
+        "service": "guide2__music",
+        "action": "Play",
+        "outputContext": {
+            "service": "guide2__music",
+            "context": "yes_or_no",
+            "parameters": { #结构自定义
+                "id": "73323sxe3"
+            }
+        }
+    },
+    "result": {
+        "hint": "周杰伦发布了新歌《告白气球》，要不要听听？",
+        "data": {
+            "type": "RUN_ONCE"
+        }
     }
-  }
 }
 ```
 
