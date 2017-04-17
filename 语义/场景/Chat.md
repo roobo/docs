@@ -57,7 +57,7 @@ _Sample Response_
     "result": {
         "hint": "你也是呀主人，让我们来一起迎接崭新的一天吧",
         "data": {
-            "**emotion**": [
+            "emotion": [
                 {
                     "type": "text_question",
                     "value": "normal",
@@ -69,7 +69,7 @@ _Sample Response_
                     "score": ""
                 }
             ],
-            "**source**": "chat_roobo"
+            "source": "chat_roobo"
         }
     }
 }
