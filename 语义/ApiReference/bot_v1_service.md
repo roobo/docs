@@ -1,64 +1,50 @@
 ### /bot/v1/service
 
-* [Overview](#overview)
-* [URLs](#URLs)
-* [Parameters and JSON Fields](#parameters)
-* [Sample](#sample)
+* [概述](#1-概述)
+* [URLs](#2-URLs)
+* [实例](#3-实例)
 
-### Overview {#overview}
+### 1 概述
 
 ---
 
 服务开放接口，开发者在意图和参数已知的情况，无需再通过自然语言处理，可直接调用相应的服务接口。
 
-### URLs {#URLs}
+### 2 URLs
 
 ---
 
 | Method | Definition |
 | :--- | :--- |
-| POST /bot/v1/service/${service\_name} | 调用service\_name指定服务的接口，具体接口名称和接口参数通过JSON在请求体中指定 |
+| POST /bot/v1/service/:domain/:method | :domain服务名; :method方法名。服务需要实现/bot/v1/service/:domain/:method。请求经过校验后会被转到这个地址。 |
 
-### Parameters and JSON Fields {#parameters}
+### 3 实例
 
 ---
 
-#### 请求参数
-
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| agentId | String | 应用唯一凭证 \(&lt;=64 char\) | Required |
-| token | String | 访问凭证 \(&lt;=64 char\) | Required |
-| function | String | 要调用的服务接口名称 | Required |
-| sessionId | String | 用于区分client并为其管理上下文信息 \(&lt;=128 char\) | Optional |
-| location | [Location](location.html#location_1) | Location对象，可以包含经纬度以及详细地址 | Optional |
-| params | JSON Object | 接口所需调用参数的对象，字段描述见具体服务的接口说明 | Optional |
-
-#### 响应参数
-
-| Name | Type | Description |
-| :--- | :--- | :--- |
-| status | [Status](Status and Error Codes.md.html#status_1) | 成功失败信息 |
-| result | JSON Object | 接口调用返回结果，字段描述见具体服务的接口说明 |
-
-### 接口调用示例 {#post}
-
-#### 请求数据
+_Sample Request_
 
 ```
-POST http://api.ros.ai/bot/v1/service/hotelbooking
+POST http://api.ros.ai/bot/v1/service/hotelbooking/list
 
 Headers:
 Content-Type: application/json; charset=utf-8
 
 {
-    "agentid": "63",
-    "sessionid": "1476002533",
-    "token": "943acb75fc4797249b50d085b8c437e9",
-    "function": "GetHotels",
-    "params": {
-        "location_city": "北京",
-        "location_district": "丰台区",
+    "agentId": "2ZmNzYyOTA5MzJjZ",
+    "token": "f7caaf310da3dcb24bacdc7944456210",
+    "sessionId": "1234567890",
+    "location": {
+        "address": {
+            "province": "北京",
+            "detail": "丰台区",
+            "city": "北京",
+            "country": "中国"
+        },
+        "longitude": 0,
+        "latitude": 0
+    },
+    "parameters": { ＃参数对象
         "hotel_name": "empty",
         "room_price": "200",
         "checkin_date": "2016-12-24",
@@ -67,7 +53,7 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-#### 响应数据
+_Sample Response_
 
 ```
 {
@@ -176,6 +162,7 @@ Content-Type: application/json; charset=utf-8
     }
 }
 ```
+
 
 
 
