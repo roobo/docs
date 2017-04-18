@@ -1,4 +1,4 @@
-* [场景列表](README.md)
+* 场景列表
   * [Chat](Chat.md)
   * [Video](Video.md)
   * [TV](TV.md)
