@@ -75,10 +75,13 @@ _Sample Response_
 }
 ```
 _Chat Result->data_
+
 | 字段名 | Definition |
 | :--- | :--- |
 | emotion | 情感分析结果，分别对问题（question）和答案（answer）做出了情感倾向识别 |
 | source | 问答来源 |
+
+具体枚举值参考如下。
 
 ### 4 情感分析
 *情感分类体系*
