@@ -1,18 +1,18 @@
 ### /bot/v1/entities
-* [Overview](#Overview)
-* [URLs](#URLs)
-* [POST /bot/v1/entities/query](#entitiesapi_1)
-* [POST /bot/v1/entities/put](#entitiesapi_2)
-* [POST /bot/v1/entities/delete](#entitiesapi_3)
-* [POST /bot/v1/entities/entries/delete](#entitiesapi_4)
+* [概述]
+* [URLs]
+* [POST /bot/v1/entities/query]
+* [POST /bot/v1/entities/put]
+* [POST /bot/v1/entities/delete]
+* [POST /bot/v1/entities/entries/delete]
 
-### Overview {#Overview}
+### 1 概述
  
 ---
 
 获取、创建、更新、删除 实体or实体项。
 
-### URLs {#URLs}
+### 2 URLs
 
 ---
 
@@ -23,7 +23,7 @@
 | POST /bot/v1/entities/delete | 删除指定实体 |
 | POST /bot/v1/entities/entries/delete | 给指定实体删除一个实体项列表 |
 
-### /bot/v1/entities/query {#entitiesapi_1}
+### 3 /bot/v1/entities/query
 
 ---
 
@@ -65,7 +65,7 @@ _Sample Response_
 }
 ```
 
-### /bot/v1/entities/put {#entitiesapi_2}
+### 4 /bot/v1/entities/put
 
 ---
 
@@ -107,7 +107,7 @@ _Sample Response_
 }
 ```
 
-### /bot/v1/entities/delete {#entitiesapi_3}
+### 5 /bot/v1/entities/delete
 
 ---
 
@@ -129,7 +129,7 @@ _Sample Response_
 }
 ```
 
-### /bot/v1/entities/entries/delete {#entitiesapi_4}
+### 6 /bot/v1/entities/entries/delete
 
 ---
 
@@ -158,3 +158,4 @@ _Sample Response_
     }
 }
 ```
+
