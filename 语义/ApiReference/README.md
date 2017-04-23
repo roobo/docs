@@ -1,6 +1,5 @@
 * API参考
 
-  * [/bot/v1/query](bot_v1_query.md)
   * [/bot/v2/query](bot_v2_query.md)
   * [/bot/v1/entities](bot_v1_entities.md)
   * [/bot/v1/service](bot_v1_service.md)
