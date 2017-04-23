@@ -1,4 +1,4 @@
-### /third/os
+### /third/os/query
 
 * [概述](#1-概述)
 * [URLs](#2-URLs)
@@ -18,7 +18,7 @@
 
 | Method | Definition |
 | :--- | :--- |
-| POST /third/os | 接收返回均使用JSON表示 |
+| POST /third/os/query | 接收返回均使用JSON表示 |
 
 ### 3 请求参数
 
