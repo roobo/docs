@@ -1,4 +1,4 @@
-### Location {#location_1}
+### Location
 
 ---
 
