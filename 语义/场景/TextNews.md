@@ -13,13 +13,13 @@
  * [Pause](#9Pause)
  * [Resume](#10Resume)
 
-### 服务说明 {#服务说明}
+### 服务说明
 
 ---
 
-\(**TextNews**\)
+文本新闻
 
-### 意图说明 {#意图说明}
+### 意图说明
 
 ---
 
@@ -38,7 +38,7 @@
 | Pause |  | news | news |
 | Resume |  | news | news |
 
-#### GetNews {#1GetNews}
+#### GetNews
 
 ---
 
@@ -79,7 +79,7 @@
 
 ```
 
-#### GetNews {#2GetNews}
+#### GetNews
 
 ---
 
@@ -122,7 +122,7 @@
 
 ```
 
-#### GetNews {#3GetNews}
+#### GetNews
 
 ---
 
@@ -165,7 +165,7 @@
 
 ```
 
-#### GetNews {#4GetNews}
+#### GetNews
 
 ---
 
@@ -206,7 +206,7 @@
 
 ```
 
-#### Break {#5Break}
+#### Break
 
 ---
 
@@ -225,7 +225,7 @@
  \(**无**\)
 
 
-#### GetOneNews {#6GetOneNews}
+#### GetOneNews
 
 ---
 
@@ -247,7 +247,7 @@
  \(**无**\)
 
 
-#### GetOneNews {#7GetOneNews}
+#### GetOneNews
 
 ---
 
@@ -268,7 +268,7 @@
  \(**无**\)
 
 
-#### Stop {#8Stop}
+#### Stop
 
 ---
 
@@ -287,7 +287,7 @@
  \(**无**\)
 
 
-#### Pause {#9Pause}
+#### Pause
 
 ---
 
@@ -306,7 +306,7 @@
  \(**无**\)
 
 
-#### Resume {#10Resume}
+#### Resume
 
 ---
 
