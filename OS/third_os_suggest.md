@@ -27,9 +27,10 @@
 
 | Name | Type | Description | Required |
 | :--- | :--- | :--- | :--- |
-| production | String | 产品线 | Required |
-| clientid | String | 设备id | Required |
-| token | String | 访问token | Required |
+| agentId | String | 应用唯一凭证 | Required |
+| token | String | 访问凭证 | Required |
+| sessionId | String | 会话id | Required |
+| clientId | String | 设备id | Required |
 | chances | []Chance | 时机数组 | Required |
 
 ### 4 回复参数
@@ -58,6 +59,7 @@ Content-Type: application/json; charset=utf-8
     "agentId":"2ZmNzYyOTA5MzJjZ",
     "token":"f7caaf310da3dcb24bacdc7944456210",
     "sessionId":"1234567890",
+    "clientId":"sn:123456789",
     "chances": [
         {
             "name": "awake_and_notalk_in_5s" # 时机名称
