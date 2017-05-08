@@ -27,9 +27,9 @@
 
 | Name | Type | Description | Required |
 | :--- | :--- | :--- | :--- |
-| agentId | String | 应用唯一凭证 | Required |
-| token | String | 访问凭证 | Required |
-| sessionId | String | 会话id | Required |
+| production | String | 产品线 | Required |
+| clientid | String | 设备id | Required |
+| token | String | 访问token | Required |
 | chances | []Chance | 时机数组 | Required |
 
 ### 4 回复参数
