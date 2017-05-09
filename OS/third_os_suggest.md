@@ -29,7 +29,6 @@
 | :--- | :--- | :--- | :--- |
 | agentId | String | 应用唯一凭证 | Required |
 | token | String | 访问凭证 | Required |
-| sessionId | String | 会话id | Required |
 | clientId | String | 设备id | Required |
 | chances | []Chance | 时机数组 | Required |
 
@@ -58,7 +57,6 @@ Content-Type: application/json; charset=utf-8
 {
     "agentId":"2ZmNzYyOTA5MzJjZ",
     "token":"f7caaf310da3dcb24bacdc7944456210",
-    "sessionId":"1234567890",
     "clientId":"sn:123456789",
     "chances": [
         {
