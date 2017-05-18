@@ -36,7 +36,8 @@ _Sample Request_
     "contexts":[
         {
             "context":"translate",
-            "service":"Translator"
+            "service":"Translator",
+            "lifespanInMs":1800
         }
     ]
 }
