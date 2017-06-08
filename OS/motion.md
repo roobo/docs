@@ -15,9 +15,11 @@ void setAcceleration(int acceleration); //set the acceleration of moving.
 
 # MotionSample
 ### MotionSdk
-#### JointMotionRequest
+* JointMotionRequest
+
 As decribed above, It is joint's wrapper
-#### IMotionExecuteCallback
+* IMotionExecuteCallback
+
 The listener of motion status
 
 ```java
@@ -31,7 +33,8 @@ void onMotionError(String errorMsg);
 void onMotionStop();
 ```
 
-#### MotionManager
+* MotionManager
+
 MotionManager is designed to connect the motion service and submit JointMotionRequest.
 
 ```java
