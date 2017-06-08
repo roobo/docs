@@ -41,18 +41,39 @@ MotionManager is designed to connect the motion service and submit JointMotionRe
 static MotionManager getInstance(Context c); //Motion manager is singleton
 
 /**
-   *  Submit one motion request and set the listener of motion status
+   * Submit one motion request and set the listener of motion status
    * @param joint motion request wrapper
    * @param callback listener
 */
-void executeJointMotion(JointMotionRequest joint, IMotionExecuteCallback callback)
+void executeJointMotion(JointMotionRequest joint, IMotionExecuteCallback callback);
 
 /**
    * Submit multiple motion request and set the listener of motion status
    * @param params motion requests wrapper
    * @param callback listener
 */
-void executeMultiJointMotion(List<JointMotionRequest> params, IMotionExecuteCallback callback)
+void executeMultiJointMotion(List<JointMotionRequest> params, IMotionExecuteCallback callback);
+
+/**
+ * Stop specific joint's motion
+ * 
+ * @param joint
+ * @param callback
+ */
+void stopJointMotion(String joint, IMotionExecuteCallback callback);
+
+/**
+ * Stop all joints' motion
+ * @param callback
+ */
+public void stopMultiJointMotion(IMotionExecuteCallback callback);
+
+/**
+ * Get the position of specific joint
+ * @param joint
+ * @return position
+ */
+public double getJointPosition(String joint);
 ```
 
 ### sample
