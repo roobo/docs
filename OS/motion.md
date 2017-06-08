@@ -6,10 +6,12 @@ Jelly has three joints:
 
 # joint's wrapper
 All joints' motion is wrapped in Class JointMotionRequest{@link com.roobo.motionsdk.JointMotionRequest}
-1. JointMotionRequest.setJoint(), select the joint.
-2. JointMotionRequest.setAngel(), set the degree to move.
-3. JointMotionRequest.setSpeed(), set the max moving speed, the unit is degree per second.
-4. JointMotionRequest.setAcceleration(), set the acceleration of moving.
+```java
+void setJoint(String joint); //select the joint.
+void setAngel(int angel); //set the degree to move.
+void setSpeed(int speed); //set the max moving speed, the unit is degree per second.
+void setAcceleration(int acceleration); //set the acceleration of moving.
+```
 
 # MotionSample
 ### MotionSdk
