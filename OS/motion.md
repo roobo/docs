@@ -9,7 +9,7 @@ All joints' motion is wrapped in Class JointMotionRequest{@link com.roobo.motion
 1. JointMotionRequest.setJoint(), select the joint.
 2. JointMotionRequest.setAngel(), set the degree to move.
 3. JointMotionRequest.setSpeed(), set the max moving speed, the unit is degree per second.
-4. JointMotionRequest.setAcceleration, set the acceleration of moving.
+4. JointMotionRequest.setAcceleration(), set the acceleration of moving.
 
 # MotionSample
 ### MotionSdk
@@ -56,22 +56,22 @@ void executeMultiJointMotion(List<JointMotionRequest> params, IMotionExecuteCall
 MotionManager motionManager = MotionManager.getInstance(context);
 
 JointMotionRequest headMotionRequest = new JointMotionRequest();
-        headMotionRequest.setJoint(IJoint.HEAD);
-        headMotionRequest.setAngel(0); // -15 ~ 15
-        headMotionRequest.setSpeed(100);
-        headMotionRequest.setAcceleration(100);
+headMotionRequest.setJoint(IJoint.HEAD);
+headMotionRequest.setAngel(0); // -15 ~ 15
+headMotionRequest.setSpeed(100);
+headMotionRequest.setAcceleration(100);
 
-        JointMotionRequest neckMotionRequest = new JointMotionRequest();
-        neckMotionRequest.setJoint(IJoint.NECK);
-        neckMotionRequest.setAngel(0); // -60 ~ 60
-        neckMotionRequest.setSpeed(100);
-        neckMotionRequest.setAcceleration(100);
+JointMotionRequest neckMotionRequest = new JointMotionRequest();
+neckMotionRequest.setJoint(IJoint.NECK);
+neckMotionRequest.setAngel(0); // -60 ~ 60
+neckMotionRequest.setSpeed(100);
+neckMotionRequest.setAcceleration(100);
 
-        JointMotionRequest waistMotionRequest = new JointMotionRequest();
-        waistMotionRequest.setJoint(IJoint.WAIST);
-        waistMotionRequest.setAngel(0); // -160 ~ 160
-        waistMotionRequest.setSpeed(100);
-        waistMotionRequest.setAcceleration(100);
+JointMotionRequest waistMotionRequest = new JointMotionRequest();
+waistMotionRequest.setJoint(IJoint.WAIST);
+waistMotionRequest.setAngel(0); // -160 ~ 160
+waistMotionRequest.setSpeed(100);
+waistMotionRequest.setAcceleration(100);
 
 /**
  *  By MotionManager, you can control it to perform the motion one by one or perform all motions at the same time.
