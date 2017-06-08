@@ -1,21 +1,21 @@
-#joints
+# joints
 Jelly has three joints:
 1. **head**, {@link com.roobo.motionsdk.IJoint.HEAD}. It performs up and down motion of Jelly's head. **Range: -15 ~ 15**
 2. **neck**, {@link com.roobo.motionsdk.IJoint.NECK}. It performs circular motion of Jelly's head. Range: **-60 ~ 60**
 3. **waist**, {@link com.roobo.motionsdk.IJoint.WAIST}. It performs circular motion of Jelly's waist. Range: **-160 ~ 160**
 
-#joint's wrapper
+# joint's wrapper
 All joints' motion is wrapped in Class JointMotionRequest{@link com.roobo.motionsdk.JointMotionRequest}
 1. JointMotionRequest.setJoint(), select the joint.
 2. JointMotionRequest.setAngel(), set the degree to move.
 3. JointMotionRequest.setSpeed(), set the max moving speed, the unit is degree per second.
 4. JointMotionRequest.setAcceleration, set the acceleration of moving.
 
-#MotionSample
-###MotionSdk
-####JointMotionRequest
+# MotionSample
+### MotionSdk
+#### JointMotionRequest
 As decribed above, It is joint's wrapper
-####IMotionExecuteCallback
+#### IMotionExecuteCallback
 The listener of motion status
 
 ```java
@@ -29,7 +29,7 @@ void onMotionError(String errorMsg);
 void onMotionStop();
 ```
 
-####MotionManager
+#### MotionManager
 MotionManager is designed to connect the motion service and submit JointMotionRequest.
 
 ```java
@@ -50,7 +50,7 @@ void executeJointMotion(JointMotionRequest joint, IMotionExecuteCallback callbac
 void executeMultiJointMotion(List<JointMotionRequest> params, IMotionExecuteCallback callback)
 ```
 
-###sample
+### sample
 
 ```java
 MotionManager motionManager = MotionManager.getInstance(context);
