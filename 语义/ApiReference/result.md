@@ -80,7 +80,7 @@
 
     ```
     此时，data必须包含，且只有一行。
-    系统组织方式为，先读hint，再读singer的song，如singer不存在，则读song，再读hintlast,nextop,除了audio，其它字段都可能不存在。
+    系统组织方式为，先读hint，再读singer的song，如artist不存在，则读song，再读hintlast,nextop,除了audio，其它字段都可能不存在。
 
     "result":{
       "hint":"为您播放",
