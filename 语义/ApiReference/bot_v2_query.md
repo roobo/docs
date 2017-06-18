@@ -31,6 +31,8 @@
 | token | String | 访问凭证 | Required |
 | sessionId | String | 会话id | Required |
 | query | String | 输入query | Required |
+| clientId | String | 设备id | Optional |
+| lang | Lang | 语种，默认中文 | Optional |
 | contexts | Context[] | 上文 | Optional |
 | location | Location | 地理位置 | Optional |
 | callback | Callback | 回调参数 | Optional |
