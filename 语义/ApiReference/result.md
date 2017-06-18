@@ -1,4 +1,4 @@
-### Result {#result_1}
+### Result
 
 ---
 
