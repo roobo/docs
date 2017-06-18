@@ -1,5 +1,6 @@
 ### Lang
-通过lang切换至不同语言的nlu引擎，枚举值
+
+切换语言理解引擎，枚举值
 ---
 
 | Name | Description |
