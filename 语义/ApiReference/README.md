@@ -7,6 +7,7 @@
 
 
 * 结构体
+  * [Lang](lang.md)
   * [Location](location.md)
   * [Callback](callback.md)
   * [Context](context.md)
