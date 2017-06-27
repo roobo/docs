@@ -104,8 +104,10 @@ _Sample Response_
     },
     "contexts": [
       {
-        "service": "Weather",
-        "context": "weather_aday"
+            "service": "Translator",
+            "context": "inquiry",
+            "lifespanInMs": 300,
+            "asrLang": "en"
       }
     ]
 }
