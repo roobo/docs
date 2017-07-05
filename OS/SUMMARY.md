@@ -1,0 +1,36 @@
+# Summary
+
+* [介绍](README.md)
+* 快速上手
+  * [获取sn号](quickStartSN.md)
+  * [部署示例工程](quickStartDeploy.md)
+  * [自定义场景](quickStartCreateScene.md)
+  * [拆分场景数据](quickStartDataSplit.md)
+* 基础概念和框架
+  * [场景](scene.md)
+  * [服务](service.md)
+  * [AI事件和AI命令](AIComm.md)
+  * [模块通讯](module.md)
+  * [用户交互流程](full_interaction_process.md)
+* [系统服务](xi-tong-fu-wu.md)
+  * [通讯服务](communicator.md)
+  * [设备验证服务](authorizor.md)
+  * [场景服务](sceneservice.md)
+  * [焦点管理](focus.md)
+  * [电源管理](power_manager.md)
+  * [事件处理器](processor.md)
+  * [配置中心](configure.md)
+* [主题系统](themesystem.md)
+  * [PersonaClient](personaclient.md)
+  * [动作](action.md)
+  * [动作规则](actionrules.md)
+  * [动作切换规则](actionswitchrules.md)
+  * [PersonaPlayer](personaplayer.md)
+  * [场景切换](sceneswitch.md)
+* 规则系统
+  * [RML](rml.md)
+  * [事件处理器规则](processor_rules.md)
+  * [配置中心规则](configure_rules.md)
+* API
+* Jelly
+  * [Motion](motion.md)
