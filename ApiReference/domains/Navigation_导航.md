@@ -121,3 +121,27 @@ Requirement
 | traffic\_category | 交通类型 | 拐角 |
 | formatType | 结果类型 | text |
 
+```
+
+"result": {
+         "hint": "将为您搜索北京市海淀区华清嘉园火锅店",
+         "data": {
+         "intent": "Search",
+         "location_reference": "附近",
+         "locations": [
+             "北京市",
+             "华清嘉园",
+             "海淀区"
+          ],
+         "names": [
+             "火锅店"
+           ],
+         "price_modifier": "便宜",
+         "quality_modifier": "",
+         "search_phrase": "北京市海淀区华清嘉园火锅店",
+         "traffic_category": ""
+         },
+         "formatType": "text"
+     }
+```
+
