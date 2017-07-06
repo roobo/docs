@@ -70,7 +70,7 @@
 | \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版1 | 从北京大学东门到知春路交通堵不堵 |
 | \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版2 | 从清华大学西门到中关村会不会塞车 |
 
-3.4 Time\_时长
+## 3.4 Time\_时长
 
 时长前缀模版：\[大概\|\]\[需要\|要\|\]\[多久\|多长时间\|多少时候\|什么时候\|几个钟头\|几个小时\]\[我\|\]\[能\|能够\|\]\[到\|到达\|抵达\]
 
@@ -171,19 +171,23 @@
          "formatType": "text"
      }
 ```
+
 ## 4.3 Traffic\_路况
-| **Field\_Name** | **Field\_Value** | **Field\_Example** |
-| --- | --- | --- |
-| hint | 提示语 | 将为您导航到五道口 |
-| intent | 意图名 | Search |
-| location\_reference | 方位词 | 前方 |
-| locations | 地点数组 | \[北京市 海淀区 华清嘉园\] |
-| streets | 街道名 | 北苑路 |
-| names | 具体名称数组 | 海底捞 |
-| building\_num | 楼牌号 | 9号楼 |
-| price\_modifier | 价格修饰词 | 便宜 |
-| quality\_modifier | 质量修饰词 | 好 |
-| search\_phrase | 搜索关键词 | 北京市海淀区华清嘉园 |
-| traffic\_category | 交通类型 | 拐角 |
-| formatType | 结果类型 | text |
+
+| **Field\_Name** | **Sub\_Field** |**Sub\_Field** |**Field\_Value** | **Field\_Example** |
+| --- | --- | --- |--- | --- |
+| hint | | | 提示语 | 将为您导航到五道口 |
+| data| | | 返回数据 | |
+| |dest | | 返回数据 | |
+| | | intent | 意图名 | Search |
+| | | location\_reference | 方位词 | 前方 |
+| | | locations| 地点数组 | \[北京市 海淀区 华清嘉园\] |
+| | | streets| 街道名 | 北苑路 |
+| | | names | 具体名称数组 | 海底捞 |
+|  | | building\_num| 楼牌号 | 9号楼 |
+|  | | price\_modifier| 价格修饰词 | 便宜 |
+|  | | quality\_modifier| 质量修饰词 | 好 |
+|  | | search\_phrase| 搜索关键词 | 北京市海淀区华清嘉园 |
+|  | | traffic\_category| 交通类型 | 拐角 |
+|  | | formatType| 结果类型 | text |
 
