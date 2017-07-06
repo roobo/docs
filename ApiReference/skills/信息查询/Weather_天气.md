@@ -20,12 +20,13 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;radioname&gt; | CNR中国之声 |
-| &lt;radio\_label&gt; | 我要听音乐台 |
-| &lt;position&gt; | 播放邢台的电台 |
-|  | 我要听广播 |
+| &lt;location&gt; + &lt;date&gt; + &lt;weather\_condition&gt; | 北京明天有雨么 |
+| &lt;location&gt; + &lt;date&gt; + &lt;time&gt; + &lt;weather\_condition&gt; | 邢台明天9点有雨么 |
+| &lt;location&gt; + &lt;date&gt; + &lt;time\_period&gt; + &lt;weather\_condition&gt; | 邢台明天傍晚有雨么 |
 
 返回字段
+
+用户查询的是某一天的天气，所以返回的data中是一个结构体，存放温度，风向等信息
 
 | **result** |  | **value** |
 | --- | --- | --- |
