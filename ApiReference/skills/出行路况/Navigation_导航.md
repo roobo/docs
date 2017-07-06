@@ -92,21 +92,21 @@
 
 ## 4.1 Navigate\_导航
 
-| **Field\_Name** | **Field\_Value** | **Field\_Example** |
-| --- | --- | --- |
-| hint | 提示语 | 将为您导航到五道口 |
-|
-| intent | 意图名 | Navigate |
-| location\_reference | 方位词 | 前方 |
-| locations | 地点数组 | \[北京市 海淀区 华清嘉园 |
-| streets | 街道名 | 北苑路 |
-| names | 具体名称数组 | 海底捞 |
-| building\_num | 楼牌号 | 9号楼 |
-| price\_modifier | 价格修饰词 | 便宜 |
-| quality\_modifier | 质量修饰词 | 好 |
-| search\_phrase | 搜索关键词 | 北京市海淀区华清嘉园 |
-| traffic\_category | 交通类型 | 拐角 |
-| formatType | 结果类型 | text |
+| **Field\_Name** | **Sub_Field** | **Field\_Value**| **Field\_Example** |
+| --- | --- | --- |--- |
+| hint |  | 提示语 |将为您导航到五道口 |
+| data| | | |
+|  | intent| 意图名 | Navigate |
+|  | location\_reference| 方位词 | 前方 |
+|  | locations |地点数组 | \[北京市 海淀区 华清嘉园 |
+|  | streets | 街道名 | 北苑路 |
+|  | names| 具体名称数组 | 海底捞 |
+|  | building\_num | 楼牌号 | 9号楼 |
+|  | price\_modifier| 价格修饰词 | 便宜 |
+|  | quality\_modifier| 质量修饰词 | 好 |
+| | search\_phrase | 搜索关键词 | 北京市海淀区华清嘉园 |
+|  | traffic\_category| 交通类型 | 拐角 |
+| formatType | | 结果类型 | text |
 
 ```
 "result": {
@@ -178,7 +178,7 @@
 | --- | --- | --- | --- | --- |
 | hint |  |  | 提示语 | 将为您导航到五道口 |
 | data |  |  | 返回数据 |  |
-| | intent | 意图名 | Search  | |
+|  | intent | 意图名 | Search |  |
 |  | dest |  |  |  |
 |  |  | location\_reference | 方位词 | 前方 |
 |  |  | locations | 地点数组 | \[北京市 海淀区 华清嘉园\] |
@@ -187,7 +187,7 @@
 |  |  | building\_num | 楼牌号 | 9号楼 |
 |  |  | search\_phrase | 搜索关键词 | 北京市海淀区华清嘉园 |
 |  |  | traffic\_category | 交通类型 | 拐角 |
-|  | origin|  |  |  |
+|  | origin |  |  |  |
 |  |  | location\_reference | 方位词 | 前方 |
 |  |  | locations | 地点数组 | \[北京市 海淀区 华清嘉园\] |
 |  |  | streets | 街道名 | 春华路 |
