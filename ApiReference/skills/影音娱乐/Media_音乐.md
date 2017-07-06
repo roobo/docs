@@ -23,25 +23,29 @@
 | &lt;keyword&gt; | 我要听忧伤的歌 |
 |  | 唱首歌 |
 
-返回字段
-
-| **result** |  |  | **value** |
-| --- | --- | --- | --- |
-| hint |  |  | 准备播放 |
-| data | album |  | 新地球 |
-|  | artist |  | 林俊杰 |
-|  | audio |  | http:\/\/dl.stream.qqmusic.qq.com\/C200004295Et37taLD.m4a?vkey=C07477C0B6B0ECF88D100FE3B64D763619D954BFA9C6DC8F0D784B9B1C006CC8EF59D603C417313906D7C10741AA3E543CEF725CBC488CAE&guid=6758412345&fromtag=30 |
-|  | extra | type |  |
-|  | image |  | https:\/\/y.gtimg.cn\/music\/photo\_new\/T002R300x300M000001IV22P1RDX7p.jpg?max\_age=2592000 |
-|  | keywords |  | null |
-|  | name |  | 可惜没如果 |
-|  | resId |  | music:4037578 |
-|  | sid |  | 3571606541-1499321247507 |
-|  | start |  | 0 |
-|  | trigger |  | voice |
-|  | triggerId |  | null |
-|  | type |  | MUSIC |
-| formattype |  |  | audio |
+```
+    "result": {
+        "hint": "准备播放",
+        "data": {
+            "album": "哎呦，不错哦",
+            "artist": "周杰伦",
+            "audio": "http://isure.stream.qqmusic.qq.com/C200001Js78a40BZU6.m4a?vkey=9661F3F2ABFC0D4F0A7E642D658960502BD3256CBB907AD3BBEA0183A5B04F2C4F44751DC8FE8776ABD72427071476C31CFEDE6F5679081E&guid=12347254&fromtag=50&uin=1152921504733674178",
+            "extra": {
+                "style": ""
+            },
+            "image": "https://y.gtimg.cn/music/photo_new/T002R300x300M000001uqejs3d6EID.jpg?max_age=2592000",
+            "keywords": null,
+            "name": "算什么男人",
+            "resId": "music:4038192",
+            "sid": "4124973079-1499329537184",
+            "start": 0,
+            "trigger": "voice",
+            "triggerId": null,
+            "type": "MUSIC"
+        },
+        "formatType": "audio"
+    }
+```
 
 ---
 
