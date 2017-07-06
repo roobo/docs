@@ -137,7 +137,7 @@
 | --- | --- | --- | --- |
 | hint |  | 提示语 | 将为您搜索北京市海淀区华清嘉园火锅店 |
 | data |  |  |  |
-|  | intent | 意图名 | Search|
+|  | intent | 意图名 | Search |
 |  | location\_reference | 方位词 | 前方 |
 |  | locations | 地点数组 | \[北京市 海淀区 华清嘉园 |
 |  | streets | 街道名 | 北苑路 |
@@ -196,5 +196,5 @@
 |  |  | building\_num | 楼牌号 | 10号楼 |
 |  |  | search\_phrase | 搜索关键词 | 北京市海淀区华清嘉园 |
 |  |  | traffic\_category | 交通类型 | 拐角 |
-|  |  | formatType | 结果类型 | text |
+| formatType  |  | | 结果类型 | text |
 
