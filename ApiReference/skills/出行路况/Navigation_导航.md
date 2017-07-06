@@ -80,7 +80,7 @@
 |
 | intent | 意图名 | Navigate |
 | location\_reference | 方位词 | 前方 |
-| locations | 地点数组 | \[北京市 海淀区 华清嘉园\] |
+| locations | 地点数组 | \[北京市 海淀区 华清嘉园 |
 | streets | 街道名 | 北苑路 |
 | names | 具体名称数组 | 海底捞 |
 | building\_num | 楼牌号 | 9号楼 |
