@@ -256,5 +256,35 @@
 | formatType |  |  | 结果类型 | text |
 
 ```
+"result": {
+        "hint": "将为您计算从五道口到牡丹园所需的时间。",
+        "data": {
+            "dest": {
+                "intent": "",
+                "location_reference": "",
+                "names": [
+                    "牡丹园"
+                ],
+                "price_modifier": "",
+                "quality_modifier": "",
+                "search_phrase": "牡丹园",
+                "traffic_category": ""
+            },
+            "intent": "Time",
+            "origin": {
+                "intent": "",
+                "location_reference": "",
+                "names": [
+                    "五道口"
+                ],
+                "price_modifier": "",
+                "quality_modifier": "",
+                "search_phrase": "五道口",
+                "traffic_category": ""
+            }
+        },
+        "formatType": "text"
+    }
+
 ```
 
