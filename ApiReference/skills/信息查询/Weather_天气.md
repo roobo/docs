@@ -40,3 +40,7 @@
 |  | maxTemp | 28 |
 |  | minTemp | 21 |
 
+
+
+
+
