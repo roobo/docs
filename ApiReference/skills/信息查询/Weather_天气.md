@@ -39,8 +39,13 @@
 |  | index |  |
 |  | maxTemp | 28 |
 |  | minTemp | 21 |
-
-
-
-
+|  | pm25 |  |
+|  | temperature |  |
+|  | weather | 中雨转小雨 |
+|  | windDay | 北风 |
+|  | windDayLevel | 3 |
+|  | windDir |  |
+|  | windLevel |  |
+|  | windNight | 北风 |
+|  | windNightLevel | 5 |
 
