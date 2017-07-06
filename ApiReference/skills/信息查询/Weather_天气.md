@@ -49,3 +49,35 @@
 |  | windNight | 北风 |
 |  | windNightLevel | 5 |
 
+\/WeatherForDays
+查询某一段时间的天气状况
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;location&gt; + &lt;date&gt; + &lt;weather\_condition&gt; | 北京明天有雨么 |
+
+返回字段
+
+根据用户查询的天数，data中返回对应数量的结构体
+
+| **result** |  | **value** |
+| --- | --- | --- |
+| hint |  | 天气情况 |
+| data\[] | alter |  |
+|  | city | 邢台 |
+|  | date | 2017-07-06 |
+|  | focus | rain |
+|  | humidity |  |
+|  | index |  |
+|  | maxTemp | 28 |
+|  | minTemp | 21 |
+|  | pm25 |  |
+|  | temperature |  |
+|  | weather | 中雨转小雨 |
+|  | windDay | 北风 |
+|  | windDayLevel | 3 |
+|  | windDir |  |
+|  | windLevel |  |
+|  | windNight | 北风 |
+|  | windNightLevel | 5 |
+
