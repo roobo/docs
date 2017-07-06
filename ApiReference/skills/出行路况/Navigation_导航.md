@@ -70,6 +70,24 @@
 | \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版1 | 从北京大学东门到知春路交通堵不堵 |
 | \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版2 | 从清华大学西门到中关村会不会塞车 |
 
+3.4 Time\_时长
+
+时长前缀模版：\[大概\|\]\[需要\|要\|\]\[多久\|多长时间\|多少时候\|什么时候\|几个钟头\|几个小时\]\[我\|\]\[能\|能够\|\]\[到\|到达\|抵达\]
+
+时长后缀模版：\[需要\|要\|\]\[多久\|多长时间\|多少时候\|什么时候\|几个钟头\|几个小时\]
+
+| **Support\_Semantic** | **Example** |
+| --- | --- |
+| 去&lt;location&gt;+时长后缀模版 | 去清华大学东门需要多久 |
+| 时长前缀模版+&lt;location&gt; | 多久能到北苑路 |
+| 时长前缀模版&lt;location\_reference&gt;+ &lt;location&gt; | 多久能到附近的咖啡店 |
+| 到&lt;location\_reference&gt;+ &lt;location&gt;+时长后缀模版 | 到沿途的酒店需要多长时间 |
+| 到&lt;traffic\_category&gt;+&lt;locations&gt;+时长后缀模版 | 到路边的餐馆要多久 |
+| 到&lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt;+时长后缀模版 | 到前方路口的咖啡厅需要几个钟头 |
+| 时长前缀模版&lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt; | 需要多久到附近的酒店 |
+| \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+时长后缀模版 | 从北京大学东门到知春路要多长时间 |
+| 时长前缀模版+\[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt; | 多久能从清华大学西门到中关村 |
+
 # 4.返回结果
 
 ## 4.1 Navigate\_导航
@@ -153,4 +171,19 @@
          "formatType": "text"
      }
 ```
+## 4.3 Traffic\_路况
+| **Field\_Name** | **Field\_Value** | **Field\_Example** |
+| --- | --- | --- |
+| hint | 提示语 | 将为您导航到五道口 |
+| intent | 意图名 | Search |
+| location\_reference | 方位词 | 前方 |
+| locations | 地点数组 | \[北京市 海淀区 华清嘉园\] |
+| streets | 街道名 | 北苑路 |
+| names | 具体名称数组 | 海底捞 |
+| building\_num | 楼牌号 | 9号楼 |
+| price\_modifier | 价格修饰词 | 便宜 |
+| quality\_modifier | 质量修饰词 | 好 |
+| search\_phrase | 搜索关键词 | 北京市海淀区华清嘉园 |
+| traffic\_category | 交通类型 | 拐角 |
+| formatType | 结果类型 | text |
 
