@@ -71,7 +71,13 @@
 |  | type |  | MUSIC |
 | formattype |  |  | audio |
 
+\/Pause
 
+暂停当前播放的歌曲
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 暂停 |
 
 # 4. 点播具体策略
 
