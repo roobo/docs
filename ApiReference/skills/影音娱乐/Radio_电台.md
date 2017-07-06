@@ -67,3 +67,8 @@
 | hint | 有节目内容： 当前播放的是“radioname”的《XXXX》           无节目内容： 没有找到相关节目内容 |
 | formattype | text |
 
+
+
+\/GetAnchor
+ 查询当前节目的主播列表。
+
