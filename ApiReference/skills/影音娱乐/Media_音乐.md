@@ -71,73 +71,7 @@
 |  | type |  | MUSIC |
 | formattype |  |  | audio |
 
-更换电台意图。根据用户
 
-上次点播的意图，为用户提供不同的换台策略。详见4.具体点播策略
-
-\| **Slot Semantic Signatures** \| **Example** \|
-
-\| --- \| --- \|
-
-\| \| 换一个电台 \|
-
-返回字段
-
-\| **result** \| \| **value** \|
-
-\| --- \| --- \| --- \|
-
-\| hint \| \| 电台名称 \|
-
-\| data \| rate24\_aac\_url \| 24码率acc播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/24.m3u8 \|
-
-\| \| rate64\_aac\_url \| 64码率acc播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8 \|
-
-\| \| rate24\_ts\_url \| 24码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/24.m3u8?transcode=ts \|
-
-\| \| rate64\_ts\_url \| 64码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8?transcode=ts \|
-
-\| formattype \| \| audio \|
-
-\/GetPlayingProgram
-
-查询当前电台正在播放的节目。
-
-\| **Slot Semantic Signatures** \| **Example** \|
-
-\| --- \| --- \|
-
-\| \| 现在播放的是什么节目啊 \|
-
-返回字段
-
-\| **result** \| **value** \|
-
-\| --- \| --- \|
-
-\| hint \| 有节目内容： 当前播放的是“radioname”的《XXXX》 无节目内容： 没有找到相关节目内容 \|
-
-\| formattype \| text \|
-
-\/GetAnchor
-
-查询当前节目的主播列表。
-
-\| **Slot Semantic Signatures** \| **Example** \|
-
-\| --- \| --- \|
-
-\| \| 主播是谁 \|
-
-返回字段
-
-\| **result** \| **value** \|
-
-\| --- \| --- \|
-
-\| hint \| 查到主播信息： 主播是xxx 没查到主播： 没有查到主播信息 \|
-
-\| formattype \| text \|
 
 # 4. 点播具体策略
 
