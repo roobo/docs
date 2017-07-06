@@ -43,6 +43,14 @@
 |  | type |  | MUSIC |
 | formattype |  |  | audio |
 
+\/Search
+
+询问歌曲相关信息
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 这首歌是谁唱的 |
+
 \/Next
 
 更换一首相同关键词的歌曲
@@ -86,6 +94,8 @@
 | hint |  |
 
 \/ Resume
+
+继续播放当前歌曲
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
