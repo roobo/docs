@@ -50,10 +50,9 @@
 | 搜索意图关键词+&lt;price\_modifier&gt;+&lt;location\_reference&gt;+&lt;locations&gt; | 搜索便宜的附近的商场 |
 | 搜索意图关键词+&lt;quality\_modifier&gt;+&lt;location\_reference&gt;+&lt;locations&gt; | 搜索低价的前方的酒店 |
 | 搜索意图关键词+&lt;price\_modifier&gt;+&lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt; | 搜索便宜的前方路口的餐厅 |
-|  |  |
 | 搜索意图关键词+&lt;quality\_modifier&gt;+&lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt; | 搜索很棒的前方路口的西餐厅 |
 
-## 3.3 Taffic\_路况
+## 3.3 Traffic\_路况
 
 路况关键词模版1：\[交通\|路况\|车\|路上\]\[情况\|状态\|信息\|流量\|\]\[怎么样\|好么\|多么\|大么\|顺畅么\|堵么\|堵不堵\|如何\]
 
@@ -66,13 +65,10 @@
 | &lt;location\_reference&gt;+ &lt;location&gt;+路况关键词模版1 | 附近的咖啡店堵不堵 |
 | &lt;location\_reference&gt;+ &lt;location&gt;+路况关键词模版2 | 沿途的酒店路况怎么样 |
 | &lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版1 | 路边的餐馆堵不堵 |
-| &lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版2 |  |
-| &lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版1 |  |
-| &lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版2 |  |
-| \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版1 |  |
-| \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版2 |  |
-
-
+| &lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版1 | 前方路口的咖啡厅交通怎么样 |
+| &lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版2 | 附近的酒店是否通畅 |
+| \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版1 | 从北京大学东门到知春路交通堵不堵 |
+| \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版2 | 从清华大学西门到中关村会不会塞车 |
 
 # 4.返回结果
 
