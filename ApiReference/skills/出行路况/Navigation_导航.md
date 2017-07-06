@@ -198,6 +198,38 @@
 |  |  | traffic\_category | 交通类型 | 拐角 |
 | formatType |  |  | 结果类型 | text |
 
+```
+ "result": {
+        "hint": "将为您查询从华清嘉园到牡丹园的路况信息。",
+        "data": {
+            "dest": {
+                "intent": "",
+                "location_reference": "",
+                "names": [
+                    "牡丹园"
+                ],
+                "price_modifier": "",
+                "quality_modifier": "",
+                "search_phrase": "牡丹园",
+                "traffic_category": ""
+            },
+            "intent": "Traffic",
+            "origin": {
+                "intent": "",
+                "location_reference": "",
+                "names": [
+                    "华清嘉园"
+                ],
+                "price_modifier": "",
+                "quality_modifier": "",
+                "search_phrase": "华清嘉园",
+                "traffic_category": ""
+            }
+        },
+        "formatType": "text"
+    }
+```
+
 ## 4.4 Time\_时长
 
 | **Field\_Name** | **Sub\_Field** | **Sub\_Field** | **Field\_Value** | **Field\_Example** |
@@ -207,7 +239,7 @@
 |  | intent | 意图名 | Search |  |
 |  | dest |  |  |  |
 |  |  | location\_reference | 方位词 | 前方 |
-|  |  | locations | 地点数组 |  华清嘉园 |
+|  |  | locations | 地点数组 | 华清嘉园 |
 |  |  | streets | 街道名 |  |
 |  |  | names | 具体名称数组 |  |
 |  |  | building\_num | 楼牌号 |  |
