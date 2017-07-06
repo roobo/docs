@@ -53,6 +53,27 @@
 |  |  |
 | 搜索意图关键词+&lt;quality\_modifier&gt;+&lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt; | 搜索很棒的前方路口的西餐厅 |
 
+## 3.3 Taffic\_路况
+
+路况关键词模版1：\[交通\|路况\|车\|路上\]\[情况\|状态\|信息\|流量\|\]\[怎么样\|好么\|多么\|大么\|顺畅么\|堵么\|堵不堵\|如何\]
+
+路况关键词模版2：\[是否通畅\|开过去顺畅么\|是否顺畅\|塞车么\|会不会堵\|堵吗\|堵车吗\|会不会堵车\|堵的严重吗\|堵的严不严重\|开过去通畅么\|是否塞车\|会不会塞车\|堵不堵\]
+
+| **Support\_Semantic** | **Example** |
+| --- | --- |
+| &lt;location&gt;+路况关键词模版1 | 清华大学东门路况如何 |
+| &lt;location&gt;+路况关键词模版2 | 北苑路堵不堵 |
+| &lt;location\_reference&gt;+ &lt;location&gt;+路况关键词模版1 | 附近的咖啡店堵不堵 |
+| &lt;location\_reference&gt;+ &lt;location&gt;+路况关键词模版2 | 沿途的酒店路况怎么样 |
+| &lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版1 | 路边的餐馆堵不堵 |
+| &lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版2 |  |
+| &lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版1 |  |
+| &lt;location\_reference&gt;+&lt;traffic\_category&gt;+&lt;locations&gt;+路况关键词模版2 |  |
+| \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版1 |  |
+| \[从\]+&lt;locations&gt;+\[到\|往\|去往\]+&lt;locations&gt;+路况关键词模版2 |  |
+
+
+
 # 4.返回结果
 
 ## 4.1 Navigate\_导航
