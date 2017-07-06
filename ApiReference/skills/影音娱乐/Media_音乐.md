@@ -14,7 +14,7 @@
 
 \/Play
 
-播放用户要的音乐
+播放用户想听的音乐
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
@@ -43,6 +43,8 @@
 |  | type |  | MUSIC |
 | formattype |  |  | audio |
 
+---
+
 \/Search
 
 询问歌曲相关信息
@@ -57,6 +59,7 @@
 | --- | --- |
 | hint |  |
 
+---
 
 \/Next
 
@@ -86,6 +89,8 @@
 |  | type |  | MUSIC |
 | formattype |  |  | audio |
 
+---
+
 \/Pause
 
 暂停当前播放的歌曲
@@ -99,6 +104,8 @@
 | **result** | **value** |
 | --- | --- |
 | hint |  |
+
+---
 
 \/ Resume
 
@@ -128,6 +135,8 @@
 |  | type |  | MUSIC |
 | formattype |  |  | audio |
 
+---
+
 \/Replay
 指重播当前歌曲（1遍）
 
@@ -154,6 +163,8 @@
 |  | triggerId |  | null |
 |  | type |  | MUSIC |
 | formattype |  |  | audio |
+
+---
 
 \/Exit
 退出音乐场景
