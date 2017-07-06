@@ -31,7 +31,7 @@
 | data | album |  | 新地球 |
 |  | artist |  | 林俊杰 |
 |  | audio |  | http:\/\/dl.stream.qqmusic.qq.com\/C200004295Et37taLD.m4a?vkey=C07477C0B6B0ECF88D100FE3B64D763619D954BFA9C6DC8F0D784B9B1C006CC8EF59D603C417313906D7C10741AA3E543CEF725CBC488CAE&guid=6758412345&fromtag=30 |
-|  | extra |  |  |
+|  | extra | type |  |
 |  | image |  | https:\/\/y.gtimg.cn\/music\/photo\_new\/T002R300x300M000001IV22P1RDX7p.jpg?max\_age=2592000 |
 |  | keywords |  | null |
 |  | name |  | 可惜没如果 |
@@ -45,7 +45,35 @@
 
 \/Next
 
-更换电台意图。根据用户上次点播的意图，为用户提供不同的换台策略。详见4.具体点播策略
+更换一首相同关键词的歌曲
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 换一首 |
+
+返回字段
+
+| **result** |  |  | **value** |
+| --- | --- | --- | --- |
+| hint |  |  | 准备播放 |
+| data | album |  | 新地球 |
+|  | artist |  | 林俊杰 |
+|  | audio |  | http:\/\/dl.stream.qqmusic.qq.com\/C200004295Et37taLD.m4a?vkey=C07477C0B6B0ECF88D100FE3B64D763619D954BFA9C6DC8F0D784B9B1C006CC8EF59D603C417313906D7C10741AA3E543CEF725CBC488CAE&guid=6758412345&fromtag=30 |
+|  | extra | type |  |
+|  | image |  | https:\/\/y.gtimg.cn\/music\/photo\_new\/T002R300x300M000001IV22P1RDX7p.jpg?max\_age=2592000 |
+|  | keywords |  | null |
+|  | name |  | 可惜没如果 |
+|  | resId |  | music:4037578 |
+|  | sid |  | 3571606541-1499321247507 |
+|  | start |  | 0 |
+|  | trigger |  | voice |
+|  | triggerId |  | null |
+|  | type |  | MUSIC |
+| formattype |  |  | audio |
+
+更换电台意图。根据用户
+
+上次点播的意图，为用户提供不同的换台策略。详见4.具体点播策略
 
 \| **Slot Semantic Signatures** \| **Example** \|
 
