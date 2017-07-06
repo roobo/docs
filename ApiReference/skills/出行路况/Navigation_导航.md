@@ -60,6 +60,7 @@
 | **Field\_Name** | **Field\_Value** | **Field\_Example** |
 | --- | --- | --- |
 | hint | 提示语 | 将为您导航到五道口 |
+|
 | intent | 意图名 | Navigate |
 | location\_reference | 方位词 | 前方 |
 | locations | 地点数组 | \[北京市 海淀区 华清嘉园\] |
