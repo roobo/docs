@@ -18,23 +18,10 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;name&gt; |  |
-|  | CNR中国之声 |
-| &lt;radio\_label&gt; | 我要听音乐台 |
-| &lt;position&gt; | 播放邢台的电台 |
-|  | 我要听广播 |
-
-\| **Slot Semantic Signatures** \| **Example** \|
-
-\| --- \| --- \|
-
-\| &lt;radioname&gt; \| CNR中国之声 \|
-
-\| &lt;radio\_label&gt; \| 我要听音乐台 \|
-
-\| &lt;position&gt; \| 播放邢台的电台 \|
-
-\| \| 我要听广播 \|
+| &lt;name&gt; | 东风破 |
+| &lt;artist&gt; | 我要听周杰伦的歌 |
+| &lt;keyword&gt; | 我要听忧伤的歌 |
+|  | 唱首歌 |
 
 返回字段
 
