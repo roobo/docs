@@ -33,6 +33,8 @@
 |  | rate64\_ts\_url | 64码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8?transcode=ts |
 | formattype |  | audio |
 
+---
+
 \/Next
 更换电台意图。根据用户上次点播的意图，为用户提供不同的换台策略。详见4.具体点播策略
 
@@ -51,6 +53,8 @@
 |  | rate64\_ts\_url | 64码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8?transcode=ts |
 | formattype |  | audio |
 
+---
+
 \/GetPlayingProgram
 查询当前电台正在播放的节目。
 
@@ -64,6 +68,8 @@
 | --- | --- |
 | hint | 有节目内容： 当前播放的是“radioname”的《XXXX》           无节目内容： 没有找到相关节目内容 |
 | formattype | text |
+
+---
 
 \/GetAnchor
  查询当前节目的主播列表。

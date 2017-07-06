@@ -14,7 +14,7 @@
 
 \/Play
 
-播放用户要的音乐
+播放用户想听的音乐
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
@@ -25,27 +25,49 @@
 
 返回字段
 
-| **result** |  |  | **value** |
-| --- | --- | --- | --- |
-| hint |  |  | 准备播放 |
-| data | album |  | 新地球 |
-|  | artist |  | 林俊杰 |
-|  | audio |  | http:\/\/dl.stream.qqmusic.qq.com\/C200004295Et37taLD.m4a?vkey=C07477C0B6B0ECF88D100FE3B64D763619D954BFA9C6DC8F0D784B9B1C006CC8EF59D603C417313906D7C10741AA3E543CEF725CBC488CAE&guid=6758412345&fromtag=30 |
-|  | extra | type |  |
-|  | image |  | https:\/\/y.gtimg.cn\/music\/photo\_new\/T002R300x300M000001IV22P1RDX7p.jpg?max\_age=2592000 |
-|  | keywords |  | null |
-|  | name |  | 可惜没如果 |
-|  | resId |  | music:4037578 |
-|  | sid |  | 3571606541-1499321247507 |
-|  | start |  | 0 |
-|  | trigger |  | voice |
-|  | triggerId |  | null |
-|  | type |  | MUSIC |
-| formattype |  |  | audio |
+```
+    "result": {
+        "hint": "准备播放",
+        "data": {
+            "album": "哎呦，不错哦",
+            "artist": "周杰伦",
+            "audio": "http://isure.stream.qqmusic.qq.com/C200001Js78a40BZU6.m4a?vkey=9661F3F2ABFC0D4F0A7E642D658960502BD3256CBB907AD3BBEA0183A5B04F2C4F44751DC8FE8776ABD72427071476C31CFEDE6F5679081E&guid=12347254&fromtag=50&uin=1152921504733674178",
+            "extra": {
+                "style": ""
+            },
+            "image": "https://y.gtimg.cn/music/photo_new/T002R300x300M000001uqejs3d6EID.jpg?max_age=2592000",
+            "keywords": null,
+            "name": "算什么男人",
+            "resId": "music:4038192",
+            "sid": "4124973079-1499329537184",
+            "start": 0,
+            "trigger": "voice",
+            "triggerId": null,
+            "type": "MUSIC"
+        },
+        "formatType": "audio"
+    }
+```
+
+---
+
+\/Search
+
+询问歌曲相关信息
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 这首歌是谁唱的 |
+
+
+
+---
 
 \/Next
 
-更换一首相同关键词的歌曲
+用户主动更换一首相同关键词的歌曲
+
+当前歌曲播放完成后自动播放下一首
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
@@ -53,23 +75,31 @@
 
 返回字段
 
-| **result** |  |  | **value** |
-| --- | --- | --- | --- |
-| hint |  |  | 准备播放 |
-| data | album |  | 新地球 |
-|  | artist |  | 林俊杰 |
-|  | audio |  | http:\/\/dl.stream.qqmusic.qq.com\/C200004295Et37taLD.m4a?vkey=C07477C0B6B0ECF88D100FE3B64D763619D954BFA9C6DC8F0D784B9B1C006CC8EF59D603C417313906D7C10741AA3E543CEF725CBC488CAE&guid=6758412345&fromtag=30 |
-|  | extra | type |  |
-|  | image |  | https:\/\/y.gtimg.cn\/music\/photo\_new\/T002R300x300M000001IV22P1RDX7p.jpg?max\_age=2592000 |
-|  | keywords |  | null |
-|  | name |  | 可惜没如果 |
-|  | resId |  | music:4037578 |
-|  | sid |  | 3571606541-1499321247507 |
-|  | start |  | 0 |
-|  | trigger |  | voice |
-|  | triggerId |  | null |
-|  | type |  | MUSIC |
-| formattype |  |  | audio |
+```
+  "result": {
+        "hint": "准备播放",
+        "data": {
+            "album": "十二新作",
+            "artist": "周杰伦",
+            "audio": "http://isure.stream.qqmusic.qq.com/C200000oW8J53xPhZA.m4a?vkey=838C86DFD53844D16B16C61346121D82C1DBFAB25EDF04F09B9C039187D51CA043EF36941B7AA4B79C05450F291957C5AEF8892E722EE646&guid=12347254&fromtag=50&uin=1152921504733674178",
+            "extra": {
+                "style": "流行"
+            },
+            "image": "http://i.gtimg.cn/music/photo/mid_album_300/q/i/003Ow85E3pnoqi.jpg",
+            "keywords": null,
+            "name": "明明就",
+            "resId": "music:551242",
+            "sid": "2419133446-1499329583202",
+            "start": 0,
+            "trigger": "voice",
+            "triggerId": null,
+            "type": "MUSIC"
+        },
+        "formatType": "audio"
+    }
+```
+
+---
 
 \/Pause
 
@@ -79,13 +109,11 @@
 | --- | --- |
 |  | 暂停 |
 
-返回字段
-
-| **result** | **value** |
-| --- | --- |
-| hint |  |
+---
 
 \/ Resume
+
+继续播放当前歌曲
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
@@ -93,21 +121,75 @@
 
 返回字段
 
-| **result** |  |  | **value** |
-| --- | --- | --- | --- |
-| hint |  |  | 准备播放 |
-| data | album |  | 新地球 |
-|  | artist |  | 林俊杰 |
-|  | audio |  | http:\/\/dl.stream.qqmusic.qq.com\/C200004295Et37taLD.m4a?vkey=C07477C0B6B0ECF88D100FE3B64D763619D954BFA9C6DC8F0D784B9B1C006CC8EF59D603C417313906D7C10741AA3E543CEF725CBC488CAE&guid=6758412345&fromtag=30 |
-|  | extra | type |  |
-|  | image |  | https:\/\/y.gtimg.cn\/music\/photo\_new\/T002R300x300M000001IV22P1RDX7p.jpg?max\_age=2592000 |
-|  | keywords |  | null |
-|  | name |  | 可惜没如果 |
-|  | resId |  | music:4037578 |
-|  | sid |  | 3571606541-1499321247507 |
-|  | start |  | 0 |
-|  | trigger |  | voice |
-|  | triggerId |  | null |
-|  | type |  | MUSIC |
-| formattype |  |  | audio |
+```
+    "result": {
+        "hint": "继续播放",
+        "data": {
+            "album": "十二新作",
+            "artist": "周杰伦",
+            "audio": "http://isure.stream.qqmusic.qq.com/C200000oW8J53xPhZA.m4a?vkey=838C86DFD53844D16B16C61346121D82C1DBFAB25EDF04F09B9C039187D51CA043EF36941B7AA4B79C05450F291957C5AEF8892E722EE646&guid=12347254&fromtag=50&uin=1152921504733674178",
+            "extra": {
+                "style": "流行"
+            },
+            "image": "http://i.gtimg.cn/music/photo/mid_album_300/q/i/003Ow85E3pnoqi.jpg",
+            "keywords": null,
+            "name": "明明就",
+            "resId": "music:551242",
+            "sid": "2419133446-1499329583202",
+            "start": 0,
+            "trigger": "voice",
+            "triggerId": null,
+            "type": "MUSIC"
+        },
+        "formatType": "audio"
+    }
+```
+
+---
+
+\/Replay
+指重播当前歌曲（1遍）
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 继续 |
+
+返回字段
+
+```
+    "result": {
+        "hint": "重新播放",
+        "data": {
+            "album": "十二新作",
+            "artist": "周杰伦",
+            "audio": "http://isure.stream.qqmusic.qq.com/C200000oW8J53xPhZA.m4a?vkey=838C86DFD53844D16B16C61346121D82C1DBFAB25EDF04F09B9C039187D51CA043EF36941B7AA4B79C05450F291957C5AEF8892E722EE646&guid=12347254&fromtag=50&uin=1152921504733674178",
+            "extra": {
+                "style": "流行"
+            },
+            "image": "http://i.gtimg.cn/music/photo/mid_album_300/q/i/003Ow85E3pnoqi.jpg",
+            "keywords": null,
+            "name": "明明就",
+            "resId": "music:551242",
+            "sid": "2419133446-1499329583202",
+            "start": 0,
+            "trigger": "voice",
+            "triggerId": null,
+            "type": "MUSIC"
+        },
+        "formatType": "audio"
+    }
+```
+
+\/Exit
+
+---
+
+\/Exit
+退出音乐场景
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 退出 |
+
+
 
