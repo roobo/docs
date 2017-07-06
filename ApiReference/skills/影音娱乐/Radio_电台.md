@@ -33,3 +33,23 @@
 |  | rate64\_ts\_url | 64码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8?transcode=ts |
 | formattype |  | audio |
 
+
+
+\/Next
+更换电台意图。根据用户上次点播的意图，为用户提供不同的换台策略。详见4.具体点播策略
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 换一个电台 |
+
+返回字段
+
+| **result** |  | **value** |
+| --- | --- | --- |
+| hint |  | 电台名称 |
+| data | rate24\_aac\_url | 24码率acc播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/24.m3u8 |
+|  | rate64\_aac\_url | 64码率acc播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8 |
+|  | rate24\_ts\_url | 24码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/24.m3u8?transcode=ts |
+|  | rate64\_ts\_url | 64码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8?transcode=ts |
+| formattype |  | audio |
+
