@@ -207,18 +207,19 @@
 |  | intent | 意图名 | Search |  |
 |  | dest |  |  |  |
 |  |  | location\_reference | 方位词 | 前方 |
-|  |  | locations | 地点数组 | \[北京市 海淀区 华清嘉园\] |
-|  |  | streets | 街道名 | 北苑路 |
-|  |  | names | 具体名称数组 | 海底捞 |
-|  |  | building\_num | 楼牌号 | 9号楼 |
-|  |  | search\_phrase | 搜索关键词 | 北京市海淀区华清嘉园 |
-|  |  | traffic\_category | 交通类型 | 拐角 |
+|  |  | locations | 地点数组 |  华清嘉园 |
+|  |  | streets | 街道名 |  |
+|  |  | names | 具体名称数组 |  |
+|  |  | building\_num | 楼牌号 |  |
+|  |  | search\_phrase | 搜索关键词 | 牡丹园 |
+|  |  | traffic\_category | 交通类型 |  |
 |  | origin |  |  |  |
 |  |  | location\_reference | 方位词 | 前方 |
-|  |  | locations | 地点数组 | \[北京市 海淀区 华清嘉园\] |
-|  |  | streets | 街道名 | 春华路 |
-|  |  | names | 具体名称数组 | 面面俱到 |
-|  |  | building\_num | 楼牌号 | 10号楼 |
-|  |  | search\_phrase | 搜索关键词 | 北京市海淀区华清嘉园 |
-|  |  | traffic\_category | 交通类型 | 拐角 |
+|  |  | locations | 地点数组 | 五道口 |
+|  |  | streets | 街道名 |  |
+|  |  | names | 具体名称数组 |  |
+|  |  | building\_num | 楼牌号 |  |
+|  |  | search\_phrase | 搜索关键词 |  |
+|  |  | traffic\_category | 交通类型 |  |
 | formatType |  |  | 结果类型 | text |
+
