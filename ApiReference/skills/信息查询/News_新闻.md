@@ -30,5 +30,6 @@
 
 | **Support\_Semantic** | **Example** |
 | --- | --- |
-| 类别新闻意图模板1+&lt;news\_category&gt;类别新闻意图模板2; | 最近有财经新闻吗 |
+| 类别新闻意图模板1+&lt;news\_category&gt;+类别新闻意图模板2; | 最近有财经新闻吗 |
 
+## 3.2 KeywordsNews\_类别新闻
