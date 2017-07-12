@@ -22,6 +22,7 @@
 
 | **Support\_Semantic** | **Example** |
 | --- | --- |
+
 | 无脑听新闻意图模板1; | 播段新闻 |
 | 无脑听新闻意图模板2; | 我想听新闻 |
 | 无脑听新闻意图模板2+&lt;news\_nosencekey&gt; | 我想听新闻快报 |
@@ -93,3 +94,40 @@
 | **Support\_Semantic** | **Example** |
 | --- | --- |
 | 换一批播报新闻意图模板; | 换一批 |
+
+# 4.返回结果
+
+## 4.1 NoSenceNews\_无脑听新闻
+
+| **Field\_Name** | **Sub\_Field** | **Field\_Value** | **Field\_Example** |
+| --- | --- | --- | --- |
+| hint |  | 提示语 | 让我们一起听听闻 |
+| data |  |  |  |
+|  | audio | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/595afd546bc0a.mp3 |
+|  | keywords | 新闻标题 | 【央广评论】杜特尔特执政一年争议不小，但民众支持率依然保持高水准？ |
+|  | name | 新闻来源 | 听闻 |
+|  | type | 数据类型 | 新闻 |
+| formatType |  | 结果类型 | audio |
+
+'''
+ "result": {
+        "hint": "让我们一起听听闻",
+        "data": {
+            "album": "",
+            "artist": "",
+            "audio": "http://mp3.tingwen.me/data/upload/mp3/5965abbc0cc55.mp3",
+            "category": "",
+            "extra": "",
+            "image": "",
+            "keywords": "茅台就消费税接受调研 白酒消费税改革引关注",
+            "name": "听闻",
+            "resId": "�",
+            "sid": "",
+            "start": 0,
+            "trigger": "voice",
+            "triggerId": "",
+            "type": "新闻"
+        },
+        "formatType": "audio"
+    }
+'''
