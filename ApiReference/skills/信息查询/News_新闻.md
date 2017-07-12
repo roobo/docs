@@ -8,10 +8,9 @@
 
 | Slot\_Key | Description | Main\_Application | Example |
 | --- | --- | --- | --- |
-
 | news\_category | 类别名称 | 用于指定新闻类别 | 热门 财经 科技 |
 | news\_nosencekey | 摘要关键字 | 已经播放过摘要，需要再次收听时，需指明 | 摘要 快报 |
-| keywords | 关键词 | 用户关键词，用于指定人物，事件，话题，地区等 | 刘德华 余额宝 爆炸 |
+| keywords | 用户关键词，用于指定人物，事件，话题，地区等 | 刘德华 余额宝 爆炸 |
 
 # 3.意图
 
@@ -23,7 +22,6 @@
 
 | **Support\_Semantic** | **Example** |
 | --- | --- |
-
 | 无脑听新闻意图模板1; | 播段新闻 |
 | 无脑听新闻意图模板2; | 我想听新闻 |
 | 无脑听新闻意图模板2+&lt;news\_nosencekey&gt; | 我想听新闻快报 |
