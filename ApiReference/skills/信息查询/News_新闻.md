@@ -8,6 +8,7 @@
 
 | Slot\_Key | Description | Main\_Application | Example |
 | --- | --- | --- | --- |
+
 | news\_category | 类别名称 | 用于指定新闻类别 | 热门 财经 科技 |
 | news\_nosencekey | 摘要关键字 | 已经播放过摘要，需要再次收听时，需指明 | 摘要 快报 |
 | keywords | 关键词 | 用户关键词，用于指定人物，事件，话题，地区等 | 刘德华 余额宝 爆炸 |
@@ -146,7 +147,27 @@
 
 ## 4.6 Exit\_停止播报
 
+| **Field\_Name** | **Sub\_Field** | **Field\_Value** | **Field\_Example** |
+| --- | --- | --- | --- |
+| hint |  | 提示语 | "" |
+
+```
+    "result": {
+        "hint": ""
+    }
+```
+
 ## 4.7 Pause\_暂停播报
+
+| **Field\_Name** | **Sub\_Field** | **Field\_Value** | **Field\_Example** |
+| --- | --- | --- | --- |
+| hint |  | 提示语 | "好的，主人" |
+
+```
+    "result": {
+        "hint": "好的，主人"
+    }
+```
 
 ## 4.8 Resume\_继续播报
 同4.5 Next\_下一个
