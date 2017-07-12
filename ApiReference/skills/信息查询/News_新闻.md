@@ -73,6 +73,7 @@
 
 ## 3.7 Pause\_暂停播报
 
+
 暂停播报新闻意图模板：先别说话\[等一等\|等一下\|\]
 
 | **Support\_Semantic** | **Example** |
@@ -109,7 +110,7 @@
 |  | type | 数据类型 | 新闻 |
 | formatType |  | 结果类型 | audio |
 
-'''
+```
  "result": {
         "hint": "让我们一起听听闻",
         "data": {
@@ -130,4 +131,5 @@
         },
         "formatType": "audio"
     }
-'''
+```
+
