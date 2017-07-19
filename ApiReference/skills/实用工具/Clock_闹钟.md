@@ -6,7 +6,8 @@
 
 | Slot key | Description | Application | Example |
 | --- | --- | --- | --- |
-| S |  |  |  |
-
-
+| specific\_time | 具体时刻 | 用户设置，删除闹钟等 | 9点20分 |
+| specific_date | 具体日期 | 用户设置，删除闹钟等 | 2月20日 |
+|  |  |  |  |
+|  |  |  |  |
 
