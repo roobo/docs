@@ -36,8 +36,13 @@
 
 | **Support\_semantic** | **example** |
 | --- | --- |
-| 设置提醒前缀1 +&lt;specific\_time&gt;+ 设置提醒后缀1+&lt;event\_name&gt; |请在早上8点叫我读书|
-| 设置提醒前缀1 +&lt;periodic\_time&gt;+ 设置提醒后缀1+&lt;event\_name&gt;  | 请在每周五9点叫我做作业|
-| 设置提醒前缀1 +&lt;specific\_time&gt; | 别忘了6点叫我活动|
+| 设置提醒前缀1 +&lt;specific\_time&gt;+ 设置提醒后缀1+&lt;event\_name&gt; | 请在早上8点叫我读书 |
+| 设置提醒前缀1 +&lt;periodic\_time&gt;+ 设置提醒后缀1+&lt;event\_name&gt; | 请在每周五9点叫我做作业 |
+| 设置提醒前缀1 +&lt;specific\_time&gt; | 别忘了6点叫我活动 |
 | 设置提醒前缀1  +&lt;periodic\_time&gt; | 每周一8点提醒我做饭 |
+
+## 3.3 GetClock\_查询闹钟
+查询闹钟前缀1：[我想|我要|][查|查询|查寻|查看|播报|播|报|说][一|][下|]
+查询闹钟后缀2：[设定|设置了|开启|设置|有|订|的][的|][几个|多少][闹铃|闹钟|叫醒|提醒][服务|]
+
 
