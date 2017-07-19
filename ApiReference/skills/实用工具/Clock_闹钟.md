@@ -147,14 +147,25 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
 
 | **Field name** | **Sub field** | **Field value** | **Field example** |
 | --- | --- | --- | --- |
-| hint | | 提示语 | 已为您删除下午9点的1条闹钟记录 |
-| data | | | |
-| | alarm\_time | 闹钟时间 | 2017-07-19 21:00:00 |
-| | content | 提醒事件 | 做游戏 |
-| | id | 闹钟id | 423 |
-| | operation | 操作 | delete |
-| | repeat\_mode | 重复类型 | 0 |
-
-
-
+| hint |  | 提示语 | 已为您删除下午9点的1条闹钟记录 |
+| data |  |  |  |
+|  | alarm\_time | 闹钟时间 | 2017-07-19 21:00:00 |
+|  | content | 提醒事件 | 做游戏 |
+|  | id | 闹钟id | 423 |
+|  | operation | 操作 | delete |
+|  | repeat\_mode | 重复类型 | 0 |
+```
+ "result": {
+        "hint": "已为您删除下午9点的1条闹钟记录",
+        "data": [
+            {
+                "alarm_time": "2017-07-19 21:00:00",
+                "content": "",
+                "id": 4205,
+                "operation": "delete",
+                "repeat_mode": 0
+            }
+        ]
+    }
+```
 
