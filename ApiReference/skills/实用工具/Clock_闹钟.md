@@ -169,4 +169,25 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
         ]
     }
 ```
-
+## 4.4 DelayClock\_延迟闹钟
+| **Field name** | **Sub field** | **Field value** | **Field example** |
+| --- | --- | --- | --- |
+| hint |  | 提示语 | 我会在10分钟后在提醒你 |
+| data |  |  |  |
+|  | alarm\_time | 闹钟时间 | 2017-07-19 21:10:00 |
+|  | content | 提醒事件 | 做游戏 |
+|  | id | 闹钟id | 423 |
+|  | operation | 操作 | delay|
+|  | repeat\_mode | 重复类型 | 0 |
+``` "result": {        "hint": "我会在10分钟后再提醒你",        
+    "data": [            
+       {
+                "alarm_time": "2017-07-19 21:10:00",
+                "content": "",
+                "id": 423,
+                "operation": "delay",
+                "repeat_mode": 0
+            }
+        ]
+    }
+```
