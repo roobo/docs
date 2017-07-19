@@ -196,4 +196,20 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
         ]
     }
 ```
+# 5.服务接入
+服务地址：http://api.ros.ai/bot/v1/query/
+请求方式：post
+参数示意：
+```
+{
+ "agentId": "83jpeekghlsktpwZWY0YUF5T0d",
+ "token": "02e4297de964ec34354sdwwr",
+ "clientId": "1015000000000099",
+ "contexts": [
+ ],
+ "query": "设置11点的闹钟",
+ "sessionId": "845551266544522"
+}
+```
+
 
