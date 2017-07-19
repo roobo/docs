@@ -25,8 +25,6 @@
 
 设置闹钟后缀2： \[的\|\]\[闹钟\|闹铃\|叫醒\]\[服务\|\]
 
-
-
 | **Support\_semantic** | **Example** |
 | --- | --- |
 | 设置闹钟前缀1 +&lt;specific\_time&gt;+ 设置闹钟后缀1 | 请在9点叫醒我 |
@@ -210,7 +208,11 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
 # 5.服务接入
 
 服务地址：[http:\/\/api.ros.ai\/bot\/v1\/query\/](http://api.ros.ai/bot/v1/query/)
+
+
 请求方式：post
+
+
 参数示意：
 
 ```
