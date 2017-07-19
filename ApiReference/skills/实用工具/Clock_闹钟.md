@@ -102,7 +102,7 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
         "data": {
             "alarm_time": "2017-07-19 22:00:00",
             "content": "",
-            "id": 4212,
+            "id": 423,
             "operation": "set",
             "repeat_mode": 0
         }
@@ -135,7 +135,7 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
             {
                 "alarm_time": "2017-07-19 22:00:00",
                 "content": "",
-                "id": 4212,
+                "id": 423,
                 "operation": "list",
                 "repeat_mode": 0
             }
@@ -154,6 +154,7 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
 |  | id | 闹钟id | 423 |
 |  | operation | 操作 | delete |
 |  | repeat\_mode | 重复类型 | 0 |
+
 ```
  "result": {
         "hint": "已为您删除下午9点的1条闹钟记录",
@@ -161,7 +162,7 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
             {
                 "alarm_time": "2017-07-19 21:00:00",
                 "content": "",
-                "id": 4205,
+                "id": 423,
                 "operation": "delete",
                 "repeat_mode": 0
             }
