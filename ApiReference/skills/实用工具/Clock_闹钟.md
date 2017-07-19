@@ -75,3 +75,10 @@
 | 延迟闹钟前缀1+&lt;specific\_time&gt;+延迟闹钟后缀1 | 请在9点30再响铃 |
 
 # 4.返回结果
+
+## 4.1 SetClock\_设置闹钟
+
+| Field name | Sub field | Field value | Field example  |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
