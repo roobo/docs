@@ -84,7 +84,7 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
 
 （预留 周一 周二 周三 周四 周五 周六 周日），例如00100000代表的数字是32，代表每周二
 
-## 4.1 SetClock\_设置闹钟(SetAlarm\_设置提醒)
+## 4.1 SetClock\_设置闹钟\(SetAlarm\_设置提醒\)
 
 | **Field name** | **Sub field** | **Field value** | **Field example** |
 | --- | --- | --- | --- |
@@ -97,5 +97,15 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
 |  | repeat\_mode | 重复类型 | 0 |
 
 ## 4.2 GetClock\_查询闹钟
+
+| **Field name** | **Sub field** | **Field value** | **Field example** |
+| --- | --- | --- | --- |
+| hint |  | 提示语 | 已为你设定2017-07-19 22:00的闹钟 |
+| data |  |  |  |
+|  | alarm\_time | 闹钟时间 | 2017-07-19 22:00:00 |
+|  | content | 提醒事件 | 做游戏 |
+|  | id | 闹钟id | 423 |
+|  | operation | 操作 | set |
+|  | repeat\_mode | 重复类型 | 0 |
 
 
