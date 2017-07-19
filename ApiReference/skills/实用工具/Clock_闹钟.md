@@ -108,6 +108,7 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
         }
     }
 ```
+
 ## 4.2 GetClock\_查询闹钟
 
 | **Field name** | **Sub field** | **Field value** | **Field example** |
@@ -119,4 +120,25 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
 |  | id | 闹钟id | 423 |
 |  | operation | 操作 | set |
 |  | repeat\_mode | 重复类型 | 0 |
+```
+ "result": {
+        "hint": "你有以下这2个闹钟",
+        "data": [
+            {
+                "alarm_time": "2017-07-19 21:00:00",
+                "content": "",
+                "id": 4205,
+                "operation": "list",
+                "repeat_mode": 0
+            },
+            {
+                "alarm_time": "2017-07-19 22:00:00",
+                "content": "",
+                "id": 4212,
+                "operation": "list",
+                "repeat_mode": 0
+            }
+        ]
+    }
+```
 
