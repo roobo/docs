@@ -80,14 +80,11 @@
 
 | **Field name** | **Sub field** | **Field value** | **Field example** |
 | --- | --- | --- | --- |
-| hint |  |  |  |
+| hint |  | 提示语 |已为你设定2017-07-19 22:00的闹钟  |
 | data |  |  |  |
-|  |alarm_time  |  |  |
-|  |content  |  |  |
-|  |id  |  |  |
-|  |operation | | |
-|  |repeat_mode | | |
-
-
-
+|  | alarm\_time |闹钟时间 |  2017-07-19 22:00:00|
+|  | content |提醒事件  | 做游戏  |
+|  | id | 闹钟id | 423 |
+|  | operation | 操作  | set |
+|  | repeat\_mode | 重复类型 | 0 |
 
