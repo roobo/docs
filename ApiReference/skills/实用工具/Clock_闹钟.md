@@ -120,6 +120,7 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
 |  | id | 闹钟id | 423 |
 |  | operation | 操作 | set |
 |  | repeat\_mode | 重复类型 | 0 |
+
 ```
  "result": {
         "hint": "你有以下这2个闹钟",
@@ -141,4 +142,6 @@ repeat\_mode：提醒模式，为0表示特定时刻闹钟，非0表示重复闹
         ]
     }
 ```
+## 4.3 DeleteClock\_删除闹钟
+
 
