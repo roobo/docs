@@ -80,10 +80,14 @@
 
 | **Field name** | **Sub field** | **Field value** | **Field example** |
 | --- | --- | --- | --- |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| hint |  |  |  |
+| data |  |  |  |
+|  |alarm_time  |  |  |
+|  |content  |  |  |
+|  |id  |  |  |
+|  |operation | | |
+|  |repeat_mode | | |
+
+
+
 
