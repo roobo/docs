@@ -6,10 +6,10 @@
 
 | Slot key | Description | Application | Example |
 | --- | --- | --- | --- |
-| specific\_time | 具体时刻 | 用户设置，删除闹钟等 | 9点20分 |
-| specific\_date | 具体日期 | 用户设置，删除闹钟等 | 2月20日 |
-| periodic\_time | 周期时刻 | 用户设置，删除闹钟等 | 每天10点 |
-| periodic\_date | 周期日期 | 用户设置，删除闹钟等 | 每周五下午 |
+| specific\_time | 具体时刻 | 用户设置，删除，查询闹钟等 | 9点20分 |
+| specific\_date | 具体日期 | 用户设置，删除，查询闹钟等 | 2月20日 |
+| periodic\_time | 周期时刻 | 用户设置，删除，查询闹钟等 | 每天10点 |
+| periodic\_date | 周期日期 | 用户设置，删除，查询闹钟等 | 每周五下午 |
 | event\_name | 事件名称 | 用户设置提醒时 | 做作业 |
 | duration | 时段 | 延迟闹钟 | 10分钟 |
 
