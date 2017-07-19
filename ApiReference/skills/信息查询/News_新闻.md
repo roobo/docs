@@ -100,9 +100,10 @@
 | --- | --- | --- | --- |
 | hint |  | 提示语 | 让我们一起听听闻 |
 | data |  |  |  |
-|  | audio | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/595afd546bc0a.mp3 |
-|  | keywords | 新闻标题 | 【央广评论】杜特尔特执政一年争议不小，但民众支持率依然保持高水准？ |
-|  | name | 新闻来源 | 听闻 |
+|  | audio | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3 |
+|  | category | 新闻类别 | 财经 |
+|  | reader | 新闻主播 | 优栗 |
+|  | title | 新闻标题 | 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
 |  | type | 数据类型 | 新闻 |
 | formatType |  | 结果类型 | audio |
 
@@ -110,19 +111,10 @@
  "result": {
         "hint": "让我们一起听听闻",
         "data": {
-            "album": "",
-            "artist": "",
-            "audio": "http://mp3.tingwen.me/data/upload/mp3/5965abbc0cc55.mp3",
+            "audio": "http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3",
             "category": "",
-            "extra": "",
-            "image": "",
-            "keywords": "茅台就消费税接受调研 白酒消费税改革引关注",
-            "name": "听闻",
-            "resId": "�",
-            "sid": "",
-            "start": 0,
-            "trigger": "voice",
-            "triggerId": "",
+            "reader": "优栗",
+            "title": "软银集团和共享办公空间公司WeWork在日本成立合资公司",
             "type": "新闻"
         },
         "formatType": "audio"
