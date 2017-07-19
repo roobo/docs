@@ -35,7 +35,7 @@
 设置提醒后缀1：\[别忘了\|就要\|\]\[叫醒\|喊醒\|叫\|喊\]\[我\|\]
 
 | **Support\_semantic** | **Example** |
-| --- |
+| --- | --- |
 | 设置提醒前缀1 +&lt;specific\_time&gt;+ 设置提醒后缀1+&lt;event\_name&gt; | 请在早上8点叫我读书 |
 | 设置提醒前缀1 +&lt;periodic\_time&gt;+ 设置提醒后缀1+&lt;event\_name&gt; | 请在每周五9点叫我做作业 |
 | 设置提醒前缀1 +&lt;specific\_time&gt; | 别忘了6点叫我活动 |
@@ -48,7 +48,7 @@
 
 | **Support\_semantic** | **Example** |
 | --- | --- |
+| 查询闹钟前缀1+ 查询闹钟后缀2| 查询明天有几个闹钟 |
 |  |  |
-
-
+|  |  |
 
