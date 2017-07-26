@@ -24,7 +24,7 @@
 | &lt;keyword&gt; | 我要听忧伤的歌 |
 |  | 唱首歌 |
 
-返回字段说明
+返回字段说明，适用与以下其它意图
 
 | **Field\_Name** | **Sub\_Field** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
 | --- | --- | --- | --- | --- |
