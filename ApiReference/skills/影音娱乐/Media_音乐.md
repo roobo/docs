@@ -1,3 +1,4 @@
+
 # 1. 服务简介
 
 用户可以收听音乐。
@@ -22,6 +23,20 @@
 | &lt;artist&gt; | 我要听周杰伦的歌 |
 | &lt;keyword&gt; | 我要听忧伤的歌 |
 |  | 唱首歌 |
+
+返回字段说明
+
+| **Field\_Name** | **Sub\_Field** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
+| --- | --- | --- | --- | --- |
+| hint |  | string | 提示语 | 让我们一起听听闻 |
+| data |  |  |  |  |
+|  | album | string | 专辑名 | 哎呦，不错哦 |
+|  | artist | string | 艺术家 | 周杰伦 |
+|  | audio | string | 音乐播放地址 | http://isure.stream.qqmusic.qq.com/C200001Js78a40BZU6.m4a?vkey=9661F3F2ABFC0D4F0A7E642D658960502BD3256CBB907AD3BBEA0183A5B04F2C4F44751DC8FE8776ABD72427071476C31CFEDE6F5679081E&guid=12347254&fromtag=50&uin=1152921504733674178 |
+|  | image | string | 专辑封面地址 | https://y.gtimg.cn/music/photo_new/T002R300x300M000001uqejs3d6EID.jpg?max_age=2592000 |
+|  | name | string | 歌曲名 | 算什么男人 |
+|  | type | string | 数据类型 | MUSIC |
+| formatType |  | string | 结果类型 | audio |
 
 返回字段
 
