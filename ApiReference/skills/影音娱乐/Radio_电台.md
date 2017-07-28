@@ -12,7 +12,7 @@
 
 # 3.意图
 
-\/GetRadio
+\/Play
 电台点播意图。用户可以根电台名称直接点播，根据电台类型进行标签点播，根据地理位置信息进行地理位置点播或者不含任何槽位的模糊点播。
 
 | **Slot Semantic Signatures** | **Example** |
@@ -68,6 +68,21 @@
 |  | rate64\_ts\_url | 64码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8?transcode=ts | string |
 | formattype |  | audio | string |
 
+返回样例
+
+```
+    "result": {
+        "hint": "邢台县人民广播电台",
+        "data": {
+            "rate24_aac_url": "http://live.xmcdn.com/live/1132/24.m3u8",
+            "rate24_ts_url": "http://live.xmcdn.com/live/1132/24.m3u8?transcode=ts",
+            "rate64_aac_url": "http://live.xmcdn.com/live/1132/64.m3u8",
+            "rate64_ts_url": "http://live.xmcdn.com/live/1132/64.m3u8?transcode=ts"
+        },
+        "formatType": "audio"
+    }
+```
+
 ---
 
 \/GetPlayingProgram
@@ -84,6 +99,15 @@
 | hint | 有节目内容： 当前播放的是“radioname”的《XXXX》           无节目内容： 没有找到相关节目内容 | string |
 | formattype | text | string |
 
+返回样例
+
+```
+    "result": {
+        "hint": "当前播放的是CRI环球旅游广播的益游未尽",
+        "formatType": "text"
+    }
+```
+
 ---
 
 \/GetAnchor
@@ -99,6 +123,15 @@
 | --- | --- | --- |
 | hint | 查到主播信息： 主播是xxx                                                 没查到主播： 没有查到主播信息 | string |
 | formattype | text | string |
+
+返回样例
+
+```
+    "result": {
+        "hint": "主播是璟炜",
+        "formatType": "text"
+    }
+```
 
 # 4. 点播具体策略
 
