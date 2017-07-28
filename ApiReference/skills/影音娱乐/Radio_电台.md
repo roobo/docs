@@ -46,7 +46,7 @@
 
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
-| hint |  | 电台名称 |
+| hint |  | 电台名称 |  |
 | data | rate24\_aac\_url | 24码率acc播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/24.m3u8 | string |
 |  | rate64\_aac\_url | 64码率acc播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8 | string |
 |  | rate24\_ts\_url | 24码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/24.m3u8?transcode=ts | string |
@@ -65,7 +65,7 @@
 返回字段
 
 | **result** | **value** | **type** |
-| --- | --- |
+| --- | --- | --- |
 | hint | 有节目内容： 当前播放的是“radioname”的《XXXX》           无节目内容： 没有找到相关节目内容 | string |
 | formattype | text | string |
 
@@ -81,7 +81,7 @@
 返回字段
 
 | **result** | **value** | **type** |
-| --- | --- |
+| --- | --- | --- |
 | hint | 查到主播信息： 主播是xxx                                                 没查到主播： 没有查到主播信息 | string |
 | formattype | text | string |
 
