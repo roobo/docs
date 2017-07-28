@@ -33,6 +33,21 @@
 |  | rate64\_ts\_url | 64码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8?transcode=ts | string |
 | formattype |  | audio | string |
 
+返回样例
+
+```
+    "result": {
+        "hint": "邢台爱在104",
+        "data": {
+            "rate24_aac_url": "http://live.xmcdn.com/live/2052/24.m3u8",
+            "rate24_ts_url": "http://live.xmcdn.com/live/2052/24.m3u8?transcode=ts",
+            "rate64_aac_url": "http://live.xmcdn.com/live/2052/64.m3u8",
+            "rate64_ts_url": "http://live.xmcdn.com/live/2052/64.m3u8?transcode=ts"
+        },
+        "formatType": "audio"
+    }
+```
+
 ---
 
 \/Next
@@ -46,7 +61,7 @@
 
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
-| hint |  | 电台名称 |string  |
+| hint |  | 电台名称 | string |
 | data | rate24\_aac\_url | 24码率acc播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/24.m3u8 | string |
 |  | rate64\_aac\_url | 64码率acc播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/64.m3u8 | string |
 |  | rate24\_ts\_url | 24码率ts播放地址，如：http:\/\/live.xmcdn.com\/live\/93\/24.m3u8?transcode=ts | string |
