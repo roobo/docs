@@ -1,4 +1,4 @@
-### /bot/v2/query
+### /bot/v2/query(废弃)
 
 * [概述](#1-概述)
 * [URLs](#2-URLs)
