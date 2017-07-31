@@ -24,7 +24,7 @@
 
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
-| hint |  | 电台名称 | string |
+| hint |  | 好的主人，我将在xxxx自动关机 | string |
 | data | Service | ShutDown | string |
 |  | Action | SetShutDown | string |
 |  | alarm\_time | 定时关机的时间，如：2017-07-31 11:04:35 | string |
@@ -54,12 +54,30 @@
 | --- | --- |
 |  | 取消关机 |
 
-a
-
 返回字段
 
-| **result** | **value** | **type** |
-| --- | --- | --- |
-| hint | 已经为您取消定时关机\/没有可以取消的定时关机 | string |
-| formattype | prop | string |
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 电台名称 | string |
+| data | Service | ShutDown | string |
+|  | Action | DeleteShutDown | string |
+|  | alarm\_time || string |
+| formattype |  | prop | string |
+
+返回样例
+
+```
+    "result": {
+        "hint": "已经帮你取消了定时关机",
+        "data": {
+            "Action": "DeleteShutDown",
+            "Service": "ShutDown",
+            "alarm_time": "",
+            "content": "",
+            "operation": "",
+            "repeat_mode": 0
+        },
+        "formatType": "prop"
+    }
+```
 
