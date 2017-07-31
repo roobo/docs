@@ -95,17 +95,20 @@
 
 ## 4.1 NoSenceNews\_无脑听新闻
 
-| **Field\_Name** | **Sub\_Field** | **Field\_Value** | **Field\_Example** |
-| --- | --- | --- | --- |
-| hint |  | 提示语 | 让我们一起听听闻 |
-| data |  |  |  |
-|  | audio | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3 |
-|  | category | 新闻类别 |  |
-|  | reader | 新闻主播 | 优栗 |
-|  | title | 新闻标题 | 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
-|  | type | 数据类型 | 新闻 |
-| formatType |  | 结果类型 | audio |
+返回字段说明
 
+| **Field\_Name** | **Sub\_Field** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
+| --- | --- | --- | --- | --- |
+| hint |  | string | 提示语 | 让我们一起听听闻 |
+| data |  |  |  |  |
+|  | audio | string | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3 |
+|  | category | string | 新闻类别 | 财经 |
+|  | reader | string | 新闻主播 | 优栗 |
+|  | title | string | 新闻标题 | 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
+|  | type | string | 数据类型 | 新闻 |
+| formatType |  | string | 结果类型 | audio |
+
+返回字段
 ```
  "result": {
         "hint": "让我们一起听听闻",
