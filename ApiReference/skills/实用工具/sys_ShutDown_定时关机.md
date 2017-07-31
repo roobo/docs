@@ -58,11 +58,8 @@ a
 
 返回字段
 
-| **result** |  | **value** | **type** |
-| --- | --- | --- | --- |
-| hint |  | 电台名称 | string |
-| data | Service | ShutDown | string |
-|  | Action | DeleteShutDown | string |
-|  | alarm\_time | 定时关机的时间，如：2017-07-31 11:04:35 | string |
-| formattype |  | audio | string |
+| **result** | **value** | **type** |
+| --- | --- | --- |
+| hint | 已经为您取消定时关机\/没有可以取消的定时关机 | string |
+| formattype | prop | string |
 
