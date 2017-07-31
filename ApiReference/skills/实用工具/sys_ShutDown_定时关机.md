@@ -17,9 +17,8 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;date&gt; | CNR中国之声 |
-| &lt;radio\_label&gt; | 我要听音乐台 |
-| &lt;position&gt; | 播放邢台的电台 |
+| &lt;date&gt; | 3天后关机 |
+| &lt;date_time&gt; | 10分钟后关机<br/>明天10点关机 |
 |  | 我要听广播 |
 
 返回字段
