@@ -18,83 +18,33 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;date&gt; | 3天后关机 |
-| &lt;date_time&gt; | 10分钟后关机、明天10点关机 |
+| &lt;date\_time&gt; | 10分钟后关机、明天10点关机 |
 
 返回字段
 
-<table>
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 电台名称 | string |
+| data | Service | ShutDown | string |
+|  | Action | SetShutDown | string |
+|  | alarm\_time | 定时关机的时间，如：2017-07-31 11:04:35 | string |
+| formattype |  | audio | string |
 
- <tr>
+返回样例
 
- <td>result</td>
 
- <td>value</td>
-
- <td>type</td>
-
- </tr>
-
- <tr>
-
- <td>hint</td>
-
- <td>好的主人，我将在xxxx自动关机</td>
-
- <td>string</td>
-
- </tr>
-
- <tr>
-
- <td>data</td>
-
- <td>service</td>
-
- <td>ShutDown</td>
-
- <td>string</td>
-
- </tr>
-
- <tr>
-
- <td></td>
-
- <td>Action</td>
-
- <td>SetShutDown</td>
-
- <td>string</td>
-
- </tr>
-
- <tr>
-
- <td></td>
-
- <td>alarm_time</td>
-
- <td>定时关机的时间，如：2017-07-31 11:04:35</td>
-
- <td>string</td>
-
- </tr>
-
- <tr>
-
- <td>formattype</td>
-
- <td>prop</td>
-
- <td>string</td>
-
- </tr>
-
- <tr>
-
- <td></td>
-
- </tr>
-
-</table>
+```
+    "result": {
+        "hint": "好的主人，我将在2017-07-31 11:04:35自动关机",
+        "data": {
+            "Action": "SetShutDown",
+            "Service": "ShutDown",
+            "alarm_time": "2017-07-31 11:04:35",
+            "content": "",
+            "operation": "set",
+            "repeat_mode": 0
+        },
+        "formatType": "prop"
+    }
+```
 
