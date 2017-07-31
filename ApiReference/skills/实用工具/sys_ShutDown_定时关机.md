@@ -52,6 +52,17 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt; | 3取消关机 |
-| &lt;date\_time&gt; | 10分钟后关机、明天10点关机 |
+|  | 取消关机 |
+
+a
+
+返回字段
+
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 电台名称 | string |
+| data | Service | ShutDown | string |
+|  | Action | DeleteShutDown | string |
+|  | alarm\_time | 定时关机的时间，如：2017-07-31 11:04:35 | string |
+| formattype |  | audio | string |
 
