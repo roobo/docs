@@ -22,3 +22,25 @@
 | &lt;stockid&gt;+&lt;date&gt; | 中国石化今天的股票 |
 
 返回样例
+
+```
+    "result": {
+        "hint": "股票名称:中国石化，股票编号:sh600028，当前价格:6.14，涨跌额:-0.08，涨跌百分比-1.29，时间:2017-08-02 15:00:00，今日开盘价:6.19，昨日收盘价:6.22，最高价:6.20，最低价:6.11，成交量:1.52M",
+        "data": {
+            "datetime": "2017-08-02 15:00:00",
+            "gid": "sh600028",
+            "image": "http://image.sinajs.cn/newchart/min/n/sh600028.gif",
+            "increPer": "-1.29",
+            "increase": "-0.08",
+            "name": "中国石化",
+            "nowPri": "6.14",
+            "todayMax": "6.20",
+            "todayMin": "6.11",
+            "todayStartPri": "6.19",
+            "traAmount": "9.37亿",
+            "traNumber": "1.52M",
+            "yestodEndPri": "6.22"
+        }
+    }
+```
+
