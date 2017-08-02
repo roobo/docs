@@ -40,3 +40,14 @@
     }
 ```
 
+\/Match
+查询两个星座的男生\/女生的组合是否匹配（特指**男女**之间谈恋爱）
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt; constellation &gt;+&lt; constellation &gt; | 天蝎座和白羊座配么 |
+| \(&lt; constellation &gt;+&lt;gender&gt;\)+\(&lt; constellation &gt; +&lt;gender&gt;\) |天蝎男和白羊女配么|
+
+返回字段
+
+返回样例
