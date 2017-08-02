@@ -76,13 +76,13 @@
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | 主人，告诉我公司名称，可以帮你查询具体信息。 | string |
-| data | datetime | 日期时间 | string |
+| data[] | datetime | 日期时间 | string |
 |  | dealNum | 成交量 | string |
 |  | dealPri | 成交额 | string |
 |  | highPri | 最高价 | string |
 |  | increPer | 涨跌百分比 | string |
 |  | increase | 涨跌额 | string |
-|  | index | 下标 | string |
+|  | index | 该数据结构在data数组中的下标 | string |
 |  | lowPri | 最低价 | string |
 |  | name | 股票名称 | string |
 |  | nowPri | 当前股价 | string |
