@@ -22,7 +22,12 @@
 
 返回字段
 
-
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 对应的诗句 | string |
+| data | author | 该诗词的作者 | string |
+|  | title | 该诗词的题目 | string |
+|  | verse | 对应的诗句 | string |
 
 返回样例
 
