@@ -44,3 +44,10 @@
     }
 ```
 
+\/GetMarket
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  |股票大盘怎么样 |
+
+返回样例
