@@ -87,4 +87,17 @@
 | data | author | 该诗词的作者 | string |
 |  | title | 该诗词的题目 | string |
 |  | verse | 对应的诗句 | string |
+
 返回样例
+
+```
+    "result": {
+        "hint": "欲穷千里目",
+        "data": {
+            "author": "王之涣",
+            "title": "登鹳雀楼",
+            "verse": "欲穷千里目"
+        }
+    }
+```
+
