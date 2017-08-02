@@ -85,7 +85,7 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;compute&gt; | 16开方等于几 |
+| &lt;number&gt; | 16开方等于几 |
 
 返回样例
 
@@ -95,6 +95,26 @@
         "data": {
             "arithmetic": "16开2次方",
             "result": "4"
+        }
+    }
+```
+
+\/Reciprocal
+
+取倒数运算。对于0，返回0没有倒数。
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;number&gt; | 7的倒数是几 |
+
+返回样例
+
+```
+    "result": {
+        "hint": "等于0.14",
+        "data": {
+            "arithmetic": "1/7",
+            "result": "0.14"
         }
     }
 ```
