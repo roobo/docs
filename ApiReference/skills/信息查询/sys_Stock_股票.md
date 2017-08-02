@@ -12,25 +12,6 @@
 
 # 3.意图
 
-\*\*\*股票的GetStock和GetMarket返回字段规整，在此统一说明
-
-| **result** |  | **value** | **type** |
-| --- | --- | --- | --- |
-| hint |  | 是否匹配的结论 | string |
-| data | datetime | 日期时间 | string |
-|  | gid | 股票编号 | string |
-|  | image | 股票K线图url | string |
-|  | increPer | 涨跌百分比 | string |
-|  | increase | 涨跌额 | string |
-|  | name | 股票名称 | string |
-|  | nowPri | 当前股价 | string |
-|  | todayMax | 今日最高股价 | string |
-|  | todayMin | 今日最低股价 | string |
-|  | todayStartPri | 今日开盘价 | string |
-|  | traAmount | 成交额 | string |
-|  | traNumber | 成交量 | string |
-|  | yestodEndPri | 昨日股价 | string |
-
 \/GetStock
 
 询问某支股票某段时间内的价格，走向
