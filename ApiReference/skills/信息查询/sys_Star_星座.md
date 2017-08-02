@@ -25,11 +25,8 @@
 
 | **result** | **value** | **type** |
 | --- | --- | --- |
-| hint | 计算结果 | string |
-| formatType | 用户输入对应的表达式 | string |
-
-
-
+| hint | 查询到的该星座的运势 | string |
+| formatType | 回值类型\(text表示该场景返回值为文字类型\) | string |
 
 \| **result** \|  \| **value** \| **type** \|
 \| --- \| --- \| --- \| --- \|
