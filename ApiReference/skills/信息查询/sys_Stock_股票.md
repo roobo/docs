@@ -46,6 +46,8 @@
 
 \/GetMarket
 
+得到当前的大盘情况，包括上证，深证，沪证指数
+
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 |  | 股票大盘怎么样 |
