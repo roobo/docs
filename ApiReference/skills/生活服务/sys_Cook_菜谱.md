@@ -6,7 +6,7 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| dish\_name | 菜品的名称 | 宫保鸡丁 |
+| dish\_name | 菜品的名称 | 红烧排骨 |
 
 # 3.意图
 
@@ -16,11 +16,11 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;dish\_name&gt; | 宫保鸡丁怎么做 |
+| &lt;dish\_name&gt; | 红烧排骨怎么做 |
 
 返回字段
 
-
+返回字段
 
 返回样例
 
