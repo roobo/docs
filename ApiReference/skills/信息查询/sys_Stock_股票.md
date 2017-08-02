@@ -48,6 +48,57 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-|  |股票大盘怎么样 |
+|  | 股票大盘怎么样 |
 
 返回样例
+
+```
+    "result": {
+        "hint": "主人，告诉我公司名称，可以帮你查询具体信息。",
+        "data": [
+            {
+                "datetime": "2017-08-02 15:10:03",
+                "dealNum": "266.73M",
+                "dealPri": "2793.52亿",
+                "highPri": "3305.43",
+                "increPer": "-0.23",
+                "increase": "-7.58",
+                "index": 1,
+                "lowPri": "3282.04",
+                "name": "上证指数",
+                "nowPri": "3285.06",
+                "todayStartPri": "3288.52",
+                "yestodEndPri": "3292.64"
+            },
+            {
+                "datetime": "2017-08-02 15:10:03",
+                "dealNum": "24843.68M",
+                "dealPri": "3051.80亿",
+                "highPri": "10557.48",
+                "increPer": "-0.53",
+                "increase": "-56.01",
+                "index": 2,
+                "lowPri": "10461.95",
+                "name": "深证成指",
+                "nowPri": "10469.34",
+                "todayStartPri": "10526.00",
+                "yestodEndPri": "10525.35"
+            },
+            {
+                "datetime": "2017-08-02 15:10:03",
+                "dealNum": "1.72M",
+                "dealPri": "1893.37亿",
+                "highPri": "3784.35",
+                "increPer": "-0.25",
+                "increase": "-9.53",
+                "index": 3,
+                "lowPri": "3759.28",
+                "name": "沪深300",
+                "nowPri": "3760.85",
+                "todayStartPri": "3768.19",
+                "yestodEndPri": "3770.38"
+            }
+        ]
+    }
+```
+
