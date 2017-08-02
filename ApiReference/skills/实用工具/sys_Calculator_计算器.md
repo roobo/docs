@@ -16,4 +16,7 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;compute&gt; | 3加9等于几 |
+返回字段
+
+返回样例
 
