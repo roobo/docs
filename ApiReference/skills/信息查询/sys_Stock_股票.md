@@ -107,6 +107,10 @@
 \/GetPicture
 返回用户查询的股票的K线图
 
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;stockid&gt;+&lt; picturetype &gt; | 中国石化的K线图 |
+
 返回样例
 
 ```
