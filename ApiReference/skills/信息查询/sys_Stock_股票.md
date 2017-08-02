@@ -104,5 +104,17 @@
     }
 ```
 
-/GetPicture
+\/GetPicture
 返回用户查询的股票的K线图
+
+返回样例
+
+```
+    "result": {
+        "hint": "主人，为您找到该公司的股票走势图。",
+        "data": {
+            "image": "http://image.sinajs.cn/newchart/daily/n/sh600028.gif"
+        }
+    }
+```
+
