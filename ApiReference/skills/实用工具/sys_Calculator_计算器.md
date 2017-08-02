@@ -67,3 +67,10 @@
     }
 ```
 
+\/Exponent
+计算平方
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;number&gt; | 16的平方是多少 |
+
