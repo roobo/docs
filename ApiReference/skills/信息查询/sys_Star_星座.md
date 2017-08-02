@@ -28,8 +28,9 @@
 | hint | 查询到的该星座的运势 | string |
 | formatType | 回值类型\(text表示该场景返回值为文字类型\) | string |
 
-\| **result** \|  \| **value** \| **type** \|
-\| --- \| --- \| --- \| --- \|
-\| hint \|  \| 查询到的该星座的运势 \| string \|
-\| formatType \|  \| 返回值类型\(text表示该场景返回值为文字类型\) \| string \|
+返回样例
+
+```
+
+```
 
