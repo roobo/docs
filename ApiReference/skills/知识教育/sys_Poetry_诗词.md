@@ -8,22 +8,29 @@
 | --- | --- | --- |
 | title | 诗词题目 | 静夜思 |
 | author | 作者 | 李白 |
-| verse | 诗句| 白日依山尽 |
-| type|诗词类型|唐诗|
+| verse | 诗句 | 白日依山尽 |
+| type | 诗词类型 | 唐诗 |
 
 # 3.意图
- /GetLastPhrase
+
+\/GetLastPhrase
 诗句对答意图，机器人会返回用户所说的诗词的上一句，如果已经是第一句，会告知用于已经是第一句。
 
 | **Slot Semantic Signatures** | **Example** |
-
 | --- | --- |
+| &gt;&lt;&gt; |  |
 
-| &lt;radioname&gt; | CNR中国之声 |
 
-| &lt;radio\_label&gt; | 我要听音乐台 |
 
-| &lt;position&gt; | 播放邢台的电台 |
+\| **Slot Semantic Signatures** \|  \|
 
-| | 我要听广播 |
+\| --- \| --- \|
+
+\| &lt;radioname&gt; \| CNR中国之声 \|
+
+\| &lt;radio\_label&gt; \| 我要听音乐台 \|
+
+\| &lt;position&gt; \| 播放邢台的电台 \|
+
+\| \| 我要听广播 \|
 
