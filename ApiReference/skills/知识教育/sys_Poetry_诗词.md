@@ -69,6 +69,20 @@
         }
     }
 ```
-/GetPhrase
+
+\/GetPhrase
 机器人会返回用户所说的下一句，如果用户说的包含多句，则反追最后一句的下一句。如果已经是最后一句，会告知用户。
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;verse&gt; | 白日依山尽黄河入海流 |
+
+返回字段
+
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 对应的诗句 | string |
+| data | author | 该诗词的作者 | string |
+|  | title | 该诗词的题目 | string |
+|  | verse | 对应的诗句 | string |
 
