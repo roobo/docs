@@ -6,9 +6,14 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| compute |  加减乘除的表达| 7+9、八除以五 |
-| number |数字，用于求倒数，开方，平方 | 17 、二十|
+| compute | 加减乘除的表达 | 7+9、八除以五 |
+| number | 数字，用于求倒数，开方，平方 | 17 、二十 |
 
 # 3.意图
 
-/Calc
+\/Calc
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;compute&gt; | 3加9等于几 |
+
