@@ -20,10 +20,9 @@
 | --- | --- |
 | &lt; constellation &gt; | 天蝎座运势 |
 | &lt; constellation &gt; +&lt;date&gt; | 天蝎座今天运势 |
-
+返回字段
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
-| hint |  | 计算结果 | string |
-| data | arithmetic | 用户输入对应的表达式 | string |
+| hint |  | 查询到的该星座的运势 | string |
 | formatType |  | 返回值类型\(text表示该场景返回值为文字类型\) | string |
 
