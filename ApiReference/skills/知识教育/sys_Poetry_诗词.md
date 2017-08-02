@@ -42,3 +42,33 @@
     }
 ```
 
+
+
+\/GetNextPhrase 
+
+诗句对答意图，机器人会返回用户所说的诗词的下一句，如果已经是最后一句，会告知用户。
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;verse&gt; | 白日依山尽的下一句是什么 |
+
+返回字段
+
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 对应的诗句 | string |
+| data | author | 该诗词的作者 | string |
+|  | title | 该诗词的题目 | string |
+|  | verse | 对应的诗句 | string |
+
+```
+    "result": {
+        "hint": "黄河入海流",
+        "data": {
+            "author": "王之涣",
+            "title": "登鹳雀楼",
+            "verse": "黄河入海流"
+        }
+    }
+```
+
