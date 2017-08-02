@@ -80,3 +80,22 @@
     }
 ```
 
+\/Sqrt
+开方运算
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;compute&gt; | 16开方等于几 |
+
+返回样例
+
+```
+    "result": {
+        "hint": "等于4",
+        "data": {
+            "arithmetic": "16开2次方",
+            "result": "4"
+        }
+    }
+```
+
