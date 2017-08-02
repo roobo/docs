@@ -18,19 +18,22 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &gt;&lt;&gt; |  |
+| &lt;verse&gt; | 黄河入海流的上一句是什么 |
+
+返回字段
 
 
 
-\| **Slot Semantic Signatures** \|  \|
+返回样例
 
-\| --- \| --- \|
-
-\| &lt;radioname&gt; \| CNR中国之声 \|
-
-\| &lt;radio\_label&gt; \| 我要听音乐台 \|
-
-\| &lt;position&gt; \| 播放邢台的电台 \|
-
-\| \| 我要听广播 \|
+```
+    "result": {
+        "hint": "白日依山尽",
+        "data": {
+            "author": "王之涣",
+            "title": "登鹳雀楼",
+            "verse": "白日依山尽"
+        }
+    }
+```
 
