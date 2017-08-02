@@ -16,7 +16,20 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;compute&gt; | 3加9等于几 |
+
 返回字段
 
+
+
 返回样例
+
+```
+    "result": {
+        "hint": "等于12",
+        "data": {
+            "arithmetic": "(3)+(9)",
+            "result": "12"
+        }
+    }
+```
 
