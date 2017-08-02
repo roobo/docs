@@ -19,7 +19,11 @@
 
 返回字段
 
-
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 计算结果 | string |
+| data |arithmetic | 用户输入对应的表达式 | string |
+|  | result | 计算结果 | string |
 
 返回样例
 
