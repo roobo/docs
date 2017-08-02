@@ -46,8 +46,25 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt; constellation &gt;+&lt; constellation &gt; | 天蝎座和白羊座配么 |
-| \(&lt; constellation &gt;+&lt;gender&gt;\)+\(&lt; constellation &gt; +&lt;gender&gt;\) |天蝎男和白羊女配么|
+| \(&lt; constellation &gt;+&lt;gender&gt;\)+\(&lt; constellation &gt; +&lt;gender&gt;\) | 天蝎男和白羊女配么 |
 
 返回字段
 
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 是否匹配的结论 | string |
+| data | content | 关于匹配度的具体内容 | string |
+| formatType |  | 回值类型\(text表示该场景返回值为文字类型\) | string |
+
 返回样例
+
+```
+    "result": {
+        "hint": "配对指数40分,前途不甚乐观的一对",
+        "data": {
+            "content": "恋爱建议:白羊和天蝎的组合，跟白羊与处女的组合一样，都需要一点奇迹。以星座的角度看来，您们的角度不吉，也距离太远；一个是孩子王，一个是天王，粉辛苦！ 不过，命运总是很爱捉弄人，羊儿很容易会被蝎子神秘魅惑的气质所吸引，反而会促使羊儿产生征服蝎子的战斗欲望。"
+        },
+        "formatType": "text"
+    }
+```
+
