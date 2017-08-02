@@ -20,7 +20,10 @@
 
 返回字段
 
-返回字段
+| **result** | **value** | **type** |
+| --- | --- | --- |
+| hint | 计算结果 | string |
+| formatType | 输出类型 | string |
 
 返回样例
 
