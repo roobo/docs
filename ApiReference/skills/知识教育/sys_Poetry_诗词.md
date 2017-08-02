@@ -13,12 +13,7 @@
 
 # 3.意图
 
-\/GetLastPhrase
-诗句对答意图，机器人会返回用户所说的诗词的上一句，如果已经是第一句，会告知用于已经是第一句。
-
-| **Slot Semantic Signatures** | **Example** |
-| --- | --- |
-| &lt;verse&gt; | 黄河入海流的上一句是什么 |
+**\*\*\*诗句对答返回字段格式规整，在此进行统一说明**
 
 返回字段
 
@@ -28,6 +23,13 @@
 | data | author | 该诗词的作者 | string |
 |  | title | 该诗词的题目 | string |
 |  | verse | 对应的诗句 | string |
+
+\/GetLastPhrase
+诗句对答意图，机器人会返回用户所说的诗词的上一句，如果已经是第一句，会告知用于已经是第一句。
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;verse&gt; | 黄河入海流的上一句是什么 |
 
 返回样例
 
@@ -50,15 +52,6 @@
 | --- | --- |
 | &lt;verse&gt; | 白日依山尽的下一句是什么 |
 
-返回字段
-
-| **result** |  | **value** | **type** |
-| --- | --- | --- | --- |
-| hint |  | 对应的诗句 | string |
-| data | author | 该诗词的作者 | string |
-|  | title | 该诗词的题目 | string |
-|  | verse | 对应的诗句 | string |
-
 返回样例
 
 ```
@@ -78,15 +71,6 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;verse&gt; | 白日依山尽黄河入海流 |
-
-返回字段
-
-| **result** |  | **value** | **type** |
-| --- | --- | --- | --- |
-| hint |  | 对应的诗句 | string |
-| data | author | 该诗词的作者 | string |
-|  | title | 该诗词的题目 | string |
-|  | verse | 对应的诗句 | string |
 
 返回样例
 
