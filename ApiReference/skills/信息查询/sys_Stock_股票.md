@@ -12,6 +12,18 @@
 
 # 3.意图
 
+\*\*\*股票的GetStock和GetMarket返回字段规整，在此统一说明
+
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 是否匹配的结论 | string |
+| data | datetime | 日期时间 | string |
+|  | gid | 股票编号 | string |
+|  | image |股票K线图url  |string  |
+|  | increPer | 涨跌百分比 |  |
+|  |increase  |涨跌额  |  |
+|  |  name|  股票名称|  |
+
 \/GetStock
 
 询问某支股票某段时间内的价格，走向
@@ -110,6 +122,13 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;stockid&gt;+&lt; picturetype &gt; | 中国石化的K线图 |
+
+返回字段
+
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 主人，为您找到该公司的股票走势图。 | string |
+| data | image | 股票K线图的url | string |
 
 返回样例
 
