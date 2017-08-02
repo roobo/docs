@@ -11,13 +11,7 @@
 
 # 3.意图
 
-\/Calc
-
-处理加减乘除这四类基本运算
-
-| **Slot Semantic Signatures** | **Example** |
-| --- | --- |
-| &lt;compute&gt; | 3加9等于几 |
+\*\*\*计算器返回字段格式规整，在此进行统一说明
 
 返回字段
 
@@ -26,6 +20,16 @@
 | hint |  | 计算结果 | string |
 | data | arithmetic | 用户输入对应的表达式 | string |
 |  | result | 计算结果 | string |
+
+
+
+\/Calc
+
+处理加减乘除这四类基本运算
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;compute&gt; | 3加9等于几 |
 
 返回样例
 
