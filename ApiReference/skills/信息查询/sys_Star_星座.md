@@ -12,11 +12,18 @@
 
 # 3.意图
 
-\*\*\*星座返回字段格式规整，在此进行统一说明
+\/Horoscope
+
+查询星座运势。
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt; constellation &gt; | 天蝎座运势 |
+| &lt; constellation &gt; +&lt;date&gt; | 天蝎座今天运势 |
 
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | 计算结果 | string |
 | data | arithmetic | 用户输入对应的表达式 | string |
-| formatType | | 返回值类型(text表示该场景返回值为文字类型) | string |
+| formatType |  | 返回值类型\(text表示该场景返回值为文字类型\) | string |
 
