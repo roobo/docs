@@ -6,7 +6,7 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| radioname | 电台名称 | 北京交通广播 |
+| title | 电台名称 | 北京交通广播 |
 |  |  |  |
 |  |  |  |
 | radio\_label | 电台类型 | 音乐 |
