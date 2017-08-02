@@ -19,10 +19,13 @@
 | hint |  | 是否匹配的结论 | string |
 | data | datetime | 日期时间 | string |
 |  | gid | 股票编号 | string |
-|  | image |股票K线图url  |string  |
+|  | image | 股票K线图url | string |
 |  | increPer | 涨跌百分比 |  |
-|  |increase  |涨跌额  |  |
-|  |  name|  股票名称|  |
+|  | increase | 涨跌额 |  |
+|  | name | 股票名称 |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 
 \/GetStock
 
