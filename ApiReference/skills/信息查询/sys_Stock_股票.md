@@ -25,7 +25,7 @@
 
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
-| hint |  |该股票的具体情况(data中的内容) | string |
+| hint |  | 该股票的具体情况\(data中的内容\) | string |
 | data | datetime | 日期时间 | string |
 |  | gid | 股票编号 | string |
 |  | image | 股票K线图url | string |
@@ -70,6 +70,26 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 |  | 股票大盘怎么样 |
+
+返回字段
+
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  |  主人，告诉我公司名称，可以帮你查询具体信息。| string |
+| data | datetime | 日期时间 | string |
+|  | dealNum| 成交量 | string |
+|  | dealPri | 成交额 | string |
+|  | highPri | 最高价 | string |
+|  | increPer |涨跌百分比 | string |
+|  | increase|  涨跌额 | string |
+| | index|下标 | string |
+| | lowPri | 最低价 | string |
+| | name| 股票名称 | string |
+|  | nowPri | 当前股价 | string |
+|  | todayMax | 今日最高股价 | string |
+|  | todayMin | 今日最低股价 | string |
+|  | todayStartPri | 今日开盘价 | string |
+
 
 返回样例
 
