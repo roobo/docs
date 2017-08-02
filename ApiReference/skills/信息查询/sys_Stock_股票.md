@@ -25,7 +25,7 @@
 
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
-| hint |  | 是否匹配的结论 | string |
+| hint |  |该股票的具体情况(data中的内容) | string |
 | data | datetime | 日期时间 | string |
 |  | gid | 股票编号 | string |
 |  | image | 股票K线图url | string |
