@@ -13,6 +13,8 @@
 
 \/Calc
 
+处理加减乘除这四类基本运算
+
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;compute&gt; | 3加9等于几 |
@@ -22,7 +24,7 @@
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | 计算结果 | string |
-| data |arithmetic | 用户输入对应的表达式 | string |
+| data | arithmetic | 用户输入对应的表达式 | string |
 |  | result | 计算结果 | string |
 
 返回样例
@@ -33,6 +35,34 @@
         "data": {
             "arithmetic": "(3)+(9)",
             "result": "12"
+        }
+    }
+```
+
+\/CalcNext
+
+接着Calc意图，进行再次计算
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;compute&gt; | 再乘以5呢 |
+
+返回字段
+
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 计算结果 | string |
+| data | arithmetic | 用户输入对应的表达式 | string |
+|  | result | 计算结果 | string |
+
+返回样例
+
+```
+    "result": {
+        "hint": "等于60",
+        "data": {
+            "arithmetic": "(12)*(5)",
+            "result": "60"
         }
     }
 ```
