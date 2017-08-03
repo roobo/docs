@@ -15,6 +15,8 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;joke\_tag&gt; | 我要听冷笑话 |
-| | 讲个笑话 |
+|  | 讲个笑话 |
 
+返回字段
 
+返回样例
