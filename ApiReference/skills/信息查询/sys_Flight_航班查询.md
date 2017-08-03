@@ -21,6 +21,6 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt; StartCity &gt;+&lt;DestCity&gt;+&lt;date\_time&gt;+&lt;direciton&gt;+&lt;company&gt; | 给我订一张北京到上海明天上午10点之后的机票 |
-| &lt; constellation &gt; +&lt;date&gt;| |
+| &lt; StartCity &gt;+&lt;DestCity&gt;+&lt;date\_time&gt;+&lt;direciton&gt;+&lt;company&gt;\(不是所有条件都必须出现，可以为空，系统会进行多轮询问\) |
+| &lt; constellation &gt; +&lt;date&gt; |  |
 
