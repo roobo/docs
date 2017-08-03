@@ -26,9 +26,25 @@
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | Apple | string |
-| data | Service | ShutDown | string |
-|  | Action | SetShutDown | string |
-|  | alarm\_time | 定时关机的时间，如：2017-07-31 11:04:35 | string |
+| data | destlang | 目标语言类| string |
+|  | dstword | 翻译结果 | string |
+|  |  speed| 定时关机的时间，如：2017-07-31 11:04:35 | string |
 | formattype |  | audio | string |
+
 返回样例
+
+```
+    "result": {
+        "hint": "Apple",
+        "data": {
+            "destlang": "en",
+            "dstword": "Apple",
+            "speed": "",
+            "srclang": "zh",
+            "srcword": "苹果",
+            "url": "http://dwn.roo.bo/voices/translate/a/apple.wav",
+            "volume": ""
+        }
+    }
+```
 
