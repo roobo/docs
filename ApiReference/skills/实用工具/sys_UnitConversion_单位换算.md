@@ -28,4 +28,7 @@
 
 \/Convert
 
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;unit\_currency&gt;+&lt;currency&gt; | 2美元等于多少人民币 |
 
