@@ -19,5 +19,5 @@
 | --- | --- |
 |  | 我要翻译 |
 |  | 能帮我翻译英文么 |
-| &lt; unit&gt; + &lt; unit&gt; | 苹果用 |
+| &lt; word&gt; + &lt; lang&gt; | 苹果用 |
 
