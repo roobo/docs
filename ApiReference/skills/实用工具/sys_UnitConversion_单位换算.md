@@ -35,3 +35,18 @@
 | formatType |  | prop | string |
 
 返回样例
+
+```
+    "result": {
+        "hint": "2.3米等于2300000微米",
+        "data": {
+            "fromAmount": "2.3",
+            "fromCode": "m",
+            "fromName": "米",
+            "toAmount": "2300000",
+            "toCode": "um",
+            "toName": "微米"
+        }
+    }
+```
+
