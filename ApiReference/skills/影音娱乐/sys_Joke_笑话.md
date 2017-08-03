@@ -14,8 +14,7 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;joke\_tag&gt; | s |
-| &lt;radio\_label&gt; | 我要听音乐台 |
-| &lt;position&gt; | 播放邢台的电台 |
-|  | 我要听广播 |
+| &lt;joke\_tag&gt; | 我要听冷笑话 |
+| | 讲个笑话 |
+
 
