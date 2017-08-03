@@ -15,3 +15,6 @@
 | direction | 方向 | 前、后 |
 
 #3.意图
+/QueryFlight
+查询机票
+
