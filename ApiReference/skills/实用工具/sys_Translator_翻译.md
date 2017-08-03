@@ -26,13 +26,13 @@
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | Apple | string |
-| data | destlang | 目标语言类| string |
+| data | destlang | 目标语言类 | string |
 |  | dstword | 翻译结果 | string |
-|  |  speed| 语速 | string |
-| | srclang| 源语言 | string |
-| | srcword| 待翻译词汇 | string |
-| | url| 翻译结果音频url | string |
-| | volume| 音量 | string |
+|  | speed | 语速 | string |
+|  | srclang | 源语言 | string |
+|  | srcword | 待翻译词汇 | string |
+|  | url | 翻译结果音频url | string |
+|  | volume | 音量 | string |
 
 返回样例
 
@@ -50,4 +50,4 @@
         }
     }
 ```
-
+/
