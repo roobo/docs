@@ -20,6 +20,14 @@
 |  | 我要翻译 |
 |  | 能帮我翻译英文么 |
 | &lt; word&gt; + &lt; lang&gt; | 苹果用英语怎么说 |
+
 返回字段
 
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | Apple | string |
+| data | Service | ShutDown | string |
+|  | Action | SetShutDown | string |
+|  | alarm\_time | 定时关机的时间，如：2017-07-31 11:04:35 | string |
+| formattype |  | audio | string |
 
