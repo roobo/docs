@@ -6,7 +6,9 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| constellation | 星座 | 天蝎座 |
+| company | 航空公司 | 中国国航 |
 | date | 日期 | 今天\/明天 |
-| gender | 性别 | 男\/女 |
+| StartCity | 出发城市 | 北京 |
+| DestCity | 到达城市 | 福州 |
+
 
