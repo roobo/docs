@@ -30,5 +30,6 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;unit\_currency&gt;+&lt;currency&gt; | 2美元等于多少人民币 |
+| &lt;unit\_num&gt;+&lt;unit&gt; | 2美元等于多少人民币 |
+|  |  |
 
