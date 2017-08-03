@@ -25,4 +25,4 @@
 |  | toCode | 转换后目标货币代码 | string |
 |  | toName | 转换后目标货币名称 | string |
 | formatType |  | prop | string |
-
+/
