@@ -11,7 +11,7 @@
 
 # 3.意图
 
-\*\*\*由于Translate意图、Repeat意图和Change意图返回字段相同，在此统一说明
+\*\*\*由于Translate意图、Repeat意图、Change意图和Spell意图返回字段相同，在此统一说明
 
 返回字段
 
