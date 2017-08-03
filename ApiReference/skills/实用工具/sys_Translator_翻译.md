@@ -57,6 +57,10 @@
 
 重复
 
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 重复一遍 |
+
 返回样例
 
 ```
@@ -77,6 +81,10 @@
 \/Change
 
 换一种说法，针对同一个源单词有不同的翻译结果的情况
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 换种说法 |
 
 返回样例
 
