@@ -16,14 +16,13 @@
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | xx\(源货币数量\)xx\(源货币类型\)等于xx\(目的货币数量\)xx\(目的货币类型\)，例如：1美元等于6.73人民币 | string |
-| data | fromAmount | 用户输入对应的表达式 | string |
-|  | fromCode | 计算结果 | string |
-| | fromName | 计算结果 | string |
-| | toAmount | 计算结果 | string |
-| | toCode | 计算结果 | string |
-| | toName | 计算结果 | string |
-|formatType | |prop| string |
-
+| data | fromAmount | 源货币数量 | string |
+|  | fromCode | 源货币代码 | string |
+|  | fromName | 源货币名称| string |
+|  | toAmount |  转换后目标货币数量| string |
+|  | toCode |转换后目标货币代码  | string |
+|  | toName | 转换后目标货币名称 | string |
+| formatType |  | prop | string |
 
 \/Exchange
 
