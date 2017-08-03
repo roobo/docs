@@ -29,14 +29,14 @@
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | 已为您查询到2017-08-04\(日期\)出发，从北京\(出发城市\)到福州\(到达城市\)的以下航班: | string |
-| data\[\] |  arrival| 到达时间 | string |
-|  | arrival| 到达时间 | string |
-| | date| 出发日期 | string |
-|  | departure|出发地 | string |
-|  | number| 航班号 | string |
-| | prince| 价格 | string |
-| | time| 出发时间 | string |
-| formatType |  | 回值类型\(text表示该场景返回值为文字类型\) | string |
+| data\[\] | arrival | 到达时间 | string |
+|  | arrival | 到达时间 | string |
+|  | date | 出发日期 | string |
+|  | departure | 出发地 | string |
+|  | number | 航班号 | string |
+|  | prince | 价格 | string |
+|  | time | 出发时间 | string |
+
 
 返回样例
 
