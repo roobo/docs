@@ -121,5 +121,7 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 |  | 说快一点 |
-|  | 说 |
+|  | 说慢一点 |
+返回样例
+
 
