@@ -6,7 +6,7 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| unit_currency | 货币数量+货币类型| 1美元、3块钱 |
+| unit\_currency | 货币数量+货币类型 | 1美元、3块钱 |
 | currency | 货币类型 | 人民币、美元 |
 
 # 3.意图
@@ -30,7 +30,7 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;afcurrency&gt;+&lt;tcurrency&gt; | 2美元等于多少人民币 |
+| &lt;unit\_currency&gt;+&lt;currency&gt; | 2美元等于多少人民币 |
 
 返回样例
 
