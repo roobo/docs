@@ -7,7 +7,7 @@
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
 | unit\_num | 数量+单位 | 1平米、3摄氏度 |
-| unit | 单位 |升、km/h |
+| unit | 单位 | 升、km\/h |
 
 # 3.意图
 
@@ -30,6 +30,6 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;unit\_num&gt;+&lt;unit&gt; | 2美元等于多少人民币 |
-|  |  |
+| &lt;unit\_num&gt;+&lt;unit&gt; |1.5米等于多少厘米|
+| <unit> | 那毫米呢(多轮，接上次询问) |
 
