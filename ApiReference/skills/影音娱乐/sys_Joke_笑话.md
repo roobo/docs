@@ -6,7 +6,7 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| radioname | 电台名称 | 北京交通广播 |
+| joke_tag | 笑话标签 | 冷、校园、儿童 |
 
 # 3.意图
 
