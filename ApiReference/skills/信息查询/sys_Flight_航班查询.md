@@ -22,5 +22,5 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt; StartCity &gt;+&lt;DestCity&gt;+&lt;date\_time&gt;+&lt;direciton&gt;+&lt;company&gt; | 给我订一张北京到上海明天上午10点之后的机票 |
-| &lt; constellation &gt; +&lt;date&gt; | 天蝎座今天运势 |
+| &lt; constellation &gt; +&lt;date&gt;| |
 
