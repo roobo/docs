@@ -6,8 +6,8 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| unit\_num | 数量+单位 | 1平米、3摄氏度 |
-| unit | 单位 | 升、km\/h |
+| word | 用户需要翻译的词 | 苹果 |
+| lang | 语言 | 英语、法语 |
 
 # 3.意图
 
