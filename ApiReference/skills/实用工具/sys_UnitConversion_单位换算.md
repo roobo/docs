@@ -31,6 +31,6 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;unit\_num&gt;+&lt;unit&gt; | 1.5米等于多少厘米 |
-| &gt;&lt;y ||
-| &lt; ||
+| &lt;unit&gt; |  |
+| &lt; unit&gt; + &lt; unit&gt;|  |
 
