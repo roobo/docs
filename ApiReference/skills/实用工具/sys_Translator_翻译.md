@@ -28,8 +28,11 @@
 | hint |  | Apple | string |
 | data | destlang | 目标语言类| string |
 |  | dstword | 翻译结果 | string |
-|  |  speed| 定时关机的时间，如：2017-07-31 11:04:35 | string |
-| formattype |  | audio | string |
+|  |  speed| 语速 | string |
+| | srclang| 源语言 | string |
+| | srcword| 待翻译词汇 | string |
+| | url| 翻译结果音频url | string |
+| | volume| 音量 | string |
 
 返回样例
 
