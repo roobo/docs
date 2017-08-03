@@ -53,7 +53,7 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;afcurrency&gt;+&lt;tcurrency&gt; | 2美元等于多少人民币 |
+| &lt;currency&gt;+&lt;currency&gt; | 2美元等于多少人民币 |
 
 返回样例
 
