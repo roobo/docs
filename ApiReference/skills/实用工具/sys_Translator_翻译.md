@@ -57,6 +57,8 @@
 
 重复
 
+返回样例
+
 ```
     "result": {
         "hint": "Apple",
@@ -71,5 +73,25 @@
         }
     }
 ```
-/Change
+
+\/Change
+
+换一种说法，针对同一个源单词有不同的翻译结果的情况
+
+返回样例
+
+```
+    "result": {
+        "hint": "Iphone",
+        "data": {
+            "destlang": "en",
+            "dstword": "Iphone",
+            "speed": "",
+            "srclang": "zh",
+            "srcword": "苹果",
+            "url": "",
+            "volume": ""
+        }
+    }
+```
 
