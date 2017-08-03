@@ -113,4 +113,7 @@
         }
     }
 ```
+/SpeedUp
+/SpeedDown
+调整语速
 
