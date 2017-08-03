@@ -6,9 +6,16 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| joke_tag | 笑话标签 | 冷、校园、儿童 |
+| joke\_tag | 笑话标签 | 冷、校园、儿童 |
 
 # 3.意图
-/GetJoke
 
+\/GetJoke
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;joke\_tag&gt; | s |
+| &lt;radio\_label&gt; | 我要听音乐台 |
+| &lt;position&gt; | 播放邢台的电台 |
+|  | 我要听广播 |
 
