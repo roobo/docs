@@ -11,6 +11,8 @@
 
 # 3.意图
 
+\*\*\*由于Exchange和GetExchangeRate返回字段相同，在此统一说明
+
 返回字段
 
 | **result** |  | **value** | **type** |
@@ -48,6 +50,10 @@
 ```
 
 \/GetExchangeRate
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt;afcurrency&gt;+&lt;tcurrency&gt; | 2美元等于多少人民币 |
 
 返回样例
 
