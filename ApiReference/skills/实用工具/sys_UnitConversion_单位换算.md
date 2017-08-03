@@ -26,11 +26,11 @@
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | xx\(源单位数量\)xx\(源单位类型\)等于xx\(目的单位数量\)xx\(目的单位类型\)，例如：1米等于100毫米 | string |
-| data | fromAmount | 源货币数量 | string |
-|  | fromCode | 源货币代码 | string |
-|  | fromName | 源货币名称 | string |
-|  | toAmount | 转换后目标货币数量 | string |
-|  | toCode | 转换后目标货币代码 | string |
-|  | toName | 转换后目标货币名称 | string |
+| data | fromAmount | 源单位数量 | string |
+|  | fromCode | 源单位代码 | string |
+|  | fromName | 源单位名称 | string |
+|  | toAmount | 转换后目标单位数量 | string |
+|  | toCode | 转换后目标单位代码 | string |
+|  | toName | 转换后目标单位名称 | string |
 | formatType |  | prop | string |
 
