@@ -12,6 +12,7 @@
 | DestCity | 到达城市 | 福州 |
 | time_period | 时段 | 傍晚|
 | date_time |时间+日期 | 明天10点|
+| direction |方向 |前、后|
 
 
 
