@@ -17,13 +17,14 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 |  | 成语接龙 |
-| &lt;idiom&gt; | h |
+| &lt;idiom&gt; |厚德载物 |
+\/Repeat
 
 \/GiveTips
 
 \/GiveAnswer
 
-\/Repeat
+
 
 \/Replay
 
