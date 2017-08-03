@@ -11,7 +11,7 @@
 
 # 3.意图
 
-\/Translator
+\/Translate
 
 包括进入场景，翻译等功能
 
