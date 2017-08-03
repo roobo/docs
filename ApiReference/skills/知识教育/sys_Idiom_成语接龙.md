@@ -25,7 +25,34 @@
 |  | 成语接龙 |
 | &lt;idiom&gt; | 厚德载物 |
 
+返回样例
+
+```
+    "result": {
+        "hint": "好的，成语接龙马上开始喽！我先说一个，七情六欲",
+        "data": {
+            "idiomToMatch": "七情六欲"
+        }
+    }
+```
+用户接“欲壑难填”
+```
+     "result": {
+        "hint": "天大地大",
+        "data": {
+            "idiomToMatch": "天大地大"
+        }
+    }
+      
+```
+
+
+
 \/Repeat
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 再说一遍 |
 
 \/GiveTips
 
