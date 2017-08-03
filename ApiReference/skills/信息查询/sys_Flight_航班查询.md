@@ -36,7 +36,6 @@
 |  | number| 航班号 | string |
 | | prince| 价格 | string |
 | | time| 出发时间 | string |
-
 | formatType |  | 回值类型\(text表示该场景返回值为文字类型\) | string |
 
 返回样例
