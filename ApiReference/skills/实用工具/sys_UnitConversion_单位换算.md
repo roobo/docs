@@ -30,7 +30,7 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;unit\_num&gt;+&lt;unit&gt; |1.5米等于多少厘米|
-| | 那毫米呢(多轮，接上次询问) |
-|  |米等于多少纳米(单位之间的换算) |
+| &lt;unit\_num&gt;+&lt;unit&gt; | 1.5米等于多少厘米 |
+|  ||
+|  |米等于多少纳米\(单位之间的换算\) |
 
