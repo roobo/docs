@@ -90,7 +90,21 @@
 
 返回字段
 
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | 机器人给用户的二字提示 | string |
+| data | idiomToMatct | 用户需要接上的成语 | string |
+
 返回样例
+
+```
+    "result": {
+        "hint": "始终",
+        "data": {
+            "idiomToMatch": "有识之士"
+        }
+    }
+```
 
 \/GiveAnswer
 
@@ -127,5 +141,7 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 |  | 布丁布丁 |
+
 返回字段
 返回样例
+
