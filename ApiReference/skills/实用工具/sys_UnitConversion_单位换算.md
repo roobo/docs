@@ -2,7 +2,7 @@
 
 为用户提供单位换算，包括长度，重量，面积，体积\/容积，速度，温度。
 
-# 2.槽位dfa
+# 2.槽位
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
@@ -31,6 +31,6 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;unit\_num&gt;+&lt;unit&gt; | 1.5米等于多少厘米 |
-| &lt;unit&gt; | 那毫米呢(多轮，接上次询问) |
-| &lt; unit&gt; + &lt; unit&gt; |米等于多少纳米(单位之间的转换) |
+| &lt;unit&gt; | 那毫米呢\(多轮，接上次询问\) |
+| &lt; unit&gt; + &lt; unit&gt; | 米等于多少纳米\(单位之间的转换\) |
 
