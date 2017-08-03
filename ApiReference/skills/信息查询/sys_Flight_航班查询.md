@@ -24,3 +24,5 @@
 | &lt; StartCity &gt;+&lt;DestCity&gt;+&lt;date\_time&gt;+&lt;direciton&gt;+&lt;company&gt;\(不是所有条件都必须出现，可以为空，系统会进行多轮询问\) | 给我订一张北京到上海明天10点半之后的机票 |
 | &lt; StartCity &gt;+&lt;DestCity&gt;+&lt;date&gt;+&lt;company&gt;\(不是所有条件都必须出现，可以为空，系统会进行多轮询问\) | 给我订一张北京到上海明天的机票 |
 
+返回字段
+返回样例
