@@ -15,6 +15,11 @@
 
 \/Play
 
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 成语接龙 |
+| &lt;idiom&gt; | h |
+
 \/GiveTips
 
 \/GiveAnswer
@@ -28,6 +33,4 @@
 \/Save
 
 \/Exit
-
-
 
