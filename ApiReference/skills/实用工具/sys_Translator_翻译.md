@@ -57,13 +57,18 @@
 
 重复
 
-
-
-\/Change
-
-换一种说法，如快乐第一次翻译成happy，换一种说法为 delight
-
-返回样例 
-
-
+```
+    "result": {
+        "hint": "Apple",
+        "data": {
+            "destlang": "en",
+            "dstword": "Apple",
+            "speed": "",
+            "srclang": "zh",
+            "srcword": "苹果",
+            "url": "http://dwn.roo.bo/voices/translate/a/apple.wav",
+            "volume": ""
+        }
+    }
+```
 
