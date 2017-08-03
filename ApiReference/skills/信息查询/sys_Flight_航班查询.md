@@ -10,5 +10,12 @@
 | date | 日期 | 今天\/明天 |
 | StartCity | 出发城市 | 北京 |
 | DestCity | 到达城市 | 福州 |
+| time_period | 时段 | 傍晚|
+| date_time |时间+日期 | 明天10点|
+
+
+
+
+
 
 
