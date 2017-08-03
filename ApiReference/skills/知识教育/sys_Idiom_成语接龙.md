@@ -13,5 +13,21 @@
 
 # 3.意图
 
-**\*\*\*诗句对答返回字段格式规整，在此进行统一说明**
+\/Play
+
+\/GiveTips
+
+\/GiveAnswer
+
+\/Repeat
+
+\/Replay
+
+\/Pause
+
+\/Save
+
+\/Exit
+
+
 
