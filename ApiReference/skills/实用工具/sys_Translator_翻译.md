@@ -113,7 +113,13 @@
         }
     }
 ```
-/SpeedUp
-/SpeedDown
+
+\/SpeedUp
+\/SpeedDown
 调整语速
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 说快一点 |
+|  | 说 |
 
