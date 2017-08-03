@@ -166,8 +166,19 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-|  | 布丁布丁 |
+|  | 布丁布丁、我不想玩了 |
 
 返回字段
-返回样例
+
+| **result** | **value** | **type** |
+| --- | --- | --- |
+| hint | 好的 | string |
+
+返回样例 
+
+```
+    "result": {
+        "hint": "好的"
+    }
+```
 
