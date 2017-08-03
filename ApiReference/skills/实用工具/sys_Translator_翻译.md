@@ -13,7 +13,18 @@
 
 \*\*\*由于Translate意图、Repeat意图和Change意图返回字段相同，在此统一说明
 
+返回字段
 
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | Apple | string |
+| data | destlang | 目标语言类 | string |
+|  | dstword | 翻译结果 | string |
+|  | speed | 语速 | string |
+|  | srclang | 源语言 | string |
+|  | srcword | 待翻译词汇 | string |
+|  | url | 翻译结果音频url | string |
+|  | volume | 音量 | string |
 
 \/Translate
 
