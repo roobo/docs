@@ -94,8 +94,23 @@
         }
     }
 ```
-/Spell
-拼写意图，只针对翻译结果为英文的情况，翻译结果(dstword)字段为单词拆分为字母的结果
+
+\/Spell
+拼写意图，只针对翻译结果为英文的情况，翻译结果\(dstword\)字段为单词拆分为字母的结果
 返回样例
 
+```
+    "result": {
+        "hint": "A p p l e",
+        "data": {
+            "destlang": "en",
+            "dstword": "A p p l e",
+            "speed": "",
+            "srclang": "zh",
+            "srcword": "苹果",
+            "url": "http://dwn.roo.bo/voices/translate/a/apple.wav",
+            "volume": ""
+        }
+    }
+```
 
