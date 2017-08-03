@@ -84,13 +84,37 @@
 
 \/GiveTips
 
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 给点儿提示 |
+
+返回字段
+
+返回样例
+
 \/GiveAnswer
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 告诉我答案吧 |
 
 \*\*\*由于Pause意图和Save意图返回字段相同，再次统一说明
 
 \/Pause
 
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 暂停 |
+
 \/Save
 
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 保存 |
+
 \/Exit
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 布丁布丁 |
 
