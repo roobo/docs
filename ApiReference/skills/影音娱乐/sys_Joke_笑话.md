@@ -19,4 +19,10 @@
 
 返回字段
 
+| **result** | **value** | **type** |
+| --- | --- | --- |
+| hint | 查到主播信息： 主播是xxx 没查到主播： 没有查到主播信息 | string |
+| formattype | text | string |
+
 返回样例
+
