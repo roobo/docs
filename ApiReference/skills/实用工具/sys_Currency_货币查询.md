@@ -53,7 +53,7 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;currency&gt;+&lt;currency&gt; | 2美元等于多少人民币 |
+| &lt;currency&gt;+&lt;currency&gt; | 美元兑人民币汇率是多少 |
 
 返回样例
 
