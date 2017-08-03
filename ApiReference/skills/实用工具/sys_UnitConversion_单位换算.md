@@ -11,7 +11,7 @@
 
 # 3.意图
 
-\*\*\*由于Exchange和GetExchangeRate返回字段相同，在此统一说明
+\*\*\*由于涉及到的单位种类较多，询问逻辑和返回字段都是一样的，在此抽象成一个Convert函数
 
 返回字段
 
@@ -26,5 +26,6 @@
 |  | toName | 转换后目标货币名称 | string |
 | formatType |  | prop | string |
 
-\/
+\/Convert
+
 
