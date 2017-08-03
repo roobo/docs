@@ -30,4 +30,5 @@
 |  | Action | SetShutDown | string |
 |  | alarm\_time | 定时关机的时间，如：2017-07-31 11:04:35 | string |
 | formattype |  | audio | string |
+返回样例
 
