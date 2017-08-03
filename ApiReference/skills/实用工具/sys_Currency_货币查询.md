@@ -6,8 +6,8 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| afcurrency | 需要兑换的货币 | 1美元 |
-| tcurrency | 目标币种 | 人民币 |
+| unit_currency | 货币数量+货币类型| 1美元、3块钱 |
+| currency | 货币类型 | 人民币、美元 |
 
 # 3.意图
 
