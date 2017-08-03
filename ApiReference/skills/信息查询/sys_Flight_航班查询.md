@@ -14,7 +14,13 @@
 | date\_time | 时间+日期 | 明天10点 |
 | direction | 方向 | 前、后 |
 
-#3.意图
-/QueryFlight
+# 3.意图
+
+\/QueryFlight
 查询机票
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt; StartCity &gt; +&lt;DestCity&gt;+&lt;date\_time&gt;+&lt;company&gt; | b给我订一张北京到上海明天上午10di |
+| &lt; constellation &gt; +&lt;date&gt; | 天蝎座今天运势 |
 
