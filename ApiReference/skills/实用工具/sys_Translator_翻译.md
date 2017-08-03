@@ -36,19 +36,6 @@
 |  | 能帮我翻译英文么 |
 | &lt; word&gt; + &lt; lang&gt; | 苹果用英语怎么说 |
 
-返回字段
-
-| **result** |  | **value** | **type** |
-| --- | --- | --- | --- |
-| hint |  | Apple | string |
-| data | destlang | 目标语言类 | string |
-|  | dstword | 翻译结果 | string |
-|  | speed | 语速 | string |
-|  | srclang | 源语言 | string |
-|  | srcword | 待翻译词汇 | string |
-|  | url | 翻译结果音频url | string |
-|  | volume | 音量 | string |
-
 返回样例
 
 ```
@@ -66,5 +53,17 @@
     }
 ```
 
-\/
+\/Repeat
+
+重复
+
+
+
+\/Change
+
+换一种说法，如快乐第一次翻译成happy，换一种说法为 delight
+
+返回样例 
+
+
 
