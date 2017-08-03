@@ -15,5 +15,9 @@
 
 包括进入场景，翻译等功能
 
-
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+| &lt; | 我要翻译 |
+| &lt; | 能帮我翻译英文么 |
+| &lt; unit&gt; + &lt; unit&gt; | 苹果用 |
 
