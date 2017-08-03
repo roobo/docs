@@ -31,6 +31,6 @@
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;unit\_num&gt;+&lt;unit&gt; | 1.5米等于多少厘米 |
-| &lt;unit&gt; |  |
-| &lt; unit&gt; + &lt; unit&gt;|  |
+| &lt;unit&gt; | 那毫米呢(多轮，接上次询问) |
+| &lt; unit&gt; + &lt; unit&gt; |米等于多少纳米(单位之间的转换) |
 
