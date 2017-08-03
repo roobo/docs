@@ -11,7 +11,7 @@
 
 # 3.意图
 
-\*\*\*Play意图和Repeat意图的返回字段相同，在此统一说明
+\*\*\*Play意图、Repeat意图和Replay的返回字段相同，在此统一说明
 
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
@@ -65,11 +65,28 @@
     }
 ```
 
+\/Replay
+
+| **Slot Semantic Signatures** | **Example** |
+| --- | --- |
+|  | 重新开始 |
+
+返回样例
+
+```
+    "result": {
+        "hint": "好的，成语接龙马上开始喽！我先说一个，阳奉阴违",
+        "data": {
+            "idiomToMatch": "阳奉阴违"
+        }
+    }
+```
+
 \/GiveTips
 
 \/GiveAnswer
 
-\/Replay
+
 
 \/Pause
 
