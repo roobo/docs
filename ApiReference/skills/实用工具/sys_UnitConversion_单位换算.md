@@ -6,8 +6,8 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| unit\_currency | 货币数量+货币类型 | 1美元、3块钱 |
-| currency | 货币类型 | 人民币、美元 |
+| unit\_num | 数量+单位 | 1平米、3摄氏度 |
+| unit | 单位 |升、km/h |
 
 # 3.意图
 
