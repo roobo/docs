@@ -13,19 +13,6 @@
 
 \*\*\*由于涉及到的单位种类较多，询问逻辑和返回字段都是一样的，在此抽象成一个Convert函数
 
-返回字段
-
-| **result** |  | **value** | **type** |
-| --- | --- | --- | --- |
-| hint |  | xx\(源货币数量\)xx\(源货币类型\)等于xx\(目的货币数量\)xx\(目的货币类型\)，例如：1美元等于6.73人民币 | string |
-| data | fromAmount | 源货币数量 | string |
-|  | fromCode | 源货币代码 | string |
-|  | fromName | 源货币名称 | string |
-|  | toAmount | 转换后目标货币数量 | string |
-|  | toCode | 转换后目标货币代码 | string |
-|  | toName | 转换后目标货币名称 | string |
-| formatType |  | prop | string |
-
 \/Convert
 
 | **Slot Semantic Signatures** | **Example** |
@@ -35,3 +22,15 @@
 | &lt; unit&gt; + &lt; unit&gt; | 米等于多少纳米\(单位之间的转换\) |
 
 返回字段
+
+| **result** |  | **value** | **type** |
+| --- | --- | --- | --- |
+| hint |  | xx\(源单位数量\)xx\(源单位类型\)等于xx\(目的单位数量\)xx\(目的单位类型\)，例如：1米等于100毫米 | string |
+| data | fromAmount | 源货币数量 | string |
+|  | fromCode | 源货币代码 | string |
+|  | fromName | 源货币名称 | string |
+|  | toAmount | 转换后目标货币数量 | string |
+|  | toCode | 转换后目标货币代码 | string |
+|  | toName | 转换后目标货币名称 | string |
+| formatType |  | prop | string |
+
