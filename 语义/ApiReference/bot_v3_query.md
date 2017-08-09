@@ -54,7 +54,7 @@
 _Sample Request_
 
 ```
-POST http://api.ros.ai/bot/v2/query
+POST http://api.ros.ai/bot/v3/query
 
 Headers:
 Content-Type: application/json; charset=utf-8
