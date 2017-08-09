@@ -11,7 +11,6 @@
 ---
 
 对输入的自然语言文本进行意图识别。 
-附历史接口：[/bot/v1/query](bot_v1_query.md)
 
 ### 2 URLs
 
@@ -19,7 +18,7 @@
 
 | Method | Definition |
 | :--- | :--- |
-| POST /bot/v2/query | 接收返回均使用JSON表示 |
+| POST /bot/v3/query | 接收返回均使用JSON表示 |
 
 ### 3 请求参数
 
