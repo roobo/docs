@@ -37,17 +37,17 @@
 |  | city | 城市 | string | 北京 |
 |  | date | 日期 | string | 2017-08-01 |
 |  | focus | 查询关键词 | string | rain |
-|  | humidity | 湿度 | string |  |
+|  | humidity | 湿度 | string | 31 |
 |  | index | 返回天气天数索引 | string | 1 |
 |  | maxTemp | 最高温度 | string | 30 |
 |  | minTemp | 最低温度 | string | 23 |
-|  | pm25 | pm25值 | string |  |
-|  | temperature | 温度 | string |  |
+|  | pm25 | pm25值 | string | 24 |
+|  | temperature | 温度 | string | 37 |
 |  | weather | 天气 | string | 阵雨 |
 |  | windDay | 白天风向 | string | 东南风 |
 |  | windDayLevel | 白天风力 | string | 2 |
-|  | windDir |  | string |  |
-|  | windLevel |  | string |  |
+|  | windDir | 转向 | string | 东北风 |
+|  | windLevel | 风力 | string | 2 |
 |  | windNight | 夜晚风向 | string | 东风 |
 |  | windNightLevel | 夜晚风力 | string | 3 |
 

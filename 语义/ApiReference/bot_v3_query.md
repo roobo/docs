@@ -1,4 +1,4 @@
-### /bot/v2/query(废弃)
+### /bot/v3/query
 
 * [概述](#1-概述)
 * [URLs](#2-URLs)
@@ -11,7 +11,6 @@
 ---
 
 对输入的自然语言文本进行意图识别。 
-附历史接口：[/bot/v1/query](bot_v1_query.md)
 
 ### 2 URLs
 
@@ -19,7 +18,7 @@
 
 | Method | Definition |
 | :--- | :--- |
-| POST /bot/v2/query | 接收返回均使用JSON表示 |
+| POST /bot/v3/query | 接收返回均使用JSON表示 |
 
 ### 3 请求参数
 
@@ -46,7 +45,7 @@
 | status | Status | 状态码 | Required |
 | query | String | 输出query（纠错后） | Required |
 | semantic | Semantic | 语义部分 | Required |
-| results | [] Result | 数据部分（***v2协议变更点***） | Optional |
+| results | [] Result | 数据部分 | Optional |
 
 ### 5 实例
 
@@ -55,7 +54,7 @@
 _Sample Request_
 
 ```
-POST http://api.ros.ai/bot/v2/query
+POST http://api.ros.ai/bot/v3/query
 
 Headers:
 Content-Type: application/json; charset=utf-8

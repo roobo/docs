@@ -76,10 +76,11 @@ _Sample Response_
 ```
 _Chat Result->data_
 
-| 字段名 | Definition |
-| :--- | :--- |
-| emotion | 情感分析结果，分别对问题（question）和答案（answer）做出了情感倾向识别 |
-| source | 问答来源 |
+| 字段名 | Definition | type |
+| :--- | :--- | :--- |
+| hint | 闲聊回复 | string |
+| emotion | 情感分析结果，分别对问题（question）和答案（answer）做出了情感倾向识别 | string |
+| source | 问答来源 | string |
 
 具体枚举值参考如下。
 
