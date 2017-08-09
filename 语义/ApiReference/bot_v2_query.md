@@ -46,7 +46,7 @@
 | status | Status | 状态码 | Required |
 | query | String | 输出query（纠错后） | Required |
 | semantic | Semantic | 语义部分 | Required |
-| results | [] Result | 数据部分（***v2协议变更点***） | Optional |
+| results | [] Result | 数据部分 | Optional |
 
 ### 5 实例
 
