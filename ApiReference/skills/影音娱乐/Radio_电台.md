@@ -71,10 +71,9 @@
     "result": {
         "hint": "邢台县人民广播电台",
         "data": {
-            "rate24_aac_url": "http://live.xmcdn.com/live/1132/24.m3u8",
-            "rate24_ts_url": "http://live.xmcdn.com/live/1132/24.m3u8?transcode=ts",
-            "rate64_aac_url": "http://live.xmcdn.com/live/1132/64.m3u8",
-            "rate64_ts_url": "http://live.xmcdn.com/live/1132/64.m3u8?transcode=ts"
+            "audio": "http://live.xmcdn.com/live/1132/24.m3u8",
+            "hqAudio": "http://live.xmcdn.com/live/1132/64.m3u8",
+            "name": "邢台县人民广播电台"
         },
         "formatType": "audio"
     }
