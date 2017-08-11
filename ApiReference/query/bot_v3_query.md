@@ -32,7 +32,7 @@
 | query | String | 输入query | Required |
 | clientId | String | 设备id | Optional |
 | lang | [Lang](/ApiReference/query/lang.md) | 语种，默认中文 | Optional |
-| contexts | [Context](/ApiReference/query/context.md)\[\] | 上文 | Optional |
+| contexts | [Context](/ApiReference/query/context.md) | 上文 | Optional |
 | location | [Location](/ApiReference/query/location.md) | 地理位置 | Optional |
 | callback | [Callback](/ApiReference/query/callback.md) | 回调参数 | Optional |
 
