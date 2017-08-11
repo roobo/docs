@@ -52,6 +52,7 @@
 ---
 
 _Sample Request_
+双语教学
 
 ```
 POST http://api.ros.ai/bot/v3/query
