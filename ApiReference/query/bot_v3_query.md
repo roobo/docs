@@ -48,11 +48,10 @@
 | results | \[\][Result](/ApiReference/query/result.md) | 数据部分 | Optional |
 
 ### 5 实例
-
 ---
+#### 双语教学
 
 _Sample Request_
-双语教学
 
 ```
 POST http://api.ros.ai/bot/v3/query
@@ -141,4 +140,90 @@ _Sample Response_
   ]
 }
 ```
+
+---
+
+#### 音乐
+_Sample Request_
+
+```
+POST http://api.ros.ai/bot/v3/query
+Headers:
+
+Content-Type: application/json; charset=utf-8
+{
+ "agentId":"2ZmNzYyOTA5MzJjZ",
+ "token":"f7caaf310da3dcb24bacdc7944456210",
+ "sessionId":"1234567890",
+ "query":"我要听歌"
+}
+
+```
+
+_Sample Response_
+```
+{
+  "status": {
+   "code": 0,
+ "errorType": "success"
+ },
+
+ "query": "唱首歌",
+
+ "semantic": {
+
+ "service": "Music",
+
+ "action": "Play",
+
+ "outputContext": {
+
+ "service": "Music",
+
+ "context": "music"
+
+ }
+
+ },
+
+ "results": [
+
+ {
+
+ "hint": "为您播放 傻傻的爱你",
+
+ "data": {
+
+ "album": "单曲 - 傻傻的爱你",
+
+ "artist": "",
+
+ "audio": "http://dwn.roo.bo/resource/music_bk/849/34678849.mp3",
+
+ "hqAudio": "",
+
+ "hqImage": "https://y.gtimg.cn/music/photo_new/T002R300x300M000003ZzeCk0Svi3K.jpg?max_age=2592000",
+
+ "image": "https://y.gtimg.cn/music/photo_new/T002R300x300M000003ZzeCk0Svi3K.jpg?max_age=2592000",
+
+ "name": "傻傻的爱你",
+
+ "resId": "music:5492123",
+
+ "start": 0
+
+ },
+
+ "formatType": "audio"
+
+ }
+
+ ]
+
+}
+
+```
+
+
+
 
