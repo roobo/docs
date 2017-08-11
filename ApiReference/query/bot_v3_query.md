@@ -1,4 +1,4 @@
-### /bot/v3/query
+### \/bot\/v3\/query
 
 * [概述](#1-概述)
 * [URLs](#2-URLs)
@@ -10,42 +10,42 @@
 
 ---
 
-对输入的自然语言文本进行意图识别。 
+对输入的自然语言文本进行意图识别。
 
 ### 2 URLs
 
 ---
 
 | Method | Definition |
-| :--- | :--- |
-| POST /bot/v3/query | 接收返回均使用JSON表示 |
+| --- | --- |
+| POST \/bot\/v3\/query | 接收返回均使用JSON表示 |
 
 ### 3 请求参数
 
 ---
 
 | Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- |
 | agentId | String | 应用唯一凭证 | Required |
 | token | String | 访问凭证 | Required |
 | sessionId | String | 会话id | Required |
 | query | String | 输入query | Required |
 | clientId | String | 设备id | Optional |
-| lang | Lang | 语种，默认中文 | Optional |
-| contexts | Context[] | 上文 | Optional |
-| location | Location | 地理位置 | Optional |
-| callback | Callback | 回调参数 | Optional |
+| lang | [Lang](/ApiReference/query/lang.md) | 语种，默认中文 | Optional |
+| contexts | [Context](/ApiReference/query/context.md)\[\] | 上文 | Optional |
+| location | [Location](/ApiReference/query/location.md) | 地理位置 | Optional |
+| callback | [Callback](/ApiReference/query/callback.md) | 回调参数 | Optional |
 
 ### 4 回复参数
 
 ---
 
 | Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- |
 | status | Status | 状态码 | Required |
 | query | String | 输出query（纠错后） | Required |
 | semantic | Semantic | 语义部分 | Required |
-| results | [] Result | 数据部分 | Optional |
+| results | \[\] Result | 数据部分 | Optional |
 
 ### 5 实例
 
@@ -140,6 +140,4 @@ _Sample Response_
   ]
 }
 ```
-
-
 
