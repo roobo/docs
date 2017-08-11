@@ -44,7 +44,7 @@
 | --- | --- | --- | --- |
 | status | Status | 状态码 | Required |
 | query | String | 输出query（纠错后） | Required |
-| semantic | Semantic | 语义部分 | Required |
+| semantic | Semantic | 语义部分 | Optional |
 | results | \[\][Result](/ApiReference/query/result.md) | 数据部分 | Optional |
 
 ### 5 实例
