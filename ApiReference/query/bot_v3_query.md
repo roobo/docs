@@ -120,22 +120,6 @@ _Sample Response_
         "type": "url"
       },
       "formatType": "audio"
-    },
-    {
-      "hint": "瞧！那不是大白熊波比吗，走，咱们过去打个招呼吧,可以说对大白熊波比说 Hi",
-      "data": {
-        "content": "瞧！那不是大白熊波比吗，走，咱们过去打个招呼吧,可以说对大白熊波比说 Hi",
-        "led": "ACTION_CHAT",
-        "resId": "e-learn:6",
-        "timeout": 7,
-        "type": "tts"
-      },
-      "formatType": "text",
-      "formatSpeak": "${content}",
-      "timeout": {
-        "timeInMs": 7000,
-        "action": "timeout?key=349079f0503df3206daf828354f646ae"
-      }
     }
   ]
 }
@@ -164,64 +148,36 @@ _Sample Response_
 ```
 {
   "status": {
-   "code": 0,
- "errorType": "success"
- },
-
- "query": "唱首歌",
-
- "semantic": {
-
- "service": "Music",
-
- "action": "Play",
-
- "outputContext": {
-
- "service": "Music",
-
- "context": "music"
-
- }
-
- },
-
- "results": [
-
- {
-
- "hint": "为您播放 傻傻的爱你",
-
- "data": {
-
- "album": "单曲 - 傻傻的爱你",
-
- "artist": "",
-
- "audio": "http://dwn.roo.bo/resource/music_bk/849/34678849.mp3",
-
- "hqAudio": "",
-
- "hqImage": "https://y.gtimg.cn/music/photo_new/T002R300x300M000003ZzeCk0Svi3K.jpg?max_age=2592000",
-
- "image": "https://y.gtimg.cn/music/photo_new/T002R300x300M000003ZzeCk0Svi3K.jpg?max_age=2592000",
-
- "name": "傻傻的爱你",
-
- "resId": "music:5492123",
-
- "start": 0
-
- },
-
- "formatType": "audio"
-
- }
-
- ]
-
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "唱首歌",
+  "semantic": {
+    "service": "Music",
+    "action": "Play",
+    "outputContext": {
+      "service": "Music",
+      "context": "music"
+    }
+  },
+  "results": [
+  {
+    "hint": "为您播放 傻傻的爱你",
+    "data": {
+      "album": "单曲 - 傻傻的爱你",
+      "artist": "",
+      "audio": "http://dwn.roo.bo/resource/music_bk/849/34678849.mp3"
+      "hqAudio": "",
+      "hqImage": "https://y.gtimg.cn/music/photo_new/T002R300x300M000003ZzeCk0Svi3K.jpg?max_age=2592000",
+      "image": "https://y.gtimg.cn/music/photo_new/T002R300x300M000003ZzeCk0Svi3K.jpg?max_age=2592000",
+      "name": "傻傻的爱你",
+      "resId": "music:5492123",
+      "start": 0
+    },
+    "formatType": "audio"
+  }
+  ]
 }
-
 ```
 
 
