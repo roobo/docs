@@ -63,6 +63,7 @@ Content-Type: application/json; charset=utf-8
   "agentId":"2ZmNzYyOTA5MzJjZ",
   "token":"f7caaf310da3dcb24bacdc7944456210",
   "sessionId":"1234567890",
+  "clientId":"1234567890",
   "query":"我要学英语"
 }
 ```
@@ -139,6 +140,7 @@ Content-Type: application/json; charset=utf-8
  "agentId":"2ZmNzYyOTA5MzJjZ",
  "token":"f7caaf310da3dcb24bacdc7944456210",
  "sessionId":"1234567890",
+ "clientId":"1234567890",
  "query":"我要听歌"
 }
 
