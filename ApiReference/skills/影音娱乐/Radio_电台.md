@@ -104,8 +104,7 @@
 ```
     "results": [
         {
-            "hint": "当前播放的是CRI环球旅游广播的益游未尽",
-            "formatType": "text"
+            "hint": "当前播放的是CRI环球旅游广播的益游未尽"
         }
     ]
 ```
@@ -124,15 +123,13 @@
 | **filed** | **value** | **type** |
 | --- | --- | --- |
 | hint | 查到主播信息： 主播是xxx                                                 没查到主播： 没有查到主播信息 | string |
-| formattype | text | string |
 
 返回样例
 
 ```
     "results": [
         {
-            "hint": "主播是璟炜",
-            "formatType": "text"
+            "hint": "主播是璟炜"
         }
     ]
 ```
