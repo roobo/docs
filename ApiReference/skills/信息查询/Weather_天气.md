@@ -16,7 +16,7 @@
 
 # 3.意图
 
-\/WeatherForADay
+### \/WeatherForADay
 查询某天的天气状况
 
 | **Slot Semantic Signatures** | **Example** |
@@ -53,32 +53,37 @@
 
 返回字段
 ```
-    "result": {
-        "hint": "北京明天，气温23度到30度，东南风2级转东风3级，阵雨",
-        "data": [
-            {
-                "alter": "",
-                "city": "北京",
-                "date": "2017-08-01",
-                "focus": "rain",
-                "humidity": "",
-                "index": 1,
-                "maxTemp": "30",
-                "minTemp": "23",
-                "pm25": "",
-                "temperature": "",
-                "weather": "阵雨",
-                "windDay": "东南风",
-                "windDayLevel": "2",
-                "windDir": "",
-                "windLevel": "",
-                "windNight": "东风",
-                "windNightLevel": "3"
-            }
-        ]
-    }
+    "results": [
+        {
+            "hint": "北京明天，气温22度到28度，北风2至3级，雷阵雨",
+            "data": [
+                {
+                    "alter": "",
+                    "city": "北京",
+                    "date": "2017-08-13",
+                    "focus": "weather",
+                    "humidity": "",
+                    "index": 1,
+                    "maxTemp": "28",
+                    "minTemp": "22",
+                    "pm25": "",
+                    "temperature": "",
+                    "weather": "雷阵雨",
+                    "windDay": "北风",
+                    "windDayLevel": "2",
+                    "windDir": "",
+                    "windLevel": "",
+                    "windNight": "北风",
+                    "windNightLevel": "3"
+                }
+            ]
+        }
+    ]
 ```
-\/WeatherForDays
+
+---
+
+### \/WeatherForDays
 查询某一段时间的天气状况
 
 | **Slot Semantic Signatures** | **Example** |
