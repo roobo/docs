@@ -179,7 +179,7 @@ _举例：数据部分_
 # 4.返回字段描述
 
 | **Field\_Name** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | album | string | 专辑名 | 传奇-刘德华 一起走过的日子 |
 | artist | string | 艺术家 | 刘德华 |
 | audio | string | 播放链接 | http://dwn.roo.bo/resource/music_bk/413/30261413.mp3 |
