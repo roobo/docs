@@ -182,6 +182,6 @@ _举例：数据部分_
 | hqAudio | string | 高质量播放链接 | http://... |
 | image | string | 专辑封面链接 | http://... |
 | hqImage | string | 高清专辑封面链接 | http://... |
-| name | string | 歌曲名 | 西游记 |
-| resId | string | 歌曲名 | aires:... |
+| name | string | 故事名 | 西游记 |
+| resId | string | 资源标识 | aires:... |
 | start | int | 断点 | 需要上传播放状态 |
