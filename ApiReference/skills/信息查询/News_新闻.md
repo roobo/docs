@@ -93,7 +93,7 @@
 
 # 4.返回结果
 
-## 4.1 NoSenceNews\_无脑听新闻
+## 4.1 Play\_播放新闻
 
 返回字段说明
 
@@ -102,32 +102,26 @@
 | hint |  | string | 提示语 | 让我们一起听听闻 |
 | data |  |  |  |  |
 |  | audio | string | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3 |
-|  | category | string | 新闻类别 | 财经 |
-|  | reader | string | 新闻主播 | 优栗 |
+|  | tagTopic | string | 新闻主题 | 财经 |
+|  | timestamp | int | 新闻产生时间戳 | 1502364363 |
 |  | title | string | 新闻标题 | 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
-|  | type | string | 数据类型 | 新闻 |
-| formatType |  | string | 结果类型 | audio |
+|  | type | string | 数据类型 | audio |
+| formatType |  | string | 结果类型 | news |
 
 返回字段
 ```
- "result": {
+    "result": {
         "hint": "让我们一起听听闻",
         "data": {
-            "audio": "http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3",
-            "category": "",
-            "reader": "优栗",
-            "title": "软银集团和共享办公空间公司WeWork在日本成立合资公司",
-            "type": "新闻"
+            "audio": "http://mp3.tingwen.me/data/upload/mp3/598c42c453e5c.mp3",
+            "tagTopic": "文娱",
+            "timestamp": 1502364363,
+            "title": "阿里影业联合优酷，开创影视综艺及艺人经纪新模式",
+            "type": "audio"
         },
-        "formatType": "audio"
+        "formatType": "news"
     }
 ```
-
-## 4.2 CategoryNews\_类别新闻
-同上
-
-## 4.3 KeywordsNews\_关键字新闻
-同上
 
 ## 4.4 Prev\_上一个
 同上
