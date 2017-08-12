@@ -43,24 +43,26 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "股票名称:中国石化，股票编号:sh600028，当前价格:6.14，涨跌额:-0.08，涨跌百分比-1.29，时间:2017-08-02 15:00:00，今日开盘价:6.19，昨日收盘价:6.22，最高价:6.20，最低价:6.11，成交量:1.52M",
-        "data": {
-            "datetime": "2017-08-02 15:00:00",
-            "gid": "sh600028",
-            "image": "http://image.sinajs.cn/newchart/min/n/sh600028.gif",
-            "increPer": "-1.29",
-            "increase": "-0.08",
-            "name": "中国石化",
-            "nowPri": "6.14",
-            "todayMax": "6.20",
-            "todayMin": "6.11",
-            "todayStartPri": "6.19",
-            "traAmount": "9.37亿",
-            "traNumber": "1.52M",
-            "yestodEndPri": "6.22"
+    "results": [
+        {
+            "hint": "股票名称:百度，股票编号:bidu，当前价格:223.49，涨跌额:0.92，涨跌百分比0.41，时间:Aug 11 04:00PM EDT，今日开盘价:218.60，昨日收盘价:222.57，最高价:224.66，最低价:216.20，成交量:3.33M",
+            "data": {
+                "datetime": "Aug 11 04:00PM EDT",
+                "gid": "bidu",
+                "image": "http://image.sinajs.cn/newchartv5/usstock/min/bidu.gif",
+                "increPer": "0.41",
+                "increase": "0.92",
+                "name": "百度",
+                "nowPri": "223.49",
+                "todayMax": "224.66",
+                "todayMin": "216.20",
+                "todayStartPri": "218.60",
+                "traAmount": "-",
+                "traNumber": "3.33M",
+                "yestodEndPri": "222.57"
+            }
         }
-    }
+    ]
 ```
 
 \/GetMarket
@@ -69,7 +71,7 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-|  | 股票大盘怎么样 |
+| &lt;&gt; | 股票大盘怎么样 |
 
 返回字段
 
@@ -93,53 +95,55 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "主人，告诉我公司名称，可以帮你查询具体信息。",
-        "data": [
-            {
-                "datetime": "2017-08-02 15:10:03",
-                "dealNum": "266.73M",
-                "dealPri": "2793.52亿",
-                "highPri": "3305.43",
-                "increPer": "-0.23",
-                "increase": "-7.58",
-                "index": 1,
-                "lowPri": "3282.04",
-                "name": "上证指数",
-                "nowPri": "3285.06",
-                "todayStartPri": "3288.52",
-                "yestodEndPri": "3292.64"
-            },
-            {
-                "datetime": "2017-08-02 15:10:03",
-                "dealNum": "24843.68M",
-                "dealPri": "3051.80亿",
-                "highPri": "10557.48",
-                "increPer": "-0.53",
-                "increase": "-56.01",
-                "index": 2,
-                "lowPri": "10461.95",
-                "name": "深证成指",
-                "nowPri": "10469.34",
-                "todayStartPri": "10526.00",
-                "yestodEndPri": "10525.35"
-            },
-            {
-                "datetime": "2017-08-02 15:10:03",
-                "dealNum": "1.72M",
-                "dealPri": "1893.37亿",
-                "highPri": "3784.35",
-                "increPer": "-0.25",
-                "increase": "-9.53",
-                "index": 3,
-                "lowPri": "3759.28",
-                "name": "沪深300",
-                "nowPri": "3760.85",
-                "todayStartPri": "3768.19",
-                "yestodEndPri": "3770.38"
-            }
-        ]
-    }
+    "results": [
+        {
+            "hint": "主人，告诉我公司名称，可以帮你查询具体信息。",
+            "data": [
+                {
+                    "datetime": "2017-08-11 15:01:03",
+                    "dealNum": "262.96M",
+                    "dealPri": "2669.98亿",
+                    "highPri": "3245.12",
+                    "increPer": "-1.63",
+                    "increase": "-53.21",
+                    "index": 1,
+                    "lowPri": "3200.75",
+                    "name": "上证指数",
+                    "nowPri": "3208.54",
+                    "todayStartPri": "3237.92",
+                    "yestodEndPri": "3261.75"
+                },
+                {
+                    "datetime": "2017-08-11 15:05:03",
+                    "dealNum": "22352.60M",
+                    "dealPri": "2690.55亿",
+                    "highPri": "10459.91",
+                    "increPer": "-1.81",
+                    "increase": "-189.29",
+                    "index": 2,
+                    "lowPri": "10281.63",
+                    "name": "深证成指",
+                    "nowPri": "10291.35",
+                    "todayStartPri": "10407.33",
+                    "yestodEndPri": "10480.64"
+                },
+                {
+                    "datetime": "2017-08-11 15:01:03",
+                    "dealNum": "1.50M",
+                    "dealPri": "1610.83亿",
+                    "highPri": "3700.49",
+                    "increPer": "-1.85",
+                    "increase": "-68.57",
+                    "index": 3,
+                    "lowPri": "3645.09",
+                    "name": "沪深300",
+                    "nowPri": "3647.35",
+                    "todayStartPri": "3687.93",
+                    "yestodEndPri": "3715.92"
+                }
+            ]
+        }
+    ]
 ```
 
 \/GetPicture
@@ -159,11 +163,13 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "主人，为您找到该公司的股票走势图。",
-        "data": {
-            "image": "http://image.sinajs.cn/newchart/daily/n/sh600028.gif"
+    "results": [
+        {
+            "hint": "主人，为您找到该公司的股票走势图。",
+            "data": {
+                "image": "http://image.sinajs.cn/newchart/daily/n/sh600028.gif"
+            }
         }
-    }
+    ]
 ```
 
