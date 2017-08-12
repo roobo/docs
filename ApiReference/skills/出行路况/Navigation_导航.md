@@ -109,26 +109,30 @@
 | formatType |  | 结果类型 | text |
 
 ```
-"result": {
-        "hint": "将为您导航到北京市海淀区华清嘉园火锅店",
-        "data": {
-            "intent": "Navigate",
-            "location_reference": "附近",
-            "locations": [
-                "北京市",
-                "华清嘉园",
-                "海淀区"
-            ],
-            "names": [
-                "火锅店"
-            ],
-            "price_modifier": "便宜",
-            "quality_modifier": "",
-            "search_phrase": "北京市海淀区华清嘉园火锅店",
-            "traffic_category": ""
-        },
-        "formatType": "text"
-    }
+    "results": [
+        {
+            "hint": "将为您导航到北京市海淀区华清嘉园火锅店",
+            "data": {
+                "building_num": [],
+                "intent": "Navigate",
+                "location_reference": "",
+                "locations": [
+                    "北京市",
+                    "华清嘉园",
+                    "海淀区"
+                ],
+                "names": [
+                    "火锅店"
+                ],
+                "price_modifier": "",
+                "quality_modifier": "",
+                "search_phrase": "北京市海淀区华清嘉园火锅店",
+                "streets": [],
+                "traffic_category": ""
+            },
+            "formatType": "text"
+        }
+    ]
 ```
 
 ## 4.2 Search\_搜索
@@ -150,27 +154,30 @@
 | formatType |  | 结果类型 | text |
 
 ```
-
-"result": {
-         "hint": "将为您搜索北京市海淀区华清嘉园火锅店",
-         "data": {
-         "intent": "Search",
-         "location_reference": "附近",
-         "locations": [
-             "北京市",
-             "华清嘉园",
-             "海淀区"
-          ],
-         "names": [
-             "火锅店"
-           ],
-         "price_modifier": "便宜",
-         "quality_modifier": "",
-         "search_phrase": "北京市海淀区华清嘉园火锅店",
-         "traffic_category": ""
-         },
-         "formatType": "text"
-     }
+    "results": [
+        {
+            "hint": "将为您查找北京市海淀区华清嘉园火锅店",
+            "data": {
+                "building_num": [],
+                "intent": "Search",
+                "location_reference": "",
+                "locations": [
+                    "北京市",
+                    "华清嘉园",
+                    "海淀区"
+                ],
+                "names": [
+                    "火锅店"
+                ],
+                "price_modifier": "",
+                "quality_modifier": "",
+                "search_phrase": "北京市海淀区华清嘉园火锅店",
+                "streets": [],
+                "traffic_category": ""
+            },
+            "formatType": "text"
+        }
+    ]
 ```
 
 ## 4.3 Traffic\_路况
@@ -199,35 +206,43 @@
 | formatType |  |  | 结果类型 | text |
 
 ```
- "result": {
-        "hint": "将为您查询从华清嘉园到牡丹园的路况信息。",
-        "data": {
-            "dest": {
-                "intent": "",
-                "location_reference": "",
-                "names": [
-                    "牡丹园"
-                ],
-                "price_modifier": "",
-                "quality_modifier": "",
-                "search_phrase": "牡丹园",
-                "traffic_category": ""
+    "results": [
+        {
+            "hint": "将为您查询从华清嘉园到牡丹园的路况信息。",
+            "data": {
+                "dest": {
+                    "building_num": [],
+                    "intent": "",
+                    "location_reference": "",
+                    "locations": [],
+                    "names": [
+                        "牡丹园"
+                    ],
+                    "price_modifier": "",
+                    "quality_modifier": "",
+                    "search_phrase": "牡丹园",
+                    "streets": [],
+                    "traffic_category": ""
+                },
+                "intent": "Traffic",
+                "origin": {
+                    "building_num": [],
+                    "intent": "",
+                    "location_reference": "",
+                    "locations": [
+                        "华清嘉园"
+                    ],
+                    "names": [],
+                    "price_modifier": "",
+                    "quality_modifier": "",
+                    "search_phrase": "华清嘉园",
+                    "streets": [],
+                    "traffic_category": ""
+                }
             },
-            "intent": "Traffic",
-            "origin": {
-                "intent": "",
-                "location_reference": "",
-                "names": [
-                    "华清嘉园"
-                ],
-                "price_modifier": "",
-                "quality_modifier": "",
-                "search_phrase": "华清嘉园",
-                "traffic_category": ""
-            }
-        },
-        "formatType": "text"
-    }
+            "formatType": "text"
+        }
+    ]
 ```
 
 ## 4.4 Time\_时长
@@ -256,35 +271,42 @@
 | formatType |  |  | 结果类型 | text |
 
 ```
-"result": {
-        "hint": "将为您计算从五道口到牡丹园所需的时间。",
-        "data": {
-            "dest": {
-                "intent": "",
-                "location_reference": "",
-                "names": [
-                    "牡丹园"
-                ],
-                "price_modifier": "",
-                "quality_modifier": "",
-                "search_phrase": "牡丹园",
-                "traffic_category": ""
+    "results": [
+        {
+            "hint": "将为您计算从五道口到牡丹园所需的时间。",
+            "data": {
+                "dest": {
+                    "building_num": [],
+                    "intent": "",
+                    "location_reference": "",
+                    "locations": [
+                        "牡丹园"
+                    ],
+                    "names": [],
+                    "price_modifier": "",
+                    "quality_modifier": "",
+                    "search_phrase": "牡丹园",
+                    "streets": [],
+                    "traffic_category": ""
+                },
+                "intent": "Time",
+                "origin": {
+                    "building_num": [],
+                    "intent": "",
+                    "location_reference": "",
+                    "locations": [],
+                    "names": [
+                        "五道口"
+                    ],
+                    "price_modifier": "",
+                    "quality_modifier": "",
+                    "search_phrase": "五道口",
+                    "streets": [],
+                    "traffic_category": ""
+                }
             },
-            "intent": "Time",
-            "origin": {
-                "intent": "",
-                "location_reference": "",
-                "names": [
-                    "五道口"
-                ],
-                "price_modifier": "",
-                "quality_modifier": "",
-                "search_phrase": "五道口",
-                "traffic_category": ""
-            }
-        },
-        "formatType": "text"
-    }
-
+            "formatType": "text"
+        }
+    ]
 ```
 
