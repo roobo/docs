@@ -180,10 +180,10 @@ _举例：数据部分_
 | --- | --- | --- | --- |
 | album | string | 专辑名 | 传奇-刘德华 一起走过的日子 |
 | artist | string | 艺术家 | 刘德华 |
-| audio | string | 播放链接 | http://dwn.roo.bo/resource/music_bk/413/30261413.mp3 |
-| hqAudio | string | 高质量播放链接 | http://dwn.roo.bo/resource/music_bk/413/30261413.mp3 |
-| image | string | 专辑封面链接 | https://y.gtimg.cn/music/photo_new/T002R300x300M000003gkYbc2Athou.jpg?max_age=2592000 |
-| hqImage | string | 高清专辑封面链接 | https://y.gtimg.cn/music/photo_new/T002R300x300M000003gkYbc2Athou.jpg?max_age=2592000 |
+| audio | string | 播放链接 | http://... |
+| hqAudio | string | 高质量播放链接 | http://... |
+| image | string | 专辑封面链接 | http://... |
+| hqImage | string | 高清专辑封面链接 | http://... |
 | name | string | 歌曲名 | 一起走过的日子 |
-| resId | string | 歌曲名 | music:4147072 |
+| resId | string | 歌曲名 | music:... |
 | start | int | 断点 | 需要上传播放状态 |
