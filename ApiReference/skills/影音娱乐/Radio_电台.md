@@ -12,7 +12,7 @@
 
 # 3.意图
 
-\/Play
+### \/Play
 电台点播意图。用户可以根电台名称直接点播，根据电台类型进行标签点播，根据地理位置信息进行地理位置点播或者不含任何槽位的模糊点播。
 
 | **Slot Semantic Signatures** | **Example** |
@@ -35,25 +35,27 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "邢台爱尚986",
-        "data": {
-            "audio": "http://live.xmcdn.com/live/1126/24.m3u8",
-            "hqAudio": "http://live.xmcdn.com/live/1126/64.m3u8",
-            "name": "邢台爱尚986"
-        },
-        "formatType": "audio"
-    }
+    "results": [
+        {
+            "hint": "CRI轻松调频",
+            "data": {
+                "audio": "http://live.xmcdn.com/live/1042/24.m3u8",
+                "hqAudio": "http://live.xmcdn.com/live/1042/64.m3u8",
+                "name": "CRI轻松调频"
+            },
+            "formatType": "audio"
+        }
+    ]
 ```
 
 ---
 
-\/Next
+### \/Next
 更换电台意图。根据用户上次点播的意图，为用户提供不同的换台策略。详见4.具体点播策略
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-|  | 换一个电台 |
+| &lt;&gt; | 换一个电台 |
 
 返回字段
 
@@ -68,25 +70,27 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "邢台县人民广播电台",
-        "data": {
-            "audio": "http://live.xmcdn.com/live/1132/24.m3u8",
-            "hqAudio": "http://live.xmcdn.com/live/1132/64.m3u8",
-            "name": "邢台县人民广播电台"
-        },
-        "formatType": "audio"
-    }
+    "results": [
+        {
+            "hint": "CRI轻松调频",
+            "data": {
+                "audio": "http://live.xmcdn.com/live/1042/24.m3u8",
+                "hqAudio": "http://live.xmcdn.com/live/1042/64.m3u8",
+                "name": "CRI轻松调频"
+            },
+            "formatType": "audio"
+        }
+    ]
 ```
 
 ---
 
-\/GetPlayingProgram
+### \/GetPlayingProgram
 查询当前电台正在播放的节目。
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-|  | 现在播放的是什么节目啊 |
+| &lt;&gt; | 现在播放的是什么节目啊 |
 
 返回字段
 
@@ -106,12 +110,12 @@
 
 ---
 
-\/GetAnchor
+### \/GetAnchor
  查询当前节目的主播列表。
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-|  | 主播是谁 |
+| &lt;&gt; | 主播是谁 |
 
 返回字段
 
@@ -131,7 +135,7 @@
 
 # 4. 点播具体策略
 
-## 1、点播策略
+### 1、点播策略
 
 \(1\)GetRadio\(直接点播\)
 
@@ -161,7 +165,7 @@
 
 如果该用户没有使用过电台，则根据用户的地理位置信息获取当地top15电台，随机播放其中一个，市级没有电台找省级，省级没有找国家级
 
-## 2、播放控制策略（下一首）
+### 2、播放控制策略（下一首）
 
 \(1\)Next\(直接点播\)
 
