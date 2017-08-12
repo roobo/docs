@@ -22,7 +22,6 @@
 | &lt;name&gt; | 东风破 |
 | &lt;artist&gt; | 我要听周杰伦的歌 |
 | &lt;keyword&gt; | 我要听忧伤的歌 |
-|  | 唱首歌 |
 
 返回字段说明，适用于以下其它意图
 
@@ -30,37 +29,37 @@
 | --- | --- | --- | --- | --- |
 | hint |  | string | 提示语 | 准备播放 |
 | data |  |  |  |  |
-|  | album | string | 专辑名 | 哎呦，不错哦 |
-|  | artist | string | 艺术家 | 周杰伦 |
-|  | audio | string | 音乐播放地址 | http://isure.stream.qqmusic.qq.com/C200001Js78a40BZU6.m4a?vkey=9661F3F2ABFC0D4F0A7E642D658960502BD3256CBB907AD3BBEA0183A5B04F2C4F44751DC8FE8776ABD72427071476C31CFEDE6F5679081E&guid=12347254&fromtag=50&uin=1152921504733674178 |
-|  | image | string | 专辑封面地址 | https://y.gtimg.cn/music/photo_new/T002R300x300M000001uqejs3d6EID.jpg?max_age=2592000 |
-|  | name | string | 歌曲名 | 算什么男人 |
+|  | album | string | 专辑名 | 传奇-刘德华 一起走过的日子 |
+|  | artist | string | 艺术家 | 刘德华 |
+|  | audio | string | 播放链接 | http://dwn.roo.bo/resource/music_bk/413/30261413.mp3 |
+|  | hqAudio | string | 高质量播放链接 | http://dwn.roo.bo/resource/music_bk/413/30261413.mp3 |
+|  | image | string | 专辑封面链接 | https://y.gtimg.cn/music/photo_new/T002R300x300M000003gkYbc2Athou.jpg?max_age=2592000 |
+|  | hqImage | string | 高清专辑封面链接 | https://y.gtimg.cn/music/photo_new/T002R300x300M000003gkYbc2Athou.jpg?max_age=2592000 |
+|  | name | string | 歌曲名 | 一起走过的日子 |
+|  | resId | string | 歌曲名 | music:4147072 |
+|  | start | int | 断点 | 需要上传播放状态 |
 | formatType |  | string | 结果类型 | audio |
 
 返回字段
 
 ```
-    "result": {
-        "hint": "准备播放",
-        "data": {
-            "album": "哎呦，不错哦",
-            "artist": "周杰伦",
-            "audio": "http://isure.stream.qqmusic.qq.com/C200001Js78a40BZU6.m4a?vkey=9661F3F2ABFC0D4F0A7E642D658960502BD3256CBB907AD3BBEA0183A5B04F2C4F44751DC8FE8776ABD72427071476C31CFEDE6F5679081E&guid=12347254&fromtag=50&uin=1152921504733674178",
-            "extra": {
-                "style": ""
+    "results": [
+        {
+            "hint": "我们一起听 老师",
+            "data": {
+                "album": "",
+                "artist": "",
+                "audio": "http://dwn.roo.bo/resource/20160928/lao_shi_.mp3",
+                "hqAudio": "",
+                "hqImage": "",
+                "image": "",
+                "name": "老师",
+                "resId": "aires:501950",
+                "start": 0
             },
-            "image": "https://y.gtimg.cn/music/photo_new/T002R300x300M000001uqejs3d6EID.jpg?max_age=2592000",
-            "keywords": null,
-            "name": "算什么男人",
-            "resId": "music:4038192",
-            "sid": "4124973079-1499329537184",
-            "start": 0,
-            "trigger": "voice",
-            "triggerId": null,
-            "type": "MUSIC"
-        },
-        "formatType": "audio"
-    }
+            "formatType": "audio"
+        }
+    ]
 ```
 
 ---
