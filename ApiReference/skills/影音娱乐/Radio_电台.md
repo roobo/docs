@@ -94,7 +94,7 @@
 
 返回字段
 
-| **result** | **value** | **type** |
+| **filed** | **value** | **type** |
 | --- | --- | --- |
 | hint | 有节目内容： 当前播放的是“radioname”的《XXXX》           无节目内容： 没有找到相关节目内容 | string |
 | formattype | text | string |
@@ -102,10 +102,12 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "当前播放的是CRI环球旅游广播的益游未尽",
-        "formatType": "text"
-    }
+    "results": [
+        {
+            "hint": "当前播放的是CRI环球旅游广播的益游未尽",
+            "formatType": "text"
+        }
+    ]
 ```
 
 ---
@@ -127,10 +129,12 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "主播是璟炜",
-        "formatType": "text"
-    }
+    "results": [
+        {
+            "hint": "主播是璟炜",
+            "formatType": "text"
+        }
+    ]
 ```
 
 # 4. 点播具体策略
