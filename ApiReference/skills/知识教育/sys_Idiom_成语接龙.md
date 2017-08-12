@@ -11,7 +11,7 @@
 
 # 3.意图
 
-\*\*\*Play意图、Repeat意图和Replay的返回字段相同，在此统一说明
+Play意图、Repeat意图和Replay的返回字段相同，在此统一说明
 
 | **result** |  | **value** | **type** |
 | --- | --- | --- | --- |
@@ -28,24 +28,27 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "好的，成语接龙马上开始喽！我先说一个，七情六欲",
-        "data": {
-            "idiomToMatch": "七情六欲"
+    "results": [
+        {
+            "hint": "好的，成语接龙马上开始喽！我先说一个，七情六欲",
+            "data": {
+                "idiomToMatch": "七情六欲"
+            }
         }
-    }
+    ]
 ```
 
 用户接“欲壑难填”
 
 ```
-     "result": {
-        "hint": "天大地大",
-        "data": {
-            "idiomToMatch": "天大地大"
+    "results": [
+        {
+            "hint": "天大地大",
+            "data": {
+                "idiomToMatch": "天大地大"
+            }
         }
-    }
-
+    ]
 ```
 
 \/Repeat
@@ -57,12 +60,14 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "天大地大",
-        "data": {
-            "idiomToMatch": "天大地大"
+    "results": [
+        {
+            "hint": "天大地大",
+            "data": {
+                "idiomToMatch": "天大地大"
+            }
         }
-    }
+    ]
 ```
 
 \/Replay
@@ -74,12 +79,14 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "好的，成语接龙马上开始喽！我先说一个，阳奉阴违",
-        "data": {
-            "idiomToMatch": "阳奉阴违"
+    "results": [
+        {
+            "hint": "好的，成语接龙马上开始喽！我先说一个，阳奉阴违",
+            "data": {
+                "idiomToMatch": "阳奉阴违"
+            }
         }
-    }
+    ]
 ```
 
 \/GiveTips
@@ -98,12 +105,14 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "始终",
-        "data": {
-            "idiomToMatch": "有识之士"
+    "results": [
+        {
+            "hint": "始终",
+            "data": {
+                "idiomToMatch": "有识之士"
+            }
         }
-    }
+    ]
 ```
 
 \/GiveAnswer
@@ -121,9 +130,11 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "我告诉你吧，始终如一，你输啦！不如咱们重新开始吧；"
-    }
+    "results": [
+        {
+            "hint": "我告诉你吧，始终如一，你输啦！不如咱们重新开始吧；",
+        }
+    ]
 ```
 
 \*\*\*由于Pause意图和Save意图返回字段相同，再次统一说明
@@ -157,9 +168,11 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "当然啦，下次跟我说继续成语接龙就可以继续玩啦"
-    }
+    "results": [
+        {
+            "hint": "当然啦，下次跟我说继续成语接龙就可以继续玩啦",
+        }
+    ]
 ```
 
 \/Exit
@@ -177,8 +190,9 @@
 返回样例 
 
 ```
-    "result": {
-        "hint": "好的"
-    }
+    "results": [
+        {
+            "hint": "好的",
+        }
+    ]
 ```
-
