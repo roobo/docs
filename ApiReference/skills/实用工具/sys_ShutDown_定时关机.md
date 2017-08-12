@@ -28,7 +28,6 @@
 | data | Service | ShutDown | string |
 |  | Action | SetShutDown | string |
 |  | alarm\_time | 定时关机的时间，如：2017-07-31 11:04:35 | string |
-| formattype |  | audio | string |
 
 返回样例
 
@@ -42,8 +41,7 @@
             "content": "",
             "operation": "set",
             "repeat_mode": 0
-        },
-        "formatType": "prop"
+        }
     }
 ```
 
@@ -62,7 +60,6 @@
 | data | Service | ShutDown | string |
 |  | Action | DeleteShutDown | string |
 |  | alarm\_time || string |
-| formattype |  | prop | string |
 
 返回样例
 
@@ -76,8 +73,7 @@
             "content": "",
             "operation": "",
             "repeat_mode": 0
-        },
-        "formatType": "prop"
+        }
     }
 ```
 
