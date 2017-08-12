@@ -129,8 +129,7 @@
                 "search_phrase": "北京市海淀区华清嘉园火锅店",
                 "streets": [],
                 "traffic_category": ""
-            },
-            "formatType": "text"
+            }
         }
     ]
 ```
@@ -174,8 +173,7 @@
                 "search_phrase": "北京市海淀区华清嘉园火锅店",
                 "streets": [],
                 "traffic_category": ""
-            },
-            "formatType": "text"
+            }
         }
     ]
 ```
@@ -239,8 +237,7 @@
                     "streets": [],
                     "traffic_category": ""
                 }
-            },
-            "formatType": "text"
+            }
         }
     ]
 ```
@@ -304,8 +301,7 @@
                     "streets": [],
                     "traffic_category": ""
                 }
-            },
-            "formatType": "text"
+            }
         }
     ]
 ```
