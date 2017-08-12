@@ -68,94 +68,76 @@
 
 询问歌曲相关信息
 
-| **Slot Semantic Signatures** | **Example** |
-| --- | --- |
-|  | 这首歌是谁唱的 |
-
+```
+    "results": [
+        {
+            "hint": "对不起,我还不知道这首歌是谁唱的",
+            "formatType": "text"
+        }
+    ]
+```
 
 
 ---
 
 \/Next
 
-用户主动更换一首相同关键词的歌曲
-
-当前歌曲播放完成后自动播放下一首
-
-| **Slot Semantic Signatures** | **Example** |
-| --- | --- |
-|  | 换一首 |
+下一首
 
 返回字段
 
 ```
-  "result": {
-        "hint": "准备播放",
-        "data": {
-            "album": "十二新作",
-            "artist": "周杰伦",
-            "audio": "http://isure.stream.qqmusic.qq.com/C200000oW8J53xPhZA.m4a?vkey=838C86DFD53844D16B16C61346121D82C1DBFAB25EDF04F09B9C039187D51CA043EF36941B7AA4B79C05450F291957C5AEF8892E722EE646&guid=12347254&fromtag=50&uin=1152921504733674178",
-            "extra": {
-                "style": "流行"
+    "results": [
+        {
+            "hint": "我们一起听 老师",
+            "data": {
+                "album": "",
+                "artist": "",
+                "audio": "http://dwn.roo.bo/resource/20160928/lao_shi_.mp3",
+                "hqAudio": "",
+                "hqImage": "",
+                "image": "",
+                "name": "老师",
+                "resId": "aires:501950",
+                "start": 0
             },
-            "image": "http://i.gtimg.cn/music/photo/mid_album_300/q/i/003Ow85E3pnoqi.jpg",
-            "keywords": null,
-            "name": "明明就",
-            "resId": "music:551242",
-            "sid": "2419133446-1499329583202",
-            "start": 0,
-            "trigger": "voice",
-            "triggerId": null,
-            "type": "MUSIC"
-        },
-        "formatType": "audio"
-    }
+            "formatType": "audio"
+        }
+    ]
 ```
 
 ---
 
 \/Pause
 
-暂停当前播放的歌曲
-
-| **Slot Semantic Signatures** | **Example** |
-| --- | --- |
-|  | 暂停 |
+暂停
 
 ---
 
 \/ Resume
 
-继续播放当前歌曲
-
-| **Slot Semantic Signatures** | **Example** |
-| --- | --- |
-|  | 继续 |
+继续播放
 
 返回字段
 
 ```
-    "result": {
-        "hint": "继续播放",
-        "data": {
-            "album": "十二新作",
-            "artist": "周杰伦",
-            "audio": "http://isure.stream.qqmusic.qq.com/C200000oW8J53xPhZA.m4a?vkey=838C86DFD53844D16B16C61346121D82C1DBFAB25EDF04F09B9C039187D51CA043EF36941B7AA4B79C05450F291957C5AEF8892E722EE646&guid=12347254&fromtag=50&uin=1152921504733674178",
-            "extra": {
-                "style": "流行"
+    "results": [
+        {
+            "hint": "我们一起听 老师",
+            "data": {
+                "album": "",
+                "artist": "",
+                "audio": "http://dwn.roo.bo/resource/20160928/lao_shi_.mp3",
+                "hqAudio": "",
+                "hqImage": "",
+                "image": "",
+                "name": "老师",
+                "resId": "aires:501950",
+                "start": 0
             },
-            "image": "http://i.gtimg.cn/music/photo/mid_album_300/q/i/003Ow85E3pnoqi.jpg",
-            "keywords": null,
-            "name": "明明就",
-            "resId": "music:551242",
-            "sid": "2419133446-1499329583202",
-            "start": 0,
-            "trigger": "voice",
-            "triggerId": null,
-            "type": "MUSIC"
-        },
-        "formatType": "audio"
-    }
+            "formatType": "audio"
+        }
+    ]
 ```
 
 ---
@@ -163,34 +145,26 @@
 \/Replay
 指重播当前歌曲（1遍）
 
-| **Slot Semantic Signatures** | **Example** |
-| --- | --- |
-|  | 继续 |
-
 返回字段
 
 ```
-    "result": {
-        "hint": "重新播放",
-        "data": {
-            "album": "十二新作",
-            "artist": "周杰伦",
-            "audio": "http://isure.stream.qqmusic.qq.com/C200000oW8J53xPhZA.m4a?vkey=838C86DFD53844D16B16C61346121D82C1DBFAB25EDF04F09B9C039187D51CA043EF36941B7AA4B79C05450F291957C5AEF8892E722EE646&guid=12347254&fromtag=50&uin=1152921504733674178",
-            "extra": {
-                "style": "流行"
+    "results": [
+        {
+            "hint": "我们一起听 老师",
+            "data": {
+                "album": "",
+                "artist": "",
+                "audio": "http://dwn.roo.bo/resource/20160928/lao_shi_.mp3",
+                "hqAudio": "",
+                "hqImage": "",
+                "image": "",
+                "name": "老师",
+                "resId": "aires:501950",
+                "start": 0
             },
-            "image": "http://i.gtimg.cn/music/photo/mid_album_300/q/i/003Ow85E3pnoqi.jpg",
-            "keywords": null,
-            "name": "明明就",
-            "resId": "music:551242",
-            "sid": "2419133446-1499329583202",
-            "start": 0,
-            "trigger": "voice",
-            "triggerId": null,
-            "type": "MUSIC"
-        },
-        "formatType": "audio"
-    }
+            "formatType": "audio"
+        }
+    ]
 ```
 
 \/Exit
@@ -199,10 +173,3 @@
 
 \/Exit
 退出音乐场景
-
-| **Slot Semantic Signatures** | **Example** |
-| --- | --- |
-|  | 退出 |
-
-
-
