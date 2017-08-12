@@ -44,34 +44,40 @@ Content-Type: application/json; charset=utf-8
 _Sample Response_
 
 ```
-
 {
     "status": {
         "code": 0,
         "errorType": "success"
     },
-    "query": "早上好",
+    "query": "你好",
     "semantic": {
-        "service": "Chat"
-    },
-    "result": {
-        "hint": "你也是呀主人，让我们来一起迎接崭新的一天吧",
-        "data": {
-            "emotion": [
-                {
-                    "type": "text_question",
-                    "value": "normal",
-                    "score": ""
-                },
-                {
-                    "type": "text_answer",
-                    "value": "normal",
-                    "score": ""
-                }
-            ],
-            "source": "chat_roobo"
+        "service": "Chat",
+        "action": "default",
+        "outputContext": {
+            "service": "Chat",
+            "context": "chat"
         }
-    }
+    },
+    "results": [
+        {
+            "hint": "你好啊，是想请我吃饭吗",
+            "data": {
+                "emotion": [
+                    {
+                        "type": "text_question",
+                        "value": "normal",
+                        "score": ""
+                    },
+                    {
+                        "type": "text_answer",
+                        "value": "normal",
+                        "score": ""
+                    }
+                ],
+                "source": "chat_roobo"
+            }
+        }
+    ]
 }
 ```
 _Chat Result->data_
