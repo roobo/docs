@@ -24,7 +24,7 @@
 
 返回字段
 
-| **result** |  | **value** | **type** |
+| **filed** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | 电台名称 | string |
 | data | name | 电台名称 | string |
@@ -59,7 +59,7 @@
 
 返回字段
 
-| **result** |  | **value** | **type** |
+| **filed** |  | **value** | **type** |
 | --- | --- | --- | --- |
 | hint |  | 电台名称 | string |
 | data | name | 电台名称 | string |
@@ -121,7 +121,7 @@
 
 返回字段
 
-| **result** | **value** | **type** |
+| **filed** | **value** | **type** |
 | --- | --- | --- |
 | hint | 查到主播信息： 主播是xxx                                                 没查到主播： 没有查到主播信息 | string |
 | formattype | text | string |
