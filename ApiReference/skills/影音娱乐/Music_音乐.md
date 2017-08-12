@@ -185,5 +185,5 @@ _举例：数据部分_
 | image | string | 专辑封面链接 | http://... |
 | hqImage | string | 高清专辑封面链接 | http://... |
 | name | string | 歌曲名 | 一起走过的日子 |
-| resId | string | 歌曲名 | music:... |
+| resId | string | 资源标识 | music:... |
 | start | int | 断点 | 需要上传播放状态 |
