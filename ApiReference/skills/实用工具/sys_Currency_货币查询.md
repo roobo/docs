@@ -24,7 +24,6 @@
 |  | toAmount | 转换后目标货币数量 | string |
 |  | toCode | 转换后目标货币代码 | string |
 |  | toName | 转换后目标货币名称 | string |
-| formatType |  | prop | string |
 
 \/Exchange
 
@@ -44,8 +43,7 @@
             "toAmount": "13.46",
             "toCode": "CNY",
             "toName": "人民币"
-        },
-        "formatType": "prop"
+        }
     }
 ```
 
@@ -67,8 +65,7 @@
             "toAmount": "6.73",
             "toCode": "CNY",
             "toName": "人民币"
-        },
-        "formatType": "prop"
+        }
     }
 
 ```
