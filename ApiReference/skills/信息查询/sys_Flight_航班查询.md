@@ -41,35 +41,34 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "已为您查询到2017-08-04出发，从北京到福州的以下航班:",
+    "result": [
+        "hint": "已为您查询到2017-08-04出发，从北京到福州的以下航班:",
         "data": [
-            {
-                "arrival": "00:50",
-                "date": "2017-08-04",
-                "departure": "PEK",
-                "number": "HU7195",
-                "price": 1010,
-                "time": "22:05"
-            },
-            {
-                "arrival": "23:30",
-                "date": "2017-08-04",
-                "departure": "PEK",
-                "number": "SC1821",
-                "price": 1210,
-                "time": "20:35"
-            },
-            {
-                "arrival": "23:30",
-                "date": "2017-08-04",
-                "departure": "PEK",
-                "number": "CA1821",
-                "price": 1240,
-                "time": "20:35"
-            }
-        ],
-        "formatType": "list"
-    }
+                {
+                    "arrival": "00:50",
+                    "date": "2017-08-04",
+                    "departure": "PEK",
+                    "number": "HU7195",
+                    "price": 1010,
+                    "time": "22:05"
+                },
+                {
+                    "arrival": "23:30",
+                    "date": "2017-08-04",
+                    "departure": "PEK",
+                    "number": "SC1821",
+                    "price": 1210,
+                    "time": "20:35"
+                },
+                {
+                    "arrival": "23:30",
+                    "date": "2017-08-04",
+                    "departure": "PEK",
+                    "number": "CA1821",
+                    "price": 1240,
+                    "time": "20:35"
+                }
+        ]
+    ]
 ```
 
