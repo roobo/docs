@@ -32,7 +32,6 @@
 |  | toAmount | 转换后目标单位数量 | string |
 |  | toCode | 转换后目标单位代码 | string |
 |  | toName | 转换后目标单位名称 | string |
-| formatType |  | prop | string |
 
 返回样例
 
