@@ -11,9 +11,9 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;name&gt; | 东风破 |
+| &lt;name&gt; | 来首东风破 |
 | &lt;artist&gt; | 我要听周杰伦的歌 |
-| &lt;keyword&gt; | 我要听忧伤的歌 |
+| &lt;artist&gt;&lt;name&gt; | 我要听周杰伦的东风破 |
 
 _举例：数据部分_
 ```
