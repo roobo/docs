@@ -7,7 +7,7 @@
 	* [一些概念](#11-一些概念)
 * [Request](#2-request)
 	* [协议概览](#21-协议概览)
-	* [Context定义](#22-Context定义)
+	* [Context定义](#22-context定义)
 	* [Location定义](#23-Location定义)
 	* [Lang定义](#24-Lang定义)
 * [Response](#3-response)
@@ -31,8 +31,7 @@
 
 *Request*是服务端与设备端之间的通讯协议（不包括语音类请求），由设备端产生，并向服务端获取对应返回结果的请求。目前有两种类型的请求：一种是**IntentRequest**，一种是**EventRequest**。**IntentRequest** 是根据语义理解（*NLP*）的结果创建的。**EventRequest**是在当有某种事件发生时产生的，事件分设备端与服务端两类事件，*CloudApp*可以选择处理或者不处理。（事件请求目前处于内测阶段，敬请更新）
 
-#### 2.1 Request 协议预览
-
+#### 2.1 协议概览
 
 *Request* 的整体协议定义如下所示：
 
@@ -79,7 +78,7 @@
 }
 ```
 
-#### 2.2 Context 定义
+#### 2.2 Context定义
 
 *Context* 向所请求的CloudApp提供了当前的设备信息，用户信息和应用状态，用以帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。
 
@@ -102,7 +101,7 @@
     ]
 ```
 
-#### 2.3 Location 定义
+#### 2.3 Location定义
 
 *Location * 向所请求的CloudApp提供了当前的设备的地理信息，用于帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。
 
@@ -119,7 +118,7 @@
 }
 ```
 
-#### 2.4 Lang 定义
+#### 2.4 Lang定义
 
 *Lang * 向所请求的CloudApp标明应用所选择的*NLP*类型。目前只支持两类中文（*zh*），英文（*en*）。
 
