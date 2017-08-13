@@ -1,6 +1,8 @@
 ## Cloud App 开发协议
 ### Roobo 开放平台
 版本：V3
+API：http://api.ros.ai/bot/v3/query
+协议：HTTP POST
 
 ### 大纲
 * [简介](#1-简介)
