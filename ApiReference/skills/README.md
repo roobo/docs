@@ -4,15 +4,17 @@
 
 ### 大纲
 * [简介](#1-简介)
-	* [一些概念](#11-一些概念)
+    * [一些概念](#11-一些概念)
 * [Request](#2-request)
-	* [协议概览](#21-协议概览)
-	* [Context定义](#22-context定义)
-	* [Location定义](#23-location定义)
-	* [Lang定义](#24-lang定义)
+    * [协议概览](#21-协议概览)
+    * [Context定义](#22-context定义)
+    * [Location定义](#23-location定义)
+    * [Lang定义](#24-lang定义)
 * [Response](#3-response)
-	* [协议概览](#31-协议概览)
-	* [Action定义](#32-action定义)
+    * [协议概览](#31-协议概览)
+    * [Status定义](#32-status定义)
+    * [Semantic定义](#33-semantic定义)
+    * [Results定义](#34-results定义)
 
 ### 1. 简介
 
@@ -111,7 +113,7 @@
     "longitude": -122.20539,
     "address": {
         "country": "中国",        
-        "province":"北京"
+        "province":"北京",
         "city": "北京",
         "detail": "北京朝阳区北苑家园121号"
     }
@@ -128,9 +130,164 @@
 
 #### 3.1 协议概览
 
-整体协议示例如下：
+*Response* 的整体协议定义如下所示：
+
+| Name | Type | Description | Required |
+| --- | --- | --- | --- |
+| status | Status 对象 | 状态码 | Required |
+| query | String | 纠错后的Text query | Required |
+| reqId | String | 当前请求的唯一ID | Required |
+| semantic | Semantic 对象 | 语义部分 | Optional |
+| results | Result 对象 | 数据部分 | Optional |
 
 ```
+{
+  "status": {
+    "code": 0,
+    "errorType": "success"
+  },
+  "query": "唱首歌",
+  "reqId": "ZmVjNVlXRmxOR05rTlRnd1pHVTFhOGE1",
+  "semantic": {
+    "service": "Music",
+    "action": "Play",
+    "outputContext": {
+      "service": "Music",
+      "context": "music"
+    }
+  },
+  "results": [
+  {
+    "hint": "为您播放 傻傻的爱你",
+    "data": {
+      "album": "单曲 - 傻傻的爱你",
+      "artist": "",
+      "audio": "http://dwn.roo.bo/resource/music_bk/849/34678849.mp3"
+      "hqAudio": "",
+      "hqImage": "https://y.gtimg.cn/music/photo_new/T002R300x300M000003ZzeCk0Svi3K.jpg?max_age=2592000",
+      "image": "https://y.gtimg.cn/music/photo_new/T002R300x300M000003ZzeCk0Svi3K.jpg?max_age=2592000",
+      "name": "傻傻的爱你",
+      "resId": "music:5492123",
+      "start": 0
+    },
+    "formatType": "audio"
+  }
+  ]
+}
+```
+#### 3.2 status定义
+
+返回结果状态标识，*code*是返回码，*errorType*是错误类型，*errorDetails*时候错误详情。
 
 ```
+{
+    "code":400,
+    "errorType":"bad_request",
+    "errorDetails":"token校验不通过"
+}
+```
+
+| Status Code | Error Type | Description |
+| :--- | :--- | :--- |
+| 0 | success | 成功 |
+| 1 | no\_result | 无结果 |
+| 400 | bad\_request | 不合法的输入 |
+| 401 | unauthorized | 权限校验失败 |
+| 500 | internal | 系统错误，重试可能有效 |
+| 501 | not_supported | 语义 |
+| 503 | too_many_requests | 在一定时间内访问次数超限 |
+| 601 | service_unreachable | 第三方服务不可用 |
+| 602 | service_unknown_format | 第三方服务返回的数据格式有误 |
+
+#### 3.3 semantic定义
+
+*Text query*的语义理解（*NLP*）的结果。
+
+| Name | Type | Description | Required |
+| --- | --- | --- | --- |
+| service | String | 技能标识 | Required |
+| action | String | 意图标识 | Required |
+| params | Slot 对象 | 槽位对象，每个技能分别有哪些槽位，请参考技能的具体描述 | Required |
+| inputContext | Context 对象 | 输入上文 | Optional |
+| outputContext | Context 对象 | 输出下文 | Optional |
+
+```
+    "semantic": {
+        "service": "Music",
+        "action": "Play",
+        "params": {
+            "artist": {
+                "orgin": "[{\"artist\":\"刘德华\"}]",
+                "norm": "[{\"artist\":\"刘德华\"}]"
+            },
+            "name": {
+                "orgin": "忘情水",
+                "norm": "忘情水"
+            }
+        },
+        "inputContext": {
+            "service": "Music",
+            "context": "music"
+        },
+        "outputContext": {
+            "service": "Music",
+            "context": "music"
+        }
+    }
+```
+
+#### 3.4 results定义
+
+技能的数据部分，results是一个**json数组**。
+
+| Name | Type | Description | Required |
+| --- | --- | --- | --- |
+| hint | String | **TTS**内容  | Required |
+| data | 自定义对象 | 技能自定义 | Optional |
+| formatType | String | 数据类型 | Optional |
+
+---
+
+* **formattype**
+
+  * _audio_
+
+    ```
+        {
+            "hint": "准备播放 Opposites Song",
+            "data": {
+                "album": "叶惠美",              // 专辑名
+                "artist": "周杰伦",                // 艺术家
+                "audio": "http://...",              // 播放链接
+                "hqAudio": "",                     // 高质量播放链接
+                "hqImage": "",                    // 专辑封面链接
+                "image": "",                        // 高清专辑封面链接
+                "name": "以父之名",          // 歌曲名
+                "resId": "aires:114423",     // 资源标识
+                "start": 0                            // 断点
+            },
+            "formatType": "audio"
+        }
+    ```
+
+  * _news_
+
+    ```
+    "result":{
+      "hint":"请欣赏刘德华的忘情水",
+      "data":{
+          "audio":"http://...",                   // 播放链接
+          "tagTopic":"财经",                   // 新闻主题
+          "timestamp":1502364363,     // 新闻产生时间戳
+          "title":"软银集...",                    // 新闻标题
+          "type":"audio",                       // 数据类型
+      },
+      "formatType":"news"
+    }
+    ```
+
+
+
+
+
 
