@@ -1,6 +1,8 @@
 ## Cloud App 开发协议
 ### Roobo 开放平台
 版本：V3
+API：http://api.ros.ai/bot/v3/query
+协议：HTTP POST
 
 ### 大纲
 * [简介](#1-简介)
@@ -248,7 +250,9 @@
 
 ---
 
-* **formattype**
+* **formatType**
+
+* formatType目的是标准化同类技能字段输出，便于设备端接入。默认为空。
 
   * _audio_
 
@@ -273,21 +277,15 @@
   * _news_
 
     ```
-    "result":{
-      "hint":"请欣赏刘德华的忘情水",
-      "data":{
-          "audio":"http://...",                   // 播放链接
-          "tagTopic":"财经",                   // 新闻主题
-          "timestamp":1502364363,     // 新闻产生时间戳
-          "title":"软银集...",                    // 新闻标题
-          "type":"audio",                       // 数据类型
-      },
-      "formatType":"news"
-    }
+        {
+            "hint": "准备播放 软银集...",
+            "data": {
+                "audio": "http://...",              // 播放链接
+                "tagTopic":"财经",                   // 新闻主题
+                "timestamp":1502364363,     // 新闻产生时间戳
+                "title":"软银集...",                    // 新闻标题
+                "type":"audio"                        // 数据类型
+            },
+            "formatType": "audio"
+        }
     ```
-
-
-
-
-
-
