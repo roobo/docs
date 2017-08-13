@@ -248,7 +248,9 @@
 
 ---
 
-* **formattype**
+* **formatType**
+
+* formatType目的是标准化同类技能字段输出，便于设备端接入。默认为空。
 
   * _audio_
 
@@ -273,21 +275,16 @@
   * _news_
 
     ```
-    "result":{
-      "hint":"请欣赏刘德华的忘情水",
-      "data":{
-          "audio":"http://...",                   // 播放链接
-          "tagTopic":"财经",                   // 新闻主题
-          "timestamp":1502364363,     // 新闻产生时间戳
-          "title":"软银集...",                    // 新闻标题
-          "type":"audio",                       // 数据类型
-      },
-      "formatType":"news"
+    {
+        "hint":"请欣赏刘德华的忘情水",
+        "data":{
+            "audio":"http://...",                   // 播放链接
+            "tagTopic":"财经",                   // 新闻主题
+            "timestamp":1502364363,     // 新闻产生时间戳
+            "title":"软银集...",                    // 新闻标题
+            "type":"audio"                        // 数据类型
+        },
+        "formatType":"news"
     }
     ```
-
-
-
-
-
 
