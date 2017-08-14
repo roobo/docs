@@ -21,7 +21,6 @@
 | **result** | **value** | **type** |
 | --- | --- | --- |
 | hint | 笑话的内容 | string |
-| formattype | text | string |
 
 返回样例
 
