@@ -124,28 +124,6 @@ _举例：数据部分_
 
 ---
 
-### \/Change
-换一批
-
-_举例：数据部分_
-
-```
-    "results": [
-        {
-            "hint": "让我们一起听听闻",
-            "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990d8af01b17.mp3",
-                "name": "【听闻播报】韩国再度公开史料 证明日本曾非法强征“慰安妇”",
-                "tagTopic": "国际",
-                "timestamp": 1502664883
-            },
-            "formatType": "audio"
-        }
-    ]
-```
-
----
-
 ### \/Exit
 退出新闻场景
 
