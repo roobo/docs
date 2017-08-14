@@ -17,17 +17,16 @@
 
 _举例：数据部分_
 ```
-    "results": [
+   "results": [
         {
             "hint": "让我们一起听听闻",
             "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/598d04b4991af.mp3",
-                "tagTopic": "科技",
-                "timestamp": 1502414039,
-                "title": "【创业邦早报】传央行要求删除“无现金”宣传字眼，总行回应；锤子炮轰阿里差点被它害死，阿里回怼",
-                "type": "audio"
+                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990ddc81215f.mp3",
+                "name": "按不住的香港房价：中国买家纷纷离场 记录高位能持续到何时？",
+                "tagTopic": "财经",
+                "timestamp": 1502666186
             },
-            "formatType": "news"
+            "formatType": "audio"
         }
     ]
 ```
@@ -44,13 +43,12 @@ _举例：数据部分_
         {
             "hint": "让我们一起听听闻",
             "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/598d5b8576e55.mp3",
-                "tagTopic": "时政",
-                "timestamp": 1502436304,
-                "title": "【央广评论】打击传销,要关注传销人员何去何从?",
-                "type": "audio"
+                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990dbd280416.mp3",
+                "name": "【听闻播报】热点城市房贷价升量跌料延续 刚需忧心被误伤",
+                "tagTopic": "财经",
+                "timestamp": 1502665693
             },
-            "formatType": "news"
+            "formatType": "audio"
         }
     ]
 ```
@@ -66,13 +64,12 @@ _举例：数据部分_
         {
             "hint": "让我们一起听听闻",
             "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/598d1e3f426eb.mp3",
+                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990ddc81215f.mp3",
+                "name": "按不住的香港房价：中国买家纷纷离场 记录高位能持续到何时？",
                 "tagTopic": "财经",
-                "timestamp": 1502420545,
-                "title": "【听闻财经通】“共有产权房”横空出世 刚需们福利到来了？",
-                "type": "audio"
+                "timestamp": 1502666186
             },
-            "formatType": "news"
+            "formatType": "audio"
         }
     ]
 ```
@@ -93,13 +90,12 @@ _举例：数据部分_
         {
             "hint": "主人，为你继续播放听闻",
             "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/598d1e3f426eb.mp3",
-                "tagTopic": "财经",
-                "timestamp": 1502420545,
-                "title": "【听闻财经通】“共有产权房”横空出世 刚需们福利到来了？",
-                "type": "audio"
+                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990ddc81215f.mp3",
+                "name": "按不住的香港房价：中国买家纷纷离场 记录高位能持续到何时？",
+                "tagTopic": "",
+                "timestamp": 1502666186
             },
-            "formatType": "news"
+            "formatType": "audio"
         }
     ]
 ```
@@ -114,15 +110,14 @@ _举例：数据部分_
 ```
     "results": [
         {
-            "hint": "主人，为你继续播放听闻",
+            "hint": "主人，为你重复播放听闻",
             "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/598d1e3f426eb.mp3",
-                "tagTopic": "财经",
-                "timestamp": 1502420545,
-                "title": "【听闻财经通】“共有产权房”横空出世 刚需们福利到来了？",
-                "type": "audio"
+                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990ddc81215f.mp3",
+                "name": "按不住的香港房价：中国买家纷纷离场 记录高位能持续到何时？",
+                "tagTopic": "",
+                "timestamp": 1502666186
             },
-            "formatType": "news"
+            "formatType": "audio"
         }
     ]
 ```
@@ -139,13 +134,12 @@ _举例：数据部分_
         {
             "hint": "让我们一起听听闻",
             "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/598d4ade2db77.mp3",
+                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990d8af01b17.mp3",
+                "name": "【听闻播报】韩国再度公开史料 证明日本曾非法强征“慰安妇”",
                 "tagTopic": "国际",
-                "timestamp": 1502431991,
-                "title": "杜特尔特支持中国主导自贸协定：TPP是消失的梦",
-                "type": "audio"
+                "timestamp": 1502664883
             },
-            "formatType": "news"
+            "formatType": "audio"
         }
     ]
 ```
