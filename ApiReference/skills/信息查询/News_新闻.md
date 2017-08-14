@@ -165,8 +165,7 @@ _举例：数据部分_
 | hint |  | string | 提示语 | 让我们一起听听闻 |
 | data |  |  |  |  |
 |  | audio | string | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3 |
+|  | name | string | 新闻标题 | 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
 |  | tagTopic | string | 新闻主题 | 财经 |
 |  | timestamp | int | 新闻产生时间戳 | 1502364363 |
-|  | title | string | 新闻标题 | 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
-|  | type | string | 数据类型 | audio |
-| formatType |  | string | 结果类型 | news |
+| formatType |  | string | 结果类型 | audio |
