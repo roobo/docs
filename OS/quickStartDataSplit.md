@@ -7,7 +7,7 @@
 
 ### 拆分数据
 前处理器对应规则文件 : **pre_process.xml**
-后处理器对应规则文件 : **post_process.xml** 
+后处理器对应规则文件 : **post_process.xml**
 
 
 示例工程中
@@ -131,12 +131,12 @@
 该条规则已经写名  当响应的response.target 和 response.action 均不为 null 的时候将数据转发给 <output> 标签中制定的target ,也就是 SHOW_MSG.
 想让我们建立的Pudding 场景应该怎么做呢.
 这是我们建立的ROS.AI场景. 写明service 是 Pudding , 所以到规则中 response.target 的值也会时 Pudding
-![](/assets/quick_start_7.png)   
+![](./assets/quick_start_7.png)
 
 
 而下图中的 意图名称   ask , eat ,praise  这三个是 response.action
- ![](/assets/quick_start_8.png)
- 
+ ![](./assets/quick_start_8.png)
+
 为此在**post_process.xml** 顶端加了一条新的规则
 
 ```xml
@@ -154,21 +154,21 @@
         </output>
     </rule>
 ```
- 
+
  然后将修改后的 **post_process.xml**文件重新push到 **/sdcard/ros/configure/** 目录下.
  按顺序重启进程:
- 
+
  1.com.roobo.platformservice:configure
  2.com.roobo.platformservice:core
  3.com.roobo.platformservice:asr
- 
+
  对着设备说出唤醒词,默认是 **布丁布丁** ,这时会看到下图:
- ![](/assets/quickStartDeploy_8.png)
+ ![](./assets/quickStartDeploy_8.png)
 
 根据我们在ROS.AI 配置的意图: ask , eat ,praise
 
-说出: **布丁你在哪里** 处触发 ask 意图 从而进入 Pudding 场景. 
-![](/assets/quickStartDataSplit_1.png)
+说出: **布丁你在哪里** 处触发 ask 意图 从而进入 Pudding 场景.
+![](./assets/quickStartDataSplit_1.png)
 说出: **我要吃布丁**  和 **布丁真好吃** . 都会有对应的 tts 变化.
 至此 拆分场景数据已经完成.  更好的写好规则可以查阅  **规则系统**章节 .
 

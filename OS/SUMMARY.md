@@ -31,6 +31,7 @@
   * [RML](rml.md)
   * [事件处理器规则](processor_rules.md)
   * [配置中心规则](configure_rules.md)
+  * [SDCARD上的配置文件](sdcard_config.md)
 * API
 * Jelly
   * [Motion](motion.md)

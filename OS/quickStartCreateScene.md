@@ -6,7 +6,7 @@ Scene（场景），在产品层面上是体现一个机器人交互能力的直
 
 在scenes目录下创建自己的Module 如：　Pudding
 
-![](/assets/quick_start_6.png)
+![](./assets/quick_start_6.png)
 
 #### 修改build.gradle
 
@@ -68,8 +68,8 @@ apply from: "${rootProject.ext.app_common}"
 
 具体在ROS.AI端配置场景及相关语义的方法请参照　[ROS.AI开发文档](http://ros.ai)
 
-![](/assets/quick_start_7.png)   
- ![](/assets/quick_start_8.png)
+![](./assets/quick_start_7.png)
+ ![](./assets/quick_start_8.png)
 
 #### 接收Command
 
@@ -77,7 +77,7 @@ apply from: "${rootProject.ext.app_common}"
 
 ** 场景初始化　**
 
-建立一个自己的Application，并在AndroidManifest.xml 中配置使用．  
+建立一个自己的Application，并在AndroidManifest.xml 中配置使用．
 作为一个scene\(场景\)，需要使用SceneHelper.initialize\(Application app\)方法进行初始化操作，该方法尽量在Application.onCreate\(\)的时候尽可能早的执行。
 
 ** 设置EventListener　**
@@ -88,7 +88,7 @@ apply from: "${rootProject.ext.app_common}"
 
 根据再ROS.AI端的配置，我们可以通过回调函数里的数据区分出用户的意图．然后做出对应的回应．快速上手中使用action , 其余参数请参考详细文档．
 
-** 注意 **  
+** 注意 **
 语义解析需要有上下文，在ROS.AI配置是选填的　，为了更精确识别语义，如果在ROS.AI配置时语义设置了上下文，　那在我们的场景时，也要设置上下文．建议同一个场景用同一上下文．
 
 如：
@@ -148,7 +148,7 @@ public class MyApplication extends Application {
 
 #### 修改global\_config
 
-开发包默认的**device.production**　已经盖我们刚自定义的场景，如果后续有了自己的ROS.AI的后台就所以必须将该值修改下．  
+开发包默认的**device.production**　已经盖我们刚自定义的场景，如果后续有了自己的ROS.AI的后台就所以必须将该值修改下．
 在**/sdcard/ros/configure/**创建　**global\_config.xml**　写入：
 
 ```xml
@@ -162,7 +162,7 @@ public class MyApplication extends Application {
 
 #### 修改更换sn号
 
-产品的名称已经修改了,也需要对应的修改sn号.  
+产品的名称已经修改了,也需要对应的修改sn号.
 打开 **/sdcard/**下 sn 文件,写入对应的数据,如我我们刚开发的场景
 
 ```

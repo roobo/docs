@@ -14,7 +14,7 @@
 
 * 状态机
 
-![](/assets/action.png)
+![](./assets/action.png)
 
 | 状态 | 数据类型 | 值 | 描述 |
 | --- | --- | --- | --- |
@@ -64,7 +64,7 @@ perform\(\)方法需要完成以下操作：
 
 ### ActionSet
 
-首先ActionSet继承自Action，它拥有Action所有的特征。ActionSet实际上定义为Action的容器，容器的结构是任意的。  
+首先ActionSet继承自Action，它拥有Action所有的特征。ActionSet实际上定义为Action的容器，容器的结构是任意的。
 我们目前提供以下常用的ActionSet：
 
 * 串行Action容器：**SequentialActionSet**，即顺序执行容器内的Action

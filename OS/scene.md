@@ -27,7 +27,7 @@ onRestoreSceneData并不总是被调用的，如果在onSaveSceneData的时候�
 
 相关的生命周期函数被调用的时机见下图：
 
-![](/assets/scene_lifecycle.jpg)
+![](./assets/scene_lifecycle.jpg)
 
 相关接口定义具体参看 com.roobo.core.scene.SceneEventListener。
 
@@ -58,20 +58,20 @@ onRestoreSceneData并不总是被调用的，如果在onSaveSceneData的时候�
 一个场景在开发前需要在 AndroidManifest.xml 中声明两个 meta-data 段，如下例子中，场景 Translator 声明：
 
 ```xml
-<meta-data 
-    android:name="ROOBO_MODULE_NAME" 
-    android:value="Translator" /> 
-<meta-data 
-    android:name="ROOBO_MODULE_TYPE" 
-    android:value="scene"/> 
+<meta-data
+    android:name="ROOBO_MODULE_NAME"
+    android:value="Translator" />
+<meta-data
+    android:name="ROOBO_MODULE_TYPE"
+    android:value="scene"/>
 ```
 
 其中 ROOBO\_MODULE\_NAME 代表该模块的名字，必须声明，同一系统上的模块名不能重复，ROOBO\_MODULE\_TYPE 代表该模块的类型，值有三种，scene、service和其他，默认不写该项指的是其他。作为一个场景，值为 scene。 一个场景开发时可以选择依赖 SceneSDK.jar（[下载页面](#)），也可以选择依赖我们提供的 aar，如果是前者，则还需要在 AndroidManifest.xml 中声明一个 service：
 
 ```xml
-<service 
-    android:name="com.roobo.core.communication.DefaultService" 
-    android:exported="true"/> 
+<service
+    android:name="com.roobo.core.communication.DefaultService"
+    android:exported="true"/>
 ```
 
 #### 初始化 - Application.onCreate\(\)
@@ -79,7 +79,7 @@ onRestoreSceneData并不总是被调用的，如果在onSaveSceneData的时候�
 场景的初始化不同于模块初始化，它依赖 com.roobo.core.scene.SceneHelper，需要在 Application.onCreate 时尽量早的地方调用：
 
 ```java
-SceneHelper.initialize(this); 
+SceneHelper.initialize(this);
 ```
 
 该函数会把该场景 attach 到系统中，以 “告知” 系统场景进程已经启动，并参与到模块通讯机制中。
@@ -89,26 +89,26 @@ SceneHelper.initialize(this);
 为了能够接收指令消息（AICommand），需要（建议也在 Application.onCreate\(\) 中）注册场景回调函数（包括生命周期函数）：
 
 ```java
-SceneHelper.setEventListener(new SceneEventListener() { 
-    @Override 
+SceneHelper.setEventListener(new SceneEventListener() {
+    @Override
     public void onSwitchIn(String action, Bundle params, Serializable suggestion) {
-        super.onSwitchIn(action, params, suggestion); 
-    } 
+        super.onSwitchIn(action, params, suggestion);
+    }
     /**
      * onCommand：进入场景(onSwitchIn)后，只需在onCommand中接收消息进行一系列操作就可以了；
      * @param action 自定义行为
      * @param params 额外参数传递
      * @param suggestion 额外参数传递
      */
-    @Override 
-    public void onCommand(String action, Bundle params, Serializable suggestion) { 
-        super.onCommand(action, params, suggestion); 
-    } 
-    @Override 
-    public void onSwitchOut() { 
-        super.onSwitchOut(); 
-    } 
-}); 
+    @Override
+    public void onCommand(String action, Bundle params, Serializable suggestion) {
+        super.onCommand(action, params, suggestion);
+    }
+    @Override
+    public void onSwitchOut() {
+        super.onSwitchOut();
+    }
+});
 ```
 
 其中 onCommand 函数的参数如注释所示。
@@ -122,11 +122,11 @@ SceneHelper.setEventListener(new SceneEventListener() {
     "status": {
         "code": 0,
         "errorType": "success"
-    }, 
+    },
     "query": "我要翻译",
     "semantic": {
-        "service": "RTTranslator", 
-        "action": "Entry" 
+        "service": "RTTranslator",
+        "action": "Entry"
     }
 }
 ```
