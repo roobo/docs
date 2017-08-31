@@ -6,13 +6,12 @@
 
 ### \/Play
 
-播放用户想听的音频
+随机返回该topic相关的5条音效。 
 
 
 | **Slot Semantic Signatures** | **Description**| **Example** |
 | --- | --- | --- |
 | &lt;topic&gt; | 音效主题 | 我想听**自然**音效 |
-| &lt;name&gt; | 音效名称关键词 | 我想听**老虎**的声音 |
 
 _举例：数据部分_
 
