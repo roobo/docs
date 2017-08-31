@@ -6,3 +6,14 @@
 
 ### \/Play
 
+播放用户想听的音频
+
+
+| **Slot Semantic Signatures** | **Example** |
+
+| --- | --- |
+
+| &lt;name&gt; | 十五的月亮 |
+
+| &lt;artist&gt; | 我要听冯巩的相声 |
+
