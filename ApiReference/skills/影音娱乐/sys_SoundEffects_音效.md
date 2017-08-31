@@ -6,16 +6,10 @@
 
 ### \/Play
 
-随机返回该topic相关的5条音效。 
-
-
-| **Slot Semantic Signatures** | **Description**| **Example** |
-| --- | --- | --- |
-| &lt;topic&gt; | 音效主题 | 我想听**人物**音效 |
-
-_举例：数据部分_
+随机返回该topic相关的5条音效。
 
 ```
-
+你是谁
 ```
-    
+
+
