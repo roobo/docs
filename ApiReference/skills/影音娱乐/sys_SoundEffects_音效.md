@@ -54,6 +54,10 @@ _举例：数据部分_
 
 返回关键字中存在该name的一条音效。
 
+| **Slot Semantic Signatures** | **Description** | **Example** |
+| --- | --- | --- |
+| &lt;name&gt; | 音效名称关键词 | 我想听**老虎**的声音 |
+
 _举例：数据部分_
 
 ```
