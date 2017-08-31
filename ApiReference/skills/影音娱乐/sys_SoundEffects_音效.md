@@ -9,11 +9,10 @@
 播放用户想听的音频
 
 
-| **Slot Semantic Signatures** | **Example** |
+| **Slot Semantic Signatures** | **Description**| **Example** |
+| --- | --- | --- |
+| &lt;topic&gt; | 音效主题 | 我想听**自然**音效 |
+| &lt;name&gt; | 音效名称关键词 | 我想听**老虎**的声音 |
 
-| --- | --- |
 
-| &lt;name&gt; | 十五的月亮 |
-
-| &lt;artist&gt; | 我要听冯巩的相声 |
 
