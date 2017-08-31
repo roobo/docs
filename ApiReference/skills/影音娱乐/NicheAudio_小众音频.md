@@ -7,7 +7,7 @@
 
 ### \/Play
 
-播放用户想听的音频
+随机返回该topic相关的5条音效。 
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
