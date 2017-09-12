@@ -53,14 +53,14 @@ apply from: "${rootProject.ext.app_common}"
             android:value="scene"/>
 ```
 
-  ** DefaultService **
+  **DefaultService**
   保证系统能够跟你建立通讯
 
-  ** ROOBO\_MODULE\_NAME **
+  **ROOBO\_MODULE\_NAME**
 
    代表该模块的名字，必须声明，同一系统上的**模块名不能重复**
 
-  ** ROOBO\_MODULE\_TYPE **
+  **ROOBO\_MODULE\_TYPE**
 
    代表该模块的类型，可选声明，值有三种，scene、service和other，默认不写该项指的是other，其中scene表示该模块是一个场景，service表示该模块是一个服务，其他值表示仅是一个普通模块快速接入指南中仅介绍scene ．
 
@@ -75,12 +75,12 @@ apply from: "${rootProject.ext.app_common}"
 
 在ROS.AI端配置完成服务后，输入对应的语义，我们的场景就能接收到对应的Command .不过在此之前我们还需要做以下操作．
 
-** 场景初始化　**
+**场景初始化**
 
 建立一个自己的Application，并在AndroidManifest.xml 中配置使用．  
 作为一个scene\(场景\)，需要使用SceneHelper.initialize\(Application app\)方法进行初始化操作，该方法尽量在Application.onCreate\(\)的时候尽可能早的执行。
 
-** 设置EventListener　**
+**设置EventListener**
 
 场景生命周期函数有三个，通过SceneHelper.setEventListener\(SceneEventListener listener\)来注册生命周期函数回调．
 
@@ -88,7 +88,7 @@ apply from: "${rootProject.ext.app_common}"
 
 根据再ROS.AI端的配置，我们可以通过回调函数里的数据区分出用户的意图．然后做出对应的回应．快速上手中使用action , 其余参数请参考详细文档．
 
-** 注意 **  
+**注意**  
 语义解析需要有上下文，在ROS.AI配置是选填的　，为了更精确识别语义，如果在ROS.AI配置时语义设置了上下文，　那在我们的场景时，也要设置上下文．建议同一个场景用同一上下文．
 
 如：
@@ -149,7 +149,7 @@ public class MyApplication extends Application {
 #### 修改global\_config
 
 开发包默认的**device.production**　已经盖我们刚自定义的场景，如果后续有了自己的ROS.AI的后台就所以必须将该值修改下．  
-在**/sdcard/ros/configure/**创建　**global\_config.xml**　写入：
+在**\/sdcard/ros/configure/**创建　**global\_config.xml**　写入：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -163,7 +163,7 @@ public class MyApplication extends Application {
 #### 修改更换sn号
 
 产品的名称已经修改了,也需要对应的修改sn号.  
-打开 **/sdcard/**下 sn 文件,写入对应的数据,如我我们刚开发的场景
+打开 **\/sdcard/**下 sn 文件,写入对应的数据,如我我们刚开发的场景
 
 ```
 sn=1110000000101063
