@@ -9,9 +9,12 @@
 
 ## 获取roobo开发包
 
-点击**[roobo开发包下载](https://pan.baidu.com/s/1bXCcTS)  **获取开发包.
+**[点击 roobo开发包下载](https://pan.baidu.com/s/1bXCcTS)**
+
 解压后会得到类似下图所示工程.不同时期下的版本可能后面的版本数字会有变化.
+
 ![](/智能手表/assets/quickStartDeploy_1.png)
+
 若您希望的是快速看到效果，可以直接转到　**执行脚本部署 **
 
 获取到的开发包是一个 android studio project .  用 android studio  open 的方式,
