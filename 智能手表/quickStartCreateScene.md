@@ -163,7 +163,7 @@ public class MyApplication extends Application {
 #### 修改更换sn号
 
 产品的名称已经修改了,也需要对应的修改sn号.  
-打开 **sdcard/**下 sn 文件,写入对应的数据,如我我们刚开发的场景
+打开**sdcard/**下 sn 文件,写入对应的数据,如我我们刚开发的场景
 
 ```
 sn=1110000000101063
