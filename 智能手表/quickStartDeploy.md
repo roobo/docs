@@ -15,7 +15,8 @@
 
 ![](/智能手表/assets/quickStartDeploy_1.png)
 
-若您希望的是快速看到效果，可以直接转到　**执行脚本部署 **
+若您希望的是快速看到效果，可以直接转到
+**执行脚本部署 **
 
 获取到的开发包是一个 android studio project .  用 android studio  open 的方式,
 切记不要使用 import .
