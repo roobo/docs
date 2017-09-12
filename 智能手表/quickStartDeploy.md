@@ -30,7 +30,6 @@
 
 **resource/apks/**         
 &emsp; roobo提供服务的核心apk:
-
 &emsp; PlatformService-release-roobo_dot-baochenhe-24-1.1.1918-online.apk
 &emsp;另外的apk 属于教学的场景apk,开发包中包含源码。
 
