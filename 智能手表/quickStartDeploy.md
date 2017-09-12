@@ -48,6 +48,7 @@
 
 #### 执行脚本部署
 1.确保设备已经正确接入到pc机．adb shell 可用
+
 2.根据自己的系统选择不同的　deploy 脚本。　
 * linux ： sh deploy.sh
 * windows: 双击deploy.bat
@@ -55,10 +56,15 @@
 
 #### 必要的检查
 1.成功部署后，确保resource/apks/ 目录下的所有apk 已经安装成功 
+
 2.resource/scenesdk/ 目录下的文件已经push到设备的sdcard 中.
+
 3.设备的日期，时间为当前正确时间
+
 4.音量已经打开
+
 5.设备已经正确联网
+
 6.Android6.0 以上的设备需要检查PlatformService（roobo核心服务），麦克风，存储，启动app等权限是否开启。
 
 #### 运行程序
