@@ -149,7 +149,7 @@ public class MyApplication extends Application {
 #### 修改global\_config
 
 开发包默认的**device.production**　已经盖我们刚自定义的场景，如果后续有了自己的ROS.AI的后台就所以必须将该值修改下．  
-在**sdcard/ros/configure/**创建　**global\_config.xml**　写入：
+在sdcard/ros/configure/创建　**global\_config.xml**　写入：
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -163,7 +163,7 @@ public class MyApplication extends Application {
 #### 修改更换sn号
 
 产品的名称已经修改了,也需要对应的修改sn号.  
-打开**sdcard/**下 sn 文件,写入对应的数据,如我我们刚开发的场景
+打开/sdcard/下 sn 文件,写入对应的数据,如我我们刚开发的场景
 
 ```
 sn=1110000000101063
