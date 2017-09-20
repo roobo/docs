@@ -36,12 +36,12 @@ SDK主要流程如下：
 ```
 2. 初始化
 ``` java
-    Authentification authentification = new Authentification();
-	UserInfo userInfo = createUserInfo();
-    authentification.login(userInfo, new LoginResultListener() {
+    UserInfo userInfo = createUserInfo();
+    Authentification.getInstance().login(userInfo, new LoginResultListener() {
             @Override
             public void onSucess() {
             }
+
             @Override
             public void onFail(final RError message) {
             }
