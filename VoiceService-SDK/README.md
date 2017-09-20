@@ -104,7 +104,7 @@ cond(no)->cond
 
 ### 错误码对应表
 
-error code | Second | error des
+error code | error des
 ------------ | -------------
 400 | BadRequest
 401 | Unauthorized
