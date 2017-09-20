@@ -14,11 +14,11 @@ VoiceService-SDK 开发指南v1.0.0
 ### 概述
 VoiceService-SDK运行在Android平台的SDK，旨在为用户提供在线的语音听写、语义分析及语音合成的能力，目前支持语言中文和英文。
 
-###使用说明
-####准备
+### 使用说明
+#### 准备
  1. 账号申请，账号通常包括agentID，agentToken，如果是Roobo分配的设备ID，则需要同时拿到clientID。
  2. SDK及demo获取，目前SDK是以aar的形式提供，IDE需要用AndroidStudio。
-####主要流程
+#### 主要流程
 SDK主要流程如下：
 
 ```flow
@@ -38,7 +38,7 @@ cond(yes)->ops
 cond(no)->cond
 ```
 
-####使用步骤
+#### 使用步骤
 1. 配置编译环境，将SDK的aar文件放入业务Module的libs文件夹下，并且配置编译选项
     
     repositories {
@@ -101,7 +101,7 @@ cond(no)->cond
 4. 在线TTS
 初始化成功后可以使用在线TTS，只需要将需要转换为TTS的文本数据送给SDK的TTS接口即可返回对应的TTS数据url。
 
-###错误码对应表
+### 错误码对应表
 400  BadRequest
 401  Unauthorized
 500  Internal
