@@ -22,22 +22,7 @@ VoiceService-SDK运行在Android平台的SDK，旨在为用户提供在线的语
 #### 主要流程
 SDK主要流程如下：
 
-``` flow
-st=>start: Start
-e=>end
-cond=>condition: init with 
-UserInfo 
-sucessed ?
-ops=>operation: start and wait asr 
-or ai or tts result
-ope=>operation: get result
-opr=>operation: quit and release engin
-
-
-st->cond->ops->ope->opr->e
-cond(yes)->ops
-cond(no)->cond
-```
+![](/VoiceService-SDK/assets/workflow.png)
 
 #### 使用步骤
 1. 配置编译环境，将SDK的aar文件放入业务Module的libs文件夹下，并且配置编译选项
@@ -85,6 +70,7 @@ cond(no)->cond
 3. 在线识别、语义
 初始化成功后可以使用在线识别和语义，用户需要将Recorder的数据通过SDK的write接口送给SDK，例如：
 ``` java
+
     AudioRecord record = new AudioRecord(MediaRecorder.AudioSource.MIC, 16000,
         AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize);
     byte[] buffer = new byte[bufferSize];
