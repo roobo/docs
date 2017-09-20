@@ -101,7 +101,7 @@ cond(no)->cond
 初始化成功后可以使用在线TTS，只需要将需要转换为TTS的文本数据送给SDK的TTS接口即可返回对应的TTS数据url。
 
 ###错误码对应表
->400  BadRequest
+400  BadRequest
 401  Unauthorized
 500  Internal
 501  NotSupported
