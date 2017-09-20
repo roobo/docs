@@ -36,12 +36,12 @@ SDK主要流程如下：
 ```
 2. 初始化
 ``` java
-    Authentification authentification = new Authentification();
-	UserInfo userInfo = createUserInfo();
-    authentification.login(userInfo, new LoginResultListener() {
+    UserInfo userInfo = createUserInfo();
+    Authentification.getInstance().login(userInfo, new LoginResultListener() {
             @Override
             public void onSucess() {
             }
+
             @Override
             public void onFail(final RError message) {
             }
@@ -70,6 +70,7 @@ SDK主要流程如下：
 3. 在线识别、语义
 初始化成功后可以使用在线识别和语义，用户需要将Recorder的数据通过SDK的write接口送给SDK，例如：
 ``` java
+
     AudioRecord record = new AudioRecord(MediaRecorder.AudioSource.MIC, 16000,
         AudioFormat.CHANNEL_IN_MONO, AudioFormat.ENCODING_PCM_16BIT, bufferSize);
     byte[] buffer = new byte[bufferSize];
