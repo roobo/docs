@@ -99,6 +99,7 @@ cond(no)->cond
         }
     }
 ```
+>NOTE:有些语义信息需要默认位置信息，例如：今天天气，现在几点了。请使用RooboRecognizer的reportLocationInfo(List<RooboWifiInfo> wifiInfos)方法上传位置信息。
 4. 在线TTS
 初始化成功后可以使用在线TTS，只需要将需要转换为TTS的文本数据送给SDK的TTS接口即可返回对应的TTS数据url。
 
