@@ -41,14 +41,14 @@ cond(no)->cond
 
 #### 使用步骤
 1. 配置编译环境，将SDK的aar文件放入业务Module的libs文件夹下，并且配置编译选项
-    
-    repositories {
+    ```java
+    repositories {
         flatDir { dirs 'libs' }
     }
     dependencies {
         compile(name:'voicesdk-release-1.0.2-test',ext:'aar')
     }
-
+    ```
 2. 初始化
     
     Authentification authentification = new Authentification();
