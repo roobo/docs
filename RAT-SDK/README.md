@@ -55,8 +55,8 @@ SDK主要流程如下：
      public void onFail(final RError error) {
      }
  );
- ```
-   2.2. 在线听写、离线语句识别、唤醒初始化。在使用识别前一定要全包创建全局RooboUtility 对象，改类主要设置一些配置。如果是使用Android的标准AudioRecorder采集音频数据，则在startWork后会在其内部创建Recorder。示例代码如下：
+ ```  
+    2.2. 在线听写、离线语句识别、唤醒初始化。在使用识别前一定要全包创建全局RooboUtility 对象，改类主要设置一些配置。如果是使用Android的标准AudioRecorder采集音频数据，则在startWork后会在其内部创建Recorder。示例代码如下：  
      
  ``` java
  RooboUtility utility = RooboUtility.createUtility();
@@ -151,29 +151,29 @@ error code | error des
 >如需要不在下述列表的语言，请与我们联系。
 
 US English  
-Spanish(LatAM)
-French for Canada
-Portuguese for Brazil
-Russian
-Spanish(Spain)
-English for GB
-French for France
-German
-Danish
-Catalan
-Italian
-Portuguese for Portugal
-Dutch
-Mandarin
-Cantonese Simplified
-Cantonese Traditional
-Mandarin(Taiwan)
-Korean
-Japanese
-English for Australia
-English for India
-Hindi
-Arabic
-Polish
-Thai
+Spanish(LatAM)  
+French for Canada  
+Portuguese for Brazil  
+Russian  
+Spanish(Spain)  
+English for GB  
+French for France  
+German  
+Danish  
+Catalan  
+Italian  
+Portuguese for Portugal  
+Dutch  
+Mandarin  
+Cantonese Simplified  
+Cantonese Traditional  
+Mandarin(Taiwan)  
+Korean  
+Japanese  
+English for Australia  
+English for India  
+Hindi  
+Arabic  
+Polish  
+Thai  
 Turkish
