@@ -13,7 +13,7 @@ VoiceService-SDK 开发指南v1.0.0
 [3.错误码对应表](#错误码对应表)
 
 ### 概述
-VoiceService-SDK运行在Android平台的SDK，旨在为用户提供在线的语音听写、语义分析及语音合成的能力，目前支持语言中文和英文。
+VoiceService-SDK运行在Android平台的SDK，旨在为用户提供在线的语音听写、语义分析及语音合成的能力，目前支持语言中文和英文。详细的接口说明可参考![接口文档](/VoiceService-SDK/javadoc/index.html)
 
 ### 使用说明
 #### 准备
@@ -85,6 +85,7 @@ SDK主要流程如下：
         }
     }
 ```
+如果你想开启录音后，在用户说话时自动进行识别，我们提供了带静音检测的Recognizer，详细请参考![RooboVADRecognizer](/VoiceService-SDK/javadoc/com/roobo/toolkit/recognizer/RooboVADRecognizer.html)
 >NOTE:有些语义信息需要默认位置信息，例如：今天天气，现在几点了。请使用RooboRecognizer的reportLocationInfo(List<RooboWifiInfo> wifiInfos)方法上传位置信息。
 4. 在线TTS
 初始化成功后可以使用在线TTS，只需要将需要转换为TTS的文本数据送给SDK的TTS接口即可返回对应的TTS数据url。
