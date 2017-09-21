@@ -42,35 +42,36 @@ SDK主要流程如下：
    ![](/RAT-SDK/assets/offlineRes.png)
    
 2. 初始化
-2.1 鉴权，调用SDK鉴权接口联网鉴权，鉴权成功后才能使用SDK的能力。在第一次没有鉴权可以短暂使用离线能力。示例代码如下：
-``` java
-RAuth auth = new RAuth(getApplicationContext());
-auth.auth(appId, publicKey, new RAuthResultListener() {
+
+ 2.1 鉴权，调用SDK鉴权接口联网鉴权，鉴权成功后才能使用SDK的能力。在第一次没有鉴权可以短暂使用离线能力。示例代码如下：
+ ``` java
+ RAuth auth = new RAuth(getApplicationContext());
+ auth.auth(appId, publicKey, new RAuthResultListener() {
      @Override
      public void onSucess() {
      }
      @Override
      public void onFail(final RError error) {
      }
-);
-```
-2.2 在线听写、离线语句识别、唤醒初始化。在使用识别前一定要全包创建全局RooboUtility 对象，改类主要设置一些配置。如果是使用Android的标准AudioRecorder采集音频数据，则在startWork后会在其内部创建Recorder。示例代码如下：
-``` java
-RooboUtility utility = RooboUtility.createUtility();
-utility.setParams(Parameter.ENDPOINT_TIME, String.valueOf(5000));
-utility.setParams(Parameter.ABSOLUTE_THRESHOLD,"-2600");
-utility.setParams(Parameter.SENSITIVITY,"30");
-utility.setParams(Parameter.T_SILENCE,"200");
-utility.initGrammar("offline-"+UserInfo.LANGUAGE.language());
-···
-utility.startWork(getApplicationContext(), UserInfo.LANGUAGE, 0);
-utility.setVolumeListener(new VolumeChangeListener() {
+ );
+ ```
+ 2.2 在线听写、离线语句识别、唤醒初始化。在使用识别前一定要全包创建全局RooboUtility 对象，改类主要设置一些配置。如果是使用Android的标准       AudioRecorder采集音频数据，则在startWork后会在其内部创建Recorder。示例代码如下：
+ ``` java
+ RooboUtility utility = RooboUtility.createUtility();
+ utility.setParams(Parameter.ENDPOINT_TIME, String.valueOf(5000));
+ utility.setParams(Parameter.ABSOLUTE_THRESHOLD,"-2600");
+ utility.setParams(Parameter.SENSITIVITY,"30");
+ utility.setParams(Parameter.T_SILENCE,"200");
+ utility.initGrammar("offline-"+UserInfo.LANGUAGE.language());
+ ···
+ utility.startWork(getApplicationContext(), UserInfo.LANGUAGE, 0);
+ utility.setVolumeListener(new VolumeChangeListener() {
         @Override
         public void onVolumeChange(int volume) {
            
         }
-});
-```
+ });
+ ```
 >NOTE:我们支持用户自己开启AudioRecorder，需要在utility.startWork时最后一个参数设置为-1，并将原始音频数据通过utility的writePcm方法写入引擎。确保音频数据是单声道，采样率16000Hz，数据位深16bit。
 
 3. 在线听写
@@ -146,7 +147,7 @@ error code | error des
 
 ### 支持的语言列表
 >如需要不在下述列表的语言，请与我们联系。
-
+---
 US English
 Spanish(LatAM)
 French for Canada
