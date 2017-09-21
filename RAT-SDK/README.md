@@ -11,6 +11,7 @@ RAT-SDK 开发指南v1.0.0
 * [2.3 使用步骤](#使用步骤)
 
 [3.错误码对应表](#错误码对应表)
+
 [4.支持的语言列表](#支持的语言列表)
 
 ### 概述
@@ -142,3 +143,34 @@ error code | error des
 102 | 无在线识别权限
 103 | 连接错误，请检查系统时间或者网络
 104 | 你好像没有说话
+
+### 支持的语言列表
+>如需要不在下述列表的语言，请与我们联系。
+
+US English
+Spanish(LatAM)
+French for Canada
+Portuguese for Brazil
+Russian
+Spanish(Spain)
+English for GB
+French for France
+German
+Danish
+Catalan
+Italian
+Portuguese for Portugal
+Dutch
+Mandarin
+Cantonese Simplified
+Cantonese Traditional
+Mandarin(Taiwan)
+Korean
+Japanese
+English for Australia
+English for India
+Hindi
+Arabic
+Polish
+Thai
+Turkish
