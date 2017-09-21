@@ -13,7 +13,7 @@ VoiceService-SDK 开发指南v1.0.0
 [3.错误码对应表](#错误码对应表)
 
 ### 概述
-VoiceService-SDK运行在Android平台的SDK，旨在为用户提供在线的语音听写、语义分析及语音合成的能力，目前支持语言中文和英文。详细的接口说明可参考[接口文档!](/VoiceService-SDK/javadoc/index.html)
+VoiceService-SDK运行在Android平台的SDK，旨在为用户提供在线的语音听写、语义分析及语音合成的能力，目前支持语言中文和英文。详细的接口说明可参考[接口文档](https://github.com/roobo/docs/blob/master/VoiceService-SDK/javadoc/index.html)
 
 ### 使用说明
 #### 准备
