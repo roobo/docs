@@ -56,7 +56,7 @@ SDK主要流程如下：
      }
  );
  ```
- 2.2. 在线听写、离线语句识别、唤醒初始化。在使用识别前一定要全包创建全局RooboUtility 对象，改类主要设置一些配置。如果是使用Android的标准AudioRecorder采集音频数据，则在startWork后会在其内部创建Recorder。示例代码如下：
+    2.2. 在线听写、离线语句识别、唤醒初始化。在使用识别前一定要全包创建全局RooboUtility 对象，改类主要设置一些配置。如果是使用Android的标准AudioRecorder采集音频数据，则在startWork后会在其内部创建Recorder。示例代码如下：
      
  ``` java
  RooboUtility utility = RooboUtility.createUtility();
