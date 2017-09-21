@@ -150,7 +150,7 @@ error code | error des
 ### 支持的语言列表
 >如需要不在下述列表的语言，请与我们联系。
 
-US English
+US English  
 Spanish(LatAM)
 French for Canada
 Portuguese for Brazil
