@@ -73,7 +73,6 @@ RATN-SDK是运行在Android平台，旨在为用户提供在线语音听写、�
 | InitListener | initListener | 初始化Callback |
 
 
-
 ###### 核心方法解析：
 
 开始识别：
