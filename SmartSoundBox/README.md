@@ -16,7 +16,7 @@
 
 ### 集成准备
   
-  [SmartSoundBoxDemo下载](http://pan.baidu.com/s/1nuJJlET)
+  [SmartSoundBoxDemo下载](http://pan.baidu.com/s/1eROboWE)
   
   resource内容介绍：(SmartSoundBoxDemo的resource文件夹)
   
