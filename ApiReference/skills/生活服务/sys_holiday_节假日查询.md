@@ -7,7 +7,7 @@
 
 ### \/GetHolidayPlan
 
-给出用户查询节日或者月份的放假安排
+获取用户查询节日或者月份的放假安排
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
