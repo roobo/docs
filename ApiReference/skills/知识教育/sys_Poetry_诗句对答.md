@@ -6,10 +6,7 @@
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| title | 诗词题目 | 静夜思 |
-| author | 作者 | 李白 |
 | verse | 诗句 | 白日依山尽 |
-| type | 诗词类型 | 唐诗 |
 
 # 3.意图
 
