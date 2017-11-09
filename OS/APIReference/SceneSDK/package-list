@@ -1,0 +1,14 @@
+com.roobo.alarm
+com.roobo.configure
+com.roobo.core.ai
+com.roobo.core.communication
+com.roobo.core.power
+com.roobo.core.scene
+com.roobo.core.service
+com.roobo.error
+com.roobo.focusinterface
+com.roobo.notification
+com.roobo.notification.utils
+com.roobo.service
+com.roobo.state
+com.roobo.tts
