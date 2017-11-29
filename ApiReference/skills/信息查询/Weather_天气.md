@@ -105,3 +105,25 @@
 | **Field\_Name** | **Sub\_Field** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
 | --- | --- | --- | --- | --- |
 |  | index | 返回天气天数索引 | string | 2 |
+
+### \/Focus
+能够查询的天气状况如下：
+
+| **Entity item** | **Synonym(部分)** |
+| --- | --- |
+| fog | 雾,大雾 |
+| hail | 冰雹，雹子 |
+| humidity | 湿度 |
+| maxTemp | 最高温度，最高气温 |
+| maxWind | 最大风力，最大风速 |
+| minTemp | 最低温度，气温最低温度 |
+| minWind | 最小风力，最小风速 |
+| pm25 | 空气情况，雾霾，雾霾指数，pm2.5值，pm25 |
+| rain | 雨，大雨，大暴雨，冰雹大雨 |
+| snow | 雪，大雪，小雪，毛毛雪，大暴雪 |
+| temperature | 温度，气温，季度，多少度 |
+| thunder | 雷，雷电，霹雷 |
+| ultraviolet | 紫外线 |
+| weather | 天气，气象，天气状况 |
+| wind | 风力，风速，风向 |
+| windcategory | 风，小风，大风，微风，东南风 |
