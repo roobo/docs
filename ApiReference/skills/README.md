@@ -270,8 +270,8 @@ _audio_
          "start": 0,                            // 断点
          "extra": null,               //额外信息
          "sid": "0-1513862035533",    //相当于sessionid
-         "size": 0,                   //文件大小
-         "length": 21,                //播放时长
+         "size": 0,                   //文件大小(B)
+         "length": 21,                //播放时长(s)
          "type": "AUDIO"              //资源类型
       },
       "formatType": "audio"
