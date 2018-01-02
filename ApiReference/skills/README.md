@@ -267,8 +267,13 @@ _audio_
          "image": "",                        // 高清专辑封面链接
          "name": "以父之名",          // 歌曲名
          "resId": "aires:114423",     // 资源标识
-         "start": 0                            // 断点
-      },
+         "start": 0,                            // 断点
+         "extra": null,               //额外信息
+         "sid": "0-1513862035533",    //相当于sessionid
+         "size": 0,                   //文件大小
+         "length": 21,                //播放时长
+         "type": "AUDIO"              //资源类型
+      },
       "formatType": "audio"
    }
 ```
