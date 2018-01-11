@@ -207,7 +207,7 @@ VUIApi.getInstance().init(context, initParam,audioGenerator,initListener);
         VUIApi.getInstance().setSpeaker("Li-Li");
         ~~~
 
-## [API文档](https://github.com/roobo/docs/blob/master/VUI-SDK/2.0/javaDoc/index.html)
+## [API文档](http://htmlpreview.github.com/?https://github.com/roobo/docs/blob/master/VUI-SDK/2.0/javaDoc/index.html)
 ## 附录
 ---
 1. 错误码
