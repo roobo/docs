@@ -61,152 +61,151 @@ VUIApi.getInstance().init(context, initParam,audioGenerator,initListener);
     | setBsdInSSE() | 设置SSE使用的Ssd文件|如该使用SSE是必须的|
 
 ## 语音识别
-### **设置离线识别文件**
-* 添加离线语法文件到assets/vocon下
-* 调用接口添加语法文件
-~~~
-  BnfGrammar test_dynamic_offline_1 = new BnfGrammar("test_dynamic_offline_1");
-  List<BnfGrammar> bnfGrammars = Arrays.asList(test_dynamic_offline_1);
-      
-     VUIApi.getInstance().getOfflineRecognizerController().loadGrammars(bnfGrammars, new LoadGrammarListener() {
-            @Override
-            public void onSuccess() {
-                Toast.makeText(getApplicationContext(), "加载离线Grammar成功", Toast.LENGTH_SHORT).show();
-            }
+* #### **设置离线识别文件**
+    * 添加离线语法文件到assets/vocon下
+    * 调用接口添加语法文件
+    ~~~
+    BnfGrammar test_dynamic_offline_1 = new BnfGrammar("test_dynamic_offline_1");
+    List<BnfGrammar> bnfGrammars = Arrays.asList(test_dynamic_offline_1);
+        
+        VUIApi.getInstance().getOfflineRecognizerController().loadGrammars(bnfGrammars, new LoadGrammarListener() {
+                @Override
+                public void onSuccess() {
+                    Toast.makeText(getApplicationContext(), "加载离线Grammar成功", Toast.LENGTH_SHORT).show();
+                }
 
-            @Override
-            public void onFail(RError error) {
-                Toast.makeText(getApplicationContext(), error.getFailDetail(), Toast.LENGTH_SHORT).show();
-            }
-        });
+                @Override
+                public void onFail(RError error) {
+                    Toast.makeText(getApplicationContext(), error.getFailDetail(), Toast.LENGTH_SHORT).show();
+                }
+            });
 
-~~~
+    ~~~
 
-### **动态设置在线识别的语言(参考附录中的在线ASR语言范围)**
-~~~
- VUIApi.getInstance().setCloudRecognizeLang(language);
-~~~
+* #### **动态设置在线识别的语言(参考附录中的在线ASR语言范围)**
+    ~~~
+    VUIApi.getInstance().setCloudRecognizeLang(language);
+    ~~~
 
----
-### **设置Listener**
-~~~
-VUIApi.getInstance().setASRListener(new RASRListener() {
-            @Override
-            public void onASRResult(final ASRResult result) {
-               //识别结果
-            }
 
-            @Override
-            public void onFail(final RError message) {
-               //识别失败
-            }
+* #### **设置Listener**
+    ~~~
+    VUIApi.getInstance().setASRListener(new RASRListener() {
+                @Override
+                public void onASRResult(final ASRResult result) {
+                //识别结果
+                }
 
-            @Override
-            public void onWakeUp(final String json) {
-               //被唤醒。当时使用多麦的时候，还可用获取到唤醒角度
-            }
+                @Override
+                public void onFail(final RError message) {
+                //识别失败
+                }
 
-            @Override
-            public void onEvent(EventType event) {
-                //语音识别过程中的事件，具体查看Api文档
-            }
-        });
-~~~
-### **开始识别**
-~~~
- VUIApi.getInstance().startRecognize();
-~~~
-### **结束识别**
-~~~
- VUIApi.getInstance().stopRecognize();
-~~~
+                @Override
+                public void onWakeUp(final String json) {
+                //被唤醒。当时使用多麦的时候，还可用获取到唤醒角度
+                }
+
+                @Override
+                public void onEvent(EventType event) {
+                    //语音识别过程中的事件，具体查看Api文档
+                }
+            });
+    ~~~
+* #### **开始识别**
+    ~~~
+    VUIApi.getInstance().startRecognize();
+    ~~~
+* #### **结束识别**
+    ~~~
+    VUIApi.getInstance().stopRecognize();
+    ~~~
 ## 语义理解
 ---
-### **文本语义理解**
-文本语义是将自然语言的文本转换成语义结果．
-~~~
- VUIApi.getInstance().setOnAIResponseListener(new OnAIResponseListener() {
-            @Override
-            public void onResult(final String json) {
-               //语义成功结果
-            }
+* #### **文本语义理解**
+    文本语义是将自然语言的文本转换成语义结果．
+    ~~~
+    VUIApi.getInstance().setOnAIResponseListener(new OnAIResponseListener() {
+                @Override
+                public void onResult(final String json) {
+                //语义成功结果
+                }
 
-            @Override
-            public void onFail(final RError rError) {
-　　　　　　　　 //语义失败
-            }
-        });
-  VUIApi.getInstance().aiQuery(text);
-~~~
+                @Override
+                public void onFail(final RError rError) {
+    　　　　　　　　 //语义失败
+                }
+            });
+    VUIApi.getInstance().aiQuery(text);
+    ~~~
 
-### **语音语义理解**
-语音语义理解是先把音频数据转为听写结果数据——自然语言的文本，再由服务器自动进行文本语义理解，相当于在文本语义前，先进行听写。不需要开发者去主动调用，ASR之后会主动请求语义并返回语义结果，开发只需要设置语义的回调．开发者可以登录ROAAI后台，去自定义自己的语义场景。
+* #### **语音语义理解**
+    语音语义理解是先把音频数据转为听写结果数据——自然语言的文本，再由服务器自动进行文本语义理解，相当于在文本语义前，先进行听写。不需要开发者去主动调用，ASR之后会主动请求语义并返回语义结果，开发只需要设置语义的回调．开发者可以登录ROAAI后台，去自定义自己的语义场景。 
 
-**语音语义设置Listener**
-~~~
- VUIApi.getInstance().setOnAIResponseListener(new OnAIResponseListener() {
-            @Override
-            public void onResult(final String json) {
-               //语义成功结果
-            }
+    ~~~
+    VUIApi.getInstance().setOnAIResponseListener(new OnAIResponseListener() {
+                @Override
+                public void onResult(final String json) {
+                //语义成功结果
+                }
 
-            @Override
-            public void onFail(final RError rError) {
-　　　　　　　　 //语义失败
-            }
-        });
-~~~
-### **语义理解上下文(现在只支持语音语义理解设置上下文)**
-RooboAI后台的语义理解是支持上下文的，开发者可以设置上下文，就支持多轮对话。在AIResponseListener回调的中可以获取到outputContext。
-~~~
-VUIApi.getInstance().setAIContext(context);
-~~~
+                @Override
+                public void onFail(final RError rError) {
+    　　　　　　　　 //语义失败
+                }
+            });
+    ~~~
+* #### **语义理解上下文(现在只支持语音语义理解设置上下文)**
+    RooboAI后台的语义理解是支持上下文的，开发者可以设置上下文，就支持多轮对话。在AIResponseListener回调的中可以获取到outputContext。
+    ~~~
+    VUIApi.getInstance().setAIContext(context);
+    ~~~
 ## 语音合成
 ---
 语音合成包括在线/离线两个方式，在SDK 初始化的时候设定的。
-### **开始TTS**
-~~~
-VUIApi.getInstance().speak(text, new RTTSListener() {
-            @Override
-            public void onSpeakBegin() {
-                //TTS开始
-            }
-
-            @Override
-            public void onCompleted() {
-　　　　　　　　　//TTS完成
-            }
-
-            @Override
-            public void onError(int code) {
-              //TTS出错
-            }
-        });
-~~~
-### **停止TTS**
-~~~
- VUIApi.getInstance().stopSpeak();
-~~~
-### **动态修改speaker**
-1. 修改在线发音人（参考附录中在线发音人范围）
-~~~
- VUIApi.getInstance().setSpeaker("jpn-JPN");
-~~~
-2. 修改离线发音人(参考附录中离线发音人范围)
-    * 在assets/vexpressive/config.xml中添加发音人的配置
-
+* #### **开始TTS**
     ~~~
-    <speakers>
-    <speaker name="Li-Li" language="cmn-CHN"/>
-    <speaker name="Allison" language="eng-USA"/>
-    </speakers>
-    ~~~
+    VUIApi.getInstance().speak(text, new RTTSListener() {
+                @Override
+                public void onSpeakBegin() {
+                    //TTS开始
+                }
 
-    * 添加发音人的配置文件到assets/vexpressive中
-    * 修改发音人
+                @Override
+                public void onCompleted() {
+    　　　　　　　　　//TTS完成
+                }
+
+                @Override
+                public void onError(int code) {
+                //TTS出错
+                }
+            });
     ~~~
-     VUIApi.getInstance().setSpeaker("Li-Li");
+* #### **停止TTS**
     ~~~
+    VUIApi.getInstance().stopSpeak();
+    ~~~
+* #### **动态修改speaker**
+    1. 修改在线发音人（参考附录中在线发音人范围）
+    ~~~
+    VUIApi.getInstance().setSpeaker("jpn-JPN");
+    ~~~
+    2. 修改离线发音人(参考附录中离线发音人范围)
+        * 在assets/vexpressive/config.xml中添加发音人的配置
+
+        ~~~
+        <speakers>
+        <speaker name="Li-Li" language="cmn-CHN"/>
+        <speaker name="Allison" language="eng-USA"/>
+        </speakers>
+        ~~~
+
+        * 添加发音人的配置文件到assets/vexpressive中
+        * 修改发音人
+        ~~~
+        VUIApi.getInstance().setSpeaker("Li-Li");
+        ~~~
 ## 附录
 ---
 1. 错误码
