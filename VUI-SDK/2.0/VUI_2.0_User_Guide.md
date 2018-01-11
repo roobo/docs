@@ -6,13 +6,13 @@ VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的�
 * 接入单项或多项语音交互基本能力
 * 在已有的VUI交互方式上快速搭建业务逻辑
 * 选择已有的技能或者自定义新技能
-#### 支持的VUI交互方式
+### 支持的VUI交互方式
 | 交互方式| 说明 |
 | ------------- |:-------------:|
 | 机器人交互 |交互过程为：唤醒识别唤醒。在等待唤醒状态开发者可以手动唤醒。开始识别后，开发者需要根据业务逻辑选择超时休眠（回到等待唤醒状态）或者一次成功交互之后回到休眠状态。可参考布丁机器人及智能音箱等。 |
 | 按钮式交互 | 交互过程为：开始识别识别结束识别。开发者需要调用特定的接口开始识别过程，并且调用结束时别接口结束整个识别过程。开始到结束之间的语音被当作是一个完整的句子送去识别。可参考现有的故事机产品以及其他靠按钮控制的语音交互产品。 |
 
-#### 支持的功能
+### 支持的功能
 1. 唤醒词识别、离线语音识别、在线语音识别。支持的语言参看附录的语言列表。
 2. 离线、在线语音和成。支持的发言人/语言参考附录的对应的列表。
 3. 语义理解。
@@ -24,7 +24,7 @@ VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的�
 
 ## 集成SDK
 ---
-#### Step1 导入SDK
+### Step1 导入SDK
 现在SDK是以aar形式提供，所以需要使用Android Studio开发。把"ratn-release-*-online.aar"拷贝到Libs文件夹下。在muoudle的build.gradle文件中添加
 ~~~
     repositories {
@@ -36,7 +36,7 @@ VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的�
     }
 ~~~
 
-#### step2 初始化SDK
+### step2 初始化SDK
 ~~~
 VUIApi.getInstance().init(context, initParam,audioGenerator,initListener);
 ~~~
@@ -61,7 +61,7 @@ VUIApi.getInstance().init(context, initParam,audioGenerator,initListener);
     | setBsdInSSE() | 设置SSE使用的Ssd文件|如该使用SSE是必须的|
 
 ## 语音识别
-#### 设置离线识别文件
+### **设置离线识别文件**
 * 添加离线语法文件到assets/vocon下
 * 调用接口添加语法文件
 ~~~
@@ -82,13 +82,13 @@ VUIApi.getInstance().init(context, initParam,audioGenerator,initListener);
 
 ~~~
 
-#### 动态设置在线识别的语言(参考附录中的在线ASR语言范围)
+### **动态设置在线识别的语言(参考附录中的在线ASR语言范围)**
 ~~~
  VUIApi.getInstance().setCloudRecognizeLang(language);
 ~~~
 
 ---
-#### 设置Listener
+### **设置Listener**
 ~~~
 VUIApi.getInstance().setASRListener(new RASRListener() {
             @Override
@@ -112,17 +112,17 @@ VUIApi.getInstance().setASRListener(new RASRListener() {
             }
         });
 ~~~
-#### 开始识别
+### **开始识别**
 ~~~
  VUIApi.getInstance().startRecognize();
 ~~~
-#### 结束识别
+### **结束识别**
 ~~~
  VUIApi.getInstance().stopRecognize();
 ~~~
 ## 语义理解
 ---
-#### 文本语义理解
+### **文本语义理解**
 文本语义是将自然语言的文本转换成语义结果．
 ~~~
  VUIApi.getInstance().setOnAIResponseListener(new OnAIResponseListener() {
@@ -139,7 +139,7 @@ VUIApi.getInstance().setASRListener(new RASRListener() {
   VUIApi.getInstance().aiQuery(text);
 ~~~
 
-#### 语音语义理解
+### **语音语义理解**
 语音语义理解是先把音频数据转为听写结果数据——自然语言的文本，再由服务器自动进行文本语义理解，相当于在文本语义前，先进行听写。不需要开发者去主动调用，ASR之后会主动请求语义并返回语义结果，开发只需要设置语义的回调．开发者可以登录ROAAI后台，去自定义自己的语义场景。
 
 **语音语义设置Listener**
@@ -156,7 +156,7 @@ VUIApi.getInstance().setASRListener(new RASRListener() {
             }
         });
 ~~~
-#### 语义理解上下文(现在只支持语音语义理解设置上下文)
+### **语义理解上下文(现在只支持语音语义理解设置上下文)**
 RooboAI后台的语义理解是支持上下文的，开发者可以设置上下文，就支持多轮对话。在AIResponseListener回调的中可以获取到outputContext。
 ~~~
 VUIApi.getInstance().setAIContext(context);
@@ -164,7 +164,7 @@ VUIApi.getInstance().setAIContext(context);
 ## 语音合成
 ---
 语音合成包括在线/离线两个方式，在SDK 初始化的时候设定的。
-#### 开始TTS
+### **开始TTS**
 ~~~
 VUIApi.getInstance().speak(text, new RTTSListener() {
             @Override
@@ -183,11 +183,11 @@ VUIApi.getInstance().speak(text, new RTTSListener() {
             }
         });
 ~~~
-#### 停止TTS
+### **停止TTS**
 ~~~
  VUIApi.getInstance().stopSpeak();
 ~~~
-#### 动态修改speaker
+### **动态修改speaker**
 1. 修改在线发音人（参考附录中在线发音人范围）
 ~~~
  VUIApi.getInstance().setSpeaker("jpn-JPN");
