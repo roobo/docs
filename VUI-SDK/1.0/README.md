@@ -48,7 +48,7 @@ VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的�
 2. 提供应用的的AgentId给商务，获取SDK和Demo。
 
 **接口文档**
-[地址](http://htmlpreview.github.com/?https://github.com/JamesNengLiu/docs/blob/master/RATN-SDK/javadoc/index.html)
+[地址](http://htmlpreview.github.com/?https://github.com/roobo/docs/blob/master/VUI-SDK/1.0/javaDoc/index.html)
 
 
 <h3 id="2">2.集成SDK</h3>
