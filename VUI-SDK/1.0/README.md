@@ -1,44 +1,61 @@
 ###  目录
-  [1.概述](#1)
+  [1.简介](#1)
 
-  [2.使用说明](#2)
-  * [2.1　准备](#2.1)
-  * [2.2　API初始化](#2.2)
-  * [2.3　方法及参数解析](#2.3)
+  [2.集成SDK](#2)
+  * [2.1　导入SDK](#2.1)
+  * [2.2　SDK接口使用](#2.2)
 
 
   [3.错误对应码](#3)
 
-  [4.支持的语音列表](#4)
+  [4.在线识别支持的语言列表](#4)
   
-  [5.发音人列表](#5)
+  [5.离线识别支持的语言列表](#5)
+  
+  [6.在线发音人列表](#6)
+  
+  [7.离线发音人列表](#7)
+  
+  [8.在线AI支持的语言列表](#8)
   
   
   
   
-<h3 id="1">1.概述 </h3>
+<h3 id="1">1.简介 </h3>
 
-VUI-SDK是运行在Android平台，旨在为用户提供完整的语音交互功能。其中内置两个标准的交互方案，1.标准的机器人交互方案，可全部通过语音控制整个交互流程。可参考市场上售卖的机器人及各种音响产品等。2.类似故事机的按钮式交互方案，主要是通过按钮控制整个交互流程。
+VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的一款包含基础语音能力和语音交互范式的软件开发包。VUI SDK连接roobo的语音语义服务平台，结合离线能力，给客户提供完整的语音系统开发能力支持。
+基于VUI SDK及背后的语音语义开发平台，开发者可以：
+* 快速对接roobo AI平台，使用roobo全链路VUI服务
+* 接入单项或多项语音交互基本能力
+* 在已有的VUI交互方式上快速搭建业务逻辑
+* 选择已有的技能或者自定义新技能
 
-**语言**目前支持语言请参见支持的语言。
+**VUI交互方式**
 
-**可选的功能**离线唤醒、打断，离线短语识别，在线语句识别，在线语义，离线语音合成，在线语音合成。
+| 交互方式 | 说明 |
+| ------------- |:-------------:|
+| 机器人交互 |交互过程为：唤醒识别唤醒。在等待唤醒状态开发者可以手动唤醒。开始识别后，开发者需要根据业务逻辑选择超时休眠（回到等待唤醒状态）或者一次成功交互之后回到休眠状态。可参考布丁机器人及智能音箱等。 |
+| 按钮式交互 | 交互过程为：开始识别识别结束识别。开发者需要调用特定的接口开始识别过程，并且调用结束时别接口结束整个识别过程。开始到结束之间的语音被当作是一个完整的句子送去识别。可参考现有的故事机产品以及其他靠按钮控制的语音交互产品。 |
 
-**demo获取**
+**语言**
+目前支持语言请参见支持的语言。
 
-##### [demo下载](http://)
+**可选的功能**
+离线唤醒、打断，离线短语识别，在线语句识别，在线语义，离线语音合成，在线语音合成。
+
+**申请帐号/获取SDK**
+1. 联系商务申请ROSAI帐号并创建应用。
+2. 提供应用的的AgentId给商务，获取SDK和Demo。
 
 **接口文档**
-[地址](http://htmlpreview.github.com/?https://github.com/roobo/docs/blob/master/VUI-SDK/javadoc/index.html)
+[地址](http://htmlpreview.github.com/?https://github.com/JamesNengLiu/docs/blob/master/RATN-SDK/javadoc/index.html)
 
 
-<h3 id="2">2.使用说明</h3>
+<h3 id="2">2.集成SDK</h3>
 
-<h4 id="2.1">准备</h4>
+<h4 id="2.1">2.1 导入SDK</h4>
 
-1.账号申请、SDK及demo获取，目前SDK是以aar的形式提供，IDE需要用AndroidStudio。
-2.对应语种唤醒词，离线短语的语法文件。
-3.配置编译环境，将SDK的aar文件放入业务Module的libs文件夹下，并且配置编译选项
+现在SDK是以aar形式提供，所以需要使用Android Studio开发。把"ratn-release-*-online.aar"拷贝到Libs文件夹下。在muoudle的build.gradle文件中添加
 
 ```
     repositories {
@@ -50,38 +67,177 @@ VUI-SDK是运行在Android平台，旨在为用户提供完整的语音交互功
 
 ```
 
-<h5 id="2.2">2.2方法及参数解析</h5>
+<h4 id="2.2">2.2 SDK接口使用</h5>
 
-###### 核心接口类：
-VUIApi。
+#### 初始化SDK
+~~~
+VUIApi.getInstance().init(context, initParam,initListener);
+~~~
 
-###### 核心方法：
+* initParam
 
-初始化SDK：
-**init(Context context, InitParam initParam, InitListener initListener)**
+    重要的几个参数
 
-开始识别：
-**startRecognize()**
+    | 参数| 说明 |必填　|
+    | ------------- |:-------------:|:-------------:|
+    | setLanguage() |设置ASR/TTS/AI的语言 |是|
+    | setVUIType | 设置VUI交互方式 |是|
+    | setTTSType | 设置TTS在线/离线模式 |是|
+    | setTTSSpeaker | 如果TTS采用离线方式，这里设置是发音人。如果是采用离线方式，这是设置的是TTS语言 |否(默认"Li-Li")|
+    | addOfflineFileName() | 设置离线语法文件，可用添加多个离线语法文件。Demo里有添加测试的离线语法文件，唤醒词是"智能管家" |否|
+    | setUseSSE() | 是否使用SSE。采用Android标准的Recorder不需要使用SSE。如果是使用的多麦，需要使用SSE。|否(默认False)|
+    | setSseMicCount() | 设置麦克风路数数量|如该使用SSE是必须的|
+    | setSseRefCount() | 设置参考信号数量|如该使用SSE是必须的|
+    | setBsdInSSE() | 设置SSE使用的Ssd文件|如该使用SSE是必须的|
 
-结束识别：
-**stopRecognize()**
+#### 语音识别
+* ##### **设置离线识别文件**
+    * 添加离线语法文件到assets/vocon下
+    * 调用接口添加语法文件
+    ~~~
+    BnfGrammar test_dynamic_offline_1 = new BnfGrammar("test_dynamic_offline_1");
+    List<BnfGrammar> bnfGrammars = Arrays.asList(test_dynamic_offline_1);
+        
+        VUIApi.getInstance().getOfflineRecognizerController().loadGrammars(bnfGrammars, new LoadGrammarListener() {
+                @Override
+                public void onSuccess() {
+                    Toast.makeText(getApplicationContext(), "加载离线Grammar成功", Toast.LENGTH_SHORT).show();
+                }
 
-语义结果监听：
-**setOnAIResponseListener(OnAIResponseListener listener)**
+                @Override
+                public void onFail(RError error) {
+                    Toast.makeText(getApplicationContext(), error.getFailDetail(), Toast.LENGTH_SHORT).show();
+                }
+            });
 
-识别结果及状态变化监听：
-**setASRListener(AsrEventListener asrEventListener)**
+    ~~~
 
-语音合成、播放：
-**speak(String text)**
+* ##### **动态设置在线识别的语言(参考附录中的在线ASR语言范围)**
+    ~~~
+    VUIApi.getInstance().setCloudRecognizeLang(language);
+    ~~~
 
-停止语音合成、播放：
-**stopSpeak()**
 
-语音播放过程监听：
-**setTTSListener(RTTSListener listener)**
+* ##### **设置Listener**
+    ~~~
+    VUIApi.getInstance().setASRListener(new RASRListener() {
+                @Override
+                public void onASRResult(final ASRResult result) {
+                //识别结果
+                }
 
-<h3 id="3">错误对应码</h3>
+                @Override
+                public void onFail(final RError message) {
+                //识别失败
+                }
+
+                @Override
+                public void onWakeUp(final String json) {
+                //被唤醒。当时使用多麦的时候，还可用获取到唤醒角度
+                }
+
+                @Override
+                public void onEvent(EventType event) {
+                    //语音识别过程中的事件，具体查看Api文档
+                }
+            });
+    ~~~
+* ##### **开始识别**
+    ~~~
+    VUIApi.getInstance().startRecognize();
+    ~~~
+* ##### **结束识别**
+    ~~~
+    VUIApi.getInstance().stopRecognize();
+    ~~~
+#### 语义理解
+---
+* ##### **文本语义理解**
+    文本语义是将自然语言的文本转换成语义结果．
+    ~~~
+    VUIApi.getInstance().setOnAIResponseListener(new OnAIResponseListener() {
+                @Override
+                public void onResult(final String json) {
+                //语义成功结果
+                }
+
+                @Override
+                public void onFail(final RError rError) {
+    　　　　　　　　 //语义失败
+                }
+            });
+    VUIApi.getInstance().aiQuery(text);
+    ~~~
+
+* ##### **语音语义理解**
+    语音语义理解是先把音频数据转为听写结果数据——自然语言的文本，再由服务器自动进行文本语义理解，相当于在文本语义前，先进行听写。不需要开发者去主动调用，ASR之后会主动请求语义并返回语义结果，开发只需要设置语义的回调．开发者可以登录ROAAI后台，去自定义自己的语义场景。 
+
+    ~~~
+    VUIApi.getInstance().setOnAIResponseListener(new OnAIResponseListener() {
+                @Override
+                public void onResult(final String json) {
+                //语义成功结果
+                }
+
+                @Override
+                public void onFail(final RError rError) {
+    　　　　　　　　 //语义失败
+                }
+            });
+    ~~~
+* ##### **语义理解上下文(现在只支持语音语义理解设置上下文)**
+    RooboAI后台的语义理解是支持上下文的，开发者可以设置上下文，就支持多轮对话。在AIResponseListener回调的中可以获取到outputContext。
+    ~~~
+    VUIApi.getInstance().setAIContext(context);
+    ~~~
+#### 语音合成
+---
+语音合成包括在线/离线两个方式，在SDK 初始化的时候设定的。
+* ##### **开始TTS**
+    ~~~
+    VUIApi.getInstance().speak(text, new RTTSListener() {
+                @Override
+                public void onSpeakBegin() {
+                    //TTS开始
+                }
+
+                @Override
+                public void onCompleted() {
+    　　　　　　　　　//TTS完成
+                }
+
+                @Override
+                public void onError(int code) {
+                //TTS出错
+                }
+            });
+    ~~~
+* ##### **停止TTS**
+    ~~~
+    VUIApi.getInstance().stopSpeak();
+    ~~~
+* ##### **动态修改speaker**
+    1. 修改在线发音人（参考附录中在线发音人范围）
+    ~~~
+    VUIApi.getInstance().setSpeaker("jpn-JPN");
+    ~~~
+    2. 修改离线发音人(参考附录中离线发音人范围)
+        * 在assets/vexpressive/config.xml中添加发音人的配置
+
+        ~~~
+        <speakers>
+        <speaker name="Li-Li" language="cmn-CHN"/>
+        <speaker name="Allison" language="eng-USA"/>
+        </speakers>
+        ~~~
+
+        * 添加发音人的配置文件到assets/vexpressive中
+        * 修改发音人
+        ~~~
+        VUIApi.getInstance().setSpeaker("Li-Li");
+        ~~~
+
+<h3 id="3">3.错误对应码</h3>
 
 | 错误码 | 备注 |
 | ------------- |:-------------:|
@@ -136,19 +292,184 @@ VUIApi。
 23301 | 在上传wifi列表获取位置时 服务端返回的http | body大小超出了8K的限制
 23401 | 在上传wifi列表获取位置时 在构造请求时，由于内存不足申请内存失败
 
-<h3 id="5">支持的语言列表</h3>
+<h3 id="4">4.在线识别支持的语言列表</h3>
+
+| 语言| 语言对应的code |
+| ------------- |:-------------:|
+|	Arabic (Egypt)	|	ara-EGY	|
+|	Arabic (Saudi Arabia)	|	ara-SAU	|
+|	Arabic (International)	|	ara-XWW	|
+|	Bahasa (Indonesia)	|	ind-IDN	|
+|	Cantonese (Simplified)	|	yue-CHN	|
+|	Catalan	|	cat-ESP	|
+|	Croatian 	|	hrv-HRV	|
+|	Czech	|	ces-CZE	|
+|	Danish	|	dan-DNK	|
+|	Dutch	|	nld-NLD	|
+|	English (Australia)*	|	eng-AUS	|
+|	English (GB)*	|	eng-GBR	|
+|	English (US)*	|	eng-USA	|
+|	English (India) 	|	eng-IND	|
+|	Finnish	|	fin-FIN	|
+|	French (Canada)	|	fra-CAN	|
+|	French (France)*	|	fra-FRA	|
+|	German*	|	deu-DEU	|
+|	Greek	|	ell-GRC	|
+|	Hebrew	|	heb-ISR	|
+|	Hindi	|	hin-IND	|
+|	Language	|	6 char *	|
+|	Hungarian	|	hun-HUN	|
+|	Italian	|	ita-ITA	|
+|	Japanese	|	jpn-JPN	|
+|	Korean	|	kor-KOR	|
+|	Malay	|	zlm-MYS	|
+|	Mandarin (China/Simplified)	|	cmn-CHN	|
+|	Mandarin (Taiwan/Traditional)	|	cmn-TWN	|
+|	Norwegian	|	nor-NOR	|
+|	Polish	|	pol-POL	|
+|	Portuguese (Brazil)	|	por-BRA	|
+|	Portuguese (Portugal)	|	por-PRT	|
+|	Romanian	|	ron-ROU	|
+|	Russian	|	rus-RUS	|
+|	Slovak	|	slk-SVK	|
+|	Spanish (Spain)	|	spa-ESP	|
+|	Spanish (LatAm)	|	spa-XLA	|
+|	Swedish	|	swe-SWE	|
+|	Thai	|	tha-THA	|
+|	Turkish	|	tur-TUR	|
+|	Ukrainian	|	ukr-UKR	|
+|	Vietnamese	|	vie-VNM	|
+
+<h3 id="5">5.离线识别支持的语言列表</h3>
+
+| 语言| 语言对应的code |
+| ------------- |:-------------:|
+|	US English	|	eng-USA	|
+|	Spanish(LatAM)	|	spa-XLA	|
+|	Russian	|	rus-RUS	|
+|	Spanish(Spain)	|	spa-ESP	|
+|	French for France	|	fra-FRA	|
+|	German	|	deu-DEU	|
+|	Danish	|	dan-DNK	|
+|	Italian	|	ita-ITA	|
+|	Dutch	|	nld-NLD	|
+|	Mandarin	|	cmn-CHN	|
+|	Cantonese Traditional	|	yue-CHN	|
+|	Korean	|	kor-KOR	|
+|	Japanese	|	jpn-JPN	|
+|	arabic	|	ara-XWW	|
+|	Polish	|	pol-POL	|
+|	turkish	|	tur-TUR	|
+
+<h3 id="6">6.在线发音人列表</h3>
+
+| 语言| 语言对应的code |
+| ------------- |:-------------:|
+|	Arabic (Egypt)	|	ara-EGY	|
+|	Arabic (Saudi Arabia)	|	ara-SAU	|
+|	Arabic (International)	|	ara-XWW	|
+|	Bahasa (Indonesia)	|	ind-IDN	|
+|	Cantonese (Simplified)	|	yue-CHN	|
+|	Catalan	|	cat-ESP	|
+|	Croatian 	|	hrv-HRV	|
+|	Czech	|	ces-CZE	|
+|	Danish	|	dan-DNK	|
+|	Dutch	|	nld-NLD	|
+|	English (Australia)*	|	eng-AUS	|
+|	English (GB)*	|	eng-GBR	|
+|	English (US)*	|	eng-USA	|
+|	English (India) 	|	eng-IND	|
+|	Finnish	|	fin-FIN	|
+|	French (Canada)	|	fra-CAN	|
+|	French (France)*	|	fra-FRA	|
+|	German*	|	deu-DEU	|
+|	Greek	|	ell-GRC	|
+|	Hebrew	|	heb-ISR	|
+|	Hindi	|	hin-IND	|
+|	Language	|	6 char *	|
+|	Hungarian	|	hun-HUN	|
+|	Italian	|	ita-ITA	|
+|	Japanese	|	jpn-JPN	|
+|	Korean	|	kor-KOR	|
+|	Malay	|	zlm-MYS	|
+|	Mandarin (China/Simplified)	|	cmn-CHN	|
+|	Mandarin (Taiwan/Traditional)	|	cmn-TWN	|
+|	Norwegian	|	nor-NOR	|
+|	Polish	|	pol-POL	|
+|	Portuguese (Brazil)	|	por-BRA	|
+|	Portuguese (Portugal)	|	por-PRT	|
+|	Romanian	|	ron-ROU	|
+|	Russian	|	rus-RUS	|
+|	Slovak	|	slk-SVK	|
+|	Spanish (Spain)	|	spa-ESP	|
+|	Spanish (LatAm)	|	spa-XLA	|
+|	Swedish	|	swe-SWE	|
+|	Thai	|	tha-THA	|
+|	Turkish	|	tur-TUR	|
+|	Ukrainian	|	ukr-UKR	|
+|	Vietnamese	|	vie-VNM	|
+
+
+<h3 id="7">7.离线发音人列表</h3>
+
+| 语言 | 语言对应的code | 发音人 |
+| ------------- |:-------------|:-------------:|
+|	Arabic	|	ara-XWW	|	Laila	|
+|	Bahasa (Indonesia)	|	ind-IDN	|	Damayanti	|
+|	Basque	|	baq-ESP	|	Miren	|
+|	Cantonese	|	yue-CHN	|	Sin-Ji	|
+|	Catalan	|	cat-ESP	|	Jordi	|
+|	Czech	|	ces-CZE	|	Iveta	|
+|	Danish	|	dan-DNK	|	Magnus	|
+|	Dutch	|	nld-NLD	|	Claire	|
+|	Dutch (Belgium)	|	nld-BEL	|	Ellen	|
+|	English (Australia)	|	eng-AUS	|	Karen	|
+|	English (GB)	|	eng-GBR	|	Daniel	|
+|	English (India)	|	eng-IND	|	Veena	|
+|	English (Ireland)	|	eng-IRL	|	Moira	|
+|	English (Scotland)	|	eng-SCT	|	Fiona	|
+|	English (South Africa)	|	eng-ZAF	|	Tessa	|
+|	English (US)	|	eng-USA	|	Allison	|
+|	Finnish	|	fin-FIN	|	Satu	|
+|	French	|	fra-FRA	|	Audrey-ML	|
+|	French (Canada)	|	fra-CAN	|	Amelie	|
+|	Galician	|	glg-ESP	|	Carmela	|
+|	German	|	deu-DEU	|	Markus	|
+|	Greek	|	ell-GRC	|	Melina	|
+|	Hebrew	|	heb-ISR	|	Carmit	|
+|	Hindi	|	hin-IND	|	Lekha	|
+|	Hungarian	|	hun-HUN	|	Mariska	|
+|	Italian	|	ita-ITA	|	Alice-ML	|
+|	Japanese	|	jpn-JPN	|	Kyoko	|
+|	Japanese	|	jpn-JPN	|	Otoya	|
+|	Korean	|	kor-KOR	|	Sora	|
+|	Mandarin (China)	|	cmn-CHN	|	Li-Li	|
+|	Mandarin (Taiwan)	|	cmn-TWN	|	Mei-Jia	|
+|	Norwegian	|	nor-NOR	|	Nora	|
+|	Polish	|	pol-POL	|	Ewa	|
+|	Portuguese (Brazil)	|	por-BRA	|	Luciana	|
+|	Romanian	|	ron-ROU	|	Ioana	|
+|	Russian	|	rus-RUS	|	Katya	|
+|	Slovak	|	slk-SVK	|	Laura	|
+|	Spanish (Castilian)	|	spa-ESP	|	Jorge	|
+|	Spanish (Columbia)	|	spa-COL	|	Soledad	|
+|	Spanish (Columbia)	|	spa-COL	|	Carlos	|
+|	Spanish (Mexico)	|	spa-MEX	|	Angelica	|
+|	Spanish (Mexico)	|	spa-MEX	|	Paulina	|
+|	Spanish (Mexico)	|	spa-MEX	|	Juan	|
+|	Swedish	|	swe-SWE	|	Alva	|
+|	Thai	|	tha-THA	|	Kanya	|
+|	Turkish	|	tur-TUR	|	Cem	|
+|	Valencian	|	spa-ESP	|	Empar	|
+
+
+
+<h3 id="8">8.在线AI支持的语言列表</h3>
 
 | 语言码| 备注 |
 | ------------- |:-------------:|
-|cmn-CHN |中文 |
-| en-US | 英文 |
-
-<h3 id="4">发音人</h3>
-
-| 语言码| 备注 |
-| ------------- |:-------------:|
-| Li-Li |中文 |
-| Allison | 英文 |
+|	US English	|	eng-USA	|
+|	Mandarin	|	cmn-CHN	|
 
 
 
