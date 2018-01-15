@@ -317,7 +317,6 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	Greek	|	ell-GRC	|
 |	Hebrew	|	heb-ISR	|
 |	Hindi	|	hin-IND	|
-|	Language	|	6 char *	|
 |	Hungarian	|	hun-HUN	|
 |	Italian	|	ita-ITA	|
 |	Japanese	|	jpn-JPN	|
@@ -386,7 +385,6 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	Greek	|	ell-GRC	|
 |	Hebrew	|	heb-ISR	|
 |	Hindi	|	hin-IND	|
-|	Language	|	6 char *	|
 |	Hungarian	|	hun-HUN	|
 |	Italian	|	ita-ITA	|
 |	Japanese	|	jpn-JPN	|
