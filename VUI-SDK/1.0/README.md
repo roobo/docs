@@ -153,8 +153,8 @@ VUIApi.getInstance().init(context, initParam,initListener);
 #### 语义理解
 ---
 * ##### **文本语义理解**
-    文本语义是将自然语言的文本转换成语义结果．
-    ~~~
+    文本语义是将自然语言的文本转换成语义结果。注意：文本语义理解暂不支持设置上下文和地理位置。
+    ~~~
     VUIApi.getInstance().setOnAIResponseListener(new OnAIResponseListener() {
                 @Override
                 public void onResult(final String json) {
@@ -190,6 +190,13 @@ VUIApi.getInstance().init(context, initParam,initListener);
     ~~~
     VUIApi.getInstance().setAIContext(context);
     ~~~
+* ##### **语义理解地理位置上报接口**
+    在地理位置相关的请求，我们提供了上报地理位置的接口来解决此类问题。例如：问设备当地的天气。
+    ~~~
+    VUIApi.getInstance().reportLocationInfo(List<ScanResult> scanResultList);
+    VUIApi.getInstance().reportLocationInfo(String latitude, String longitude, String country, String province, String city, String detail);
+    ~~~
+
 #### 语音合成
 ---
 语音合成包括在线/离线两个方式，在SDK 初始化的时候设定的。
@@ -439,7 +446,6 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	Hungarian	|	hun-HUN	|	Mariska	|
 |	Italian	|	ita-ITA	|	Alice-ML	|
 |	Japanese	|	jpn-JPN	|	Kyoko	|
-|	Japanese	|	jpn-JPN	|	Otoya	|
 |	Korean	|	kor-KOR	|	Sora	|
 |	Mandarin (China)	|	cmn-CHN	|	Li-Li	|
 |	Mandarin (Taiwan)	|	cmn-TWN	|	Mei-Jia	|
@@ -451,10 +457,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	Slovak	|	slk-SVK	|	Laura	|
 |	Spanish (Castilian)	|	spa-ESP	|	Jorge	|
 |	Spanish (Columbia)	|	spa-COL	|	Soledad	|
-|	Spanish (Columbia)	|	spa-COL	|	Carlos	|
 |	Spanish (Mexico)	|	spa-MEX	|	Angelica	|
-|	Spanish (Mexico)	|	spa-MEX	|	Paulina	|
-|	Spanish (Mexico)	|	spa-MEX	|	Juan	|
 |	Swedish	|	swe-SWE	|	Alva	|
 |	Thai	|	tha-THA	|	Kanya	|
 |	Turkish	|	tur-TUR	|	Cem	|
