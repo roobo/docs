@@ -50,7 +50,6 @@ VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的�
 **接口文档**
 [地址](http://htmlpreview.github.com/?https://github.com/roobo/docs/blob/master/VUI-SDK/1.0/javaDoc/index.html)
 
-
 <h3 id="2">2.集成SDK</h3>
 
 <h4 id="2.1">2.1 导入SDK</h4>
@@ -66,6 +65,8 @@ VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的�
     }
 
 ```
+***DEMO下载***
+[地址](https://github.com/roobo/docs/blob/master/VUI-SDK/1.0/VUISDKDemo.zip)
 
 <h4 id="2.2">2.2 SDK接口使用</h5>
 
