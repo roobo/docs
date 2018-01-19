@@ -85,11 +85,8 @@ VUIApi.getInstance().init(context, initParam,initListener);
     | setVUIType | 设置VUI交互方式 |是|
     | setTTSType | 设置TTS在线/离线模式 |是|
     | setTTSSpeaker | 如果TTS采用离线方式，这里设置是发音人。如果是采用在线方式，这是设置的是TTS语言 |否(默认"Li-Li")|
-    | addOfflineFileName() | 设置离线语法文件，可用添加多个离线语法文件。Demo里有添加测试的离线语法文件，唤醒词是"智能管家" |否|
-    | setUseSSE() | 是否使用SSE。采用Android标准的Recorder不需要使用SSE。如果是使用的多麦，需要使用SSE。|否(默认False)|
-    | setSseMicCount() | 设置麦克风路数数量|如该使用SSE是必须的|
-    | setSseRefCount() | 设置参考信号数量|如该使用SSE是必须的|
-    | setBsdInSSE() | 设置SSE使用的Ssd文件|如该使用SSE是必须的|
+    | setAudioGenerator() | 设置语音识别的音源|是|
+    | setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PUBLICKEY的场景|否（默认是通过android默认的serialno来确认设备的唯一性，所以必须保证serialno的唯一性）|
 
 #### 语音识别
 * ##### **设置离线识别文件**
