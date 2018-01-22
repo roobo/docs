@@ -248,6 +248,15 @@ VUIApi.getInstance().init(context, initParam,initListener);
 
 | 错误码 | 备注 |
 | ------------- |:-------------:|
+100 | please check user info
+101 | session begin error
+102 | token invalid
+103 | server result error
+104 | can not link to server,please check net work
+200 | not have tts content
+201 | vad init error
+202 | speech timeout
+203 | wait server response result time out
 400 | BadRequest
 401 | Unauthorized
 500 | Internal
@@ -264,6 +273,8 @@ VUIApi.getInstance().init(context, initParam,initListener);
 609 | AiNotSupported
 610 | GetTtsServiceError
 611 | TtsServiceInternalError
+901 | no network
+900 | unkown error,please check the exception info in log
 10001 | 初始化language错误 
 10002 | 重复初始化
 10101 | 发送语音数据时 无法解析IP地址
