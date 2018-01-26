@@ -85,8 +85,8 @@ VUIApi.getInstance().init(context, initParam,initListener);
     | setVUIType | 设置VUI交互方式 |是|
     | setTTSType | 设置TTS在线/离线模式 |是|
     | setTTSSpeaker | 如果TTS采用离线方式，这里设置是发音人。如果是采用在线方式，这是设置的是TTS语言 |否(默认"Li-Li")|
-    | setAudioGenerator() | 设置语音识别的音源|是|
-    | setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景|否（默认是通过android默认的serialno来确认设备的唯一性，所以必须保证serialno的唯一性）|
+    | setAudioGenerator() | 设置语音识别的音源 |是|
+    | setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景 | 否（默认是通过android默认的serialno来确认设备的唯一性，所以必须保证serialno的唯一性）|
     
     注意：设置SN请调用UserInfo.setDeviceID(),设置PublicKey请调用UserInfo.setPublicKey（）。
 
