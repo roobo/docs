@@ -259,6 +259,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
 203 | wait server response result time out
 400 | BadRequest
 401 | Unauthorized
+402 | UnGranted
 500 | Internal
 501 | NotSupported
 503 | TooManyRequests
@@ -273,6 +274,8 @@ VUIApi.getInstance().init(context, initParam,initListener);
 609 | AiNotSupported
 610 | GetTtsServiceError
 611 | TtsServiceInternalError
+614 | AsrTimeOut int （一次会话超过最大允许时长）
+615 | AsrStreamingTimeOut int （用户传输音频过程中存在超过，5s钟未传输数据）
 901 | no network
 900 | unkown error,please check the exception info in log
 10001 | 初始化language错误 
