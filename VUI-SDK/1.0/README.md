@@ -476,6 +476,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	Thai	|	tha-THA	|	Kanya	|
 |	Turkish	|	tur-TUR	|	Cem	|
 |	Valencian	|	spa-ESP	|	Empar	|
+| Malay | zlm-MYS	 | Amira |
 
 
 
