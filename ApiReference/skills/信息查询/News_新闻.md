@@ -238,7 +238,7 @@ _举例：数据部分_
 
 | **Field\_Name** | **Sub\_Field** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
 | --- | --- | --- | --- | --- |
-| hint |  | string | 提示语 | 让我们一起听听闻 |
+| hint |  | string | 提示语 | 请欣赏 听闻下午茶 听闻下午茶 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
 | data |  |  |  |  |
 |  | audio | string | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3 |
 |  | name | string | 新闻标题 | 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
