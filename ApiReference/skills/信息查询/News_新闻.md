@@ -206,16 +206,16 @@ _举例：数据部分_
 
 ```
     "results": [
-        {
-            "hint": "主人，为你重复播放听闻",
-            "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990ddc81215f.mp3",
-                "name": "按不住的香港房价：中国买家纷纷离场 记录高位能持续到何时？",
-                "tagTopic": "",
-                "timestamp": 1502666186
-            },
-            "formatType": "audio"
-        }
+       {
+	"hint": "为您播放 高明 油价上涨助推欧元区通胀超预期 欧央行宽松压力加大",
+	"data": {
+		"audio": "http://mp3.tingwen.me/data/upload/mp3/5a728f0d1fb09.mp3",
+		"timestamp": 1517457169,
+		"tagTopic": "财经",
+		"name": "油价上涨助推欧元区通胀超预期 欧央行宽松压力加大"
+	},
+	"formatType": "audio"
+       }
     ]
 ```
 
