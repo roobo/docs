@@ -18,6 +18,7 @@
 
 _举例：数据部分_
 ```
+我想听新闻
   "results": [
       {
          "hint": "我们一起听 听闻早餐 听闻早餐 微信新功能 支持双账号登录 2018年2月1日",
@@ -31,7 +32,8 @@ _举例：数据部分_
       }
    ]
    
-   "results": [
+下一批
+   "results": [
    {
       "hint": "请欣赏 飞碟说 飞碟说 误会大了 考古才不是持证盗墓",
       "data": {
@@ -134,7 +136,7 @@ _举例：数据部分_
 
 _举例：数据部分_
 ```
-	"results": [
+   "results": [
       {
          "hint": "为您播放 笔记侠快播 笔记侠快播 不要被新零售迷惑",
          "data": {
@@ -156,16 +158,16 @@ _举例：数据部分_
 _举例：数据部分_
 ```
     "results": [
-        {
-            "hint": "让我们一起听听闻",
-            "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990ddc81215f.mp3",
-                "name": "按不住的香港房价：中国买家纷纷离场 记录高位能持续到何时？",
-                "tagTopic": "财经",
-                "timestamp": 1502666186
-            },
-            "formatType": "audio"
-        }
+       {
+	  "hint": "请欣赏 飞碟说 飞碟说 误会大了 考古才不是持证盗墓",
+	  "data": {
+		"audio": "http://mp3.tingwen.me/data/upload/mp3/5a72ba02a1741.mp3",
+		"timestamp": 1517468173,
+		"tagTopic": "",
+		"name": "飞碟说 误会大了 考古才不是持证盗墓"
+	  },
+	  "formatType": "audio"
+       } 
     ]
 ```
 
