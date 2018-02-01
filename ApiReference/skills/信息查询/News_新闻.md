@@ -18,18 +18,112 @@
 
 _举例：数据部分_
 ```
+  "results": [
+      {
+         "hint": "我们一起听 听闻早餐 听闻早餐 微信新功能 支持双账号登录 2018年2月1日",
+         "data": {
+            "audio": "http://mp3.tingwen.me/data/upload/mp3/5a724f902a574.mp3",
+            "timestamp": 1517440923,
+            "tagTopic": "政治",
+            "name": "听闻早餐 微信新功能 支持双账号登录 2018年2月1日"
+         },
+         "formatType": "audio"
+      }
+   ]
+   
    "results": [
-        {
-            "hint": "让我们一起听听闻",
-            "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990ddc81215f.mp3",
-                "name": "按不住的香港房价：中国买家纷纷离场 记录高位能持续到何时？",
-                "tagTopic": "财经",
-                "timestamp": 1502666186
-            },
-            "formatType": "audio"
-        }
-    ]
+   {
+      "hint": "请欣赏 飞碟说 飞碟说 误会大了 考古才不是持证盗墓",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72ba02a1741.mp3",
+         "timestamp": 1517468173,
+         "tagTopic": "",
+         "name": "飞碟说 误会大了 考古才不是持证盗墓"
+      },
+      "formatType": "audio"
+   }, {
+      "hint": "我们一起听 笔记侠快播 笔记侠快播 不要被新零售迷惑",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b80dc6f38.mp3",
+         "timestamp": 1517467669,
+         "tagTopic": "财经",
+         "name": "笔记侠快播 不要被新零售迷惑"
+      },
+      "formatType": "audio"
+   }, {
+      "hint": "为您播放 艾问人物 艾问人物 坎普拉德 离世的宜家创始人如何从卖火柴逆袭成隐形首富",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b7c7784bc.mp3",
+         "timestamp": 1517467596,
+         "tagTopic": "财经",
+         "name": "艾问人物 坎普拉德 离世的宜家创始人如何从卖火柴逆袭成隐形首富"
+      },
+      "formatType": "audio"
+   }, {
+      "hint": "为您播放 互联网新鲜事 互联网新鲜事 今日头条宣战百度",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b7078944f.mp3",
+         "timestamp": 1517467539,
+         "tagTopic": "科技",
+         "name": "互联网新鲜事 今日头条宣战百度"
+      },
+      "formatType": "audio"
+   }, {
+      "hint": "请欣赏 腾讯科技 腾讯科技 手握4000亿现金 中国移动是否能够大象起舞",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b6d7568f4.mp3",
+         "timestamp": 1517467353,
+         "tagTopic": "科技",
+         "name": "腾讯科技 手握4000亿现金 中国移动是否能够大象起舞"
+      },
+      "formatType": "audio"
+   }, {
+      "hint": "我们一起听 无冕财经 无冕财经  一条 抱京东大腿是站队吗",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b69358b31.mp3",
+         "timestamp": 1517467286,
+         "tagTopic": "财经",
+         "name": "无冕财经  一条 抱京东大腿是站队吗"
+      },
+      "formatType": "audio"
+   }, {
+      "hint": "请欣赏 听闻下午茶 听闻下午茶 2018丝路春晚全明星阵容曝光 看那些记忆中的 传奇 集体现身 2018年2月1日",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b42026ab4.mp3",
+         "timestamp": 1517466690,
+         "tagTopic": "政治",
+         "name": "听闻下午茶 2018丝路春晚全明星阵容曝光 看那些记忆中的 传奇 集体现身 2018年2月1日"
+      },
+      "formatType": "audio"
+   }, {
+      "hint": "为您播放 高明 \"贾跃亭的乐视时代\"结束 因为他爆仓了",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a728ff4a0128.mp3",
+         "timestamp": 1517457401,
+         "tagTopic": "财经",
+         "name": "\"贾跃亭的乐视时代\"结束 因为他爆仓了"
+      },
+      "formatType": "audio"
+   }, {
+      "hint": "为您播放 高明 日方抗议日企因\"问题地图\"被罚 外交部:应遵守法律",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a728f66d717f.mp3",
+         "timestamp": 1517457257,
+         "tagTopic": "政治",
+         "name": "日方抗议日企因\"问题地图\"被罚 外交部:应遵守法律"
+      },
+      "formatType": "audio"
+   }, {
+      "hint": "我们一起听 高明 台商批当局阻两岸航班遭打压:不许为大陆说话",
+      "data": {
+         "audio": "http://mp3.tingwen.me/data/upload/mp3/5a728f360903b.mp3",
+         "timestamp": 1517457210,
+         "tagTopic": "政治",
+         "name": "台商批当局阻两岸航班遭打压:不许为大陆说话"
+      },
+      "formatType": "audio"
+   }
+   ]
 ```
 
 ---
@@ -40,18 +134,18 @@ _举例：数据部分_
 
 _举例：数据部分_
 ```
-    "results": [
-        {
-            "hint": "让我们一起听听闻",
-            "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990dbd280416.mp3",
-                "name": "【听闻播报】热点城市房贷价升量跌料延续 刚需忧心被误伤",
-                "tagTopic": "财经",
-                "timestamp": 1502665693
-            },
-            "formatType": "audio"
-        }
-    ]
+	"results": [
+      {
+         "hint": "为您播放 笔记侠快播 笔记侠快播 不要被新零售迷惑",
+         "data": {
+            "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b80dc6f38.mp3",
+            "timestamp": 1517467669,
+            "tagTopic": "财经",
+            "name": "笔记侠快播 不要被新零售迷惑"
+         },
+         "formatType": "audio"
+      }
+   ]
 ```
 
 ---
@@ -87,18 +181,18 @@ _举例：数据部分_
 
 _举例：数据部分_
 ```
-    "results": [
-        {
-            "hint": "主人，为你继续播放听闻",
-            "data": {
-                "audio": "http://mp3.tingwen.me/data/upload/mp3/5990ddc81215f.mp3",
-                "name": "按不住的香港房价：中国买家纷纷离场 记录高位能持续到何时？",
-                "tagTopic": "",
-                "timestamp": 1502666186
-            },
-            "formatType": "audio"
-        }
-    ]
+   "results": [
+      {
+         "hint": "请欣赏 腾讯科技 腾讯科技 手握4000亿现金 中国移动是否能够大象起舞",
+         "data": {
+            "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b6d7568f4.mp3",
+            "timestamp": 1517467353,
+            "tagTopic": "科技",
+            "name": "腾讯科技 手握4000亿现金 中国移动是否能够大象起舞"
+         },
+         "formatType": "audio"
+      }
+   ]
 ```
 
 ---
