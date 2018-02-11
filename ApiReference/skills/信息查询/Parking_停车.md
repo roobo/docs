@@ -13,6 +13,7 @@
 | --- | --- |
 | &lt;lot_count&gt; | 查找附近的三个停车场 |
 | &lt;spec_dst&gt; | 查找目的地附近的停车场 |
+| &lt;nth&gt; | 查看第二个 |
 
 _举例：数据部分_
 ```
@@ -77,70 +78,63 @@ _举例：数据部分_
 
 ---
 
-### \/ Resume
-继续播放
+### \/ GetFee
+停车多少钱
 
 _举例：数据部分_
 ```
-   "results": [
-      {
-         "hint": "请欣赏 腾讯科技 腾讯科技 手握4000亿现金 中国移动是否能够大象起舞",
-         "data": {
-            "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b6d7568f4.mp3",
-            "timestamp": 1517467353,
-            "tagTopic": "科技",
-            "name": "腾讯科技 手握4000亿现金 中国移动是否能够大象起舞"
-         },
-         "formatType": "audio"
+  "results": [
+    {
+      "hint": "双休日标准收费: 07:00-21:00 0.5元/15分钟,21:00-07:00 1元/2小时"
+    }
+  ]
+```
+
+---
+
+### \/Navigate
+导航到这里
+
+_举例：数据部分_
+
+```
+  "results": [
+    {
+      "hint": "好的，即将为你导航到北科创业大厦地面停车场",
+      "data": {
+        "coordinate": {
+          "latitude": 40.039867,
+          "longitude": 116.41554
+        }
       }
-   ]
+    }
+  ]
 ```
 
 ---
-
-### \/Replay
-指重播当前新闻（1遍）
-
-_举例：数据部分_
-
-```
-    "results": [
-       {
-	"hint": "为您播放 高明 油价上涨助推欧元区通胀超预期 欧央行宽松压力加大",
-	"data": {
-		"audio": "http://mp3.tingwen.me/data/upload/mp3/5a728f0d1fb09.mp3",
-		"timestamp": 1517457169,
-		"tagTopic": "财经",
-		"name": "油价上涨助推欧元区通胀超预期 欧央行宽松压力加大"
-	},
-	"formatType": "audio"
-       }
-    ]
-```
-
----
-
-### \/Exit
-退出新闻场景
 
 
 # 3.槽位
 
 | **Slot\_Key** | **Description** | **Main\_Description** | **Example** |
 | --- | --- | --- | --- |
-| tag_topic | 新闻主题 | 用于指定新闻主题 | 财经,科技 |
-| keywords | 关键字 | 用于指定人物，事件，话题，地区等 | 刘德华 余额宝 爆炸 |
-| category | 新闻类别 | 已经播放过摘要，需要再次收听时，需指明 | 摘要 快报 |
-| type | 场景类型 | 进入此场景，全部为新闻 | 新闻 资讯 |
+| lot_count | 停车场个数 | 用于指定查找停车场的个数 | 三个 |
+| spec_dst | 目的地 | 用于指定查找目的地附近的停车场 | 目的地 |
+| nth | 第几个 | 用于指定查看第几个停车场详情 | 第二个 |
 
 # 4.返回字段描述
 
 | **Field\_Name** | **Sub\_Field** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
 | --- | --- | --- | --- | --- |
-| hint |  | string | 提示语 | 请欣赏 听闻下午茶 听闻下午茶 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
+| hint |  | string | 提示语 | 北科创业大厦地面停车场为完全对外开放地面停车场...... |
 | data |  |  |  |  |
-|  | audio | string | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3 |
-|  | name | string | 新闻标题 | 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
-|  | tagTopic | string | 新闻主题 | 财经 |
-|  | timestamp | int | 新闻产生时间戳 | 1502364363 |
-| formatType |  | string | 结果类型 | audio |
+|  | images | []string | 停车场入口图片 | ["http://pic.ezparking.com.cn/rtpi-......", ".......=building_Yg90HemE.jpg",] |
+
+
+| **Field\_Name** | **Sub\_Field** | **Sub\_Field** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
+| --- | --- | --- | --- | --- |
+| hint |  |  | string | 提示语 | 北科创业大厦地面停车场为完全对外开放地面停车场...... |
+| data |  |  |  |  |  |
+|  | coordinate |  |  |  |  |
+|  |  | latitude | float64 | 纬度 | 40.039867 |
+|  |  | longitude | float64 | 经度 | 116.41554 |
