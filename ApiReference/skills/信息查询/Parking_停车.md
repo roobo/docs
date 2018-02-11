@@ -128,11 +128,11 @@ _举例：数据部分_
 | --- | --- | --- | --- | --- |
 | hint |  | string | 提示语 | 北科创业大厦地面停车场为完全对外开放地面停车场...... |
 | data |  |  |  |  |
-|  | images | []string | 停车场入口图片 | ["http://pic.ezparking.com.cn/rtpi-......", ".......=building_Yg90HemE.jpg",] |
+|  | images | []string | 停车场入口图片 | ["http://pic.ezparking.com.cn/rtpi-......", ".......=building_Yg90HemE.jpg"] |
 
 
 | **Field\_Name** | **Sub\_Field** | **Sub\_Field** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | hint |  |  | string | 提示语 | 北科创业大厦地面停车场为完全对外开放地面停车场...... |
 | data |  |  |  |  |  |
 |  | coordinate |  |  |  |  |
