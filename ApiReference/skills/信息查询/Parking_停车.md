@@ -21,57 +21,59 @@ _举例：数据部分_
     {
       "hint": "为你推荐附近3个停车场，你可以选择任意一个查看详细信息。第1个北科创业大厦地下停车库距离63米，第2个北科创业大厦地面停车场距离67米，第3个领地地面停车场距离69米"
     }
-  ]
-   
+  ]  
 ```
 
 ---
 
 
-### \/Next
-下一个
+### \/Choose
+第二个
+
+_举例：数据部分_
+```
+  "results": [
+    {
+      "hint": "北科创业大厦地面停车场为完全对外开放地面停车场，入口位于北苑路，距离当前位置67米，为你找到入口照片。你可以查看大图或直接导航到入口。",
+      "data": {
+        "images": [
+          "http://pic.ezparking.com.cn/rtpi-service/parking?key=geztypqwhewtm1ztzcc0axpru6eo4rtq\u0026type=photo\u0026id=8eFNJKjl\u0026file=entrance_ZqMGYnoa.jpg",
+          "http://pic.ezparking.com.cn/rtpi-service/parking?key=geztypqwhewtm1ztzcc0axpru6eo4rtq\u0026type=photo\u0026id=8eFNJKjl\u0026file=building_Yg90HemE.jpg",
+          "http://pic.ezparking.com.cn/rtpi-service/parking?key=geztypqwhewtm1ztzcc0axpru6eo4rtq\u0026type=photo\u0026id=8eFNJKjl\u0026file=entrance_ZqMGYnoa.jpg",
+          "http://pic.ezparking.com.cn/rtpi-service/parking?key=geztypqwhewtm1ztzcc0axpru6eo4rtq\u0026type=photo\u0026id=8eFNJKjl\u0026file=exit_oFkE3v2G.jpg"
+        ]
+      }
+    }
+  ]
+```
+
+---
+
+### \/Available
+还有车位吗
 
 _举例：数据部分_
 ```
    "results": [
-      {
-         "hint": "为您播放 笔记侠快播 笔记侠快播 不要被新零售迷惑",
-         "data": {
-            "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72b80dc6f38.mp3",
-            "timestamp": 1517467669,
-            "tagTopic": "财经",
-            "name": "笔记侠快播 不要被新零售迷惑"
-         },
-         "formatType": "audio"
-      }
-   ]
+    {
+      "hint": "目前该停车场车位充足，推荐在此停车"
+    }
+  ]
 ```
 
 ---
 
-### \/Prev
-上一个
+### \/HowToPay
+可以用哪些支付方式
 
 _举例：数据部分_
 ```
-    "results": [
-       {
-	  "hint": "请欣赏 飞碟说 飞碟说 误会大了 考古才不是持证盗墓",
-	  "data": {
-		"audio": "http://mp3.tingwen.me/data/upload/mp3/5a72ba02a1741.mp3",
-		"timestamp": 1517468173,
-		"tagTopic": "",
-		"name": "飞碟说 误会大了 考古才不是持证盗墓"
-	  },
-	  "formatType": "audio"
-       } 
-    ]
+  "results": [
+    {
+      "hint": "该停车场支持现金"
+    }
+  ]
 ```
-
----
-
-### \/Pause
-暂停
 
 ---
 
