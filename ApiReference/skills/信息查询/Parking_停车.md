@@ -11,7 +11,7 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;lot_count&gt; | 查找附近的三个停车场 |
+|  | 查找附近的停车场 |
 | &lt;spec_dst&gt; | 查找目的地附近的停车场 |
 
 查找附近的停车场
