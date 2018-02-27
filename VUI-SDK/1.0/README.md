@@ -450,7 +450,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	English (South Africa)	|	eng-ZAF	|	Tessa	|
 |	English (US)	|	eng-USA	|	Allison	|
 |	Finnish	|	fin-FIN	|	Satu	|
-|	French	|	fra-FRA	|	Audrey-ML	|
+|	French	|	fra-FRA	|	Aurelie	|
 |	French (Canada)	|	fra-CAN	|	Amelie	|
 |	Galician	|	glg-ESP	|	Carmela	|
 |	German	|	deu-DEU	|	Markus	|
@@ -458,13 +458,13 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	Hebrew	|	heb-ISR	|	Carmit	|
 |	Hindi	|	hin-IND	|	Lekha	|
 |	Hungarian	|	hun-HUN	|	Mariska	|
-|	Italian	|	ita-ITA	|	Alice-ML	|
-|	Japanese	|	jpn-JPN	|	Kyoko	|
+|	Italian	|	ita-ITA	|	Alice	|
+|	Japanese	|	jpn-JPN	|	Ichiro	|
 |	Korean	|	kor-KOR	|	Sora	|
 |	Mandarin (China)	|	cmn-CHN	|	Li-Li	|
 |	Mandarin (Taiwan)	|	cmn-TWN	|	Mei-Jia	|
 |	Norwegian	|	nor-NOR	|	Nora	|
-|	Polish	|	pol-POL	|	Ewa	|
+|	Polish	|	pol-POL	|	Zosia	|
 |	Portuguese (Brazil)	|	por-BRA	|	Luciana	|
 |	Romanian	|	ron-ROU	|	Ioana	|
 |	Russian	|	rus-RUS	|	Katya	|
