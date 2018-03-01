@@ -466,12 +466,12 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	Norwegian	|	nor-NOR	|	Nora	|
 |	Polish	|	pol-POL	|	Zosia	|
 |	Portuguese (Brazil)	|	por-BRA	|	Luciana	|
+|	Portuguese (Portugal)	|	por-PRT	|	Joana	|
 |	Romanian	|	ron-ROU	|	Ioana	|
 |	Russian	|	rus-RUS	|	Katya	|
 |	Slovak	|	slk-SVK	|	Laura	|
 |	Spanish (Castilian)	|	spa-ESP	|	Jorge	|
 |	Spanish (Columbia)	|	spa-COL	|	Soledad	|
-|	Spanish (Mexico)	|	spa-MEX	|	Angelica	|
 |	Swedish	|	swe-SWE	|	Alva	|
 |	Thai	|	tha-THA	|	Kanya	|
 |	Turkish	|	tur-TUR	|	Cem	|
