@@ -1,7 +1,6 @@
-
 # 1. 服务简介
 
-用户可以询问当天以及往后15天的天气，风向，空气污染等情况。资源来自墨迹天气。
+用户可以询问当天以及往后5天的天气，风向，空气污染等情况。资源来自墨迹天气。
 
 # 2.槽位
 
@@ -18,12 +17,18 @@
 
 ### \/WeatherForADay
 查询某天的天气状况
+note: 不带location但是request里包含经纬度信息时，以当前经纬度查询天气状况
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;location&gt; + &lt;date&gt; + &lt;weather\_condition&gt; | 北京明天有雨么 |
 | &lt;location&gt; + &lt;date&gt; + &lt;time&gt; + &lt;weather\_condition&gt; | 邢台明天9点有雨么 |
 | &lt;location&gt; + &lt;date&gt; + &lt;time\_period&gt; + &lt;weather\_condition&gt; | 邢台明天傍晚有雨么 |
+| &lt;date&gt; + &lt;weather\_condition&gt; | 明天有雨么 |
+| &lt;date&gt; + &lt;time&gt; + &lt;weather\_condition&gt; | 明天9点有雨么 |
+| &lt;date&gt; + &lt;time\_period&gt; + &lt;weather\_condition&gt; | 明天傍晚有雨么 |
+
+
 
 返回字段说明
 
@@ -50,6 +55,22 @@
 |  | windLevel | 风力 | string | 2 |
 |  | windNight | 夜晚风向 | string | 东风 |
 |  | windNightLevel | 夜晚风力 | string | 3 |
+
+请求字段
+```
+request:
+{
+    "location":{
+        "latitude":34.4,
+        "longitude":135.3
+    },
+    "query":"未来4天天气",
+    "sessionId": "xxxxxx",
+    "agentId":"xxxxxx",
+    "token":"xxxxxxxx"
+}
+```
+note: 如果query中无城市信息，则以location中的经纬度信息来查询天气
 
 返回字段
 ```
@@ -85,10 +106,12 @@
 
 ### \/WeatherForDays
 查询某一段时间的天气状况
+note: 不带location但是request里包含经纬度信息时，以当前经纬度查询天气状况
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 | &lt;location&gt; + &lt;date&gt; + &lt;weather\_condition&gt; | 邢台这两天有雨么 |
+| &lt;date&gt; + &lt;weather\_condition&gt; | 这两天有雨么 |
 
 返回字段说明及示例同上
 
@@ -129,4 +152,3 @@
 | weather | 天气，气象，天气状况 |
 | wind | 风力，风速，风向 |
 | windcategory | 风，小风，大风，微风，东南风 |
-
