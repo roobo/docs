@@ -47,7 +47,7 @@
         {
             "hint": "股票名称:百度，股票编号:bidu，当前价格:223.49，涨跌额:0.92，涨跌百分比0.41，时间:Aug 11 04:00PM EDT，今日开盘价:218.60，昨日收盘价:222.57，最高价:224.66，最低价:216.20，成交量:3.33M",
             "data": {
-                "datetime": "Aug 11 04:00PM EDT",
+                "datetime": "2018-04-03 18:05:00",
                 "gid": "bidu",
                 "image": "http://image.sinajs.cn/newchartv5/usstock/min/bidu.gif",
                 "increPer": "0.41",
