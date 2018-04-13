@@ -321,7 +321,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	Arabic (Saudi Arabia)	|	ara-SAU	|
 |	Arabic (International)	|	ara-XWW	|
 |	Bahasa (Indonesia)	|	ind-IDN	|
-|	Cantonese (Simplified)	|	yue-CHN	|
+|	Cantonese (Traditional)	|	yue-CHN	|
 |	Catalan	|	cat-ESP	|
 |	Croatian 	|	hrv-HRV	|
 |	Czech	|	ces-CZE	|
