@@ -92,17 +92,12 @@ API：http://api.ros.ai/bot/v3/query
 | :--- | :--- | :--- | :--- |
 | service | String | 服务名 | Required |
 | context | String | 上文名称 | Optional |
-| parameters | 自定义对象 | 上文参数 | Optional |
 
 ```
     "contexts": [
         {
             "context": "coffee",
             "service": "OrderCoffee",
-            "parameters": {
-                "userId": "blm_rlco03m",
-                "contactId": "1486539416366"
-            }
         }
     ]
 ```
