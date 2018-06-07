@@ -426,7 +426,6 @@ VUIApi.getInstance().init(context, initParam,initListener);
 |	Thai	|	tha-THA	|
 |	Turkish	|	tur-TUR	|
 |	Ukrainian	|	ukr-UKR	|
-|	Vietnamese	|	vie-VNM	|
 
 
 <h3 id="7">7.离线发音人列表</h3>
