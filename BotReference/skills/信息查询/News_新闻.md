@@ -1,4 +1,3 @@
-
 # 1. 服务简介
 
 新闻
@@ -11,12 +10,13 @@
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
-| &lt;tag_topic&gt; | 我想听财经新闻 |
+| &lt;tag\_topic&gt; | 我想听财经新闻 |
 | &lt;keywords&gt; | 我想听九寨沟的新闻 |
 | &lt;category&gt; | 我想听新闻摘要 |
 | &lt;type&gt; | 我想听新闻 |
 
 _举例：数据部分_
+
 ```
 我想听新闻
   "results": [
@@ -31,9 +31,9 @@ _举例：数据部分_
          "formatType": "audio"
       }
    ]
-   
+
 下一批
-   "results": [
+   "results": [
    {
       "hint": "请欣赏 飞碟说 飞碟说 误会大了 考古才不是持证盗墓",
       "data": {
@@ -130,11 +130,12 @@ _举例：数据部分_
 
 ---
 
-
 ### \/Next
+
 下一个
 
 _举例：数据部分_
+
 ```
    "results": [
       {
@@ -153,35 +154,40 @@ _举例：数据部分_
 ---
 
 ### \/Prev
+
 上一个
 
 _举例：数据部分_
+
 ```
     "results": [
        {
-	  "hint": "请欣赏 飞碟说 飞碟说 误会大了 考古才不是持证盗墓",
-	  "data": {
-		"audio": "http://mp3.tingwen.me/data/upload/mp3/5a72ba02a1741.mp3",
-		"timestamp": 1517468173,
-		"tagTopic": "",
-		"name": "飞碟说 误会大了 考古才不是持证盗墓"
-	  },
-	  "formatType": "audio"
-       } 
+      "hint": "请欣赏 飞碟说 飞碟说 误会大了 考古才不是持证盗墓",
+      "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a72ba02a1741.mp3",
+        "timestamp": 1517468173,
+        "tagTopic": "",
+        "name": "飞碟说 误会大了 考古才不是持证盗墓"
+      },
+      "formatType": "audio"
+       } 
     ]
 ```
 
 ---
 
 ### \/Pause
+
 暂停
 
 ---
 
 ### \/ Resume
+
 继续播放
 
 _举例：数据部分_
+
 ```
    "results": [
       {
@@ -200,6 +206,7 @@ _举例：数据部分_
 ---
 
 ### \/Replay
+
 指重播当前新闻（1遍）
 
 _举例：数据部分_
@@ -207,14 +214,14 @@ _举例：数据部分_
 ```
     "results": [
        {
-	"hint": "为您播放 高明 油价上涨助推欧元区通胀超预期 欧央行宽松压力加大",
-	"data": {
-		"audio": "http://mp3.tingwen.me/data/upload/mp3/5a728f0d1fb09.mp3",
-		"timestamp": 1517457169,
-		"tagTopic": "财经",
-		"name": "油价上涨助推欧元区通胀超预期 欧央行宽松压力加大"
-	},
-	"formatType": "audio"
+    "hint": "为您播放 高明 油价上涨助推欧元区通胀超预期 欧央行宽松压力加大",
+    "data": {
+        "audio": "http://mp3.tingwen.me/data/upload/mp3/5a728f0d1fb09.mp3",
+        "timestamp": 1517457169,
+        "tagTopic": "财经",
+        "name": "油价上涨助推欧元区通胀超预期 欧央行宽松压力加大"
+    },
+    "formatType": "audio"
        }
     ]
 ```
@@ -222,14 +229,14 @@ _举例：数据部分_
 ---
 
 ### \/Exit
-退出新闻场景
 
+退出新闻场景
 
 # 3.槽位
 
 | **Slot\_Key** | **Description** | **Main\_Description** | **Example** |
 | --- | --- | --- | --- |
-| tag_topic | 新闻主题 | 用于指定新闻主题 | 财经,科技 |
+| tag\_topic | 新闻主题 | 用于指定新闻主题 | 财经,科技 |
 | keywords | 关键字 | 用于指定人物，事件，话题，地区等 | 刘德华 余额宝 爆炸 |
 | category | 新闻类别 | 已经播放过摘要，需要再次收听时，需指明 | 摘要 快报 |
 | type | 场景类型 | 进入此场景，全部为新闻 | 新闻 资讯 |
@@ -240,8 +247,11 @@ _举例：数据部分_
 | --- | --- | --- | --- | --- |
 | hint |  | string | 提示语 | 请欣赏 听闻下午茶 听闻下午茶 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
 | data |  |  |  |  |
-|  | audio | string | 新闻播放地址 | http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3 |
+|  | audio | string | 新闻播放地址 | [http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3](http://mp3.tingwen.me/data/upload/mp3/596e2a9d01ae2.mp3) |
 |  | name | string | 新闻标题 | 软银集团和共享办公空间公司WeWork在日本成立合资公司 |
 |  | tagTopic | string | 新闻主题 | 财经 |
 |  | timestamp | int | 新闻产生时间戳 | 1502364363 |
 | formatType |  | string | 结果类型 | audio |
+
+
+
