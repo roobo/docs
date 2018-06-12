@@ -43,7 +43,7 @@ User: 播放80年代的歌
 
 ### /Play
 
-播放用户想听的音乐
+点播
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
@@ -54,163 +54,153 @@ User: 播放80年代的歌
 _举例：数据部分_
 
 ```
-    "results": [
-        {
-            "hint": "我们一起听 老师",
             "data": {
-                "album": "",
-                "artist": "",
-                "audio": "http://dwn.roo.bo/resource/20160928/lao_shi_.mp3",
+                "album": "叶惠美",
+                "artist": "周杰伦",
+                "audio": "http://dwn.roo.bo/resource/music_bk/775/30097775.mp3",
+                "extra": null,
                 "hqAudio": "",
-                "hqImage": "",
-                "image": "",
-                "name": "老师",
-                "resId": "aires:501950",
-                "start": 0
+                "hqImage": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+                "image": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+                "length": 315,
+                "name": "东风破",
+                "playMode": "",
+                "resId": "music:4041702",
+                "sid": "3007738066-1528808220045",
+                "size": 5050583,
+                "start": 0,
+                "type": "MUSIC"
             },
             "formatType": "audio"
-        }
-    ]
-```
-
----
-
-### /Search
-
-### 询问歌曲相关信息
-
-_举例：数据部分_
-
-```
-    "results": [
-        {
-            "hint": "对不起,我还不知道这首歌是谁唱的",
-            "formatType": "text"
-        }
-    ]
 ```
 
 ---
 
 ### /Next
 
-下一首
+播控：下一首
 
 _举例：数据部分_
 
 ```
-    "results": [
-        {
-            "hint": "我们一起听 老师",
             "data": {
-                "album": "",
-                "artist": "",
-                "audio": "http://dwn.roo.bo/resource/20160928/lao_shi_.mp3",
+                "album": "惊叹号",
+                "artist": "周杰伦",
+                "audio": "http://dwn.roo.bo/resource/music_bk/31026967.mp3",
+                "extra": null,
                 "hqAudio": "",
-                "hqImage": "",
-                "image": "",
-                "name": "老师",
-                "resId": "aires:501950",
-                "start": 0
+                "hqImage": "http://i.gtimg.cn/music/photo/mid_album_300/w/g/003KNcyk0t3mwg.jpg",
+                "image": "http://i.gtimg.cn/music/photo/mid_album_300/w/g/003KNcyk0t3mwg.jpg",
+                "length": 218,
+                "name": "公主病",
+                "playMode": "",
+                "resId": "music:2941186",
+                "sid": "1017128579-1528808288974",
+                "size": 3504066,
+                "start": 0,
+                "type": "MUSIC"
             },
             "formatType": "audio"
-        }
-    ]
 ```
 
 ---
 
 ### /Prev
 
-上一首
+播控：上一首
 
 _举例：数据部分_
 
 ```
-    "results": [
-        {
-            "hint": "我们一起听 老师",
             "data": {
-                "album": "",
-                "artist": "",
-                "audio": "http://dwn.roo.bo/resource/20160928/lao_shi_.mp3",
+                "album": "叶惠美",
+                "artist": "周杰伦",
+                "audio": "http://dwn.roo.bo/resource/music_bk/775/30097775.mp3",
+                "extra": null,
                 "hqAudio": "",
-                "hqImage": "",
-                "image": "",
-                "name": "老师",
-                "resId": "aires:501950",
-                "start": 0
+                "hqImage": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+                "image": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+                "length": 315,
+                "name": "东风破",
+                "playMode": "",
+                "resId": "music:4041702",
+                "sid": "3007738066-1528808333034",
+                "size": 5050583,
+                "start": 0,
+                "type": "MUSIC"
             },
             "formatType": "audio"
-        }
-    ]
 ```
 
 ---
 
-### /Pause
+### /Resume
 
-暂停
-
----
-
-### / Resume
-
-继续播放
+播控：继续播放
 
 _举例：数据部分_
 
 ```
-    "results": [
-        {
-            "hint": "我们一起听 老师",
             "data": {
-                "album": "",
-                "artist": "",
-                "audio": "http://dwn.roo.bo/resource/20160928/lao_shi_.mp3",
+                "album": "叶惠美",
+                "artist": "周杰伦",
+                "audio": "http://dwn.roo.bo/resource/music_bk/775/30097775.mp3",
+                "extra": null,
                 "hqAudio": "",
-                "hqImage": "",
-                "image": "",
-                "name": "老师",
-                "resId": "aires:501950",
-                "start": 0
+                "hqImage": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+                "image": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+                "length": 315,
+                "name": "东风破",
+                "playMode": "",
+                "resId": "music:4041702",
+                "sid": "3007738066-1528808333034",
+                "size": 5050583,
+                "start": 0,
+                "type": "MUSIC"
             },
             "formatType": "audio"
-        }
-    ]
+
 ```
 
 ---
 
 ### /Replay
 
-指重播当前歌曲（1遍）
+播控：指重播当前歌曲
 
 _举例：数据部分_
 
 ```
-    "results": [
-        {
-            "hint": "我们一起听 老师",
             "data": {
-                "album": "",
-                "artist": "",
-                "audio": "http://dwn.roo.bo/resource/20160928/lao_shi_.mp3",
+                "album": "叶惠美",
+                "artist": "周杰伦",
+                "audio": "http://dwn.roo.bo/resource/music_bk/775/30097775.mp3",
+                "extra": null,
                 "hqAudio": "",
-                "hqImage": "",
-                "image": "",
-                "name": "老师",
-                "resId": "aires:501950",
-                "start": 0
+                "hqImage": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+                "image": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+                "length": 315,
+                "name": "东风破",
+                "playMode": "",
+                "resId": "music:4041702",
+                "sid": "3007738066-1528808333034",
+                "size": 5050583,
+                "start": 0,
+                "type": "MUSIC"
             },
             "formatType": "audio"
-        }
-    ]
+
 ```
+
+---
+
+### /Pause
+
+播控：暂停
 
 ---
 
 ### /Exit
 
-退出音乐场景
+播控：退出音乐场景
 
