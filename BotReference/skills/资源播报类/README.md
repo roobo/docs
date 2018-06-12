@@ -11,26 +11,33 @@ User: 播放睡前音乐
 User: 播放80年代的歌
 ```
 
-# 2.槽位
+# 2.语义槽位描述
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
-| name | 歌曲名字 | 东风破 |
-| artist | 作者 | 周杰伦 |
+| artist | 歌手 | 周杰伦 |
+| name | 歌曲名 | 东风破 |
+| album\_name | 歌单名 | 十一月的肖邦 |
+|  |  |  |
 
 # 3.返回字段描述
 
 | **Field\_Name** | **Field\_Type** | **Field\_Value** | **Field\_Example** |
-| --- | --- | --- | --- |
-| album | string | 专辑名 | 传奇-刘德华 一起走过的日子 |
+| :--- | :--- | :--- | :--- |
+| album | string | 歌单名 | 爱如此神奇 |
 | artist | string | 艺术家 | 刘德华 |
 | audio | string | 播放链接 | http://... |
-| hqAudio | string | 高质量播放链接 | http://... |
+| hqAudio | string | 高清播放链接 | http://... |
 | image | string | 专辑封面链接 | http://... |
 | hqImage | string | 高清专辑封面链接 | http://... |
+| length | int |  |  |
 | name | string | 歌曲名 | 一起走过的日子 |
+| playMode | string |  |  |
 | resId | string | 资源标识 | music:... |
+| sid | string |  |  |
+| size | int |  |  |
 | start | int | 断点 | 需要上传播放状态 |
+| extra | object |  |  |
 
 # 4.意图
 
