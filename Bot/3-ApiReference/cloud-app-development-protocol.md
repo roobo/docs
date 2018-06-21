@@ -4,8 +4,6 @@
 
 版本：V3
 
-API：[http://api.ros.ai/bot/v3/query](http://api.ros.ai/bot/v3/query)
-
 协议：HTTP POST
 
 ### 大纲
