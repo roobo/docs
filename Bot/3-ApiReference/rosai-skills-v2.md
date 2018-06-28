@@ -8,6 +8,7 @@
 		- [Context Object](#context-object)
 		- [System Object](#system-object)
 - [Intent Response](#intent-response)
+	- [Response Body Syntax:](#response-body-syntax)
 		- [Results Array](#results-array)
 		- [Result Object](#result-object)
 		- [outputSpeech Object](#outputspeech-object)
@@ -102,7 +103,7 @@ Accept-Charset : utf-8
 # Intent Response
 ===
 
-json for Intent Response:
+## Response Body Syntax:
 
 ```json
 {
@@ -136,7 +137,7 @@ json for Intent Response:
         "items": [
           {
             "simpleResponse": {
-              "textToSpeech": "北京今天多云，气温23度到35度，东南风2级",
+              "speechText": "北京今天多云，气温23度到35度，东南风2级",
               "displayText": "多云，气温23度到35度，东南风2级"
             }
           },
@@ -191,7 +192,7 @@ Results 中每一个元素是一个Result Object
 Parameter  | Description  |  type | required
 --|--|--|--
 type | 表示output speech的type, 有效的type: "PlainText"，"SSML" |  string | true
-source | output speech 的内容，根据type来解析 | string | true
+source | output speech 的内容，根据type来解析<br>- PlainText: 输出tts;<br>- SSML: 符合ssml语法的声音输出方案 | string | true
 
 ### outputDisplay Object
 
