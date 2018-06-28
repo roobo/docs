@@ -1,3 +1,20 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Intent Request](#intent-request)
+	- [Request format](#request-format)
+		- [HTTP Header](#http-header)
+		- [Intent Request Body Syntax:](#intent-request-body-syntax)
+		- [Intent Request Body Parameters](#intent-request-body-parameters)
+		- [Context Object](#context-object)
+		- [System Object](#system-object)
+- [Intent Response](#intent-response)
+		- [Results Array](#results-array)
+		- [Result Object](#result-object)
+		- [outputSpeech Object](#outputspeech-object)
+		- [outputDisplay Object](#outputdisplay-object)
+
+<!-- /TOC -->
+
 # Intent Request
 
 ## Request format
@@ -18,7 +35,6 @@ Accept-Charset : utf-8
 ```json
 {
   "version": "2.0",
-  "context": {
     "system": {
       "skill": {
         "skillId": "rosai1.ask.skill.weather.v1.0"
@@ -83,9 +99,8 @@ Accept-Charset : utf-8
 
 ### System Object
 
-
-
 # Intent Response
+===
 
 json for Intent Response:
 
@@ -106,40 +121,81 @@ json for Intent Response:
         "orgin": null,
         "normType": "String",
         "norm": "2018-06-21"
-      },
-      "focus": {
-        "orgin": null,
-        "normType": "String",
-        "norm": "天气"
       }
     }
   },
   "results": [
     {
-      "formatType": "speech",
+      "formatType": "text",
       "hint": "北京今天多云，气温23度到35度，东南风2级",
+      "outputSpeech": {
+        "type": "SSML",
+        "source": "<speak>北京今天多云，气温23度到35度，东南风2级<audio src=\"https://ai.roobo.com/weather/wind_2.mp3\" /> </speak>"
+      },
+      "outputDisplay": {
+        "items": [
+          {
+            "simpleResponse": {
+              "textToSpeech": "北京今天多云，气温23度到35度，东南风2级",
+              "displayText": "多云，气温23度到35度，东南风2级"
+            }
+          },
+          {
+            "basicCard": {
+              "type": "Standard",
+              "title": "北京天气",
+              "content": "多云，气温23度到35度，东南风2级",
+              "image": {
+                "url": "www.roobo.com/aicloud/skills/weather/cloudy.jpg",
+                "altText": "Image alternate text"
+              }
+            }
+          }
+        ],
+        "suggestions": [
+          {
+            "title": "明天"
+          },
+          {
+            "title": "后天"
+          }
+        ]
+      },
       "data": {
-        "index": 1,
-        "pm25": "23",
-        "city": "北京,北京,中国",
-        "focus": "weather",
+        "city": "北京",
+        "date": "2018-06-21",
         "weather": "多云",
         "quality": "轻度污染",
-        "temperature": "33",
-        "minTemp": "23",
-        "maxTemp": "35",
-        "date": "2018-06-21",
-        "humidity": "29",
-        "windDir": "东南",
-        "windLevel": "2",
-        "windDay": "东南",
-        "windDayLevel": "2",
-        "windNight": "东南",
-        "windNightLevel": "2",
-        "alter": ""
+        "temperature": "33"
       }
     }
   ]
 }
 ```
 
+### Results Array
+
+Results 中每一个元素是一个Result Object
+
+### Result Object
+
+| Parameter    | Description  | type    | required |
+| ------------ | ----------------- | ---------------- | -------- |
+| hint         | legacy field, deprecated    | string   | true |
+| formatType   | legacy field, deprecated, value: text/audio | string | false  |
+| outputSpeech | 针对无屏设备的语音展示 | Object  | false |
+| outputDisplay | 针对有屏设备的展示 | Object | false |
+
+### outputSpeech Object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type | 表示output speech的type, 有效的type: "PlainText"，"SSML" |  string | true
+source | output speech 的内容，根据type来解析 | string | true
+
+### outputDisplay Object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+items | 有屏设备的显示信息，一般包含简单输出和复杂展示，建议不要超过2个元素。<br>- 简单输出: 包含展示的文字和需要说出的tts <br>- 复杂输出: 包括如basicCard, listSelect, carouselSelect, carouselBrowse, tableCard, mediaResponse |  Object Array | false
+suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | Object Array | false
