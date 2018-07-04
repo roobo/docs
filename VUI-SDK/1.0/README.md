@@ -223,7 +223,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
     ~~~
     VUIApi.getInstance().stopSpeak();
     ~~~
-* ##### **获取TTS音频数据(只支持离线)*
+* ##### **获取TTS音频数据(只支持离线)**
     ~~~
     VUIApi.getInstance().getTTSAudioData(text, new RTTSAudioDataListener() {
                 @Override
