@@ -223,6 +223,15 @@ VUIApi.getInstance().init(context, initParam,initListener);
     ~~~
     VUIApi.getInstance().stopSpeak();
     ~~~
+* ##### **获取TTS音频数据(只支持离线)**
+    ~~~
+    VUIApi.getInstance().getTTSAudioData(text, new RTTSAudioDataListener() {
+                @Override
+                public void onSpeakAudio(byte[] data, boolean isFinish) {
+                    //data是音频数据, isFinish true 是结束,最后一块数据data是null
+                }
+            });
+    ~~~
 * ##### **动态修改speaker**
     1. 修改在线发音人（参考附录中在线发音人范围）
     ~~~
