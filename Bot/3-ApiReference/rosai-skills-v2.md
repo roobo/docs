@@ -130,8 +130,24 @@ Accept-Charset : utf-8
       "formatType": "text",
       "hint": "北京今天多云，气温23度到35度，东南风2级",
       "outputSpeech": {
-        "type": "SSML",
-        "source": "<speak>北京今天多云，气温23度到35度，东南风2级<audio src=\"https://ai.roobo.com/weather/wind_2.mp3\" /> </speak>"
+        "items": [
+          {
+            "type": "PlainText",
+            "source": "北京今天多云，气温23度到35度，东南风2级"
+          },
+          {
+            "type": "SSML",
+            "source": "<speak>北京今天<emphasis level=\"strong\">多云</emphasis>，气温23度到35度，东南风2级</speak>"
+          },
+          {
+            "type": "Audio",
+            "source": "https://ai.roobo.com/weather/wind_2.mp3"
+          },
+          {
+            "type": "PlainText",
+            "source": "您还可以跟我说 北京空气质量?"
+          }
+        ]
       },
       "outputDisplay": {
         "items": [
@@ -188,6 +204,8 @@ Results 中每一个元素是一个Result Object
 | outputDisplay | 针对有屏设备的展示 | Object | false |
 
 ### outputSpeech Object
+
+包含这一次response需要语音输出的所有资源，其中items是一个 Object Array.
 
 Parameter  | Description  |  type | required
 --|--|--|--
