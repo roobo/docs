@@ -17,6 +17,10 @@ Repeat  | 重复学习  |
 返回结果如下json所示。
 语音输出方案在response的result字段里的outputSpeech中，以数组的形式，依次读出。目前支持PlainText格式和ssml格式。
 
+query: 我要学静夜思
+
+response:
+
 ```
 {
   "results": [
