@@ -14,8 +14,8 @@ Repeat  | 重复学习  |
 
 ## response
 
-学读背对的返回如下json段所示。
-语音输出方案在response的result字段李的outputSpeech中，以数组的形式，依次读出。目前支持PlainText格式和ssml格式。
+返回结果如下json所示。
+语音输出方案在response的result字段里的outputSpeech中，以数组的形式，依次读出。目前支持PlainText格式和ssml格式。
 
 ```
 {
