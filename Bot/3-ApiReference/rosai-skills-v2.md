@@ -127,7 +127,6 @@ Accept-Charset : utf-8
   },
   "results": [
     {
-      "formatType": "text",
       "hint": "北京今天多云，气温23度到35度，东南风2级",
       "outputSpeech": {
         "items": [
