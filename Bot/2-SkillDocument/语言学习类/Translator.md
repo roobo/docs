@@ -26,15 +26,15 @@
 |  | url | 翻译结果音频url | string |
 |  | volume | 音量 | string |
 
-\/Translate
+## 3.1 Translate
 
 包括进入场景，翻译等功能
 
 | **Slot Semantic Signatures** | **Example** |
 | --- | --- |
 |  | 我要翻译 |
-|  | 能帮我翻译英文么 |
-| &lt; word&gt; + &lt; lang&gt; | 苹果用英语怎么说 |
+| &lt; lang&gt; | 能帮我翻译**英文**么 |
+| &lt; word&gt; + &lt; lang&gt; | **苹果**用**英语**怎么说 |
 
 返回样例
 
@@ -53,7 +53,7 @@
     }
 ```
 
-\/Repeat
+## 3.2 Repeat
 
 重复
 
@@ -78,7 +78,7 @@
     }
 ```
 
-\/Change
+## 3.3 Change
 
 换一种说法，针对同一个源单词有不同的翻译结果的情况
 
@@ -103,7 +103,7 @@
     }
 ```
 
-\/Spell
+## 3.4 Spell
 拼写意图，只针对翻译结果为英文的情况，翻译结果\(dstword\)字段为单词拆分为字母的结果
 返回样例
 
@@ -122,8 +122,8 @@
     }
 ```
 
-\/SpeedUp
-\/SpeedDown
+## 3.5 SpeedUp
+## 3.6 SpeedDown
 调整语速
 
 | **Slot Semantic Signatures** | **Example** |
