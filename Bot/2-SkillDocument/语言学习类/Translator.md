@@ -1,6 +1,6 @@
 # 1. 服务简介
 
-为用户提供翻译服务，资源来自百度翻译\/有道翻译API，可以提供27种语言的翻译。
+为用户提供翻译服务，资源来自百度翻译\/有道翻译API，可以提供21种语言的翻译。
 
 # 2.槽位
 
@@ -39,18 +39,32 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "Apple",
-        "data": {
-            "destlang": "en",
-            "dstword": "Apple",
-            "speed": "",
-            "srclang": "zh",
-            "srcword": "苹果",
-            "url": "http://dwn.roo.bo/voices/translate/a/apple.wav",
-            "volume": ""
-        }
+   "results": [
+    {
+      "hint": "Apple,A p p l e",
+      "data": {
+        "destlang": "en",
+        "dstword": "Apple,A p p l e",
+        "speed": "",
+        "srclang": "zh",
+        "srcword": "苹果",
+        "url": "http://dwn.roo.bo/voices/translate/a/apple.wav",
+        "volume": ""
+      }
     }
+  ]
+```
+
+**故事机和布丁方案**下，“我要翻译”默认进入英文翻译。
+
+返回样例
+
+```
+ "results": [
+    {
+      "hint": "好的，现在起我会连续将你说的每句话翻译成英语，想结束时可以对我说退出，我们开始吧"
+    }
+  ]
 ```
 
 ## 3.2 Repeat
@@ -64,18 +78,20 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "Apple",
-        "data": {
-            "destlang": "en",
-            "dstword": "Apple",
-            "speed": "",
-            "srclang": "zh",
-            "srcword": "苹果",
-            "url": "http://dwn.roo.bo/voices/translate/a/apple.wav",
-            "volume": ""
-        }
+  "results": [
+    {
+      "hint": "Apple,A p p l e",
+      "data": {
+        "destlang": "en",
+        "dstword": "Apple",
+        "speed": "",
+        "srclang": "zh",
+        "srcword": "苹果",
+        "url": "http://dwn.roo.bo/voices/translate/a/apple.wav",
+        "volume": ""
+      }
     }
+  ]
 ```
 
 ## 3.3 Change
@@ -89,18 +105,20 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "Iphone",
-        "data": {
-            "destlang": "en",
-            "dstword": "Iphone",
-            "speed": "",
-            "srclang": "zh",
-            "srcword": "苹果",
-            "url": "",
-            "volume": ""
-        }
+  "results": [
+    {
+      "hint": "Iphone",
+      "data": {
+        "destlang": "en",
+        "dstword": "Iphone",
+        "speed": "",
+        "srclang": "zh",
+        "srcword": "苹果",
+        "url": "",
+        "volume": ""
+      }
     }
+  ]
 ```
 
 ## 3.4 Spell
@@ -108,18 +126,20 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "A p p l e",
-        "data": {
-            "destlang": "en",
-            "dstword": "A p p l e",
-            "speed": "",
-            "srclang": "zh",
-            "srcword": "苹果",
-            "url": "http://dwn.roo.bo/voices/translate/a/apple.wav",
-            "volume": ""
-        }
+  "results": [
+    {
+      "hint": "I p h o n e",
+      "data": {
+        "destlang": "en",
+        "dstword": "I p h o n e",
+        "speed": "",
+        "srclang": "zh",
+        "srcword": "苹果",
+        "url": "",
+        "volume": ""
+      }
     }
+  ]
 ```
 
 ## 3.5 SpeedUp
@@ -134,13 +154,17 @@
 返回样例
 
 ```
-    "result": {
-        "hint": "好的，我会快点说"
+  "results": [
+    {
+      "hint": "好的，我会快点说"
     }
+  ]
 ```
 
 ```
-    "result": {
-        "hint": "好的，我会慢点说"
+  "results": [
+    {
+      "hint": "好的，我会慢点说"
     }
+  ]
 ```
