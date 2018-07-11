@@ -13,18 +13,18 @@
 
 \*\*\*由于Translate意图、Repeat意图、Change意图和Spell意图返回字段相同，在此统一说明
 
-返回字段
 
-| **result** |  | **value** | **type** |
-| --- | --- | --- | --- |
-| hint |  | Apple | string |
-| data | destlang | 目标语言类 | string |
-|  | dstword | 翻译结果 | string |
-|  | speed | 语速 | string |
-|  | srclang | 源语言 | string |
-|  | srcword | 待翻译词汇 | string |
-|  | url | 翻译结果音频url | string |
-|  | volume | 音量 | string |
+| **Field\_Name** | **Sub\_Field** | **Field\_Description** | **Field\_Type** | **Field\_Example** |
+| --- | --- | --- | --- | --- |
+| hint |    | 回复语 | string | 我会说英语、俄语、法语等多种语言，你要翻译成哪一种呢？ |
+| data |    |     |     |     |
+|    | destlang | 回复语种 | string | en |
+|    | dstword | 翻译结果 | string | apple |
+|    | speed | 语速 | string |    |
+|    | srclang | 源语言 | string | zh |
+|    | srcword | 待翻译词汇 | string | 苹果 |
+|    | url | 翻译结果音频 | string | http://dwn.roo.bo/voices/translate/a/apple.wav |
+|    | volume | 音量 | string |  |
 
 ## 3.1 Translate
 
