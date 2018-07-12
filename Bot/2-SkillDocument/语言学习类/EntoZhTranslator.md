@@ -29,11 +29,20 @@
 | **Field\_Name** | **Sub\_Field** | **Field\_Value** | **Field\_Example** |
 | --- | --- | --- | --- |
 | hint |  | 回复语 | 好的，从现在起主人和我说英文，我来给主人翻译成中文，想结束时请和我说goodbye |
+| data |  |  |  |
+|  | destlang | 回复语语种 | zh |
+|  | destword | 翻译结果 |  |
+|  | srcword | 待翻译语句 |  |
 
 ```
   "results": [
     {
-      "hint": "好的，从现在起主人和我说英文，我来给主人翻译成中文，想结束时请和我说goodbye"
+      "hint": "好的，从现在起主人和我说英文，我来给主人翻译成中文，想结束时请和我说goodbye",
+      "data": {
+        "destlang": "zh",
+        "destword": "",
+        "srcword": ""
+      }
     }
   ]
 ```
@@ -66,11 +75,20 @@
 | **Field\_Name** | **Sub\_Field** | **Field\_Value** | **Field\_Example** |
 | --- | --- | --- | --- |
 | hint |  | 回复语 | 好的，下次再找我吧 |
+| data |  |  |  |
+|  | destlang | 回复语语种 | zh |
+|  | destword | 翻译结果 |  |
+|  | srcword | 待翻译语句 |  |
 
 ```
   "results": [
     {
-      "hint": "好的，下次再找我吧"
+      "hint": "好的，下次再找我吧",
+      "data": {
+        "destlang": "zh",
+        "destword": "",
+        "srcword": ""
+      }
     }
   ]
 ```
