@@ -30,7 +30,7 @@
 | --- | --- | --- | --- |
 | hint |  | 回复语 | 好的，从现在起我们开始用英语对话，想退出时请和我说goodbye |
 | data |  |  |  |
-|  | destlang | 回复语语种 | en |
+|  | destlang | 回复语语种 | zh |
 
 ```
 "results": [
@@ -68,7 +68,7 @@
 | --- | --- | --- | --- |
 | hint |  | 回复语 | 好的，再见 |
 | data |  |  |  |
-|  | destlang | 回复语语种 | en |
+|  | destlang | 回复语语种 | zh |
 
 ```
 "results": [
