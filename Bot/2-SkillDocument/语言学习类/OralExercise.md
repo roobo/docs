@@ -37,7 +37,7 @@
   {
     "hint": "好的，从现在起我们开始用英语对话，想退出时请和我说goodbye",
     "data": {
-      "destlang": "en"
+      "destlang": "zh"
     }
   }
 ]
@@ -75,7 +75,7 @@
   {
     "hint": "好的，再见",
     "data": {
-      "destlang": "en"
+      "destlang": "zh"
     }
   }
 ]
