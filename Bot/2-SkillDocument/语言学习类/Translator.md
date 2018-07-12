@@ -38,11 +38,11 @@
 
 拼写一遍
 
-## 3.5 SpeedUp_大声
+## 3.5 SpeedUp_快点
 
 说快一点
 
-## 3.6 SpeedDown_小声
+## 3.6 SpeedDown_慢点
 
 说慢一点
 
@@ -93,9 +93,18 @@
 返回样例
 
 ```
- "results": [
+  "results": [
     {
-      "hint": "好的，现在起我会连续将你说的每句话翻译成英语，想结束时可以对我说退出，我们开始吧"
+      "hint": "好的，现在起我会连续将你说的每句话翻译成英语，想结束时可以对我说退出，我们开始吧",
+      "data": {
+        "destlang": "zh",
+        "dstword": "",
+        "speed": "",
+        "srclang": "",
+        "srcword": "",
+        "url": "",
+        "volume": ""
+      }
     }
   ]
 ```
@@ -161,35 +170,62 @@
   ]
 ```
 
-## 4.5 SpeedUp_大声
+## 4.5 SpeedUp_快点
 
 返回样例
 
 ```
   "results": [
     {
-      "hint": "好的，我会快点说"
+      "hint": "好的，我会快点说",
+      "data": {
+        "destlang": "zh",
+        "dstword": "",
+        "speed": "",
+        "srclang": "",
+        "srcword": "",
+        "url": "",
+        "volume": ""
+      }
     }
   ]
 ```
 
-## 4.6 SpeedDown_小声
+## 4.6 SpeedDown_慢点
 
 返回样例
 
 ```
   "results": [
     {
-      "hint": "好的，我会慢点说"
+      "hint": "好的，我会慢点说",
+      "data": {
+        "destlang": "zh",
+        "dstword": "",
+        "speed": "",
+        "srclang": "",
+        "srcword": "",
+        "url": "",
+        "volume": ""
+      }
     }
   ]
 ```
 
 ## 4.7 Exit_退出
 ```
-  "results": [
+ "results": [
     {
-      "hint": "好的，下次翻译再找我吧"
+      "hint": "好的，下次翻译再找我吧",
+      "data": {
+        "destlang": "zh",
+        "dstword": "",
+        "speed": "",
+        "srclang": "",
+        "srcword": "",
+        "url": "",
+        "volume": ""
+      }
     }
   ]
 ```
