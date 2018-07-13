@@ -117,7 +117,7 @@ _Response_ 的整体协议定义如下所示：
 | status | Status 对象 | 状态码 | Required |
 | query | String | 纠错后的Text query | Required |
 | semantic | Semantic 对象 | 语义部分 | Optional |
-| results | Result 对象 | 数据部分 | Optional |
+| results | Result 对象 | [Result](rosai-skills-development-protocol.md#Results-Array) | Optional |
 
 ```
 {
@@ -213,10 +213,7 @@ _Text query_的语义理解（_NLP_）的结果。
 | --- | --- | --- | --- |
 | service | String | 技能标识 | Required |
 | action | String | 意图标识 | Required |
-| params | Map | [Map<string, slu.Value>](rosai-skills-deveopment-protocol.md) | Required |
+| params | Map | [Map<string, slu.Value>](rosai-skills-development-protocol.md) | Required |
 | inputContext | Context 对象 | 输入上文 | Optional |
 | outputContext | Context 对象 | 输出下文 | Optional |
 
-#### 3.4 results定义
-
-技能的数据部分，参见
