@@ -71,7 +71,7 @@ _Response_ 的整体协议定义如下所示：
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
-| status | Status 对象 | 状态码 | Required |
+| status | Status 对象 | [Status](status.md) | Required |
 | instructions | Instruction　对象 | 结果，包括指令和其他参数 | Optional |
 
 ```

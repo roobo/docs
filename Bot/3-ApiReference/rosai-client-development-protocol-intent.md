@@ -114,10 +114,10 @@ _Response_ 的整体协议定义如下所示：
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | reqId | String | 请求的唯一ID | Required |
-| status | Status 对象 | 状态码 | Required |
+| status | Status 对象 | [Status](status.md) | Required |
 | query | String | 纠错后的Text query | Required |
 | semantic | Semantic 对象 | 语义部分 | Optional |
-| results | Result 对象 | [Result](rosai-skills-development-protocol.md#Results-Array) | Optional |
+| results | Result 对象 | [Result](rosai-skills-development-protocol.md#results-array) | Optional |
 
 ```
 {
@@ -161,11 +161,11 @@ _Response_ 的整体协议定义如下所示：
       "data": {
         "album": "十一月的萧邦",
         "artist": "周杰伦",
-        "audio": "http://ms-dwn.roo.bo/resource/music_bk/479/30718479.mp3",
+        "audio": "http://...",
         "extra": null,
         "hqAudio": "",
-        "hqImage": "https://y.gtimg.cn/music/photo_new/T002R300x300M0000024bjiL2aocxT.jpg?max_age=2592000",
-        "image": "https://y.gtimg.cn/music/photo_new/T002R300x300M0000024bjiL2aocxT.jpg?max_age=2592000",
+        "hqImage": "http://...",
+        "image": "http://...",
         "length": 275,
         "name": "枫",
         "playMode": "",
@@ -181,31 +181,7 @@ _Response_ 的整体协议定义如下所示：
 }
 ```
 
-#### 3.2 status定义
-
-返回结果状态标识，_code_是返回码，_errorType_是错误类型，_errorDetails_时候错误详情。
-
-```
-{
-    "code":400,
-    "errorType":"bad_request",
-    "errorDetails":"token校验不通过"
-}
-```
-
-| Status Code | Error Type | Description |
-| :--- | :--- | :--- |
-| 0 | success | 成功 |
-| 1 | no\_result | 无结果 |
-| 400 | bad\_request | 不合法的输入 |
-| 401 | unauthorized | 权限校验失败 |
-| 500 | internal | 系统错误，重试可能有效 |
-| 501 | not\_supported | 语义 |
-| 503 | too\_many\_requests | 在一定时间内访问次数超限 |
-| 601 | service\_unreachable | 第三方服务不可用 |
-| 602 | service\_unknown\_format | [第三方服务返回的数据格式有误] |
-
-#### 3.3 semantic定义
+#### 3.2 semantic定义
 
 _Text query_的语义理解（_NLP_）的结果。
 
@@ -216,4 +192,3 @@ _Text query_的语义理解（_NLP_）的结果。
 | params | Map | [Map<string, slu.Value>](rosai-skills-development-protocol.md) | Required |
 | inputContext | Context 对象 | 输入上文 | Optional |
 | outputContext | Context 对象 | 输出下文 | Optional |
-
