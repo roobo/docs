@@ -2,9 +2,7 @@
 
 ### Roobo 开放平台
 
-版本：V3
-
-协议：HTTP POST
+版本：1.0.1
 
 ### 大纲
 
@@ -29,7 +27,7 @@
 * **CloudApp** - 在[_Roobo开放平台_](https://ros.ai)上接入某种云端服务或小应用。
 * **CloudDispatcher** - 用于向 CloudApp 传递请求和分发 CloudApp 返回结果的云端模块。
 * **CloudClient** - 用于处理 CloudDispatcher 返回结果的设备端的执行容器。
-* **TTS** - **T**ext **T**o **S**peech的缩写，这是机器人的语音表达方式。
+* **TTS** - **T**ext **T**o **S**peech 的缩写，这是机器人的语音表达方式。
 
 ### 2. Request
 
