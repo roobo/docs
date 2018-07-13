@@ -217,6 +217,3 @@ _Text query_的语义理解（_NLP_）的结果。
 | inputContext | Context 对象 | 输入上文 | Optional |
 | outputContext | Context 对象 | 输出下文 | Optional |
 
-#### 3.4 results定义
-
-技能的数据部分，参见
