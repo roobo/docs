@@ -213,7 +213,7 @@ _Text query_的语义理解（_NLP_）的结果。
 | --- | --- | --- | --- |
 | service | String | 技能标识 | Required |
 | action | String | 意图标识 | Required |
-| params | Map | [Param定义](rosai-skills-deveopment-protocol) | Required |
+| params | Map | [Map<string, slu.Value>](rosai-skills-deveopment-protocol.md) | Required |
 | inputContext | Context 对象 | 输入上文 | Optional |
 | outputContext | Context 对象 | 输出下文 | Optional |
 
