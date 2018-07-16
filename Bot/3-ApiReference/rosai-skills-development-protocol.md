@@ -100,8 +100,15 @@ Accept-Charset : utf-8
 
 ### System Object
 
+### slu.Value
+
+| Parameter    | Description     | type      | required |
+| ------------ | --------------- | --------- | -------- |
+| orgin       | value 的synonym，原值 | object | true     |
+| normType    | 值类型    | string，可枚举值，包括：<br> Int, Bool, Float, String, Array, StrArray, Map, MapArray   | true    |
+| norm        | 归一化后的值    | 由normType指定   | true    |
+
 # Intent Response
-===
 
 ## Response Body Syntax:
 
