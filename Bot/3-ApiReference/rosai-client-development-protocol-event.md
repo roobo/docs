@@ -44,18 +44,24 @@ _Request_ 的整体协议定义如下所示：
 | token | String | Token | Required |
 | clientId | String | 设备id | Required |
 | event | Map | 当前事件，默认参数为事件名称name | Required |
-| params | Map | 自定义字段，目前暂无定义，做扩展用 | Optional |
+| params | Map | 自定义字段，传递上文信息 | Optional |
 
 ```
 {
     "event":{
-        "name":"MediaControllerEvent"
+        "name":"ROSAI.AddIntent"
     },
     "clientId":"1015000000000093",
     "agentId":"Your Access Key",
     "token":"Your Token",
     "params":{
-        "action":"ManualPrevious"
+        "extra":{
+            // 用户自定义
+        },
+        "parameters":{
+            // 槽位
+            map<string, *slu.Value>
+        }
     }
 }
 ```
@@ -108,4 +114,4 @@ _Response_ 的整体协议定义如下所示：
 
 | 事件名称 | 事件含义 | 参数 | 举例 |
 | --- | --- | --- | --- |
-| ROSAI.TimeoutIntent | 用户输入超时事件 | {"service":"场景名"} | {"service":"AiLivePoetry"} |
+| ROSAI.TimeoutIntent | 用户输入超时事件 | {<br>"extra":{<br>"service":"场景名"<br>}<br>} | {<br>"extra":{<br>"service":"AiLivePoetry"<br>}<br>} |
