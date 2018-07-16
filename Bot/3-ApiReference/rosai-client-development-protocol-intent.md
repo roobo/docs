@@ -1,4 +1,4 @@
-## Cloud App 开发协议
+## IntentRequest 开发协议
 
 ### Roobo 开放平台
 

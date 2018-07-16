@@ -1,4 +1,4 @@
-## Cloud App 开发协议
+## EventRequest 开发协议
 
 ### Roobo 开放平台
 
@@ -15,6 +15,7 @@
   * [Status定义](#32-status定义)
   * [Semantic定义](#33-semantic定义)
   * [Results定义](#34-results定义)
+* [Event](#4-event)
 
 ### 1. 简介
 
@@ -43,7 +44,7 @@ _Request_ 的整体协议定义如下所示：
 | token | String | Token | Required |
 | clientId | String | 设备id | Required |
 | event | Map | 当前事件，默认参数为事件名称name | Required |
-| params | Map | 参数，事件自定义 | Optional |
+| params | Map | 自定义字段，目前暂无定义，做扩展用 | Optional |
 
 ```
 {
@@ -70,7 +71,8 @@ _Response_ 的整体协议定义如下所示：
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | status | Status 对象 | [Status](status.md) | Required |
-| instructions | Instruction　对象 | 结果，包括指令和其他参数 | Optional |
+| instructions | Instruction　对象 | 结果，包括指令和其他参数，deprecated | Optional |
+| result | Result 对象 | [Result](rosai-skills-development-protocol.md#results-array) | Optional |
 
 ```
 {
@@ -81,12 +83,29 @@ _Response_ 的整体协议定义如下所示：
     "instructions":[
         {
             "name":"Play",
-            "url":"http://audio.roobo.com/tts/21232"
+            "url":"http://..."
         },
         {
             "name":"Play",
-            "url":"http://audio.roobo.com/media/8792026"
+            "url":"http://..."
         }
     ]
 }
 ```
+
+### 4. Event
+
+#### 4.1 旧的事件，返回结果Instruction
+
+| 事件名称 | 事件含义 | 参数 | 举例 |
+| --- | --- | --- | --- |
+| PowerOnEvent | 开机事件 | | |
+| AutomaticNextEvent | 自动下一首事件 | | |
+| IdleEvent | 设备空闲事件 | | |
+| TouchEvent | 触摸事件 | //part | //Head //Ear |
+
+#### 4.2 ROSAI.xxIntent 事件，返回结果Result
+
+| 事件名称 | 事件含义 | 参数 | 举例 |
+| --- | --- | --- | --- |
+| ROSAI.TimeoutIntent | 用户输入超时事件 | {"service":"场景名"} | {"service":"AiLivePoetry"} |
