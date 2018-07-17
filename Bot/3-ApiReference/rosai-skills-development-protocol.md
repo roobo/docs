@@ -36,7 +36,7 @@ Accept-Charset : utf-8
 ```json
 {
   "version": "2.0",
-	"context": {
+  "context": {
     "system": {
       "skill": {
         "skillId": "rosai1.ask.skill.weather.v1.0"
