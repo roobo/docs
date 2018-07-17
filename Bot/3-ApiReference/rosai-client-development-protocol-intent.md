@@ -50,6 +50,7 @@ _Request_ 的整体协议定义如下所示：
 | lang | Lang | 语种，默认中文 | Optional |
 | contexts | Context 对象 | 上文 | Optional |
 | location | Location 对象 | 地理位置 | Optional |
+| callback | Callback 对象 | 回调参数,deprecated | Optional |
 
 ```
 {
@@ -85,7 +86,7 @@ _Request_ 的整体协议定义如下所示：
 }
 ```
 
-#### 2.2 Context定义
+#### 2.2 Context 定义
 
 _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息和应用状态，用以帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。
 
@@ -95,13 +96,20 @@ _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息�
 | context | String | 上文名称 | Optional |
 | parameters  | Map | [Param定义](Bot_3-ApiReference_rosai-skills-deveopment-protocol) | Optional |
 
-#### 2.3 Location定义
+#### 2.3 Location 定义
 
 __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，用于帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。
 
-#### 2.4 Lang定义
+#### 2.4 Lang 定义
 
 __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只支持两类中文（__zh__），英文（__en__）。
+
+#### 2.5 Callback 定义(deprecated)
+
+| Name | Type | Description | Required |
+| :--- | :--- | :--- | :--- |
+| service | String | 服务名 | Required |
+| action | String | 动作 | Required |
 
 ### 3. Response
 
