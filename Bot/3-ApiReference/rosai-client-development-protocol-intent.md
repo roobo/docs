@@ -50,7 +50,7 @@ _Request_ 的整体协议定义如下所示：
 | lang | Lang | 语种，默认中文 | Optional |
 | contexts | Context 对象 | 上文 | Optional |
 | location | Location 对象 | 地理位置 | Optional |
-| callback | Callback 对象 | <font color=##FF0000 size=2>回调参数,deprecated</font> | Optional |
+| callback | Callback 对象 | 回调参数,deprecated | Optional |
 
 ```
 {
