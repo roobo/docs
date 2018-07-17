@@ -114,4 +114,4 @@ _Response_ 的整体协议定义如下所示：
 
 | 事件名称 | 事件含义 | 参数 | 举例 |
 | --- | --- | --- | --- |
-| ROSAI.TimeoutIntent | 用户输入超时事件 | {<br>"extra":{<br>"service":"场景名"<br>}<br>} | {<br>"extra":{<br>"service":"AiLivePoetry"<br>}<br>} |
+| ROSAI.TimeoutIntent | 用户输入超时事件 | {<br>&emsp;"extra":{<br>&emsp;&emsp;"service":"场景名"<br>&emsp;}<br>} | {<br>&emsp;"extra":{<br>&emsp;&emsp;"service":"AiLivePoetry"<br>&emsp;}<br>} |
