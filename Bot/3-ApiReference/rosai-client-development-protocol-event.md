@@ -49,7 +49,7 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 ```
 {
     "event": {
-        "name": "ROSAI.AddIntent",
+        "name": "AddAction",
         "nominated": true
     },
     "clientId": "1015000000000093",
@@ -57,14 +57,13 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
     "token": "Your Token",
     "params": {
         "services": [
-            "AiLive"
+            "OrderCoffee"
         ],
         "parameters": {
-            // 槽位
-            map<string, *slu.Value>
-        },
-        "extra": {
-            // 用户自定义
+          "orderId": {
+            "normType": "String",
+            "norm": "123456789"
+          }
         }
     }
 }
@@ -83,7 +82,6 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 | --- | --- | --- | --- |
 | services | string array | 发送方指定的可响应该事件的skill names | Optional |
 | parameters | map | k: 槽位名(string)，v: 槽位值([slu.Value][03272349]) | Optional |
-| extra | map | 针对该事件，用户自定义参数 | Optional |
 
   [03272349]: https://github.com/roobo/docs/blob/master/Bot/3-ApiReference/rosai-skills-development-protocol.md#system-object "slu.Value"
 
