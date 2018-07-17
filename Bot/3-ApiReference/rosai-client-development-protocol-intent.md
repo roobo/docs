@@ -50,7 +50,7 @@ _Request_ 的整体协议定义如下所示：
 | lang | Lang | 语种，默认中文 | Optional |
 | contexts | Context 对象 | 上文 | Optional |
 | location | Location 对象 | 地理位置 | Optional |
-| callback | Callback 对象 | 回调参数,deprecated | Optional |
+| callback | Callback 对象 | <font color=##FF0000 size=2>回调参数,deprecated</font> | Optional |
 
 ```
 {
@@ -104,7 +104,7 @@ __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，�
 
 __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只支持两类中文（__zh__），英文（__en__）。
 
-#### 2.5 Callback 定义(deprecated)
+#### 2.5 Callback 定义
 
 | Name | Type | Description | Required |
 | :--- | :--- | :--- | :--- |

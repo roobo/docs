@@ -96,7 +96,7 @@ _Response_ 的整体协议定义如下所示：
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | status | Status 对象 | [Status](status.md) | Required |
-| instructions | Instruction　对象 | 结果，包括指令和其他参数，deprecated | Optional |
+| instructions | Instruction　对象 | <font color=##FF0000 size=2>包括指令和其他参数,deprecated</font> | Optional |
 | result | Result 对象 | [Result](rosai-skills-development-protocol.md#results-array) | Optional |
 
 ```
