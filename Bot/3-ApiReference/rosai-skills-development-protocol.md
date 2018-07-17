@@ -61,7 +61,6 @@ Accept-Charset : utf-8
         "date": {
           "name": "date",
           "value": {
-            "orgin": null,
             "normType": "String",
             "norm": "2018-06-21"
           },
@@ -70,7 +69,6 @@ Accept-Charset : utf-8
         "focus": {
           "name": "focus",
           "value": {
-            "orgin": null,
             "normType": "String",
             "norm": "天气"
           },
