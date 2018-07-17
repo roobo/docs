@@ -36,35 +36,56 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 
 #### 2.1 协议概览
 
-_Request_ 的整体协议定义如下所示：
+**_Request_ 的整体协议定义如下所示：**
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
-| agentId | String | Access Key | Required |
-| token | String | Token | Required |
-| clientId | String | 设备id | Required |
-| event | Map | 当前事件，默认参数为事件名称name | Required |
-| params | Map | 自定义字段，传递上文信息 | Optional |
+| event | Object | 事件对象，包含事件名和事件相关定义 | Required |
+| clientId | string | 设备id | Required |
+| agentId | string | Access Key | Required |
+| token | string | Token | Required |
+| params | Object | 事件服务端需要的参数信息 | Required |
 
 ```
 {
-    "event":{
-        "name":"ROSAI.AddIntent"
+    "event": {
+        "name": "ROSAI.AddIntent",
+        "nominated": true
     },
-    "clientId":"1015000000000093",
-    "agentId":"Your Access Key",
-    "token":"Your Token",
-    "params":{
-        "extra":{
-            // 用户自定义
-        },
-        "parameters":{
+    "clientId": "1015000000000093",
+    "agentId": "Your Access Key",
+    "token": "Your Token",
+    "params": {
+        "services": [
+            "AiLive"
+        ],
+        "parameters": {
             // 槽位
             map<string, *slu.Value>
+        },
+        "extra": {
+            // 用户自定义
         }
     }
 }
 ```
+
+**event Object**
+
+| Name | Type | Description | Required |
+| --- | --- | --- | --- |
+| name | string | 事件名 | Required |
+| nominated | bool | 标识是否有指定的skill响应该事件，<br>如果有指定，则需要在params段的services中列出需要响应该事件的skill names | Required |
+
+**params Object**
+
+| Name | Type | Description | Required |
+| --- | --- | --- | --- |
+| services | string array | 发送方指定的可响应该事件的skill names | Optional |
+| parameters | map | k: 槽位名(string)，v: 槽位值([slu.Value][03272349]) | Optional |
+| extra | map | 针对该事件，用户自定义参数 | Optional |
+
+  [03272349]: https://github.com/roobo/docs/blob/master/Bot/3-ApiReference/rosai-skills-development-protocol.md#system-object "slu.Value"
 
 ### 3. Response
 
