@@ -52,7 +52,8 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
     "agentId": "Your Access Key",
     "token": "Your Token",
     "event": {
-        "name": "ROSAI.BOT.OrderCoffee.AddAction",
+        "name": "OrderCoffee.AddAction",
+        "type": "dedicated"
     },
     "params": {
         "orderId": {
@@ -67,8 +68,8 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
-| name | string | 事件名 | Required |
-| nominated | bool | 标识是否有指定的skill响应该事件，<br>如果有指定，则需要在params段的services中列出需要响应该事件的skill names | Required |
+| name | string | 事件名，如果type为dedicated，则为bot_name.action_name，如果为general，则为action_name | Required |
+| type | string | 可枚举值，可选值有：<br>-"dedicated": 有Bot响应的事件，bot name和bot action由name字段解析产生 <br>-"general": 通用事件，例如OnTouch | Required |
 
 **params Object**
 
