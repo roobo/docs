@@ -40,30 +40,24 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
-| event | Object | 事件对象，包含事件名和事件相关定义 | Required |
 | clientId | string | 设备id | Required |
 | agentId | string | Access Key | Required |
 | token | string | Token | Required |
+| event | Object | 事件对象，包含事件名和事件相关定义 | Required |
 | params | Object | 事件服务端需要的参数信息 | Required |
 
 ```
 {
-    "event": {
-        "name": "AddAction",
-        "nominated": true
-    },
     "clientId": "1015000000000093",
     "agentId": "Your Access Key",
     "token": "Your Token",
+    "event": {
+        "name": "ROSAI.BOT.OrderCoffee.AddAction",
+    },
     "params": {
-        "services": [
-            "OrderCoffee"
-        ],
-        "parameters": {
-          "orderId": {
-            "normType": "String",
-            "norm": "123456789"
-          }
+        "orderId": {
+          "normType": "String",
+          "norm": "123456789"
         }
     }
 }
@@ -133,4 +127,4 @@ _Response_ 的整体协议定义如下所示：
 
 | 事件名称 | 事件含义 | 参数 | 举例 |
 | --- | --- | --- | --- |
-| ROSAI.TimeoutIntent | 用户输入超时事件 | {<br>&emsp;"extra":{<br>&emsp;&emsp;"service":"场景名"<br>&emsp;}<br>} | {<br>&emsp;"extra":{<br>&emsp;&emsp;"service":"AiLivePoetry"<br>&emsp;}<br>} |
+| ROSAI.BOT.TimeoutIntent | 用户输入超时事件 | {<br>&emsp;"extra":{<br>&emsp;&emsp;"service":"场景名"<br>&emsp;}<br>} | {<br>&emsp;"extra":{<br>&emsp;&emsp;"service":"AiLivePoetry"<br>&emsp;}<br>} |
