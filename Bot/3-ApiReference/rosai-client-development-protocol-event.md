@@ -40,11 +40,11 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
-| clientId | string | 设备id | Required |
-| agentId | string | Access Key | Required |
-| token | string | Token | Required |
-| event | Object | 事件对象，包含事件名和事件相关定义 | Required |
-| params | Object | 事件服务端需要的参数信息 | Required |
+| clientId | string | 设备id | true |
+| agentId | string | Access Key | true |
+| token | string | Token | true |
+| event | Object | 事件对象，包含事件名和事件相关定义 | true |
+| params | Object | 事件服务端需要的参数信息 | false |
 
 ```
 {
@@ -62,7 +62,8 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
         }
     },
     "params": {
-        //
+        // 事件条件
+        map<key, object>
     }
 }
 ```
@@ -76,9 +77,7 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
         "type": "general"
     },
     "params": {
-      "condition":{
-        "isChild":true
-      }
+      "isChild": true
     }
 }
 ```
@@ -87,15 +86,16 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
-| name | string | 事件名，如果type为dedicated，则为bot_name.action_name，如果为general，则为action_name | Required |
-| type | string | 可枚举值，可选值有：<br>-"dedicated": 有Bot响应的事件，bot name和bot action由name字段解析产生 <br>-"general": 通用事件，例如OnTouch | Required |
+| name | string | 事件名 | true |
+| type | string | 可枚举值，可选值有：<br>- dedicated: 有Bot响应的事件 <br>- general: 通用事件，例如Touch, HumanFace | true |
+| data | object | 事件参数，包含响应该事件的服务名以及该服务处理该事件的槽位信息 | false |
 
-**params Object**
+**data Object**
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
-| services | string array | 发送方指定的可响应该事件的skill names | Optional |
-| parameters | map | k: 槽位名(string)，v: 槽位值([slu.Value][03272349]) | Optional |
+| service | string | 事件发送端指定的可响应该事件的skill names | true |
+| parameters | map | k: 槽位名(string)，v: 槽位值([slu.Value][03272349]) | false |
 
   [03272349]: https://github.com/roobo/docs/blob/master/Bot/3-ApiReference/rosai-skills-development-protocol.md#system-object "slu.Value"
 
