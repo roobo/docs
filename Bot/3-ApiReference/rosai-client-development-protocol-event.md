@@ -52,14 +52,33 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
     "agentId": "Your Access Key",
     "token": "Your Token",
     "event": {
-        "name": "OrderCoffee.AddAction",
-        "type": "dedicated"
+        "name": "AddAction",
+        "type": "dedicated",
+        "data" : {
+          "service":"OrderCoffee",
+          "parameters":{
+            map<key, *slu.Value>
+          }
+        }
     },
     "params": {
-        "orderId": {
-          "normType": "String",
-          "norm": "123456789"
-        }
+        //
+    }
+}
+```
+```
+{
+    "clientId": "1015000000000093",
+    "agentId": "Your Access Key",
+    "token": "Your Token",
+    "event": {
+        "name": "DeviceHumanFaceEvent",
+        "type": "general"
+    },
+    "params": {
+      "condition":{
+        "isChild":true
+      }
     }
 }
 ```
@@ -115,7 +134,7 @@ _Response_ 的整体协议定义如下所示：
 
 ### 4. Event
 
-#### 4.1 旧的事件，返回结果Instruction
+#### 4.1 旧的general事件,返回结果Instruction
 
 | 事件名称 | 事件含义 | 参数 | 举例 |
 | --- | --- | --- | --- |
@@ -124,8 +143,9 @@ _Response_ 的整体协议定义如下所示：
 | IdleEvent | 设备空闲事件 | | |
 | TouchEvent | 触摸事件 | //part | //Head //Ear |
 
-#### 4.2 ROSAI.xxIntent 事件，返回结果Result
+#### 4.2 新的general事件,返回结果Result
+命名规则: ROSAI.GeneralEventName
 
 | 事件名称 | 事件含义 | 参数 | 举例 |
 | --- | --- | --- | --- |
-| ROSAI.BOT.TimeoutIntent | 用户输入超时事件 | {<br>&emsp;"extra":{<br>&emsp;&emsp;"service":"场景名"<br>&emsp;}<br>} | {<br>&emsp;"extra":{<br>&emsp;&emsp;"service":"AiLivePoetry"<br>&emsp;}<br>} |
+| ROSAI.TimeoutIntent | 用户输入超时事件 | 无 | 无 |
