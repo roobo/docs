@@ -148,4 +148,4 @@ _Response_ 的整体协议定义如下所示：
 
 | 事件名称 | 事件含义 | 参数 | 举例 |
 | --- | --- | --- | --- |
-| ROSAI.TimeoutIntent | 用户输入超时事件 | 无 | 无 |
+| ROSAI.TimeoutIntent | 用户输入超时事件 | "params": <br>{<br>"repeat": 重复次数，从0开始，1代表第1次重复<br>} | "params": <br>{<br>"repeat": 1<br>} |
