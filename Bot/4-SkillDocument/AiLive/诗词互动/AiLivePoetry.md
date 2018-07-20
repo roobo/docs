@@ -266,7 +266,7 @@ response：
 
 ## 4.6 Prev_上一关
 
-query:上一关（假定当前关是对这一关）
+query:上一关（假定当前关是**对答**）
 
 response：
 
@@ -309,7 +309,7 @@ response：
 
 ## 4.7 Repeat_重复
 
-query：重复学习（假定当前关是对这一关）
+query：重复学习（假定当前关是**对答**）
 
 response：
 
