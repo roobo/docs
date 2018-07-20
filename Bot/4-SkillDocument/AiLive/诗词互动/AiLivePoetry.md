@@ -41,6 +41,10 @@
 
 重复学习
 
+## 3.8 Exit_退出
+
+退出
+
 # 4.返回结果
 
 返回结果如下json所示。
@@ -345,4 +349,27 @@ response：
     }
   ]
 ```
+
+## 4.8 Exit_退出
+
+query：退出
+
+response：
+
+```
+  "results": [
+    {
+      "hint": "好的",
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "PlainText",
+            "source": "好的"
+          }
+        ]
+      }
+    }
+  ]
+```
+
 
