@@ -1,5 +1,5 @@
 
-## 意图
+## Action
 按照诗词互动功能，分为以下7个意图：
 
 意图  | 例句  |  关键词
@@ -12,7 +12,7 @@ Next  | 下一关  | 下一关
 Prev  |  上一关 | 上一关
 Repeat  | 重复学习  | 重复
 
-## response
+## Response
 
 返回结果如下json所示。
 语音输出方案在response的result字段里的outputSpeech中，以数组的形式，依次读出。目前支持PlainText格式和ssml格式。
