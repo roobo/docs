@@ -46,12 +46,13 @@
 返回结果如下json所示。
 语音输出方案在response的result字段里的outputSpeech中，以数组的形式，依次读出。目前支持PlainText格式和ssml格式。
 
+## 4.1 Learn_学
+
 query: 我要学静夜思
 
 response:
 
 ```
-{
   "results": [
     {
       "hint": "小朋友，跟我一起来学吧，静夜思，唐代，李白，床前明月光，疑是地上霜，举头望明月，低头思故乡，知识需要重复记忆才能掌握哦，是重复学习、还是进入下一关呢？",
@@ -89,5 +90,259 @@ response:
       }
     }
   ]
-}
 ```
+
+## 4.2 Read_跟读
+
+query：我要跟读静夜思
+
+response：
+
+```
+  "results": [
+    {
+      "hint": "小朋友，跟我一起来读吧，静夜思，唐代，李白，床前明月光，小朋友，该你啦",
+      "data": {
+        "author": [
+          "李白"
+        ],
+        "content": [
+          "床前明月光"
+        ],
+        "dynasty": [
+          "唐代"
+        ],
+        "length": 20,
+        "title": "静夜思"
+      },
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "PlainText",
+            "source": "小朋友，跟我一起来读吧"
+          },
+          {
+            "type": "SSML",
+            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>\n<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+          },
+          {
+            "type": "PlainText",
+            "source": "小朋友，轮到你啦"
+          }
+        ]
+      }
+    }
+  ]
+```
+
+## 4.3 Abut_对答
+
+queyr：我要对静夜思
+
+response：
+
+```
+  "results": [
+    {
+      "hint": "小朋友，跟我一起来对诗词吧，静夜思，唐代，李白，床前明月光，小朋友，该你啦",
+      "data": {
+        "author": [
+          "李白"
+        ],
+        "content": [
+          "床前明月光"
+        ],
+        "dynasty": [
+          "唐代"
+        ],
+        "length": 20,
+        "title": "静夜思"
+      },
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "PlainText",
+            "source": "小朋友，跟我一起来对诗词吧"
+          },
+          {
+            "type": "SSML",
+            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>\n<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+          },
+          {
+            "type": "PlainText",
+            "source": "小朋友，轮到你啦"
+          }
+        ]
+      }
+    }
+  ]
+```
+
+## 4.4 Recite_背
+
+query：我要背静夜思
+
+response：
+
+```
+  "results": [
+    {
+      "hint": "小朋友，你来背诗词吧，静夜思，唐代，李白，小朋友，该你啦",
+      "data": {
+        "author": [
+          "李白"
+        ],
+        "content": null,
+        "dynasty": [
+          "唐代"
+        ],
+        "length": 20,
+        "title": "静夜思"
+      },
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "PlainText",
+            "source": "小朋友，你来背诗词吧"
+          },
+          {
+            "type": "SSML",
+            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
+          },
+          {
+            "type": "PlainText",
+            "source": "小朋友，轮到你啦"
+          }
+        ]
+      }
+    }
+  ]
+```
+
+## 4.5 Next_下一关
+
+query：下一关 （假定当前关是**对答**）
+
+response：
+
+```
+  "results": [
+    {
+      "hint": "小朋友，你来背诗词吧，静夜思，唐代，李白，小朋友，该你啦",
+      "data": {
+        "author": [
+          "李白"
+        ],
+        "content": null,
+        "dynasty": [
+          "唐代"
+        ],
+        "length": 20,
+        "title": "静夜思"
+      },
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "PlainText",
+            "source": "小朋友，你来背诗词吧"
+          },
+          {
+            "type": "SSML",
+            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
+          },
+          {
+            "type": "PlainText",
+            "source": "小朋友，轮到你啦"
+          }
+        ]
+      }
+    }
+  ]
+```
+
+## 4.6 Prev_上一关
+
+query:上一关（假定当前关是对这一关）
+
+response：
+
+```
+  "results": [
+    {
+      "hint": "小朋友，跟我一起来读吧，静夜思，唐代，李白，床前明月光，小朋友，该你啦",
+      "data": {
+        "author": [
+          "李白"
+        ],
+        "content": [
+          "床前明月光"
+        ],
+        "dynasty": [
+          "唐代"
+        ],
+        "length": 20,
+        "title": "静夜思"
+      },
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "PlainText",
+            "source": "小朋友，跟我一起来读吧"
+          },
+          {
+            "type": "SSML",
+            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>\n<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+          },
+          {
+            "type": "PlainText",
+            "source": "小朋友，轮到你啦"
+          }
+        ]
+      }
+    }
+  ]
+```
+
+## 4.7 Repeat_重复
+
+query：重复学习（假定当前关是对这一关）
+
+response：
+
+```
+  "results": [
+    {
+      "hint": "小朋友，跟我一起来对诗词吧，静夜思，唐代，李白，床前明月光，小朋友，该你啦",
+      "data": {
+        "author": [
+          "李白"
+        ],
+        "content": [
+          "床前明月光"
+        ],
+        "dynasty": [
+          "唐代"
+        ],
+        "length": 20,
+        "title": "静夜思"
+      },
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "PlainText",
+            "source": "小朋友，跟我一起来对诗词吧"
+          },
+          {
+            "type": "SSML",
+            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>\n<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+          },
+          {
+            "type": "PlainText",
+            "source": "小朋友，轮到你啦"
+          }
+        ]
+      }
+    }
+  ]
+```
+
