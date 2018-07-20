@@ -126,6 +126,7 @@ _Response_ 的整体协议定义如下所示：
 | query | String | 纠错后的Text query | Required |
 | semantic | Semantic 对象 | 语义部分 | Optional |
 | results | Result 对象 | [Result](rosai-skills-development-protocol.md#results-array) | Optional |
+| timeout | Timeout 对象 | 超时参数,deprecated | Optional |
 
 ```
 {
@@ -200,3 +201,10 @@ _Text query_的语义理解（_NLP_）的结果。
 | params | Map | [Map<string, slu.Value>](rosai-skills-development-protocol.md) | Required |
 | inputContext | Context 对象 | 输入上文 | Optional |
 | outputContext | Context 对象 | 输出下文 | Optional |
+
+#### 3.3 Timeout 定义
+
+| Name | Type | Description | Required |
+| :--- | :--- | :--- | :--- |
+| timeInMs | String | 超时时间（ms） | Required |
+| action | String | 动作 | Required |
