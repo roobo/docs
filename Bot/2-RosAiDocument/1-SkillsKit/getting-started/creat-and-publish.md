@@ -5,7 +5,7 @@
 ## BOT创建
 
 登录ROS.AI平台，进入Bot服务，选择“Bot管理”，点击“新建BOT”，输入”BOT名称”，“BOT描述”完成BOT创建。
-![image](https://github.com/roobo/docs/blob/master/Bot/2-RosAiDocument/1-SkillsKit/getting-started/images/build-bot.png)
+![image](images/build-bot.png)
 ![image](https://github.com/roobo/docs/blob/master/Bot/2-RosAiDocument/1-SkillsKit/getting-started/images/build-bot1.png)
 
 
