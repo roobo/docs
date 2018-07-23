@@ -6,3 +6,6 @@
   * [技能开发工具简介](2-RosAiDocument/1-SkillsKit/platform-introduction.md)
   * 快速开始
     * [技能的创建与发布](2-RosAiDocument/1-SkillsKit/getting-started/creat-and-publish.md)
+  * 重要概念
+    * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
+    * [实体](2-RokidDocument/1-SkillsKit/important-concept/entity.md)
