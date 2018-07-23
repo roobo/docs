@@ -12,6 +12,6 @@
     * [实体](2-RokidDocument/1-SkillsKit/important-concept/entity.md)
   * [开发协议](3-ApiReference/README.md)
     * [技能开发协议](3-ApiReference/rosai-skills-development-protocol.md)
-    * [端测语义请求协议](3-ApiReference/rosai-client-development-protocol-intent.md)
-    * [端测事件请求协议](3-ApiReference/rosai-client-development-protocol-event.md)
+    * [端侧语义请求协议](3-ApiReference/rosai-client-development-protocol-intent.md)
+    * [端侧事件请求协议](3-ApiReference/rosai-client-development-protocol-event.md)
   * [技能接入指南](https://github.com/roobo/docs/tree/master/Bot/4-SkillDocument)
