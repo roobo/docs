@@ -372,4 +372,50 @@ response：
   ]
 ```
 
+# 5.超时事件
+
+request：
+
+```
+{
+    "event": {
+        "name": "ROSAI.TimeoutEvent",
+        "type": "dedicated",
+        "data" : {
+          "service": "AiLivePoetry"
+        }
+    },
+    "params": {
+      "repeat": 1
+    },
+    "clientId": "4000006F00000001",
+    "agentId": "Dc3OTE2YTczNDJhO",
+    "token": "c6e30bd939f18f224173a843beda940c"
+}
+```
+
+response：
+
+```
+{
+    "reqId": "Dc3OTE2YTczNDJhO-4000006F00000001-1532421578294537341",
+    "status": {
+        "code": 0
+    },
+    "results": [
+        {
+            "hint": "小朋友，我找不到你了，我们下次再来玩吧",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，我找不到你了，我们下次再来玩吧"
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
 
