@@ -88,7 +88,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
     | setAudioGenerator() | 设置语音识别的音源 |是|
     | setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景 | 否 |
     | setTokenType() | 设置token的类型,默认是内部维护token,如果是外部设置token，同时需要设置setDeviceInfo()的信息 | 否 |
-    | setDeviceInfo() | 设置SN号和token,同时需要设置setDeviceInfo(VUIApi.TokenType.TYPE_TOKEN_EXTERNAL_SETTING) | 否 |
+    | setDeviceInfo() | 设置SN号和token,同时需要设置setTokenType(VUIApi.TokenType.TYPE_TOKEN_EXTERNAL_SETTING) | 否 |
     
     注意：设置SN请调用UserInfo.setDeviceID(),设置PublicKey请调用UserInfo.setPublicKey（）。（默认是通过android默认的serialno来确认设备的唯一性，所以必须保证serialno的唯一性）
 #### 参数设置
