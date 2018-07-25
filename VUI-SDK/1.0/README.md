@@ -227,8 +227,12 @@ VUIApi.getInstance().init(context, initParam,initListener);
     ~~~
     VUIApi.getInstance().getTTSAudioData(text, new RTTSAudioDataListener() {
                 @Override
-                public void onSpeakAudio(byte[] data, boolean isFinish) {
-                    //data是音频数据, isFinish true 是结束,最后一块数据data是null
+                public void onSpeakAudio(VUIApi.VUITTSAudioType type, byte[] data, boolean isFinish) {
+                    if (type == VUIApi.VUITTSAudioType.TYPE_AUDIO_DATA) {
+                      //离线TTS返回data是音频数据, isFinish true 是结束,最后一块数据data是null
+                    } else {
+                      //data是在线的TTS返回的url地址;
+                    }
                 }
             });
     ~~~
