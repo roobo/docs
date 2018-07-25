@@ -87,9 +87,14 @@ VUIApi.getInstance().init(context, initParam,initListener);
     | setTTSSpeaker | 如果TTS采用离线方式，这里设置是发音人。如果是采用在线方式，这是设置的是TTS语言 |否(默认"Li-Li")|
     | setAudioGenerator() | 设置语音识别的音源 |是|
     | setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景 | 否 |
+    | setTokenType() | 设置token的类型,默认是内部维护token,如果是外部设置token，同时需要设置setDeviceInfo()的信息 | 否 |
+    | setDeviceInfo() | 设置SN号和token,同时需要设置setDeviceInfo(VUIApi.TokenType.TYPE_TOKEN_EXTERNAL_SETTING) | 否 |
     
     注意：设置SN请调用UserInfo.setDeviceID(),设置PublicKey请调用UserInfo.setPublicKey（）。（默认是通过android默认的serialno来确认设备的唯一性，所以必须保证serialno的唯一性）
-
+#### 参数设置
+    ~~~
+    VUIApi.getInstance().setVUIParam(final VUIParam key, final String value);
+    ~~~
 #### 语音识别
 * ##### **设置离线识别文件**
     * 添加离线语法文件到assets/vocon下
@@ -223,7 +228,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
     ~~~
     VUIApi.getInstance().stopSpeak();
     ~~~
-* ##### **获取TTS音频数据(只支持离线)**
+* ##### **获取TTS音频数据(支持离线获取音频数据,支持获取在线URL地址)**
     ~~~
     VUIApi.getInstance().getTTSAudioData(text, new RTTSAudioDataListener() {
                 @Override
