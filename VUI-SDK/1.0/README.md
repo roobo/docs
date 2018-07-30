@@ -91,10 +91,6 @@ VUIApi.getInstance().init(context, initParam,initListener);
     | setDeviceInfo() | 设置SN号和token,同时需要设置setTokenType(VUIApi.TokenType.TYPE_TOKEN_EXTERNAL_SETTING) | 否 |
     
     注意：设置SN请调用UserInfo.setDeviceID(),设置PublicKey请调用UserInfo.setPublicKey（）。（默认是通过android默认的serialno来确认设备的唯一性，所以必须保证serialno的唯一性）
-#### 参数设置
-    ~~~
-    VUIApi.getInstance().setVUIParam(final VUIParam key, final String value);
-    ~~~
 #### 语音识别
 * ##### **设置离线识别文件**
     * 添加离线语法文件到assets/vocon下
