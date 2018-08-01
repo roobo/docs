@@ -11,7 +11,7 @@
     * [模板](2-RosAiDocument/1-SkillsKit/important-concept/template.md)
     * [子模板](2-RosAiDocument/1-SkillsKit/important-concept/subtemplate.md)
     * [实体](2-RosAiDocument/1-SkillsKit/important-concept/entity.md)
-    * [参数](2-RosAiDocument/1-SkillsKit/important-concept/slot.md)
+    * [槽位](2-RosAiDocument/1-SkillsKit/important-concept/slot.md)
   * [开发协议](3-ApiReference/README.md)
     * [技能开发协议](3-ApiReference/rosai-skills-development-protocol.md)
     * [端侧语义请求协议](3-ApiReference/rosai-client-development-protocol-intent.md)
