@@ -85,7 +85,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
     | setVUIType | 设置VUI交互方式 |是|
     | setTTSType | 设置TTS在线/离线模式 |是|
     | setTTSSpeaker | 如果TTS采用离线方式，这里设置是发音人。如果是采用在线方式，这是设置的是TTS语言 |否(默认"Li-Li")|
-    | setAudioGenerator() | 设置语音识别的音源 |是|
+    | setAudioGenerator() | 设置语音识别的音源,设置为RooboAECRecorder,是带AEC功能 |是|
     | setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景 | 否 |
     | setTokenType() | 设置token的类型,默认是内部维护token,如果是外部设置token，同时需要设置setDeviceInfo()的信息 | 否 |
     | setDeviceInfo() | 设置SN号和token,同时需要设置setTokenType(VUIApi.TokenType.TYPE_TOKEN_EXTERNAL_SETTING) | 否 |
@@ -257,7 +257,10 @@ VUIApi.getInstance().init(context, initParam,initListener);
         ~~~
         VUIApi.getInstance().setSpeaker("Li-Li");
         ~~~
-
+* ##### **日志开关**
+    ~~~
+    VUIApi.getInstance().setLogLevel(int logLevel); //默认是0, 最高级别是5
+    ~~~
 <h3 id="3">3.错误对应码</h3>
 
 | 错误码 | 备注 |
