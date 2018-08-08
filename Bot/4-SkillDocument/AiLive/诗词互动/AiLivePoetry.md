@@ -50,6 +50,19 @@
 返回结果如下json所示。
 语音输出方案在response的result字段里的outputSpeech中，以数组的形式，依次读出。目前支持PlainText格式和ssml格式。
 
+返回results中data字段说明：
+
+| **Field** | **Description** | **Example** | **type** |
+| --- | --- | --- | --- |
+| title | 诗词名 | 静夜思 | string |
+| author | 诗词作者 | 李白 | []string |
+| content | 当前显示内容 | 床前明月光 | []string |
+| dynasty | 朝代 | 唐代 | []string |
+| index | content字段最后末尾诗句下标 | -1 | int |
+| length | 诗句总字数 | 20 | int |
+| lines | 诗句总句数 | 4 | int |
+
+
 ## 4.1 Learn_学
 
 query: 我要学静夜思
@@ -59,7 +72,7 @@ response:
 ```
   "results": [
     {
-      "hint": "小朋友，跟我一起来学吧，静夜思，唐代，李白，床前明月光，疑是地上霜，举头望明月，低头思故乡，知识需要重复记忆才能掌握哦，是重复学习、还是进入下一关呢？",
+      "hint": "跟我一起学吧，静夜思，唐代，李白，床前明月光，疑是地上霜，举头望明月，低头思故乡，知识需要重复记忆才能掌握哦，是重复学习、还是进入下一关呢？",
       "data": {
         "author": [
           "李白"
@@ -73,18 +86,20 @@ response:
         "dynasty": [
           "唐代"
         ],
+        "index": 3,
         "length": 20,
+        "lines": 4,
         "title": "静夜思"
       },
       "outputSpeech": {
         "items": [
           {
-            "type": "PlainText",
-            "source": "小朋友，跟我一起来学吧"
+            "type": "SSML",
+            "source": "<p>跟我一起学吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
           },
           {
             "type": "SSML",
-            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>\n<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>\n<s>疑是<break time=\"100ms\" /><emphasis>地</emphasis>上霜</s>\n<s>举头<break time=\"100ms\" /><emphasis>望</emphasis>明月</s>\n<s>低头<break time=\"100ms\" /><emphasis>思</emphasis>故乡</s>"
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>\n<s>疑是<break time=\"100ms\" /><emphasis>地</emphasis>上霜</s>\n<s>举头<break time=\"100ms\" /><emphasis>望</emphasis>明月</s>\n<s>低头<break time=\"100ms\" /><emphasis>思</emphasis>故乡</s>"
           },
           {
             "type": "PlainText",
@@ -105,7 +120,7 @@ response：
 ```
   "results": [
     {
-      "hint": "小朋友，跟我一起来读吧，静夜思，唐代，李白，床前明月光，小朋友，该你啦",
+      "hint": "跟我一起读吧，静夜思，唐代，李白，床前明月光，轮到你拉",
       "data": {
         "author": [
           "李白"
@@ -116,22 +131,24 @@ response：
         "dynasty": [
           "唐代"
         ],
+        "index": 0,
         "length": 20,
+        "lines": 4,
         "title": "静夜思"
       },
       "outputSpeech": {
         "items": [
           {
-            "type": "PlainText",
-            "source": "小朋友，跟我一起来读吧"
+            "type": "SSML",
+            "source": "<p>跟我一起读吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
           },
           {
             "type": "SSML",
-            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>\n<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
           },
           {
             "type": "PlainText",
-            "source": "小朋友，轮到你啦"
+            "source": "轮到你拉"
           }
         ]
       }
@@ -148,7 +165,7 @@ response：
 ```
   "results": [
     {
-      "hint": "小朋友，跟我一起来对诗词吧，静夜思，唐代，李白，床前明月光，小朋友，该你啦",
+      "hint": "跟我一起对诗词吧，静夜思，唐代，李白，床前明月光，轮到你拉",
       "data": {
         "author": [
           "李白"
@@ -159,22 +176,24 @@ response：
         "dynasty": [
           "唐代"
         ],
+        "index": 0,
         "length": 20,
+        "lines": 4,
         "title": "静夜思"
       },
       "outputSpeech": {
         "items": [
           {
-            "type": "PlainText",
-            "source": "小朋友，跟我一起来对诗词吧"
+            "type": "SSML",
+            "source": "<p>跟我一起对诗词吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
           },
           {
             "type": "SSML",
-            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>\n<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
           },
           {
             "type": "PlainText",
-            "source": "小朋友，轮到你啦"
+            "source": "轮到你拉"
           }
         ]
       }
@@ -191,7 +210,7 @@ response：
 ```
   "results": [
     {
-      "hint": "小朋友，你来背诗词吧，静夜思，唐代，李白，小朋友，该你啦",
+      "hint": "你来背诗词吧，静夜思，唐代，李白，，轮到你拉",
       "data": {
         "author": [
           "李白"
@@ -200,22 +219,20 @@ response：
         "dynasty": [
           "唐代"
         ],
+        "index": -1,
         "length": 20,
+        "lines": 4,
         "title": "静夜思"
       },
       "outputSpeech": {
         "items": [
           {
-            "type": "PlainText",
-            "source": "小朋友，你来背诗词吧"
-          },
-          {
             "type": "SSML",
-            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
+            "source": "<p>你来背诗词吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
           },
           {
             "type": "PlainText",
-            "source": "小朋友，轮到你啦"
+            "source": "轮到你拉"
           }
         ]
       }
@@ -232,7 +249,7 @@ response：
 ```
   "results": [
     {
-      "hint": "小朋友，你来背诗词吧，静夜思，唐代，李白，小朋友，该你啦",
+      "hint": "你来背诗词吧，静夜思，唐代，李白，，该你拉",
       "data": {
         "author": [
           "李白"
@@ -241,22 +258,20 @@ response：
         "dynasty": [
           "唐代"
         ],
+        "index": -1,
         "length": 20,
+        "lines": 4,
         "title": "静夜思"
       },
       "outputSpeech": {
         "items": [
           {
-            "type": "PlainText",
-            "source": "小朋友，你来背诗词吧"
-          },
-          {
             "type": "SSML",
-            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
+            "source": "<p>你来背诗词吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
           },
           {
             "type": "PlainText",
-            "source": "小朋友，轮到你啦"
+            "source": "该你拉"
           }
         ]
       }
@@ -273,7 +288,7 @@ response：
 ```
   "results": [
     {
-      "hint": "小朋友，跟我一起来读吧，静夜思，唐代，李白，床前明月光，小朋友，该你啦",
+      "hint": "跟我一起读吧，静夜思，唐代，李白，床前明月光，该你拉",
       "data": {
         "author": [
           "李白"
@@ -284,22 +299,24 @@ response：
         "dynasty": [
           "唐代"
         ],
+        "index": 0,
         "length": 20,
+        "lines": 4,
         "title": "静夜思"
       },
       "outputSpeech": {
         "items": [
           {
-            "type": "PlainText",
-            "source": "小朋友，跟我一起来读吧"
+            "type": "SSML",
+            "source": "<p>跟我一起读吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
           },
           {
             "type": "SSML",
-            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>\n<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
           },
           {
             "type": "PlainText",
-            "source": "小朋友，轮到你啦"
+            "source": "该你拉"
           }
         ]
       }
@@ -314,9 +331,9 @@ query：重复学习（假定当前关是**对答**）
 response：
 
 ```
-  "results": [
+ "results": [
     {
-      "hint": "小朋友，跟我一起来对诗词吧，静夜思，唐代，李白，床前明月光，小朋友，该你啦",
+      "hint": "跟我一起对诗词吧，静夜思，唐代，李白，床前明月光，该你拉",
       "data": {
         "author": [
           "李白"
@@ -327,22 +344,24 @@ response：
         "dynasty": [
           "唐代"
         ],
+        "index": 0,
         "length": 20,
+        "lines": 4,
         "title": "静夜思"
       },
       "outputSpeech": {
         "items": [
           {
-            "type": "PlainText",
-            "source": "小朋友，跟我一起来对诗词吧"
+            "type": "SSML",
+            "source": "<p>跟我一起对诗词吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
           },
           {
             "type": "SSML",
-            "source": "<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>\n<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
           },
           {
             "type": "PlainText",
-            "source": "小朋友，轮到你啦"
+            "source": "该你拉"
           }
         ]
       }
