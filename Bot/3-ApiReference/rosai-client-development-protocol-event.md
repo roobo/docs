@@ -107,6 +107,7 @@ _Response_ 的整体协议定义如下所示：
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | status | Status 对象 | [Status](status.md) | Required |
+| instructions | instruction 数组 | 音频url | Optional |
 | result | Result 对象 | [Result](rosai-skills-development-protocol.md#results-array) | Optional |
 
 
@@ -129,6 +130,40 @@ _Response_ 的整体协议定义如下所示：
             }
         }
     ]
+}
+```
+
+legacy response (deprecated)
+```
+{
+    "status": {
+        "code": 0,
+        "errorType": "success"
+    },
+    "instructions": [
+        {
+            "name": "",
+            "url": "http://bj-voice.roo.bo/static/usertts/2018-01-17/897/reply.WmyunGaoWF.42d8df1d-c944-47d4-b657-6d5a79d1738a.mp3"
+        },
+        {
+            "name": "",
+            "url": "http://dwn.roo.bo//resource/20170411/742d84a7c68403e8034de36b46930299.mp3"
+        }
+    ],
+    "result": {
+        "outputSpeech": {
+            "items": [
+                {
+                    "type": "Audio",
+                    "source": "http://bj-voice.roo.bo/static/usertts/2018-01-17/897/reply.WmyunGaoWF.42d8df1d-c944-47d4-b657-6d5a79d1738a.mp3"
+                },
+                {
+                    "type": "Audio",
+                    "source": "http://dwn.roo.bo//resource/20170411/742d84a7c68403e8034de36b46930299.mp3"
+                }
+            ]
+        }
+    }
 }
 ```
 
