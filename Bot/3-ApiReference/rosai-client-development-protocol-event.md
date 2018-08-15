@@ -150,8 +150,9 @@ legacy response (deprecated)
             "url": "http://dwn.roo.bo//resource/20170411/742d84a7c68403e8034de36b46930299.mp3"
         }
     ],
-    "result": {
-        "outputSpeech": {
+    "results": [
+        {
+          "outputSpeech": {
             "items": [
                 {
                     "type": "Audio",
@@ -162,8 +163,9 @@ legacy response (deprecated)
                     "source": "http://dwn.roo.bo//resource/20170411/742d84a7c68403e8034de36b46930299.mp3"
                 }
             ]
+          }
         }
-    }
+    ]
 }
 ```
 
