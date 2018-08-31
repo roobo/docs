@@ -158,12 +158,12 @@ Accept-Charset : utf-8
         "items": [
           {
             "simpleResponse": {
-              "speechText": "北京今天多云，气温23度到35度，东南风2级",
+              "ssml": "<speak>北京今天多云，气温23度到35度，东南风2级<audio>https://ai.roobo.com/weather/wind_2.mp3</audio></speak>",
               "displayText": "多云，气温23度到35度，东南风2级"
             }
           },
           {
-            "basicCard": {
+            "card": {
               "type": "Standard",
               "title": "北京天气",
               "content": "多云，气温23度到35度，东南风2级",
@@ -221,5 +221,110 @@ source | output speech 的内容，根据type来解析<br>- PlainText: 输出tts
 
 Parameter  | Description  |  type | required
 --|--|--|--
-items | 有屏设备的显示信息，一般包含简单输出和复杂展示，建议不要超过2个元素。<br>- 简单输出: 包含展示的文字和需要说出的tts <br>- 复杂输出: 包括如basicCard, listSelect, carouselSelect, carouselBrowse, tableCard, mediaResponse |  Object Array | false
+items | 有屏设备的显示信息，一般包含简单输出和card，一般不要超过2个元素。<br>- simpleResponse: 包含展示的文字(**textToDisplay**)和需要说出的ssml(**ssml**)或tts(**textToSpeech**). ssml和textToSpeech不能同时出现。 <br>- card: type支持“Standard“, "Images", “List“, “Carousel“, “Audio“, "Video"等 |  Object Array | false
 suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | Object Array | false
+
+Notes<br>
+- 一个response回复里建议最多包含两个simpleResponse对象和最多一个card对象。
+- items 数组里的元素在端上是有顺序的。即端上收到解析outputDisplay后，先执行第一个元素的内容，接下来再执行第二个元素的内容。
+- items 数组里的每一个元素是simpleResponse和card对象的组合，它们是无顺序的。对于如下一个元素在播放音乐的同时显示标准图片卡片。
+```
+  {
+    "simpleResponse": {
+      "audio": "https://ai.roobo.com/song/东风破.wav"
+    },
+    "card": {
+      "type": "Standard",
+      "title": "东风破",
+      "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
+      "image": {
+        "url": "https://ai.roobo.com/image/东风破.jpg",
+        "altText": "music 东风破"
+      }
+    }
+  }
+```
+
+### simpleResponse Object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+textToSpeech  | 用来发声的普通文本，用来转换成tts，不能和ssml字段同时存在 |  string | false
+ssml  |  ssml格式的内容，不能和textToSpeech字段同时存在，例： `<speak>北京今天多云，东南风2级<audio>https://ai.roobo.com/weather/wind_2.mp3</audio></speak>` |  string | false
+textToDisplay  | 用来展示的文本  | string  | true
+audio  | 音频资源，存放一个音频url，例：https://ai.roobo.com/weather/wind_2.mp3  |  string | false
+
+### Standard card Object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type  | 卡片类型，固定值为"Standard"  |  string | true
+title  | 卡片标题 |  string | true
+content  | 卡片内容  | string  | true
+image  | 卡片图片对象  | object |  true
+
+### Standard card image Object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+imageUrl  | 图片url, 建议图片的宽度与高度的比是16:9 |  string | true
+bulletComment  | 图片弹幕，可以是文字或者表情(\good)，显示在图片上 |  string | false
+altText  | 图片获取失败时显示的文本 | string  | true
+
+```
+"card": {
+  "type": "Standard",
+  "title": "东风破",
+  "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
+  "image": {
+    "url": "https://ai.roobo.com/image/东风破.jpg",
+    "bulletComment": "\FiveStars",
+    "altText": "music 东风破"
+  }
+```
+
+### Simple card Object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type  | 卡片类型，固定值为"Simple"  |  string | true
+title  | 卡片标题 |  string | true
+content  | 卡片内容  | string  | true
+
+simple card example:
+```
+"card": {
+  "type": "Standard",
+  "title": "北京天气",
+  "content": "多云，气温23度到35度，东南风2级"
+}
+```
+
+### Images card Object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type  | 卡片类型，固定值为"Images"  |  string | true
+list  | 图片对象数组  | image array object |  true
+
+images card example:
+```
+"card": {
+  "type": "Images",
+  "list": [
+    {
+      "url": "https://ai.roobo.com/image/东风破.jpg",
+      "bulletComment": "\FiveStars",
+      "altText": "music 东风破"
+    }，
+    {
+      "url": "https://ai.roobo.com/image/小夜曲.jpg",
+      "altText": "music 小夜曲"
+    }
+  ]
+}
+```
+
+### Suggestions Object
+
+引导用户进行下一轮对话的提示样例。
