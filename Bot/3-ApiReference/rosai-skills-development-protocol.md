@@ -227,7 +227,8 @@ suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文�
 Notes<br>
 - 一个response回复里建议最多包含两个simpleResponse对象和最多一个card对象。
 - items 数组里的元素在端上是有顺序的。即端上收到解析outputDisplay后，先执行第一个元素的内容，接下来再执行第二个元素的内容。
-- items 数组里的每一个元素是simpleResponse和card对象的组合，它们是无顺序的。对于如下一个元素在播放音乐的同时显示标准图片卡片。
+- items 数组里的每一个元素是simpleResponse和card对象的组合，它们是无顺序的。对于如下一个item元素在播放音乐的同时显示标准图片卡片。
+- 每次交互，云端返回给端上的response，不一定都会带上card。对于不带card的response，端上不要清除上一次交互返回的response里的card展示，以做到状态保持。对于端上接收到带card的response，端上替换目前在展示的card展示。
 ```
   {
     "simpleResponse": {
