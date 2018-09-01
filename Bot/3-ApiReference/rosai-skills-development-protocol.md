@@ -221,7 +221,7 @@ source | output speech 的内容，根据type来解析<br>- PlainText: 输出tts
 
 Parameter  | Description  |  type | required
 --|--|--|--
-items | 有屏设备的显示信息，一般包含简单输出和card，一般不要超过2个元素。<br>- simpleResponse: 包含展示的文字(**textToDisplay**)和需要说出的ssml(**ssml**)或tts(**textToSpeech**). ssml和textToSpeech不能同时出现。 <br>- card: type支持“Standard“, "Images", “List“, “Carousel“, “Audio“, "Video"等 |  Object Array | false
+items | 有屏设备的显示信息，一般包含简单输出和card，一般不要超过2个元素。<br>- simpleResponse: 包含展示的文字(**textToDisplay**)和需要说出的ssml(**ssml**)或tts(**textToSpeech**). ssml和textToSpeech不能同时出现。 <br>- card: type支持“Txt“, “Standard“, "Images"(待续...) |  Object Array | false
 suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | Object Array | false
 
 Notes<br>
@@ -254,7 +254,26 @@ ssml  |  ssml格式的内容，不能和textToSpeech字段同时存在，例： 
 textToDisplay  | 用来展示的文本  | string  | true
 audio  | 音频资源，存放一个音频url，例：https://ai.roobo.com/weather/wind_2.mp3  |  string | false
 
-### Standard card Object
+<hr>
+
+### 文本卡片
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type  | 卡片类型，固定值为"Txt"  |  string | true
+title  | 卡片标题 |  string | true
+content  | 卡片内容  | string  | true
+
+simple card example:
+```
+"card": {
+  "type": "Txt",
+  "title": "北京天气",
+  "content": "多云，气温23度到35度，东南风2级"
+}
+```
+
+### 标准卡片
 
 Parameter  | Description  |  type | required
 --|--|--|--
@@ -263,7 +282,7 @@ title  | 卡片标题 |  string | true
 content  | 卡片内容  | string  | true
 image  | 卡片图片对象  | object |  true
 
-### Standard card image Object
+#### Standard card image Object
 
 Parameter  | Description  |  type | required
 --|--|--|--
@@ -283,24 +302,7 @@ altText  | 图片获取失败时显示的文本 | string  | true
   }
 ```
 
-### Simple card Object
-
-Parameter  | Description  |  type | required
---|--|--|--
-type  | 卡片类型，固定值为"Simple"  |  string | true
-title  | 卡片标题 |  string | true
-content  | 卡片内容  | string  | true
-
-simple card example:
-```
-"card": {
-  "type": "Standard",
-  "title": "北京天气",
-  "content": "多云，气温23度到35度，东南风2级"
-}
-```
-
-### Images card Object
+### 图片卡片
 
 Parameter  | Description  |  type | required
 --|--|--|--
@@ -310,7 +312,7 @@ list  | 图片对象数组  | image array object |  true
 images card example:
 ```
 "card": {
-  "type": "Images",
+  "type": "Image",
   "list": [
     {
       "url": "https://ai.roobo.com/image/东风破.jpg",
