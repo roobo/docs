@@ -245,6 +245,8 @@ Notes<br>
   }
 ```
 
+<hr>
+
 ### simpleResponse Object
 
 Parameter  | Description  |  type | required
