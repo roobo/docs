@@ -155,25 +155,23 @@ Accept-Charset : utf-8
         ]
       },
       "outputDisplay": {
-        "items": [
-          {
-            "simpleResponse": {
-              "ssml": "<speak>北京今天多云，气温23度到35度，东南风2级<audio>https://ai.roobo.com/weather/wind_2.mp3</audio></speak>",
-              "displayText": "多云，气温23度到35度，东南风2级"
-            }
-          },
-          {
-            "card": {
-              "type": "Standard",
-              "title": "北京天气",
-              "content": "多云，气温23度到35度，东南风2级",
-              "image": {
-                "url": "www.roobo.com/aicloud/skills/weather/cloudy.jpg",
-                "altText": "Image alternate text"
-              }
-            }
+        "simpleResponse": {
+          "ssml": "<speak>北京今天多云，气温23度到35度，东南风2级<audio>https://ai.roobo.com/weather/wind_2.mp3</audio></speak>",
+          "textToDisplay": "多云，气温23度到35度，东南风2级"
+        },
+        "card": {
+          "type": "Standard",
+          "title": "北京天气",
+          "content": "多云，气温23度到35度，东南风2级",
+          "image": {
+            "bulletScreen": {
+              "period": 3000,
+              "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
+              "text": "十二个赞"
+            },
+            "url": "www.roobo.com/aicloud/skills/weather/cloudy.jpg"
           }
-        ],
+        },
         "suggestions": [
           {
             "title": "明天"
@@ -181,7 +179,11 @@ Accept-Charset : utf-8
           {
             "title": "后天"
           }
-        ]
+        ],
+        "timer": {
+          "period": 10000,
+          "expectEvent": "ROSAI.EnterEvent"
+        }
       },
       "data": {
         "city": "北京",
@@ -203,10 +205,10 @@ Results 中每一个元素是一个Result Object
 
 | Parameter    | Description  | type    | required |
 | ------------ | ----------------- | ---------------- | -------- |
-| hint         | legacy field, deprecated    | string   | true |
-| formatType   | legacy field, deprecated, value: text/audio | string | false  |
+| hint         | tts, legacy field, deprecated | string   | true |
 | outputSpeech | 针对无屏设备的语音展示 | Object  | false |
 | outputDisplay | 针对有屏设备的展示 | Object | false |
+| data | 技能返回的所有原始数据  | Object  | false  |
 
 ### outputSpeech Object
 
@@ -221,30 +223,13 @@ source | output speech 的内容，根据type来解析<br>- PlainText: 输出tts
 
 Parameter  | Description  |  type | required
 --|--|--|--
-items | 有屏设备的显示信息，一般包含简单输出和card，一般不要超过2个元素。<br>- simpleResponse: 包含展示的文字(**textToDisplay**)和需要说出的ssml(**ssml**)或tts(**textToSpeech**). ssml和textToSpeech不能同时出现。 <br>- card: type支持“Txt“, “Standard“, "Images", "List", "Timer", "BulletScreen" (待续...) |  Object Array | false
+simpleResponse | simpleResponse: 包含展示的文字(**textToDisplay**)和需要说出的ssml(**ssml**)或tts(**textToSpeech**). ssml和textToSpeech不能同时出现。 |  Object | false
+card  | type支持“Txt“, “Standard“, "Images", "List", "Timer", "BulletScreen" (待续...) | Object | false
 suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | Object Array | false
+timer  | 计时信息，预期端上会给云端发指定的事件  |  object | false
 
-Notes<br>
-- 一个response回复里建议最多包含两个simpleResponse对象和最多一个card对象。
-- items 数组里的元素在端上是有顺序的。即端上收到解析outputDisplay后，先执行第一个元素的内容，接下来再执行第二个元素的内容。
-- items 数组里的每一个元素是simpleResponse和card对象的组合，它们是无顺序的。对于如下一个item元素在播放音乐的同时显示标准图片卡片。
-- 每次交互，云端返回给端上的response，不一定都会带上card。对于不带card的response，端上不要清除上一次交互返回的response里的card展示，以做到状态保持。对于端上接收到带card的response，端上替换目前在展示的card展示。
-```
-  {
-    "simpleResponse": {
-      "audio": "https://ai.roobo.com/song/东风破.wav"
-    },
-    "card": {
-      "type": "Standard",
-      "title": "东风破",
-      "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
-      "image": {
-        "url": "https://ai.roobo.com/image/东风破.jpg",
-        "altText": "music 东风破"
-      }
-    }
-  }
-```
+<br>
+**Notes**: 每次交互，云端返回给端上的response，不一定都会带上card。对于不带card的response，端上不要清除上一次交互返回的response里的card展示，以做到状态保持。对于端上接收到带card的response，端上替换目前在展示的card展示。
 
 ### simpleResponse Object
 
@@ -281,11 +266,12 @@ title  | 卡片标题 |  string | true
 content  | 卡片内容  | string  | true
 image  | 卡片图片对象  | object |  true
 
-#### Standard card image Object
+#### image Object
 
 Parameter  | Description  |  type | required
 --|--|--|--
-imageUrl  | 图片url |  string | true
+url  | 图片url |  string | true
+bulletScreen  | 弹幕信息  | object  |  false
 
 Standard card example:
 ```
@@ -294,7 +280,12 @@ Standard card example:
   "title": "东风破",
   "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
   "image": {
-    "url": "https://ai.roobo.com/image/东风破.jpg"
+    "url": "https://ai.roobo.com/image/东风破.jpg",
+    "bulletScreen": {
+      "period": 3000,
+      "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
+      "text": "十二个赞"
+    },
   }
 ```
 
@@ -352,14 +343,14 @@ List card example:
 }
 ```
 
-#### Timer card Object
+#### Timer Object
 
 Parameter  | Description  |  type | required
 --|--|--|--
 type  | 卡片类型，固定值为"Timer"  |  string | true
 title  | 定时卡片标题 |  string | false
 period  | 定时时长, 单位为ms  | int64  | true
-expectEvent | 倒计时结束时期望端上发送的事件  | string |  true
+expectEvent | 倒计时结束时期望端上发送的事件  | string |  false
 imageUrl  | 倒计时期间展现的图片，如gif，jpg | string |  false
 
 Timer card example:
@@ -370,25 +361,6 @@ Timer card example:
   "period": 10000,
   "expectEvent": "ROSAI.EnterEvent",
   "imageUrl": "https://ai.roobo.com/image/happy_new_year.jpg"
-}
-```
-
-#### BulletScreen card Object
-
-Parameter  | Description  |  type | required
---|--|--|--
-type  | 卡片类型，固定值为"BulletScreen"，弹幕卡片 | string | true
-period  | 显示弹幕的时长, 单位为ms  | int64  | true
-imageUrl | 弹幕图片内容，如：gif，jpg | string |  false
-text  | 弹幕文字, imageUrl和text至少存在一个 | string | false
-
-BulletScreen card example:
-```
-"card": {
-  "type": "Timer",
-  "period": 3000,
-  "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
-  "text": "十二个赞"
 }
 ```
 
