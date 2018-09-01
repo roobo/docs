@@ -327,6 +327,8 @@ images card example:
 }
 ```
 
+<hr>
+
 ### Suggestions Object
 
 引导用户进行下一轮对话的提示样例。
