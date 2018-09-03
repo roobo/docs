@@ -235,7 +235,7 @@ suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文�
 type | 指定该directive的类型,固定值为“ROSAI.EVENT” |  string | true
 event | event对象，包含事件名(name)和端上处理事件的等待时间(period，单位ms) | string | true
 
-##### 文本卡片
+#### 文本卡片
 
 Parameter  | Description  |  type | required
 --|--|--|--
@@ -301,7 +301,7 @@ images card example:
 }
 ```
 
-##### 列表卡片
+#### 列表卡片
 
 Parameter  | Description  |  type | required
 --|--|--|--
@@ -333,7 +333,7 @@ List card example:
 }
 ```
 
-##### Suggestions Object
+#### Suggestions Object
 
 引导用户进行下一轮对话的提示样例。
 
