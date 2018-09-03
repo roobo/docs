@@ -261,6 +261,24 @@ title  | 卡片标题 |  string | true
 content  | 卡片内容  | string  | true
 image  | 图片对象  | [image object array](#图片对象) |  true
 
+
+Standard card example:
+```
+"card": {
+  "type": "Standard",
+  "title": "东风破",
+  "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
+  "image": {
+    "url": "https://ai.roobo.com/image/东风破.jpg",
+    "bulletScreen": {
+      "period": 3000,
+      "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
+      "text": "十二个赞"
+    }
+  }
+}
+```
+
 #### 图片卡片
 
 Parameter  | Description  |  type | required
@@ -326,20 +344,3 @@ Parameter  | Description  |  type | required
 --|--|--|--
 url  | 图片url |  string | true
 bulletScreen  | 弹幕信息  | object  |  false
-
-Standard card example:
-```
-"card": {
-  "type": "Standard",
-  "title": "东风破",
-  "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
-  "image": {
-    "url": "https://ai.roobo.com/image/东风破.jpg",
-    "bulletScreen": {
-      "period": 3000,
-      "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
-      "text": "十二个赞"
-    }
-  }
-}
-```
