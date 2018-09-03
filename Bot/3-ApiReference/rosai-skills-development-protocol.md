@@ -154,37 +154,35 @@ Accept-Charset : utf-8
           }
         ]
       },
-      "outputDisplay": {
-        "simpleResponse": {
-          "ssml": "<speak>北京今天多云，气温23度到35度，东南风2级<audio>https://ai.roobo.com/weather/wind_2.mp3</audio></speak>",
-          "textToDisplay": "多云，气温23度到35度，东南风2级"
-        },
-        "card": {
-          "type": "Standard",
-          "title": "北京天气",
-          "content": "多云，气温23度到35度，东南风2级",
-          "image": {
-            "bulletScreen": {
-              "period": 3000,
-              "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
-              "text": "十二个赞"
-            },
-            "url": "www.roobo.com/aicloud/skills/weather/cloudy.jpg"
-          }
-        },
-        "suggestions": [
-          {
-            "title": "明天"
+      "directives": [
+        {
+          "type": "Display.Customized",
+          "hint": "多云，气温23度到35度，东南风2级",
+          "card": {
+            "type": "Standard",
+            "title": "北京天气",
+            "content": "多云，气温23度到35度，东南风2级",
+            "image": {
+              "bulletScreen": {
+                "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
+                "text": "赞"
+              },
+              "url": "www.roobo.com/aicloud/skills/weather/cloudy.jpg"
+            }
           },
-          {
-            "title": "后天"
+          "suggestions": [
+            "明天",
+            "后天"
+          ]
+        },
+        {
+          "type": "ROSAI.EVENT",
+          "event": {
+            "name": "ROSAI.TimeoutEvent",
+            "period": 10000
           }
-        ],
-        "timer": {
-          "period": 10000,
-          "expectEvent": "ROSAI.EnterEvent"
         }
-      },
+      ],
       "data": {
         "city": "北京",
         "date": "2018-06-21",
@@ -199,16 +197,16 @@ Accept-Charset : utf-8
 
 ### Results Array
 
-Results 中每一个元素是一个Result Object
+Results 中每一个元素是一个Result object
 
 ### Result Object
 
 | Parameter    | Description  | type    | required |
 | ------------ | ----------------- | ---------------- | -------- |
 | hint         | tts, legacy field, deprecated | string   | true |
-| outputSpeech | 针对无屏设备的语音展示 | Object  | false |
-| outputDisplay | 针对有屏设备的展示 | Object | false |
-| data | 技能返回的所有原始数据  | Object  | false  |
+| outputSpeech | 语音输出 | object  | false |
+| directives | 针对给定接口的设备级响应的指令数组，如ROSAI.EVENT, Display.Customized | object array | false |
+| data | 技能返回的所有原始数据  | object  | false  |
 
 ### outputSpeech Object
 
@@ -216,31 +214,28 @@ Results 中每一个元素是一个Result Object
 
 Parameter  | Description  |  type | required
 --|--|--|--
-type | 表示output speech的type, 有效的type: "PlainText"，"SSML" |  string | true
-source | output speech 的内容，根据type来解析<br>- PlainText: 输出tts;<br>- SSML: 符合ssml语法的声音输出方案 | string | true
+type | 表示output speech的type, 有效的type: "PlainText"，"SSML", "Audio" |  string | true
+source | output speech 的内容，根据type来解析<br>- PlainText: 输出tts;<br>- SSML: 符合ssml语法的声音输出方案;<br>- Audio: 输出音频文件 | string | true
 
-### outputDisplay Object
+### display directive object
+
+显示指令(display directive Object)在directives字段里只允许有一个
 
 Parameter  | Description  |  type | required
 --|--|--|--
-simpleResponse | simpleResponse: 包含展示的文字(**textToDisplay**)和需要说出的ssml(**ssml**)或tts(**textToSpeech**). ssml和textToSpeech不能同时出现。 |  Object | false
-card  | type支持“Txt“, “Standard“, "Images", "List", "Timer", "BulletScreen" (待续...) | Object | false
-suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | Object Array | false
-timer  | 计时信息，预期端上会给云端发指定的事件  |  object | false
+type | 指定该directive的类型 |  string | true
+hint | 屏幕上显示的提示文字 | string | false
+card  | type支持“Txt“, “Standard“, "Images", "List", "Timer", "BulletScreen" (待续...) | object | false
+suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | string array | false
 
 <br>
 **Notes**: 每次交互，云端返回给端上的response，不一定都会带上card。对于不带card的response，端上不要清除上一次交互返回的response里的card展示，以做到状态保持。对于端上接收到带card的response，端上替换目前在展示的card展示。
 
-### simpleResponse Object
+### event directive object
+type | 指定该directive的类型,固定值为“ROSAI.EVENT” |  string | true
+event | event对象，包含事件名(name)和端上处理事件的等待时间(period，单位ms) | string | true
 
-Parameter  | Description  |  type | required
---|--|--|--
-textToSpeech  | 用来发声的普通文本，用来转换成tts，不能和ssml字段同时存在 |  string | false
-ssml  |  ssml格式的内容，不能和textToSpeech字段同时存在，例： `<speak>北京今天多云，东南风2级<audio>https://ai.roobo.com/weather/wind_2.mp3</audio></speak>` |  string | false
-textToDisplay  | 用来展示的文本  | string  | false
-audio  | 音频资源，存放一个音频url，例：https://ai.roobo.com/weather/wind_2.mp3  |  string | false
-
-### 文本卡片
+##### 文本卡片
 
 Parameter  | Description  |  type | required
 --|--|--|--
@@ -257,44 +252,21 @@ simple card example:
 }
 ```
 
-#### image Object
-
-Parameter  | Description  |  type | required
---|--|--|--
-url  | 图片url |  string | true
-bulletScreen  | 弹幕信息  | object  |  false
-
-Standard card example:
-```
-"card": {
-  "type": "Standard",
-  "title": "东风破",
-  "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
-  "image": {
-    "url": "https://ai.roobo.com/image/东风破.jpg",
-    "bulletScreen": {
-      "period": 3000,
-      "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
-      "text": "十二个赞"
-    },
-  }
-```
-
-### 标准卡片
+#### 标准卡片
 
 Parameter  | Description  |  type | required
 --|--|--|--
 type  | 卡片类型，固定值为"Standard"  |  string | true
 title  | 卡片标题 |  string | true
 content  | 卡片内容  | string  | true
-image  | 图片对象  | [image object array](#image Object) |  true
+image  | 图片对象  | [image object array](#图片对象) |  true
 
-### 图片卡片
+#### 图片卡片
 
 Parameter  | Description  |  type | required
 --|--|--|--
 type  | 卡片类型，固定值为"Images"  |  string | true
-list  | 图片对象数组  | [image object array](#image Object) |  true
+list  | 图片对象数组  | [image object array](#图片对象) |  true
 
 images card example:
 ```
@@ -311,7 +283,7 @@ images card example:
 }
 ```
 
-#### List card Object
+##### 列表卡片
 
 Parameter  | Description  |  type | required
 --|--|--|--
@@ -343,27 +315,31 @@ List card example:
 }
 ```
 
-#### Timer Object
+##### Suggestions Object
+
+引导用户进行下一轮对话的提示样例。
+
+
+##### 图片对象
 
 Parameter  | Description  |  type | required
 --|--|--|--
-type  | 卡片类型，固定值为"Timer"  |  string | true
-title  | 定时卡片标题 |  string | false
-period  | 定时时长, 单位为ms  | int64  | true
-expectEvent | 倒计时结束时期望端上发送的事件  | string |  false
-imageUrl  | 倒计时期间展现的图片，如gif，jpg | string |  false
+url  | 图片url |  string | true
+bulletScreen  | 弹幕信息  | object  |  false
 
-Timer object example:
+Standard card example:
 ```
 "card": {
-  "type": "Timer",
-  "title": "Happy New Year",
-  "period": 10000,
-  "expectEvent": "ROSAI.EnterEvent",
-  "imageUrl": "https://ai.roobo.com/image/happy_new_year.jpg"
+  "type": "Standard",
+  "title": "东风破",
+  "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
+  "image": {
+    "url": "https://ai.roobo.com/image/东风破.jpg",
+    "bulletScreen": {
+      "period": 3000,
+      "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
+      "text": "十二个赞"
+    }
+  }
 }
 ```
-
-### Suggestions Object
-
-引导用户进行下一轮对话的提示样例。
