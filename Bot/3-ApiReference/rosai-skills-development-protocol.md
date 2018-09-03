@@ -257,15 +257,6 @@ simple card example:
 }
 ```
 
-### 标准卡片
-
-Parameter  | Description  |  type | required
---|--|--|--
-type  | 卡片类型，固定值为"Standard"  |  string | true
-title  | 卡片标题 |  string | true
-content  | 卡片内容  | string  | true
-image  | 卡片图片对象  | object |  true
-
 #### image Object
 
 Parameter  | Description  |  type | required
@@ -289,12 +280,21 @@ Standard card example:
   }
 ```
 
+### 标准卡片
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type  | 卡片类型，固定值为"Standard"  |  string | true
+title  | 卡片标题 |  string | true
+content  | 卡片内容  | string  | true
+image  | 图片对象  | [image object array](#image Object) |  true
+
 ### 图片卡片
 
 Parameter  | Description  |  type | required
 --|--|--|--
 type  | 卡片类型，固定值为"Images"  |  string | true
-list  | 图片对象数组  | image array objects |  true
+list  | 图片对象数组  | [image object array](#image Object) |  true
 
 images card example:
 ```
@@ -316,7 +316,7 @@ images card example:
 Parameter  | Description  |  type | required
 --|--|--|--
 type  | 卡片类型，固定值为"List"  |  string | true
-list  | 卡片对象列表  | card array objects |  true
+list  | 标准卡片对象数组  | [标准卡片](# 标准卡片) array |  true
 
 List card example:
 ```
@@ -353,7 +353,7 @@ period  | 定时时长, 单位为ms  | int64  | true
 expectEvent | 倒计时结束时期望端上发送的事件  | string |  false
 imageUrl  | 倒计时期间展现的图片，如gif，jpg | string |  false
 
-Timer card example:
+Timer object example:
 ```
 "card": {
   "type": "Timer",
