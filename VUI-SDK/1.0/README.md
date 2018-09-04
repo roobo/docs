@@ -86,7 +86,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
     | setTTSType | 设置TTS在线/离线模式 |是|
     | setTTSSpeaker | 如果TTS采用离线方式，这里设置是发音人。如果是采用在线方式，这是设置的是TTS语言 |否(默认"Li-Li")|
     | setAudioGenerator() | 设置语音识别的音源,设置为RooboAECRecorder,是带AEC功能 |是|
-    | setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景 | 否 |
+    | setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景;如果用户的SN号是预分配的模式,就必须调用此接口设置SN号 | 否 |
     | setTokenType() | 设置token的类型,默认是内部维护token,如果是外部设置token，同时需要设置setDeviceInfo()的信息 | 否 |
     | setDeviceInfo() | 设置SN号和token,同时需要设置setTokenType(VUIApi.TokenType.TYPE_TOKEN_EXTERNAL_SETTING) | 否 |
     
