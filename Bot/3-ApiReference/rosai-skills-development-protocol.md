@@ -205,8 +205,8 @@ Results 中每一个元素是一个Result object
 | ------------ | ----------------- | ---------------- | -------- |
 | hint         | tts, legacy field, deprecated | string   | true |
 | outputSpeech | 语音输出 | object  | false |
-| directives | 针对给定接口的设备级响应的指令数组，如ROSAI.EVENT, Display.Customized | object array | false |
-| data | 技能返回的所有原始数据  | object  | false  |
+| directives | 针对给定接口的设备级响应的指令数组，如ROSAI.EVENT, Display.Customized | directive object array | false |
+| data | bot返回的所有原始数据  | object  | false  |
 
 ### outputSpeech Object
 
@@ -229,9 +229,15 @@ card  | type支持“Txt“, “Standard“, "Images", "List", "Timer", "BulletS
 suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | string array | false
 
 <br>
-**Notes**: 每次交互，云端返回给端上的response，不一定都会带上card。对于不带card的response，端上不要清除上一次交互返回的response里的card展示，以做到状态保持。对于端上接收到带card的response，端上替换目前在展示的card展示。
+**Notes**:<br>
+每次交互，云端返回给端上的response，不一定都会带上card。<br>
+对于不带card的response，端上不要清除上一次交互返回的response里的card展示，以做到状态保持。<br>
+对于端上接收到带card的response，端上替换目前在展示的card展示。
 
 ### event directive object
+
+Parameter  | Description  |  type | required
+--|--|--|--
 type | 指定该directive的类型,固定值为“ROSAI.EVENT” |  string | true
 event | event对象，包含事件名(name)和端上处理事件的等待时间(period，单位ms) | string | true
 
@@ -259,8 +265,7 @@ Parameter  | Description  |  type | required
 type  | 卡片类型，固定值为"Standard"  |  string | true
 title  | 卡片标题 |  string | true
 content  | 卡片内容  | string  | true
-image  | 图片对象  | [image object array](#图片对象) |  true
-
+image  | 图片对象  | [image object](#图片对象) |  true
 
 Standard card example:
 ```
@@ -284,7 +289,7 @@ Standard card example:
 Parameter  | Description  |  type | required
 --|--|--|--
 type  | 卡片类型，固定值为"Images"  |  string | true
-list  | 图片对象数组  | [image object array](#图片对象) |  true
+list  | 图片对象数组  | [image object](#图片对象) array |  true
 
 images card example:
 ```
