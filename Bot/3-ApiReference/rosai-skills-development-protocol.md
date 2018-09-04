@@ -15,7 +15,7 @@
 		- [display directive Object](#display-directive-object)
 		  - [文本卡片](#文本卡片)
 		  - [标准卡片](#标准卡片)
-        - [图片对象](#图片对象)
+            - [图片对象](#图片对象)
 		  - [图片卡片](#图片卡片)
 		  - [列表卡片](#列表卡片)
 		  - [Suggestions Object](#Suggestions-Object)
