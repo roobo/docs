@@ -12,7 +12,14 @@
 		- [Results Array](#results-array)
 		- [Result Object](#result-object)
 		- [outputSpeech Object](#outputspeech-object)
-		- [outputDisplay Object](#outputdisplay-object)
+		- [display directive Object](#display-directive-object)
+		  - [文本卡片](#文本卡片)
+		  - [标准卡片](#标准卡片)
+        - [图片对象](#图片对象)
+		  - [图片卡片](#图片卡片)
+		  - [列表卡片](#列表卡片)
+		  - [Suggestions Object](#Suggestions-Object)
+		- [event directive object](#event-directive-object)
 
 <!-- /TOC -->
 
@@ -203,7 +210,7 @@ Results 中每一个元素是一个Result object
 
 | Parameter    | Description  | type    | required |
 | ------------ | ----------------- | ---------------- | -------- |
-| hint         | tts, legacy field, deprecated | string   | true |
+| hint         | tts, legacy field, deprecated | string   | false |
 | outputSpeech | 语音输出 | object  | false |
 | directives | 针对给定接口的设备级响应的指令数组，如ROSAI.EVENT, Display.Customized | directive object array | false |
 | data | bot返回的所有原始数据  | object  | false  |
@@ -311,7 +318,7 @@ images card example:
 Parameter  | Description  |  type | required
 --|--|--|--
 type  | 卡片类型，固定值为"List"  |  string | true
-list  | 标准卡片对象数组  | [标准卡片](# 标准卡片) array |  true
+list  | 标准卡片对象数组  | [标准卡片](#标准卡片) array |  true
 
 List card example:
 ```
