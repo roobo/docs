@@ -277,6 +277,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
 400 | BadRequest
 401 | Unauthorized
 402 | UnGranted
+410 | 公私钥校验检查失败;请联系项目负责人check公钥信息
 500 | Internal
 501 | NotSupported
 503 | TooManyRequests
@@ -295,6 +296,8 @@ VUIApi.getInstance().init(context, initParam,initListener);
 615 | AsrStreamingTimeOut int （用户传输音频过程中存在超过，5s钟未传输数据）
 901 | no network
 900 | unkown error,please check the exception info in log
+5005 | deny access;如果是预分配SN号的模式;请check是否调用了setUserInfo函数,设置了SN号;否则联系项目负责人check是否开通了权限
+5005 | app config not found; 请联系项目负责人开通相关权限
 10001 | 初始化language错误 
 10002 | 重复初始化
 10101 | 发送语音数据时 无法解析IP地址
