@@ -233,7 +233,7 @@ Parameter  | Description  |  type | required
 --|--|--|--
 type | 指定该directive的类型 |  string | true
 hint | 屏幕上显示的提示文字 | string | false
-card  | type支持“Txt“, “Standard“, "Images", "List", "Timer" (待续...) | object | false
+card  | type支持“Text“, “Standard“, "Images", "List", "Timer" (待续...) | object | false
 suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | string array | false
 
 <br>
@@ -253,14 +253,14 @@ event | event对象，包含事件名(name)和端上处理事件的等待时间(
 
 Parameter  | Description  |  type | required
 --|--|--|--
-type  | 卡片类型，固定值为"Txt"  |  string | true
+type  | 卡片类型，固定值为"Text"  |  string | true
 title  | 卡片标题 |  string | true
 content  | 卡片内容  | string  | true
 
 simple card example:
 ```
 "card": {
-  "type": "Txt",
+  "type": "Text",
   "title": "北京天气",
   "content": "多云，气温23度到35度，东南风2级"
 }
