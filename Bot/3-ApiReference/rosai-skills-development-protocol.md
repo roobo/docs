@@ -305,6 +305,7 @@ Parameter  | Description  |  type | required
 --|--|--|--
 imageUrl  | 弹幕图片url |  string | false
 text  | 弹幕文字  | string  |  false
+position  |  弹幕位置，支持 “top”, "buttom", "left", "right", "center", "full", "top-left", "top-right", "bottom-left", "bottom-right", 默认是"bottom" |  string | false 
 period  | 弹幕显示时间  | int  |  false
 
 #### 图片卡片
