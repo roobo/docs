@@ -16,6 +16,7 @@
 		  - [文本卡片](#文本卡片)
 		  - [标准卡片](#标准卡片)
             - [图片对象](#图片对象)
+            - [弹幕对象](#弹幕对象)
 		  - [图片卡片](#图片卡片)
 		  - [列表卡片](#列表卡片)
 		  - [Suggestions Object](#Suggestions-Object)
@@ -291,6 +292,21 @@ Standard card example:
 }
 ```
 
+##### 图片对象
+
+Parameter  | Description  |  type | required
+--|--|--|--
+url  | 图片url |  string | true
+bulletScreen  | 弹幕信息  | [bulletScreen](#弹幕对象) object  |  false
+
+##### 弹幕对象
+
+Parameter  | Description  |  type | required
+--|--|--|--
+imageUrl  | 弹幕图片url |  string | false
+text  | 弹幕文字  | string  |  false
+period  | 弹幕显示时间  | int  |  false
+
 #### 图片卡片
 
 Parameter  | Description  |  type | required
@@ -348,11 +364,3 @@ List card example:
 #### Suggestions Object
 
 引导用户进行下一轮对话的提示样例。
-
-
-##### 图片对象
-
-Parameter  | Description  |  type | required
---|--|--|--
-url  | 图片url |  string | true
-bulletScreen  | 弹幕信息  | object  |  false
