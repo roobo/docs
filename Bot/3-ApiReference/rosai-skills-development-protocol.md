@@ -232,7 +232,7 @@ Parameter  | Description  |  type | required
 --|--|--|--
 type | 指定该directive的类型 |  string | true
 hint | 屏幕上显示的提示文字 | string | false
-card  | type支持“Txt“, “Standard“, "Images", "List", "Timer", "BulletScreen" (待续...) | object | false
+card  | type支持“Txt“, “Standard“, "Images", "List", "Timer" (待续...) | object | false
 suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | string array | false
 
 <br>
