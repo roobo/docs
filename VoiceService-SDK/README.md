@@ -8,23 +8,23 @@ VoiceService-SDK 开发指南v1.0.0
 [2.使用说明](#使用说明)
 * [2.1 准备](#准备)
 * [2.2 主要流程](#主要流程)
-* [2.3 使用步骤](#使用步骤)
+* [2.3 开发步骤](#使用步骤)
 
 [3.错误码对应表](#错误码对应表)
 
 ### 概述
-VoiceService-SDK运行在Android平台的SDK，旨在为用户提供在线的语音听写、语义分析及语音合成的能力，目前支持语言中文和英文。详细的接口说明可参考[接口文档](http://htmlpreview.github.com/?https://github.com/roobo/docs/blob/master/VoiceService-SDK/javadoc/index.html)
+VoiceService-SDK运行在嵌入式平台的SDK，旨在为用户提供在线的语音听写、语义分析及语音合成,实时翻译的能力,，目前支持语言中文和英文。详细的接口说明可参考
 
 ### 使用说明
 #### 准备
- 1. 账号申请，账号通常包括agentID，agentToken，如果是Roobo分配的设备ID，则需要同时拿到clientID。
- 2. SDK及demo获取，目前SDK是以aar的形式提供，IDE需要用AndroidStudio。
+ 1. 账号申请，账号通常包括agentID，agentToken，如果是Roobo分配的设备SN，则需要同时拿到设备的SN号。
+ 2. SDK及demo获取，需要提供相应的toolchain,目前输出SDK可以提供动态库和静态库。
 #### 主要流程
 SDK主要流程如下：
 
 ![](/VoiceService-SDK/assets/workflow.png)
 
-#### 使用步骤
+#### 开发步骤
 1. 配置编译环境，将SDK的aar文件放入业务Module的libs文件夹下，并且配置编译选项
 ``` java
     repositories {
