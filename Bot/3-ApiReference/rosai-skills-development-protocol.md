@@ -141,7 +141,6 @@ Accept-Charset : utf-8
   },
   "results": [
     {
-      "hint": "北京今天多云，气温23度到35度，东南风2级",
       "outputSpeech": {
         "items": [
           {
@@ -247,7 +246,14 @@ suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文�
 Parameter  | Description  |  type | required
 --|--|--|--
 type | 指定该directive的类型,固定值为“ROSAI.EVENT” |  string | true
-event | event对象，包含事件名(name)和端上处理事件的等待时间(period，单位ms) | string | true
+event | event对象，包含事件名(name)和端上处理事件的等待时间(period，单位ms) | [event object](#event object) | true
+
+#### event object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+name | 事件名,该事件需在事件引擎已注册 |  string | true
+period | 端上处理事件的等待时间 | int | true
 
 #### 文本卡片
 
@@ -305,8 +311,8 @@ Parameter  | Description  |  type | required
 --|--|--|--
 imageUrl  | 弹幕图片url |  string | false
 text  | 弹幕文字  | string  |  false
-position  |  弹幕位置，支持 “top”, "bottom", "left", "right", "center", "full", "top-left", "top-right", "bottom-left", "bottom-right", 默认是"bottom" |  string | false
-period  | 弹幕显示时间  | int  |  false
+position  |  弹幕位置，支持 “top”, "bottom", "left", "right", "center", "full", "top-left", "top-right", "bottom-left", "bottom-right", 默认是"bottom"（如果是"full"，建议端上做到50%透明度） |  string | false
+period  | 弹幕显示时间，单位为ms, 0代表不消失 | int  |  false
 
 #### 图片卡片
 
