@@ -172,7 +172,9 @@ Accept-Charset : utf-8
             "image": {
               "bulletScreen": {
                 "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
-                "text": "赞"
+                "text": "赞",
+                "imagePosition": "top",
+                "textPosition": "bottom"
               },
               "url": "www.roobo.com/aicloud/skills/weather/cloudy.jpg"
             }
@@ -311,7 +313,8 @@ Parameter  | Description  |  type | required
 --|--|--|--
 imageUrl  | 弹幕图片url |  string | false
 text  | 弹幕文字  | string  |  false
-position  |  弹幕位置，支持 “top”, "bottom", "left", "right", "center", "full", "top-left", "top-right", "bottom-left", "bottom-right", 默认是"bottom"（如果是"full"，建议端上做到50%透明度） |  string | false
+imagePosition  | 图片弹幕位置，支持 “top”, "bottom", "left", "right", "center", "full", "top-left", "top-right", "bottom-left", "bottom-right", 默认是"bottom"（如果是"full"，建议端上做到50%透明度） | string |  false
+textPosition  | 文字弹幕位置  |  string |  false
 period  | 弹幕显示时间，单位为ms, 0代表不消失 | int  |  false
 
 #### 图片卡片
