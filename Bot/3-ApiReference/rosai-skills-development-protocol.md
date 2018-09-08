@@ -197,7 +197,7 @@ Accept-Charset : utf-8
         "date": "2018-06-21",
         "weather": "多云",
         "quality": "轻度污染",
-        "temperature": "33"
+    		"temperature": "33"
       }
     }
   ]
@@ -212,10 +212,28 @@ Results 中每一个元素是一个Result object
 
 | Parameter    | Description  | type    | required |
 | ------------ | ----------------- | ---------------- | -------- |
-| hint         | tts, legacy field, deprecated | string   | false |
-| outputSpeech | 语音输出 | object  | false |
+| outputSpeech | 语音回复 | object  | false |
 | directives | 针对给定接口的设备级响应的指令数组，如ROSAI.EVENT, Display.Customized | directive object array | false |
-| data | bot返回的所有原始数据  | object  | false  |
+| hint    | 语音回复，后续语音输出建议使用outputSpeech | string   | false |
+| emotion | emotion object数组。情感识别结果 | string   | false |
+| data | bot返回的所有原始数据 | object  | false  |
+
+### emotion Object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type  | 情感识别对象，枚举类型["answer"-语音回复的情绪]  |  string | true
+level  | [情感值定义-一级情绪](Bot_3-ApiReference_emotion) |  int | true
+code  | [情感值定义-二级情绪](Bot_3-ApiReference_emotion) |  string | true
+
+simple card example:
+```
+{
+		"type": "answer",
+		"level": "1",
+		"code": "B001"
+}
+```
 
 ### outputSpeech Object
 
