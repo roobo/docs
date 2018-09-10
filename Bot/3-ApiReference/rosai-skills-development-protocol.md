@@ -197,7 +197,7 @@ Accept-Charset : utf-8
         "date": "2018-06-21",
         "weather": "多云",
         "quality": "轻度污染",
-    		"temperature": "33"
+    	"temperature": "33"
       }
     }
   ]
