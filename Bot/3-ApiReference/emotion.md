@@ -1,10 +1,3 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-	- [Level定义](#level定义)
-	- [Code定义](#code定义)
-
-<!-- /TOC -->
-
 ## Level定义
 一级情绪标识码， 分为16类， int型。
 
