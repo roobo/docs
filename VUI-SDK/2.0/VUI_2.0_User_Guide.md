@@ -2,41 +2,41 @@ README
 =
 
 ### 目录
-*1. VUISDK_V1.0 简介*  
-*2. 项目使用条件*  
-*3. Demo*  
-*4. 快速开始*  
-*5. 参数介绍*  
-*5. FAQ*  
+1. VUISDK_V1.0 简介  
+2. 项目使用条件  
+3. Demo  
+4. 快速开始  
+5. 参数介绍  
+6. FAQ  
 
 
-#1.VUISDK_V1.0 简介
+## 1.VUISDK_V1.0 简介
 
 **VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的一款包含基础语音能力和语音交互范式的软件开发包。VUI SDK连接roobo的语音语义服务平台，结合离线能力，给客户提供完整的语音系统开发能力支持。 
 基于VUI SDK及背后的语音语义开发平台，开发者可以：**
 
-> **1. 快速对接roobo AI平台，使用roobo全链路VUI服务。**  
-> **2. 接入单项或多项语音交互基本能力。**  
-> **3. 在已有的VUI交互方式上快速搭建业务逻辑。**  
-> **4. 选择已有的技能或者自定义新技能。**  
+**1. 快速对接roobo AI平台，使用roobo全链路VUI服务。**  
+**2. 接入单项或多项语音交互基本能力。**  
+**3. 在已有的VUI交互方式上快速搭建业务逻辑。**  
+**4. 选择已有的技能或者自定义新技能。**  
 
-#2. 项目使用条件
+## 2. 项目使用条件
 
 android 设备
 
 > **1. 联系商务申请ROSAI帐号并创建应用。**  
 > **2. 提供应用的的AgentId给商务，获取SDK和Demo。**  
 
-#3. Demo
+## 3. Demo
 **Demo中提供了最常用的三种模式。**
 
 >- **模式1：唤醒+VAD+ASR+TTS**  
 >- **模式2：VAD+ASR+TTS**  
 >- **模式3：ASR+TTS**  
 
-#4. 快速开始
+## 4. 快速开始
 
-- **现在以模式二为例开始我们的Demo。
+- **现在以模式二为例开始我们的Demo。  
 目前SDK是以aar形式提供，所以需要使用Android Studio开发。把"ratn-release-xx-online.aar"拷贝到Libs文件夹下。在muoudle的build.gradle文件中添加。**
 
 ``` gradle
@@ -49,6 +49,7 @@ dependencies {
 }
 ```
 - **我们需要你创建一个带有按钮的页面，就像这样**  
+
 ![image.png](https://upload-images.jianshu.io/upload_images/11080649-b5a3d5be07ea6582.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 - **然后我们需要初始化我们的VUI**  
@@ -152,7 +153,7 @@ InitListener  初始化回调**
 ```
 - **现在就可以运行你的App体验效果了。Have Fun！**  
 
-#5. 常见问题
+## 5. 常见问题
 
 
 
