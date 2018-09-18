@@ -223,6 +223,33 @@
 
 ## 4.1 ROSAI.EnterEvent_进入事件
 
+**进入单词app：**
+
+**request**:
+
+```
+ {
+    "event": {
+        "name": "ROSAI.EnterEvent",
+        "type": "dedicated",
+        "data": {
+            "service": "AiLiveDict"
+        }
+    },
+    "clientId": "4000007700000001",
+    "agentId": "GExZTRmMGY2NTg1N",
+    "token": "5cfe63e08559bceea7debc06fc5d7333"
+}
+```
+
+**response**:
+
+```
+```
+ 
+ 
+**进入具体课程或通关：**
+
 **request**:
 
 ```
