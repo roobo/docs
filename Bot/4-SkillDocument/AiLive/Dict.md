@@ -245,6 +245,71 @@
 **response**:
 
 ```
+"results": [
+        {
+            "hint": "好的",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "好的"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/lession1/home.jpg",
+                                "bulletScreen": {
+                                    "text": "水果1",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession2/home.jpg",
+                                "bulletScreen": {
+                                    "text": "交通1",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/gate1/homejpg",
+                                "bulletScreen": {
+                                    "text": "通关",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession3/home.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/lock/light_colour.jpg",
+                                    "imagePosition": "full"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession4/home.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/lock/light_colour.jpg",
+                                    "imagePosition": "full"
+                                }
+                            },
+                            {
+                                "url": "http://ip/gate2/home.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/lock/light_colour.jpg",
+                                    "imagePosition": "full"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
 ```
  
  
