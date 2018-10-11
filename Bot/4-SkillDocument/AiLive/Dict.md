@@ -20,31 +20,38 @@
  
  ```
  "results": [
-    {
-      "hint": "小朋友，想知道这张卡片用英语怎么读么？点击卡片试试吧！",
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "PlainText",
-            "source": "小朋友，想知道这张卡片用英语怎么读么？点击卡片试试吧！"
-          }
-        ]
-      },
-      "directives": [
         {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/apple/front-card.jpg"
-              }
+            "hint": "小朋友，想知道这张卡片用英语怎么读么？点击卡片试试吧！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，想知道这张卡片用英语怎么读么？点击卡片试试吧！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/apple/front-card.jpg"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 14,
+                    "code": "O001"
+                }
             ]
-          }
         }
-      ]
-    }
-  ]
+    ]
  ```
  
 ## 3.2 Wonder
@@ -55,42 +62,49 @@
   
   ```
    "results": [
-    {
-      "hint": "没关系，我们再来读一次吧！",
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "PlainText",
-            "source": "没关系，我们再来读一次吧！"
-          }
-        ]
-      },
-      "directives": [
         {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/apple/front-card.jpg"
-              }
+            "hint": "没关系，我们再来读一次吧！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "没关系，我们再来读一次吧！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/apple/front-card.jpg"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/mike/twinkle-card.jpg"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 12,
+                    "code": "M002"
+                }
             ]
-          }
-        },
-        {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/mike/twinkle-card.jpg"
-              }
-            ]
-          }
         }
-      ]
-    }
-  ]
+    ]
   ```
   
   
@@ -103,42 +117,49 @@
   
   ```
   "results": [
-    {
-      "hint": "小朋友，你真棒！",
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "PlainText",
-            "source": "小朋友，你真棒！"
-          }
-        ]
-      },
-      "directives": [
         {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/apple/front-card.jpg",
-                "bulletScreen": {
-                  "imageUrl": "http://ip/star/red-card.jpg",
-                  "imagePosition": "bottom"
+            "hint": "小朋友，你真棒！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，你真棒！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/apple/front-card.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/star/red-card.jpg",
+                                    "imagePosition": "bottom"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "ROSAI.EVENT",
+                    "event": {
+                        "name": "ROSAI.ContinueEvent",
+                        "period": 1000
+                    }
                 }
-              }
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 0,
+                    "code": "A001"
+                }
             ]
-          }
-        },
-        {
-          "type": "ROSAI.EVENT",
-          "event": {
-            "name": "Continue",
-            "period": 2000
-          }
         }
-      ]
-    }
-  ]
+    ]
   ```
   
   
@@ -150,71 +171,78 @@
   **response**:（回到首页）
   
   ```
-  "results": [
-    {
-      "hint": "好的",
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "PlainText",
-            "source": "好的"
-          }
-        ]
-      },
-      "directives": [
+ "results": [
         {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/lession1/home.jpg",
-                "bulletScreen": {
-                  "text": "水果1",
-                  "textPosition": "bottom"
+            "hint": "好的",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "好的"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/lession1/home.jpg",
+                                "bulletScreen": {
+                                    "text": "水果1",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession2/home.jpg",
+                                "bulletScreen": {
+                                    "text": "交通1",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/gate1/homejpg",
+                                "bulletScreen": {
+                                    "text": "通关",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession3/home.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/lock/light_colour.jpg",
+                                    "imagePosition": "full"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession4/home.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/lock/light_colour.jpg",
+                                    "imagePosition": "full"
+                                }
+                            },
+                            {
+                                "url": "http://ip/gate2/home.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/lock/light_colour.jpg",
+                                    "imagePosition": "full"
+                                }
+                            }
+                        ]
+                    }
                 }
-              },
-              {
-                "url": "http://ip/lession2/home.jpg",
-                "bulletScreen": {
-                  "text": "交通1",
-                  "textPosition": "bottom"
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 0,
+                    "code": "A001"
                 }
-              },
-              {
-                "url": "http://ip/gate1/homejpg",
-                "bulletScreen": {
-                  "text": "通关",
-                  "textPosition": "bottom"
-                }
-              },
-              {
-                "url": "http://ip/lession3/home.jpg",
-                "bulletScreen": {
-                  "imageUrl": "http://ip/lock/light_colour.jpg",
-                  "imagePosition": "full"
-                }
-              },
-              {
-                "url": "http://ip/lession4/home.jpg",
-                "bulletScreen": {
-                  "imageUrl": "http://ip/lock/light_colour.jpg",
-                  "imagePosition": "full"
-                }
-              },
-              {
-                "url": "http://ip/gate2/home.jpg",
-                "bulletScreen": {
-                  "imageUrl": "http://ip/lock/light_colour.jpg",
-                  "imagePosition": "full"
-                }
-              }
             ]
-          }
         }
-      ]
-    }
-  ]
+    ]
   ```
   
   
@@ -307,6 +335,13 @@
                         ]
                     }
                 }
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 0,
+                    "code": "A001"
+                }
             ]
         }
     ]
@@ -347,32 +382,39 @@
 **response**:
 
 ```
-"results": [
-    {
-      "hint": "小朋友，想知道这张卡片用英语怎么读么？点击卡片试试吧！",
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "PlainText",
-            "source": "小朋友，想知道这张卡片用英语怎么读么？点击卡片试试吧！"
-          }
-        ]
-      },
-      "directives": [
+    "results": [
         {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/apple/front-card.jpg"
-              }
+            "hint": "小朋友，想知道这张卡片用英语怎么读么？点击卡片试试吧！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，想知道这张卡片用英语怎么读么？点击卡片试试吧！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/apple/front-card.jpg"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 14,
+                    "code": "O001"
+                }
             ]
-          }
         }
-      ]
-    }
-  ]
+    ]
 ```
 
 
@@ -399,35 +441,35 @@
 
 ```
 "results": [
-    {
-      "hint": "apple，小朋友，想知道这张卡片中的单词长什么样子么？点击卡片试试吧！",
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "PlainText",
-            "source": "apple，小朋友，想知道这张卡片中的单词长什么样子么？点击卡片试试吧！"
-          }
-        ]
-      },
-      "directives": [
         {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/backgroud/no_color.jpg",
-                "bulletScreen": {
-                  "text": "apple",
-                  "textPosition": "center"
+            "hint": "apple，小朋友，想知道这张卡片中的单词长什么样子么？点击卡片试试吧！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "apple，小朋友，想知道这张卡片中的单词长什么样子么？点击卡片试试吧！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/backgroud/no_color.jpg",
+                                "bulletScreen": {
+                                    "text": "apple",
+                                    "textPosition": "center"
+                                }
+                            }
+                        ]
+                    }
                 }
-              }
             ]
-          }
         }
-      ]
-    }
-  ]
+    ]
 ```
 
 ## 4.3 ROSAI.TimeOutEvent_超时事件
@@ -494,42 +536,42 @@
 
 ```
 "results": [
-    {
-      "hint": "小朋友，想知道这张卡片用英语怎么读么？和我一起读吧！apple！该你啦！",
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "PlainText",
-            "source": "小朋友，想知道这张卡片用英语怎么读么？和我一起读吧！apple！该你啦！"
-          }
-        ]
-      },
-      "directives": [
         {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/apple/front-card.jpg"
-              }
+            "hint": "小朋友，想知道这张卡片用英语怎么读么？和我一起读吧！apple！该你啦！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，想知道这张卡片用英语怎么读么？和我一起读吧！apple！该你啦！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/apple/front-card.jpg"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/mike/twinkle-card.jpg"
+                            }
+                        ]
+                    }
+                }
             ]
-          }
-        },
-        {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/mike/twinkle-card.jpg"
-              }
-            ]
-          }
         }
-      ]
-    }
-  ]
+    ]
 ```
 
 
@@ -555,71 +597,78 @@
 **response**:（回到首页）
 
 ```
- "results": [
-    {
-      "hint": "好的",
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "PlainText",
-            "source": "好的"
-          }
-        ]
-      },
-      "directives": [
+  "results": [
         {
-          "type": "Display.Customized",
-          "card": {
-            "type": "Images",
-            "list": [
-              {
-                "url": "http://ip/lession1/home.jpg",
-                "bulletScreen": {
-                  "text": "水果1",
-                  "textPosition": "bottom"
+            "hint": "好的",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "好的"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/lession1/home.jpg",
+                                "bulletScreen": {
+                                    "text": "水果1",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession2/home.jpg",
+                                "bulletScreen": {
+                                    "text": "交通1",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/gate1/homejpg",
+                                "bulletScreen": {
+                                    "text": "通关",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession3/home.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/lock/light_colour.jpg",
+                                    "imagePosition": "full"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession4/home.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/lock/light_colour.jpg",
+                                    "imagePosition": "full"
+                                }
+                            },
+                            {
+                                "url": "http://ip/gate2/home.jpg",
+                                "bulletScreen": {
+                                    "imageUrl": "http://ip/lock/light_colour.jpg",
+                                    "imagePosition": "full"
+                                }
+                            }
+                        ]
+                    }
                 }
-              },
-              {
-                "url": "http://ip/lession2/home.jpg",
-                "bulletScreen": {
-                  "text": "交通1",
-                  "textPosition": "bottom"
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 0,
+                    "code": "A001"
                 }
-              },
-              {
-                "url": "http://ip/gate1/homejpg",
-                "bulletScreen": {
-                  "text": "通关",
-                  "textPosition": "bottom"
-                }
-              },
-              {
-                "url": "http://ip/lession3/home.jpg",
-                "bulletScreen": {
-                  "imageUrl": "http://ip/lock/light_colour.jpg",
-                  "imagePosition": "full"
-                }
-              },
-              {
-                "url": "http://ip/lession4/home.jpg",
-                "bulletScreen": {
-                  "imageUrl": "http://ip/lock/light_colour.jpg",
-                  "imagePosition": "full"
-                }
-              },
-              {
-                "url": "http://ip/gate2/home.jpg",
-                "bulletScreen": {
-                  "imageUrl": "http://ip/lock/light_colour.jpg",
-                  "imagePosition": "full"
-                }
-              }
             ]
-          }
         }
-      ]
-    }
-  ]
+    ]
 ```
 
 # 5. 典型流程
@@ -1249,7 +1298,7 @@
     ]
  ```
  
- **备注** 此时已经进入了测试阶段
+ **备注**:此时已经进入了测试阶段
  
  
 ### 5.10 小朋友语音回答
@@ -1389,7 +1438,7 @@
 
 **备注**:重复上述步骤，直到是本课程最后一个单词
 
-### 5.11 假设现在是该课程最后一个单词，并且小朋友答对了，客户端1s后发送ROSAI.ContinueEvent事件
+### 5.11 假设现在是该课程在测试阶段最后一个单词，并且小朋友答对了，客户端1s后发送ROSAI.ContinueEvent事件
 
 **request**:
 
