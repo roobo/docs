@@ -1,18 +1,36 @@
+* [1. 服务简介](#1)
+* [2. 槽位](#2)
+* [3. 意图](#3)
+* [3.1 Enter意图](#3.1)
+* [3.2 Wonder意图](#3.2)
+* [3.3 Match意图](#3.3)
+* [3.4 Exit意图](#3.4)
+* [4. 事件](#4)
+* [4.1 ROSAI.EnterEvent事件](#4.1)
+* [4.2 ROSAI.TouchEvent事件](#4.2)
+* [4.3 ROSAI.TimeoutEvent事件](#4.3)
+* [4.4 ROSAI.ContinueEvent事件](#4.4)
+* [4.5 ROSAI.ExitEvent事件](#4.5)
+* [5. 学练测流程示例](#5)
+* [6. 通关流程示例](#6)
 
-# 1. 服务简介
+
+
+
+<h1 id='1'>1. 服务简介</h1>
 
 单词互动在带屏设备上使用，采用VUI+GUI多模态交互，使小朋友在于机器人交互过程中，轻松愉快的掌握精心挑选的200个儿童必备常用词汇。
 
-# 2.槽位
+<h1 id='2'>2.槽位</h1>
 
 | **Slot\_Key** | **Description** | **Example** |
 | --- | --- | --- |
 | mode | 课程or通关 | 课程 |
 | num | 课程数or通关数 | 1 |
 
-# 3.意图
+<h1 id='3'>3.意图</h1>
 
-## 3.1 Enter
+<h2 id='3.1'>3.1 Enter</h2>
 
  **request**: 我要学单词**课程1**
  
@@ -54,7 +72,7 @@
     ]
  ```
  
-## 3.2 Wonder
+<h2 id='3.2'>3.2 Wonder</h2>
   
   **request**: 我不知道
   
@@ -107,9 +125,7 @@
     ]
   ```
   
-  
-  
-## 3.3 Match
+<h2 id='3.3'>3.3 Match</h2>
   
   **request**: apple
   
@@ -163,8 +179,7 @@
   ```
   
   
-  
-## 3.4 Exit
+<h2 id='3.4'>3.4 Exit</h2>
   
   **request**: 退出
   
@@ -246,10 +261,9 @@
   ```
   
   
-  
-# 4.事件
+<h1 id='4'>4. 事件</h1>
 
-## 4.1 ROSAI.EnterEvent_进入事件
+<h2 id='4.1'>4.1 ROSAI.EnterEvent_进入事件</h2>
 
 **进入单词app：**
 
@@ -417,8 +431,7 @@
     ]
 ```
 
-
-## 4.2 ROSAI.TouchEvent_点击事件
+<h2 id='4.2'>4.2 ROSAI.TouchEvent_点击事件</h2>
 
 **request**:
 
@@ -472,7 +485,8 @@
     ]
 ```
 
-## 4.3 ROSAI.TimeOutEvent_超时事件
+
+<h2 id='4.3'>4.3 ROSAI.TimeOutEvent_超时事件</h2>
 
 **request**:
 
@@ -512,8 +526,7 @@
     ]
 ```
 
-
-## 4.4 ROSAI.ContinueEvent_定时跳转事件
+<h2 id='4.4'>4.4 ROSAI.ContinueEvent_定时跳转事件</h2>
 
 **request**:
 
@@ -575,7 +588,7 @@
 ```
 
 
-## 4.5 ROSAI.ExitEvent_退出事件
+<h2 id='4.5'>4.5 ROSAI.ExitEvent_退出事件</h2>
 
 **request**:
 
@@ -671,7 +684,7 @@
     ]
 ```
 
-# 5. 典型流程
+<h1 id='5'>5. “学练测”流程</h1>
 
 ### 5.1 进入单词互动app（语音或Enter事件进入）
 
@@ -1588,4 +1601,371 @@
 
 **备注**:这里就是回到主页了。
 
-同理，对待通关流程。
+<h1 id='6'>6. “通关”流程</h1>
+
+### 6.1 小朋友说“我要学单词通关1”
+
+**request**：
+
+```
+{
+    "agentId":"GExZTRmMGY2NTg1N",
+    "token":"cdf6da8b3a7c2b652bbeaf720d3278b89689",
+    "sessionId":"4000007700000002",
+    "query":"我要学单词通关1"
+}
+```
+
+**response**:
+
+```
+"results": [
+        {
+            "hint": "小朋友，这张卡片用英语怎么读么？试试吧！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，这张卡片用英语怎么读么？试试吧！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/orange/front.jpg"
+                            },
+                            {
+                                "url": "http://ip/backgroud/no_color.jpg",
+                                "bulletScreen": {
+                                    "text": "orange",
+                                    "textPosition": "center"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/mike/twinkle-card.jpg"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 14,
+                    "code": "O002"
+                }
+            ]
+        }
+    ]
+```
+
+### 6.2 小朋友说“orange”
+
+**request**:
+
+```
+{
+    "agentId":"GExZTRmMGY2NTg1N",
+    "token":"cdf6da8b3a7c2b652bbeaf720d3278b89689",
+    "sessionId":"4000007700000002",
+    "query":"orange"
+}
+```
+**response**:
+
+```
+"results": [
+        {
+            "hint": "小朋友，这张卡片用英语怎么读么？试试吧！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，这张卡片用英语怎么读么？试试吧！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/bike/front-card.jpg"
+                            },
+                            {
+                                "url": "http://ip/backgroud/no_color.jpg",
+                                "bulletScreen": {
+                                    "text": "bike",
+                                    "textPosition": "center"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/mike/twinkle-card.jpg"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 14,
+                    "code": "O002"
+                }
+            ]
+        }
+    ]
+```
+
+### 6.3 小朋友说“我不知道”
+
+**request**:
+
+```
+{
+    "agentId":"GExZTRmMGY2NTg1N",
+    "token":"cdf6da8b3a7c2b652bbeaf720d3278b89689",
+    "sessionId":"4000007700000002",
+    "query":"我不知道"
+}
+```
+
+**response**:
+
+```
+"results": [
+        {
+            "hint": "小朋友，这张卡片用英语怎么读么？试试吧！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，这张卡片用英语怎么读么？试试吧！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/ship/front-card.jpg"
+                            },
+                            {
+                                "url": "http://ip/backgroud/no_color.jpg",
+                                "bulletScreen": {
+                                    "text": "ship",
+                                    "textPosition": "center"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/mike/twinkle-card.jpg"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 14,
+                    "code": "O002"
+                }
+            ]
+        }
+    ]
+```
+
+**备注**：一个通关包含前边两个课程的单词，现在一个课程是5个单词，所以一个通关共10个单词，重复上述步骤，直到最后一个单词
+
+
+### 6.4 假设目前是通过最后一个单词，并且是等待小朋友回复的状态
+
+**request**:（小朋友回答最后一个单词后，会计算学习成绩，显示勋章和红旗）
+
+```
+{
+    "agentId":"GExZTRmMGY2NTg1N",
+    "token":"cdf6da8b3a7c2b652bbeaf720d3278b89689",
+    "sessionId":"4000007700000002",
+    "query":"boat"
+}
+```
+
+**response**:
+
+```
+"results": [
+        {
+            "hint": "小朋友，表现不错！这一关的单词学得很好！我们继续挑战下一关吧！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，表现不错！这一关的单词学得很好！我们继续挑战下一关吧！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/medal/front-card.jpg"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/flag/2red-card.jpg"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "ROSAI.EVENT",
+                    "event": {
+                        "name": "ROSAI.ContinueEvent",
+                        "period": 1000
+                    }
+                }
+            ],
+            "emotions": [
+                {
+                    "type": "answer",
+                    "level": 0,
+                    "code": "A001"
+                }
+            ]
+        }
+    ]
+```
+
+### 6.5 客户端1s后发送ROSAI.ContinueEvent事件
+
+**request**:
+
+```
+{
+    "event": {
+        "name": "ROSAI.ContinueEvent",
+        "type": "dedicated",
+        "data" : {
+          "service": "AiLiveDict"
+        }
+    },
+    "clientId": "4000007700000002",
+    "agentId": "GExZTRmMGY2NTg1N",
+    "token": "3bb83ed5c756800c81b1635de10defc3"
+}
+```
+
+**response**: （回到单词互动首页）
+
+```
+"results": [
+        {
+            "hint": "小朋友，见到你真开心！我们一起来学单词吧！",
+            "outputSpeech": {
+                "items": [
+                    {
+                        "type": "PlainText",
+                        "source": "小朋友，见到你真开心！我们一起来学单词吧！"
+                    }
+                ]
+            },
+            "directives": [
+                {
+                    "type": "Display.Customized",
+                    "card": {
+                        "type": "Images",
+                        "list": [
+                            {
+                                "url": "http://ip/lession1/home.jpg",
+                                "bulletScreen": {
+                                    "text": "水果1",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession2/home.jpg",
+                                "bulletScreen": {
+                                    "text": "交通1",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/gate1/homejpg",
+                                "bulletScreen": {
+                                    "text": "通关",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession3/home.jpg",
+                                "bulletScreen": {
+                                    "text": "水果2",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/lession4/home.jpg",
+                                "bulletScreen": {
+                                    "text": "交通2",
+                                    "textPosition": "bottom"
+                                }
+                            },
+                            {
+                                "url": "http://ip/gate2/home.jpg",
+                                "bulletScreen": {
+                                    "text": "通关",
+                                    "textPosition": "bottom"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+```
