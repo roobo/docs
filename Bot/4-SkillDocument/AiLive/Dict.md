@@ -488,7 +488,7 @@
 ```
 
 
-<h2 id='4.3'>4.3 ROSAI.TimeOutEvent_超时事件</h2>
+<h2 id='4.3'>4.3 ROSAI.TimeoutEvent_超时事件</h2>
 
 **request**:
 
