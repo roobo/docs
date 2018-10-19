@@ -198,7 +198,14 @@ Accept-Charset : utf-8
         "weather": "多云",
         "quality": "轻度污染",
     	"temperature": "33"
-      }
+      },
+      "emotions": [
+          {
+              "type": "answer",
+              "level": 0,
+              "code": "A001"
+          }
+      ]
     }
   ]
 }
