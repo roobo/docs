@@ -22,14 +22,47 @@
 
 note: 不带location但是request里包含经纬度信息时，以当前经纬度查询poi信息
 
-| **Semantic** | **Description** | **Example** |
-| --- | --- | --- |
-| SearchHotspotByName | 查找热门地点+名称 | 国贸的便利蜂 、国贸的手机店|
-| SearchAroundByName | 查找周边的POI名称 | 查找周边的便利蜂、附近的物美超市 |
-| SearchByName | 查找POI名称 | 儿研所在哪、北京市的711 |
-| SearchHotspotByCategory | 查找热门地点+名称 | 国贸的加油站 、国贸的酒店 |
-| SearchAroundByCategory | 查找周边的POI分类 | 附近的餐厅 、附近的酒店|
-| SearchByCategory| 查找POI分类 | 哪里有酒店、哪里有医院 |
+<table>
+    <tr>
+        <td>Intent</td> 
+        <td>SubIntent</td> 
+        <td>Description</td> 
+        <td>Example</td> 
+   </tr>
+   <tr>
+        <td rowspan="6">Search</td>    
+        <td >SearchHotspotByName</td>  
+       <td >查找热门地点+名称</td>  
+       <td >国贸的便利蜂 、国贸的手机店</td> 
+    </tr>
+   <tr>
+        <td >SearchAroundByName</td>  
+       <td >查找周边的POI名称</td>  
+       <td >查找周边的便利蜂、附近的物美超市</td> 
+   </tr>
+   <tr>
+        <td >SearchByName</td>  
+       <td >查找POI名称</td>  
+       <td >儿研所在哪、北京市的711</td> 
+   </tr>
+     <tr>
+        <td >SearchHotspotByCategory</td>  
+       <td >查找热门地点+名称</td>  
+       <td >国贸的加油站 、国贸的酒店</td> 
+   </tr>
+        <tr>
+        <td >SearchAroundByCategory</td>  
+       <td >查查找周边的POI分类</td>  
+       <td >附近的餐厅 、附近的酒店</td> 
+   </tr>
+           <tr>
+        <td >SearchByCategory</td>  
+       <td >查找POI分类</td>  
+       <td >哪里有酒店、哪里有医院</td> 
+   </tr>
+    
+</table>
+
 
 # 4.返回字段说明
 
