@@ -61,6 +61,7 @@
 | index | content字段最后末尾诗句下标 | -1 | int |
 | length | 诗句总字数 | 20 | int |
 | lines | 诗句总句数 | 4 | int |
+| state | 用户回复正确与否标记 | right | string |
 
 
 ## 4.1 Learn_学
@@ -72,7 +73,30 @@ response:
 ```
   "results": [
     {
-      "hint": "跟我一起学吧，静夜思，唐代，李白，床前明月光，疑是地上霜，举头望明月，低头思故乡，知识需要重复记忆才能掌握哦，是重复学习、还是进入下一关呢？",
+      "hint": "跟我一起学吧，静夜思，唐朝，李白，床前明月光，疑是地上霜，举头望明月，低头思故乡，知识要多次记忆才能掌握，是重复学习？还是进入下一关？",
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "SSML",
+            "source": "<p>跟我一起学吧</p>\n<p>静夜思</p>\n<p><s>唐朝</s><s>李白</s></p>"
+          },
+          {
+            "type": "SSML",
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>\n<s>疑是<break time=\"100ms\" /><emphasis>地</emphasis>上霜</s>\n<s>举头<break time=\"100ms\" /><emphasis>望</emphasis>明月</s>\n<s>低头<break time=\"100ms\" /><emphasis>思</emphasis>故乡</s>"
+          },
+          {
+            "type": "PlainText",
+            "source": "知识要多次记忆才能掌握，是重复学习？还是进入下一关？"
+          }
+        ]
+      },
+      "emotions": [
+        {
+          "type": "answer",
+          "level": 11,
+          "code": "L001"
+        }
+      ],
       "data": {
         "author": [
           "李白"
@@ -84,28 +108,13 @@ response:
           "低头思故乡"
         ],
         "dynasty": [
-          "唐代"
+          "唐朝"
         ],
         "index": 3,
         "length": 20,
         "lines": 4,
+        "state": "",
         "title": "静夜思"
-      },
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "SSML",
-            "source": "<p>跟我一起学吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
-          },
-          {
-            "type": "SSML",
-            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>\n<s>疑是<break time=\"100ms\" /><emphasis>地</emphasis>上霜</s>\n<s>举头<break time=\"100ms\" /><emphasis>望</emphasis>明月</s>\n<s>低头<break time=\"100ms\" /><emphasis>思</emphasis>故乡</s>"
-          },
-          {
-            "type": "PlainText",
-            "source": "知识需要重复记忆才能掌握哦，是重复学习、还是进入下一关呢？"
-          }
-        ]
       }
     }
   ]
@@ -118,9 +127,32 @@ query：我要跟读静夜思
 response：
 
 ```
-  "results": [
+   "results": [
     {
-      "hint": "跟我一起读吧，静夜思，唐代，李白，床前明月光，轮到你拉",
+      "hint": "跟我读，静夜思，唐朝，李白，床前明月光，该你拉",
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "SSML",
+            "source": "<p>跟我读</p>\n<p>静夜思</p>\n<p><s>唐朝</s><s>李白</s></p>"
+          },
+          {
+            "type": "SSML",
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+          },
+          {
+            "type": "PlainText",
+            "source": "该你拉"
+          }
+        ]
+      },
+      "emotions": [
+        {
+          "type": "answer",
+          "level": 0,
+          "code": "A001"
+        }
+      ],
       "data": {
         "author": [
           "李白"
@@ -129,28 +161,13 @@ response：
           "床前明月光"
         ],
         "dynasty": [
-          "唐代"
+          "唐朝"
         ],
         "index": 0,
         "length": 20,
         "lines": 4,
+        "state": "",
         "title": "静夜思"
-      },
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "SSML",
-            "source": "<p>跟我一起读吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
-          },
-          {
-            "type": "SSML",
-            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
-          },
-          {
-            "type": "PlainText",
-            "source": "轮到你拉"
-          }
-        ]
       }
     }
   ]
@@ -165,7 +182,30 @@ response：
 ```
   "results": [
     {
-      "hint": "跟我一起对诗词吧，静夜思，唐代，李白，床前明月光，轮到你拉",
+      "hint": "跟我对，静夜思，唐朝，李白，床前明月光，该你拉",
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "SSML",
+            "source": "<p>跟我对</p>\n<p>静夜思</p>\n<p><s>唐朝</s><s>李白</s></p>"
+          },
+          {
+            "type": "SSML",
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+          },
+          {
+            "type": "PlainText",
+            "source": "该你拉"
+          }
+        ]
+      },
+      "emotions": [
+        {
+          "type": "answer",
+          "level": 10,
+          "code": "K001"
+        }
+      ],
       "data": {
         "author": [
           "李白"
@@ -174,28 +214,13 @@ response：
           "床前明月光"
         ],
         "dynasty": [
-          "唐代"
+          "唐朝"
         ],
         "index": 0,
         "length": 20,
         "lines": 4,
+        "state": "",
         "title": "静夜思"
-      },
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "SSML",
-            "source": "<p>跟我一起对诗词吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
-          },
-          {
-            "type": "SSML",
-            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
-          },
-          {
-            "type": "PlainText",
-            "source": "轮到你拉"
-          }
-        ]
       }
     }
   ]
@@ -210,31 +235,39 @@ response：
 ```
   "results": [
     {
-      "hint": "你来背诗词吧，静夜思，唐代，李白，，轮到你拉",
+      "hint": "你来背，静夜思，唐朝，李白，，该你拉",
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "SSML",
+            "source": "<p>你来背</p>\n<p>静夜思</p>\n<p><s>唐朝</s><s>李白</s></p>"
+          },
+          {
+            "type": "PlainText",
+            "source": "该你拉"
+          }
+        ]
+      },
+      "emotions": [
+        {
+          "type": "answer",
+          "level": 0,
+          "code": "A001"
+        }
+      ],
       "data": {
         "author": [
           "李白"
         ],
         "content": null,
         "dynasty": [
-          "唐代"
+          "唐朝"
         ],
         "index": -1,
         "length": 20,
         "lines": 4,
+        "state": "",
         "title": "静夜思"
-      },
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "SSML",
-            "source": "<p>你来背诗词吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
-          },
-          {
-            "type": "PlainText",
-            "source": "轮到你拉"
-          }
-        ]
       }
     }
   ]
@@ -249,31 +282,39 @@ response：
 ```
   "results": [
     {
-      "hint": "你来背诗词吧，静夜思，唐代，李白，，该你拉",
+      "hint": "你来背，静夜思，唐朝，李白，，轮到你拉",
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "SSML",
+            "source": "<p>你来背</p>\n<p>静夜思</p>\n<p><s>唐朝</s><s>李白</s></p>"
+          },
+          {
+            "type": "PlainText",
+            "source": "轮到你拉"
+          }
+        ]
+      },
+      "emotions": [
+        {
+          "type": "answer",
+          "level": 0,
+          "code": "A001"
+        }
+      ],
       "data": {
         "author": [
           "李白"
         ],
         "content": null,
         "dynasty": [
-          "唐代"
+          "唐朝"
         ],
         "index": -1,
         "length": 20,
         "lines": 4,
+        "state": "",
         "title": "静夜思"
-      },
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "SSML",
-            "source": "<p>你来背诗词吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
-          },
-          {
-            "type": "PlainText",
-            "source": "该你拉"
-          }
-        ]
       }
     }
   ]
@@ -288,7 +329,30 @@ response：
 ```
   "results": [
     {
-      "hint": "跟我一起读吧，静夜思，唐代，李白，床前明月光，该你拉",
+      "hint": "跟我读，静夜思，唐朝，李白，床前明月光，轮到你拉",
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "SSML",
+            "source": "<p>跟我读</p>\n<p>静夜思</p>\n<p><s>唐朝</s><s>李白</s></p>"
+          },
+          {
+            "type": "SSML",
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+          },
+          {
+            "type": "PlainText",
+            "source": "轮到你拉"
+          }
+        ]
+      },
+      "emotions": [
+        {
+          "type": "answer",
+          "level": 0,
+          "code": "A001"
+        }
+      ],
       "data": {
         "author": [
           "李白"
@@ -297,28 +361,13 @@ response：
           "床前明月光"
         ],
         "dynasty": [
-          "唐代"
+          "唐朝"
         ],
         "index": 0,
         "length": 20,
         "lines": 4,
+        "state": "",
         "title": "静夜思"
-      },
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "SSML",
-            "source": "<p>跟我一起读吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
-          },
-          {
-            "type": "SSML",
-            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
-          },
-          {
-            "type": "PlainText",
-            "source": "该你拉"
-          }
-        ]
       }
     }
   ]
@@ -326,14 +375,37 @@ response：
 
 ## 4.7 Repeat_重复
 
-query：重复学习（假定当前关是**对答**）
+query：重复学习（只有在**整首诗完成**后才能进入）
 
 response：
 
 ```
  "results": [
     {
-      "hint": "跟我一起对诗词吧，静夜思，唐代，李白，床前明月光，该你拉",
+      "hint": "跟我读，静夜思，唐朝，李白，床前明月光，轮到你拉",
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "SSML",
+            "source": "<p>跟我读</p>\n<p>静夜思</p>\n<p><s>唐朝</s><s>李白</s></p>"
+          },
+          {
+            "type": "SSML",
+            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
+          },
+          {
+            "type": "PlainText",
+            "source": "轮到你拉"
+          }
+        ]
+      },
+      "emotions": [
+        {
+          "type": "answer",
+          "level": 0,
+          "code": "A001"
+        }
+      ],
       "data": {
         "author": [
           "李白"
@@ -342,28 +414,13 @@ response：
           "床前明月光"
         ],
         "dynasty": [
-          "唐代"
+          "唐朝"
         ],
         "index": 0,
         "length": 20,
         "lines": 4,
+        "state": "",
         "title": "静夜思"
-      },
-      "outputSpeech": {
-        "items": [
-          {
-            "type": "SSML",
-            "source": "<p>跟我一起对诗词吧</p>\n<p>静夜思</p>\n<p><s>唐代</s><s>李白</s></p>"
-          },
-          {
-            "type": "SSML",
-            "source": "<s>床前<break time=\"100ms\" /><emphasis>明</emphasis>月光</s>"
-          },
-          {
-            "type": "PlainText",
-            "source": "该你拉"
-          }
-        ]
       }
     }
   ]
@@ -376,7 +433,7 @@ query：退出
 response：
 
 ```
-  "results": [
+ "results": [
     {
       "hint": "好的",
       "outputSpeech": {
@@ -386,7 +443,14 @@ response：
             "source": "好的"
           }
         ]
-      }
+      },
+      "emotions": [
+        {
+          "type": "answer",
+          "level": 0,
+          "code": "A001"
+        }
+      ]
     }
   ]
 ```
