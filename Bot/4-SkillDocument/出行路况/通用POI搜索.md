@@ -53,7 +53,7 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
 
 | **result** | | | **value** | **type** |
 | --- | --- | --- | --- | -- |
-| hint| | | 为您找到以下结果 | string |
+| outputSpeech | | | [回复话术定义](/Bot/3-ApiReference/rosai-skills-development-protocol.md#outputspeech-object) | |
 | emotions | | | [情绪值定义](/Bot/3-ApiReference/emotion.md) | |
 | data | | | | |
 |  | list| | | |
