@@ -230,8 +230,8 @@ Results 中每一个元素是一个Result object
 Parameter  | Description  |  type | required
 --|--|--|--
 type  | 情感识别对象，枚举类型["answer"-语音回复的情绪]  |  string | true
-level  | [情感值定义-一级情绪](Bot_3-ApiReference_emotion) |  int | true
-code  | [情感值定义-二级情绪](Bot_3-ApiReference_emotion) |  string | true
+level  | [情感值定义-一级情绪](emotion.md) |  int | true
+code  | [情感值定义-二级情绪](emotion.md) |  string | true
 
 simple card example:
 ```
