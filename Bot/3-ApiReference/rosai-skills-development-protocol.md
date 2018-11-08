@@ -145,11 +145,11 @@ Accept-Charset : utf-8
         "items": [
           {
             "type": "PlainText",
-            "source": "北京今天多云，气温23度到35度，东南风2级"
+            "source": "北京今天晴，气温23度到35度，东南风2级"
           },
           {
             "type": "SSML",
-            "source": "<speak>北京今天<emphasis level=\"strong\">多云</emphasis>，气温23度到35度，东南风2级</speak>"
+            "source": "<speak>出门记得<emphasis level=\"strong\">涂</emphasis>防晒霜哦</speak>"
           },
           {
             "type": "Audio",
@@ -164,11 +164,11 @@ Accept-Charset : utf-8
       "directives": [
         {
           "type": "Display.Customized",
-          "hint": "多云，气温23度到35度，东南风2级",
+          "hint": "晴，气温23度到35度，东南风2级",
           "card": {
             "type": "Standard",
             "title": "北京天气",
-            "content": "多云，气温23度到35度，东南风2级",
+            "content": "晴，气温23度到35度，东南风2级",
             "image": {
               "bulletScreen": {
                 "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
@@ -195,7 +195,7 @@ Accept-Charset : utf-8
       "data": {
         "city": "北京",
         "date": "2018-06-21",
-        "weather": "多云",
+        "weather": "晴",
         "quality": "轻度污染",
     	"temperature": "33"
       },
