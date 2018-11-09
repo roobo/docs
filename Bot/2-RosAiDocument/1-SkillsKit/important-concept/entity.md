@@ -17,7 +17,7 @@
 <tr><td width="100px">分类</td><td width="140px">实体名称</td><td width="140px">实体描述</td><td width="200px">举例</td><td width="200px">返回数据格式</td></tr>
 
 <tr><td rowspan="2">时间</td><td>sdate</td><td>匹配日期</td><td>明天，大后天明年三月四号，下个月五号国庆节等</td>
-<td>
+<td td width="200px">
 {"year":"2017","month":"05","day":"26","especial":"","kind":0,"status":0,"leap":false,"delta":0,"yeardelta":0,"monthdelta":0}
 type SDate struct {
     Year string `json:"year"` // 十二生肖，所以是string
@@ -40,7 +40,7 @@ type SDate struct {
 <tr><td rowspan="2">数字</td><td>number</td><td>数字</td><td>一万零三十</td><td>10030</td></tr>
 <tr><td>ordinal</td><td>序数</td><td>第8个</td><td>8</td></tr>
 <tr><td rowspan="6">计量</td><td>unit_area</td><td>匹配面积(基准单位m2)</td><td>1平方米</td><td>{"amount":1,"unit":"m2"}</td></tr>
-<tr><td>unit_currency</td><td>匹配汇率(unit 是变化的 范围参考 [ISO 4217}(https://en.wikipedia.org/wiki/ISO_4217))</td><td>10美元</td><td>{"amount":10,"unit":"USD"}
+<tr><td>unit_currency</td><td>匹配汇率(unit 是变化的 范围参考 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217))</td><td>10美元</td><td>{"amount":10,"unit":"USD"}
 </td></tr>
 <tr><td>unit_lenght</td><td>匹配长度(基准单位m)</td><td>5厘米</td><td>{"amount":0.05,"unit":"m"}</td></tr>
 <tr><td>unit_speed</td><td>匹配速度(基准单位km/h)</td><td>6千米每小时</td><td>{"amount":6,"unit":"km/h"}</td></tr>
