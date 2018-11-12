@@ -143,8 +143,8 @@
     <td rowspan="2">通用匹配</td>
     <td>any</td>
     <td>任何字符，包括空 都在该实体中。这个实体相当于正则中的*。和default的区别见any/default实体区别</td>
-    <td>打电话给@sys.any:name打电话给李XXX</td>
-    <td></td>
+    <td>打电话给@sys.any:name打电话给李XX</td>
+    <td>李XX</td>
   </tr>
   <tr>
     <td>default</td>
