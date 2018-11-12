@@ -75,9 +75,12 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
 
 
 
-### 6.[返回样例](https://passport.ros.ai/#/login)
+# 6.[返回样例](https://passport.ros.ai/#/login)
 运行语义测试前请确保：
+
 1.拥有ros.ai 开发平台账号
+
 2.确认该账号下要测试的场景已经打开
+
 [语意测试连接](https://passport.ros.ai/#/login)
 
