@@ -2,7 +2,7 @@
 
 ### Roobo 开放平台
 
-版本：1.0.1
+版本：1.0.2
 
 ### 大纲
 
@@ -173,9 +173,16 @@ legacy response (deprecated)
 
 | 事件名称 | 事件含义 | 参数 | 举例 | deprecated |
 | --- | --- | --- | --- | --- |
-| ROSAI.TimeoutIntent | 用户输入超时 | "params": {<br>&nbsp;&nbsp;"repeat": int //重复次数，从0开始，1代表第1次重复<br>} | "params": {<br>&nbsp;&nbsp;"repeat": 1<br>} | false |
-| ROSAI.handleChangeContextEvent | 变更上文事件(context&slots) | map<k, v> | "params":<br>{<br>&nbsp;&nbsp;"artist":["周杰伦"],<br>&nbsp;&nbsp;"name":["龙卷风"]<br>} | false |
-| PowerOnEvent | 开机 | | | true |
-| AutomaticNextEvent | 自动下一首 | | | true |
-| IdleEvent | 设备空闲 | | | true |
-| TouchEvent | 触摸 | //part | //Head //Ear | true |
+| TimeoutEvent | 用户输入超时 | "params": {<br>&nbsp;&nbsp;"repeat": int //重复次数，从0开始，1代表第1次重复<br>} | "params": {<br>&nbsp;&nbsp;"repeat": 1<br>} | false |
+| ChangeContextEvent | 变更上文事件(context&slots) | map<k, v> | "params":<br>{<br>&nbsp;&nbsp;"artist":["周杰伦"],<br>&nbsp;&nbsp;"name":["龙卷风"]<br>} | false |
+| PowerOnEvent | 开机 | | | false |
+| AutomaticNextEvent | 自动下一首 | | | false |
+| IdleEvent | 设备空闲 | | | false |
+| TouchEvent | 触摸 | //part | //Head //Ear | false |
+| EnterEvent | 进入场景 |  | | false |
+| ContinueEvent | 继续 |  | | false |
+| ExitEvent | 退出场景 |  | | false |
+| DeviceHumanFaceEvent | 人脸唤醒 | "params": {<br>&nbsp;&nbsp;"isChild": bool //是否是小孩<br>&nbsp;&nbsp;"userId":string //userId<br>} | | false |
+| DeviceWakeUpBotEvent | 语音唤醒 |  | | false |
+| DeviceTouch5TimesEvent | 触摸5次 |  | | false |
+| CloudBotEvent | 云端事件 |  | | false |
