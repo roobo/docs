@@ -1,4 +1,4 @@
-# 基本信息 
+## 基本信息 
 - 实体表示一类客观事物的总和，比如城市，歌手，歌曲名称，食物名称等 
 - 实体由一个实体名称，多个实体项，实体项的同义词组成  
 ## 实体命名规则
@@ -116,25 +116,25 @@
   </tr>
   <tr>
     <td rowspan="4">地理信息</td>
-    <td>geog_country</td>
+    <td>geo_country</td>
     <td>国家</td>
     <td>不丹</td>
     <td>不丹</td>
   </tr>
   <tr>
-    <td>geog_province</td>
+    <td>geo_province</td>
     <td>中国省份</td>
     <td>河南省</td>
     <td>河南省</td>
   </tr>
   <tr>
-    <td>geog_city</td>
+    <td>geo_city</td>
     <td>中国地级城市及以上城市</td>
     <td>北京市</td>
     <td>北京市</td>
   </tr>
   <tr>
-    <td>geog_district</td>
+    <td>geo_district</td>
     <td>中国区/县</td>
     <td>朝阳区</td>
     <td>朝阳区</td>
@@ -142,19 +142,19 @@
   <tr>
     <td rowspan="2">通用匹配</td>
     <td>any</td>
-    <td>匹配任何字符或者空。同一模板中优先级最低，先匹配其他槽位。</td>
+    <td>任何字符，包括空 都在该实体中。这个实体相当于正则中的*。和default的区别见any/default实体区别</td>
     <td>打电话给@sys.any:name打电话给李XXX</td>
     <td></td>
   </tr>
   <tr>
     <td>default</td>
-    <td>在模板中单独使用，需要配置上文,匹配任何字符。</td>
+    <td>任何字符，包括空 都在该实体中。这个实体相当于正则中的*。和any的区别见any/default实体区别</td>
     <td>例如：英译汉场景。进入场景后，只要没有退出场景，所有后面的输入都需要翻译。就需要在场景中配置一个只有default的模板来匹配所有的输入，来实现这个功能。</td>
     <td></td>
   </tr>
 </table>
 
-### any/default　实体 区别
+### any/default实体区别
 
 |-|any|default|
 |---|---|---|
