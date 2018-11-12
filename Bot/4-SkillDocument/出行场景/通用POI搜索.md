@@ -64,12 +64,12 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
 # 3.返回字段说明
 
 | **result** | **Description** | **value** | **type** |
-| --- | --- | --- | --- | -- |
-| id | poi的ID|amap-B000A7OUR9 | string | 
-| name | poi的名称|东城社区卫生服务站(小牌坊胡同) | string | 
-| tel | 电话号码|010-85111691 | string | 
-| type | poi地点的类型|医疗保健服务;综合医院;卫生院 | string | 
-| location | poi名称对应的经纬度信息|详情查阅|string| 
+| --- | --- | --- | --- | --- |
+| id | poi的ID | amap-B000A7OUR9 | string |
+| name | poi的名称 | 东城社区卫生服务站(小牌坊胡同) | string |
+| tel | 电话号码 | 010-85111691 | string |
+| type | poi地点的类型 | 医疗保健服务;综合医院;卫生院 | string |
+| location | poi名称对应的经纬度信息 | 详情查阅 | string| 
 
 
 ### 6.[返回样例](https://passport.ros.ai/#/login)
