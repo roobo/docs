@@ -8,7 +8,7 @@ PublicPOI 查地标,用户可以询问指定位置或者其周边的POI信息，
 
 | **Product** | **Recommend** | **Description** |
 | ------------ | ------------ | ------------ |
-| 无屏设备 | 否 |  仅靠 outputSpeech完成交互体验较差，期望有UI配合展示 [详情查阅](http://test/ "详情查阅") |
+| 无屏设备 | 否 |  仅靠 outputSpeech完成交互体验较差，期望有UI配合展示 [详情查阅](/Bot/4-SkillDocument/最佳实践.md) |
 
 
 # 4.返回槽位说明
