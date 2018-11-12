@@ -94,7 +94,7 @@ _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息�
 | :--- | :--- | :--- | :--- |
 | service | String | 服务名 | Required |
 | context | String | 上文名称 | Optional |
-| parameters  | Map | [Param定义](Bot/3-ApiReference/rosai-skills-deveopment-protocol) | Optional |
+| parameters  | Map | [Param定义](Bot/3-ApiReference/rosai-skills-deveopment-protocol.md) | Optional |
 
 #### 2.3 Location 定义
 
