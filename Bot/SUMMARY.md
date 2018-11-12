@@ -16,6 +16,7 @@
         * [端侧语义请求协议](3-ApiReference/rosai-client-development-protocol-intent.md)
         * [端侧事件请求协议](3-ApiReference/rosai-client-development-protocol-event.md)
     * [技能接入指南](4-SkillDocument/README.md)
+        * [场景模板](4-SkillDocument/场景模板.md)
         * [最佳实践]
         * [出行场景类](4-SkillDocument/出行场景/README.md)
             * [通用POI搜索](4-SkillDocument/出行场景/通用POI搜索.md)
