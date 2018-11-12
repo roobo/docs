@@ -102,7 +102,7 @@ __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，�
 
 | Name | Type | Description | Required |
 |--|--|--|--|
-|address|object| [address定义]((#231-address定义))| Optional |
+|address|object| [address定义](#231-address定义)| Optional |
 |longitude|float|经度| Required |
 |latitude|float|纬度| Required |
 
