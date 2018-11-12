@@ -98,7 +98,23 @@ _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息�
 
 #### 2.3 Location 定义
 
-__Location__ 向所请求的CloudApp提供了当前的设备的地理信息，用于帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。
+__Location__ 向所请求的CloudApp提供了当前的设备的地理信息，用于帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。期望key 统一为 location
+
+| Name | Type | Description | Required |
+|--|--|--|--|
+|address|object| [address定义]()| Optional |
+|longitude|float|经度| Required |
+|latitude|float|纬度| Required |
+
+##### 2.3.1 address定义
+
+| Name | Type | Description | Required |
+|--|--|--|--|
+|country|String| 国家| Optional |
+|province|String| 所在地区的省份 | Required |
+|city|String|所在的城市| Required |
+|detail|String|详细的地址信息| Required |
+
 
 #### 2.4 Lang 定义
 
