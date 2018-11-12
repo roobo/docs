@@ -111,7 +111,7 @@
   <tr>
     <td>unit_weight</td>
     <td>匹配重量(基准单位g)</td>
-    <td>9斤</td
+    <td>9斤</td>
     <td>{"amount":4500,"unit":"g"}</td>
   </tr>
   <tr>
