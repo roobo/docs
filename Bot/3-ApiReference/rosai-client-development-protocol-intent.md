@@ -111,9 +111,9 @@ __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，�
 | Name | Type | Description | Required |
 |--|--|--|--|
 |country|String| 国家| Optional |
-|province|String| 所在地区的省份 | Required |
-|city|String|所在的城市| Required |
-|detail|String|详细的地址信息| Required |
+|province|String| 所在地区的省份 | Optional |
+|city|String|所在的城市| Optional |
+|detail|String|详细的地址信息| Optional |
 
 
 #### 2.4 Lang 定义
