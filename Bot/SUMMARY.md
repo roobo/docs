@@ -1,5 +1,6 @@
 # Summary
 
+* [Roobo 开放平台](README.md)
 * Roobo 技能开发工具
     * [技能开发工具简介](2-RosAiDocument/1-SkillsKit/platform-introduction.md)
     * 快速入门

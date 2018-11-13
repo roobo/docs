@@ -1,0 +1,12 @@
+{
+  "plugins" : [
+    "anchor-navigation-ex",
+    "expandable-chapters-interactive",
+    "vistors-github"
+  ],
+  "pluginsConfig" : {
+    "vistors-github": {
+      "repo": "roobo/docs"
+    }
+  }
+}
