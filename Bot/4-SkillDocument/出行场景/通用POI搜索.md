@@ -70,6 +70,7 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
 | name | poi的名称 | 东城社区卫生服务站(小牌坊胡同) | string |Required|
 | tel | 电话号码 | 010-85111691 | string |Optional|
 | type | poi地点的类型 | 医疗保健服务;综合医院;卫生院 | string |Optional|
+| distance | 距离该poi点的直线距离，单位：米 | 183 | string |Optional|
 | location | poi名称对应的经纬度信息 | [详情查阅](/Bot/3-ApiReference/rosai-client-development-protocol-intent.md#23-location-定义) | string|Optional|
 
 
