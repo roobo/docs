@@ -64,18 +64,18 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
 
 # 5.返回字段说明
 
-| **result** | **Description** | **value** | **type** |
-| ------------ | ------------ | ------------ | ------------ |
-| id | poi的ID | amap-B000A7OUR9 | string |
-| name | poi的名称 | 东城社区卫生服务站(小牌坊胡同) | string |
-| tel | 电话号码 | 010-85111691 | string |
-| type | poi地点的类型 | 医疗保健服务;综合医院;卫生院 | string |
-| location | poi名称对应的经纬度信息 | [详情查阅](/Bot/3-ApiReference/rosai-client-development-protocol-intent.md#23-location-定义) | string| 
+| **result** | **Description** | **value** | **type** |**Required** |
+| ------------ | ------------ | ------------ | ------------ |------------ |
+| id | poi的ID | amap-B000A7OUR9 | string |Required|
+| name | poi的名称 | 东城社区卫生服务站(小牌坊胡同) | string |Required|
+| tel | 电话号码 | 010-85111691 | string |Optional|
+| type | poi地点的类型 | 医疗保健服务;综合医院;卫生院 | string |Optional|
+| location | poi名称对应的经纬度信息 | [详情查阅](/Bot/3-ApiReference/rosai-client-development-protocol-intent.md#23-location-定义) | string|Optional|
 
 
 
 
-# 6.[返回样例](https://passport.ros.ai/#/login)
+# 6.语义测试
 运行语义测试前请确保：
 
 1.拥有ros.ai 开发平台账号
