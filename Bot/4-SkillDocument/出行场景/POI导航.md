@@ -71,7 +71,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.导航到周边的便利蜂</br>b.导航到附近的物美超市</td>
    
    <td>无</td>
-   <td>上文：</br>下文：navi</td>
+ 
 </tr>
 
 <tr>
@@ -83,7 +83,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.导航到朝阳区酒店</br>b.导航到海淀区超市</td>
    
    <td>无</td>
-   <td>上文：</br>下文：navi</td>
+ 
 </tr>
 
 <tr>
@@ -95,7 +95,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.导航到周边的酒店</br>b.导航到附近的超市</td>
    
    <td>无</td>
-   <td>上文：</br>下文：navi</td>
+ 
 </tr>
 
 <tr>
@@ -109,7 +109,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.先去途中的鸟巢<br>b.先导航去鸟巢再去天安门<br>c.先导航去鸟巢再去天安门最后去立水桥南</td>
    
    <td>无</td>
-   <td>上文：</br>下文：navi</td>
+   
 
 </tr>
 
