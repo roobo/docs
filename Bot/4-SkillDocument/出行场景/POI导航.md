@@ -410,9 +410,28 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
 
 </table>
 
+# 5.返回字段说明
+
+| **result** | **Description** | **value** | **type** |**Required** |
+| ------------ | ------------ | ------------ | ------------ |------------ |
+| id | poi的ID | amap-B000A7OUR9 | string |Required|
+| name | poi的名称 | 东城社区卫生服务站(小牌坊胡同) | string |Required|
+| tel | 电话号码 | 010-85111691 | string |Optional|
+| type | poi地点的类型 | 医疗保健服务;综合医院;卫生院 | string |Optional|
+| passByIndex |途经点 （1 2 3 代表第X个途径点） | 1 | string |Optional|
+| distance | 距离该poi点的直线距离，单位：米 | 183 | string |Optional|
+| location | poi名称对应的经纬度信息 | [详情查阅](/Bot/3-ApiReference/rosai-client-development-protocol-intent.md#23-location-定义) | string|Optional|
 
 
 
+# 6.语义测试
+运行语义测试前请确保：
+
+1.拥有ros.ai 开发平台账号
+
+2.确认该账号下要测试的场景已经打开
+
+[语意测试连接](https://passport.ros.ai/#/login)
 
 
 
