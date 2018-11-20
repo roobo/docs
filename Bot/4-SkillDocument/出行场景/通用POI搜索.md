@@ -26,6 +26,7 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
         <td><b>Description</b></td> 
         <td><b>Example</b></td> 
         <td><b>Slot</b></td> 
+        <td><b>Context</b></td> 
    </tr>
    <tr>
         <td rowspan="6">Search</td>    
@@ -33,11 +34,13 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
        <td >查找热门地点+名称</td>  
        <td >国贸的便利蜂 、国贸的手机店</td> 
        <td>无</td>
+       <td>无</td>
     </tr>
    <tr>
         <td >SearchAroundByName</td>  
        <td >查找周边的POI名称</td>  
        <td >查找周边的便利蜂、附近的物美超市</td> 
+       <td>无</td>
        <td>无</td>
    </tr>
    <tr>
@@ -50,19 +53,22 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
         <td >SearchHotspotByCategory</td>  
        <td >查找热门地点+名称</td>  
        <td >国贸的加油站 、国贸的酒店</td> 
-         <td>无</td>
+       <td>无</td>
+       <td>无</td>
    </tr>
         <tr>
         <td >SearchAroundByCategory</td>  
        <td >查查找周边的POI分类</td>  
        <td >附近的餐厅 、附近的酒店</td> 
-            <td>无</td>
+       <td>无</td>
+       <td>无</td>
    </tr>
-           <tr>
+   <tr>
         <td >SearchByCategory</td>  
        <td >查找POI分类</td>  
        <td >哪里有酒店、哪里有医院</td> 
-               <td>无</td>
+       <td>无</td>
+        <td>无</td>
    </tr>
     
 </table>
