@@ -40,6 +40,8 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
 
 <td><b>Slot</b></td>
 
+<td><b></b></td>
+
 </tr>
 
 <tr>
@@ -53,7 +55,8 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.导航到鸟巢</br>b.导航到的物美超市</td>
    
    <td>无</td>
-
+   
+   <td>上文：</br>下文：navi</td>
 
 </tr>
 
@@ -68,7 +71,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.导航到周边的便利蜂</br>b.导航到附近的物美超市</td>
    
    <td>无</td>
-
+   <td>上文：</br>下文：navi</td>
 </tr>
 
 <tr>
@@ -80,7 +83,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.导航到朝阳区酒店</br>b.导航到海淀区超市</td>
    
    <td>无</td>
-
+   <td>上文：</br>下文：navi</td>
 </tr>
 
 <tr>
@@ -92,7 +95,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.导航到周边的酒店</br>b.导航到附近的超市</td>
    
    <td>无</td>
-
+   <td>上文：</br>下文：navi</td>
 </tr>
 
 <tr>
@@ -106,6 +109,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.先去途中的鸟巢<br>b.先导航去鸟巢再去天安门<br>c.先导航去鸟巢再去天安门最后去立水桥南</td>
    
    <td>无</td>
+   <td>上文：</br>下文：navi</td>
 
 </tr>
 
@@ -121,6 +125,8 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.把家里的地址设置为立水桥南</br>把银河SOHO设置为公司的地址</td>
    
    <td>alias</td>
+   
+  <td rowspan="24">Navigate</td>
 
 </tr>
 
@@ -133,7 +139,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.把家里的地址设置为当前位置</br>把当前位置设置为公司的地址</td>
    
    <td>alias</td>
-
+   
 </tr>
 
 <tr>
@@ -161,7 +167,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.第一个</br>第二个</td>
    
    <td>number</td>
-
+   
 </tr>
 
 
@@ -177,7 +183,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>a.车头向上模式</br>b.设置为指北模式</td>
    
    <td>compass_mode</td>
-
+   
 </tr>
 
 <tr>
