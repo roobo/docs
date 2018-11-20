@@ -164,33 +164,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
 
 </tr>
 
-<tr>
 
-   <td >OpenFullView</td>
- 
-   <td >OpenFullView</td>
-
-   <td >打开全程模式</td>
-
-   <td>查看全览模式</td>
-   
-   <td>无</td>
-
-</tr>
-
-<tr>
-
-   <td >CloseFullView</td>
- 
-   <td >CloseFullView</td>
-
-   <td >关闭全程模式</td>
-
-   <td>关闭全程模式</td>
-   
-   <td>无</td>
-
-</tr>
 
 <tr>
 
@@ -233,7 +207,33 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    <td>route_mode</td>
 
 </tr>
+<tr>
 
+   <td >OpenFullView</td>
+ 
+   <td >OpenFullView</td>
+
+   <td >打开全程模式</td>
+
+   <td>查看全览模式</td>
+   
+   <td>无</td>
+
+</tr>
+
+<tr>
+
+   <td >CloseFullView</td>
+ 
+   <td >CloseFullView</td>
+
+   <td >关闭全程模式</td>
+
+   <td>关闭全程模式</td>
+   
+   <td>无</td>
+
+</tr>
 <tr>
 
    <td >AskRemainTime</td>
