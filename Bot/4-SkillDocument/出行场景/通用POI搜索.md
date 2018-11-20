@@ -48,6 +48,7 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
        <td >查找POI名称</td>  
        <td >儿研所在哪、北京市的711</td> 
        <td>无</td>
+       <td>无</td>
    </tr>
      <tr>
         <td >SearchHotspotByCategory</td>  
