@@ -56,7 +56,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    
    <td>无</td>
    
-   <td>上文：</br>下文：navi</td>
+ <td rowspan="5">上文：navi</br>下文：navi</td>
 
 </tr>
 
@@ -126,7 +126,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
    
    <td>alias</td>
    
-  <td rowspan="24">Navigate</td>
+  <td rowspan="24">上文：navi</br>下文：navi</td>
 
 </tr>
 
