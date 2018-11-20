@@ -103,7 +103,7 @@ note: 不带location但是request里包含经纬度信息时，以当前经纬�
  
    <td >NaviWithPassby</td>
 
-   <td >途经点导航（最多支持三个点）</td>
+   <td >途经点导航</br>（最多支持三个点）</td>
 
    <td>a.先去途中的鸟巢<br>b.先导航去鸟巢再去天安门<br>c.先导航去鸟巢再去天安门最后去立水桥南</td>
    
