@@ -40,7 +40,7 @@ PoiNavigation 保护语音地图控制和POI的导航服务，用户可以导航
 
 <td><b>Slot</b></td>
 
-<td><b></b></td>
+<td><b>Context</b></td>
 
 </tr>
 
