@@ -55,7 +55,7 @@
     </td>
   </tr>
   <tr>
-    <td>datatime</td>
+    <td>datetime</td>
     <td>
       匹配一个日期时间
       (有明确日期概念时。例如:
@@ -101,7 +101,7 @@
     <td>{"amount":10,"unit":"USD"}</td>
   </tr>
   <tr>
-    <td>unit_lenght</td>
+    <td>unit_length</td>
     <td>匹配长度(基准单位m)</td>
     <td>5厘米</td>
     <td>{"amount":0.05,"unit":"m"}</td>
