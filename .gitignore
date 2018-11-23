@@ -1,0 +1,5 @@
+_book/
+.DS_Store
+Bot/_book/
+Bot/node_modules/
+Bot/book.json
