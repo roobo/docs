@@ -2,7 +2,7 @@
 
 ### Roobo 开放平台
 
-版本：2.0.0
+版本：1.0.4
 
 ### 大纲
 
@@ -40,22 +40,42 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 | clientId | string | 设备id | true |
 | agentId | string | Access Key | true |
 | token | string | Token | true |
+| type | string | 可枚举值，可选值有：<br>- dedicated: 指定Skill响应的请求 <br>- general: 通用请求 | true |
 | event | Object | 事件对象，包含事件名和事件相关定义 | true |
-| state | Object | 设备状态 | false |
+| params | Object | 事件属性，一般用于做条件判定 | false |
 
 ```
 {
-    "clientId":"1015000000000093",
-    "agentId":"Your Access Key",
-    "token":"Your Token",
-    "state":{
-       "service":"OrderCoffee",
-    },
-    "event":{
-        "name":"AddAction",
-        "params":{
-           //事件参数
+    "clientId": "1015000000000093",
+    "agentId": "Your Access Key",
+    "token": "Your Token",
+    "type": "dedicated",
+    "event": {
+        "name": "event.bot.enter_lesson",
+        "data" : {
+            "service":"AiLiveDict",
+            "parameters":{
+                map<key, *slu.Value>
+            }
         }
+    },
+    "params": {
+        // 事件参数
+        map<key, object>
+    }
+}
+```
+```
+{
+    "clientId": "1015000000000093",
+    "agentId": "Your Access Key",
+    "token": "Your Token",
+    "type": "general"
+    "event": {
+        "name": "sys.event.camera.humanface_wakeup",
+    },
+    "params": {
+        "isChild": true
     }
 }
 ```
@@ -65,7 +85,16 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | name | string | 事件名 | true |
-| params | object | 事件参数 | false |
+| data | object | 当type==dedicated时，才会有这个字段，描述如下。data用来描述需要由哪个skill来接收此事件，以及相关的槽位信息 | false |
+
+**data Object**
+
+| Name | Type | Description | Required |
+| --- | --- | --- | --- |
+| service | string | skill name | true |
+| parameters | map | k: 槽位名(string)，v: 槽位值([slu.Value][03272349]) | false |
+
+  [03272349]: https://github.com/roobo/docs/blob/master/Bot/3-ApiReference/rosai-skills-development-protocol.md#system-object "slu.Value"
 
 ### 3. Response
 
@@ -141,3 +170,17 @@ legacy response (deprecated)
 ```
 
 ### 4. Event
+
+| 事件名称 | 事件含义 | 参数 | 举例 | deprecated |
+| --- | --- | --- | --- | --- |
+| sys.event.bot.reply_timeout | 用户输入超时 | "params": {<br>&nbsp;&nbsp;"repeat": int //重复次数，从0开始，1代表第1次重复<br>} | "params": {<br>&nbsp;&nbsp;"repeat": 1<br>} | ROSAI.TimeoutEvent |
+| sys.event.device.power_on  | 开机 | | | PowerOnEvent |
+| sys.event.device.idle | 设备空闲 | | | IdleEvent |
+| sys.event.bot.enter | 进入场景 |  | | ROSAI.EnterEvent |
+| sys.event.bot.continue | 继续 |  | | ROSAI.ContinueEvent |
+| sys.event.bot.exit | 退出场景 |  | | ROSAI.ExitEvent |
+| sys.event.camera.humanface_wakeup | 人脸唤醒 | "params": {<br>&nbsp;&nbsp;"isChild": bool //是否是小孩<br>&nbsp;&nbsp;"userId":string //userId<br>} | | DeviceHumanFaceEvent |
+| sys.event.voice.wakeup | 语音唤醒 |  | | DeviceWakeUpBotEvent |
+| sys.event.screen.touch_item | 触摸交互元素 | "params": {<br>&nbsp;&nbsp;"url": string //被交互元素url标识<br>} | | ROSAI.TouchEvent |
+| event.screen.touch_5_times | 触摸5次 |  | | Touch5Times |
+| sys.event.cloud.query | 云端query事件 |  | | CloudBotEvent |
