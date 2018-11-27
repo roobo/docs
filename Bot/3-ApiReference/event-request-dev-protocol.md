@@ -50,7 +50,7 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
     "token": "Your Token",
     "event": {
         "type": "dedicated",
-        "name": "event.bot.enter_lesson",
+        "name": "event.bot_enter_lesson",
         "data" : {
             "service":"AiLiveDict",
         }
@@ -68,7 +68,7 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
     "token": "Your Token",
     "event": {
         "type": "general"
-        "name": "sys.event.camera.humanface_wakeup",
+        "name": "sys.event.camera_humanface_wakeup",
     },
     "params": {
         "isChild": true
