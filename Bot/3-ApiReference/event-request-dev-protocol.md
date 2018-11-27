@@ -2,7 +2,7 @@
 
 ### Roobo 开放平台
 
-版本：1.1.0
+版本：1.1.1
 
 ### 大纲
 
@@ -40,9 +40,9 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
 | clientId | string | 设备id | true |
 | agentId | string | Access Key | true |
 | token | string | Token | true |
-| event | Object | 事件对象，包含事件名和事件相关定义 | true |
+| event | Event 对象 | 事件对象，包含事件名和事件相关定义 | true |
+| location | Location 对象 | 地理位置 | false |
 | params | Object | 事件属性，一般用于做条件判定 | false |
-
 ```
 {
     "clientId": "1015000000000093",
@@ -54,6 +54,16 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
         "data" : {
             "service":"AiLiveDict",
         }
+    },
+    "location": {
+        "address": {
+            "country": "中国",
+            "province": "北京",
+            "city": "北京",
+            "detail": "北京朝阳区北苑家园121号"
+        },
+        "longitude": 39.9197477,
+        "latitude": 116.432956
     },
     "params": {
         // 事件参数 or 槽位
@@ -70,25 +80,59 @@ _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返�
         "type": "general"
         "name": "sys.event.camera_humanface_wakeup",
     },
+    "location": {
+        "address": {
+            "country": "中国",
+            "province": "北京",
+            "city": "北京",
+            "detail": "北京朝阳区北苑家园121号"
+        },
+        "longitude": 39.9197477,
+        "latitude": 116.432956
+    },
     "params": {
         "isChild": true
     }
 }
 ```
 
-**event Object**
+#### 2.2 Event 定义
+
+__Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包含事件名和事件相关定义
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | name | string | 事件名 | true |
 | type | string | 可枚举值，可选值有：<br>- dedicated: 指定Skill响应的请求 <br>- general: 通用请求 | true |
-| data | object | 当type==dedicated时，才会有这个字段，描述如下。data用来描述需要由哪个skill来接收此事件 | false |
+| data | object |  [data定义](#221-data定义) 当type==dedicated时，才会有这个字段，描述如下。data用来描述需要由哪个skill来接收此事件 | false |
 
-**data Object**
+##### 2.2.1 data定义
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | service | string | skill name | true |
+
+
+#### 2.3 Location 定义
+
+__Location__ 向所请求的CloudApp提供了当前的设备的地理信息，用于帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。期望key 统一为 location
+
+| Name | Type | Description | Required |
+|--|--|--|--|
+|address|object| [address定义](#231-address定义)| Optional |
+|longitude|float|经度| Required |
+|latitude|float|纬度| Required |
+
+
+##### 2.3.1 address定义
+
+| Name | Type | Description | Required |
+|--|--|--|--|
+|country|String| 国家| Optional |
+|province|String| 所在地区的省份 | Optional |
+|city|String|所在的城市| Optional |
+|detail|String|详细的地址信息| Optional |
+
 
 ### 3. Response
 
