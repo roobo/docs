@@ -146,7 +146,7 @@ _Response_ 的整体协议定义如下所示：
 | --- | --- | --- | --- |
 | status | Status 对象 | [Status](status.md) | Required |
 | instructions | instruction 数组 | 音频url | Optional |
-| result | Result 对象 | [Result](rosai-skills-development-protocol.md#results-array) | Optional |
+| result | Result 对象 | [Result](skill-dev-protocol.md#results-array) | Optional |
 
 
 ```
