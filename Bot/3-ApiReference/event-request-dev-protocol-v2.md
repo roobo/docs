@@ -159,35 +159,7 @@ _Response_ 的整体协议定义如下所示：
     "code": 0,
     "errorType": "success"
   },
-  "query": "唱首周杰伦的歌",
-  "semantic": {
-    "service": "Music",
-    "action": "Play",
-    "params": {
-      "artist": {
-        "orgin": [
-          "周杰伦"
-        ],
-        "normType": "StrArray",
-        "norm": [
-          "周杰伦"
-        ]
-      },
-      "category": {
-        "orgin": [
-          "歌"
-        ],
-        "normType": "StrArray",
-        "norm": [
-          "音乐"
-        ]
-      }
-    },
-    "outputContext": {
-      "service": "RMUSIC_1206",
-      "context": "media,ack"
-    }
-  },
+  "semantic": {},
   "results": [
     {
       "hint": "为您播放 周杰伦 枫",
