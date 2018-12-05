@@ -148,10 +148,6 @@ Accept-Charset : utf-8
             "source": "北京今天晴，气温23度到35度，东南风2级"
           },
           {
-            "type": "SSML",
-            "source": "<speak>出门记得<emphasis level=\"strong\">涂</emphasis>防晒霜哦</speak>"
-          },
-          {
             "type": "Audio",
             "source": "https://ai.roobo.com/weather/wind_2.mp3"
           },
@@ -161,37 +157,39 @@ Accept-Charset : utf-8
           }
         ]
       },
-      "directives": [
-        {
-          "type": "Display.Customized",
-          "hint": "晴，气温23度到35度，东南风2级",
-          "card": {
-            "type": "Standard",
-            "title": "北京天气",
-            "content": "晴，气温23度到35度，东南风2级",
-            "image": {
-              "bulletScreen": {
-                "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
-                "text": "赞",
-                "imagePosition": "top",
-                "textPosition": "bottom"
-              },
-              "url": "www.roobo.com/aicloud/skills/weather/cloudy.jpg"
-            }
-          },
-          "suggestions": [
-            "明天",
-            "后天"
-          ]
-        },
-        {
-          "type": "ROSAI.EVENT",
-          "event": {
-            "name": "ROSAI.TimeoutEvent",
-            "period": 10000
-          }
-        }
-      ],
+      "outputMultimodal": {
+				"items": [
+					{
+						"type": "Emotion",
+						"source": {
+							"list": [
+								{
+			              "type": "answer",
+			              "level": 0,
+			              "code": "A001"
+			          }
+							]
+						}
+					},
+	        {
+	          "type": "Event",
+	          "source": {
+	            "name": "@sys.event.TimeoutEvent",
+							"params": {
+								"period": 10000
+							}
+	          }
+	        }
+				]
+      },
+			"suggestedInteracts": {
+				"items": [
+					{
+						"type": "H5",
+						"source": "http://xx.h5"
+					}
+				]
+			},
       "data": {
         "city": "北京",
         "date": "2018-06-21",
@@ -220,7 +218,7 @@ Results 中每一个元素是一个Result object
 | Parameter    | Description  | type    | required |
 | ------------ | ----------------- | ---------------- | -------- |
 | outputSpeech | 语音回复 | object  | false |
-| directives | 针对给定接口的设备级响应的指令数组，如ROSAI.EVENT, Display.Customized | directive object array | false |
+| directives | 针对给定接口的设备级响应的指令数组，如Display.Customized.H5 | directive object array | false |
 | hint    | 语音回复，后续语音输出建议使用outputSpeech | string   | false |
 | emotion | emotion object数组。情感识别结果 | string   | false |
 | data | bot返回的所有原始数据 | object  | false  |
@@ -248,8 +246,8 @@ simple card example:
 
 Parameter  | Description  |  type | required
 --|--|--|--
-type | 表示output speech的type, 有效的type: "PlainText"，"SSML", "Audio" |  string | true
-source | output speech 的内容，根据type来解析<br>- PlainText: 输出tts;<br>- SSML: 符合ssml语法的声音输出方案;<br>- Audio: 输出音频文件 | string | true
+type | 表示output speech的type, 有效的type: "PlainText", "Audio" |  string | true
+source | output speech 的内容，根据type来解析<br>- PlainText: 输出tts;<br>- Audio: 输出音频文件 | string | true
 
 ### display directive object
 

@@ -2,12 +2,11 @@
 
 ### Roobo 开放平台
 
-版本：1.1.1
+版本：1.0.1（已停止升级）
 
 ### 大纲
 
 * [简介](#1-简介)
-  * [一些概念](#11-一些概念)
 * [Request](#2-request)
   * [协议概览](#21-协议概览)
 * [Response](#3-response)
@@ -16,20 +15,9 @@
 
 ### 1. 简介
 
-本文是对在[_Roobo开放平台_](https://ros.ai)上开发Client的EventRequest协议的详细描述。
-
-#### 1.1 一些概念
-
-在了解本文所描述协议之前，需要对一下概念作如下说明：
-
-* **CloudApp** - 在[_Roobo开放平台_](https://ros.ai)上接入某种云端服务或小应用。
-* **CloudDispatcher** - 用于向 CloudApp 传递请求和分发 CloudApp 返回结果的云端模块。
-* **CloudClient** - 用于处理 CloudDispatcher 返回结果的设备端的执行容器。
-* **TTS** - **T**ext **T**o **S**peech 的缩写，这是机器人的语音表达方式。
+本文是对在[_Roobo开放平台_](https://ros.ai)上开发事件请求开发协议的详细描述。在当有某种事件发生时产生的，将事件转发给云端的AI多模交互引擎。
 
 ### 2. Request
-
-_Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返回结果的请求。目前有两种类型的请求：一种是**IntentRequest**，一种是**EventRequest**。**IntentRequest** 根据语音识别和语义理解（_NLP_）的结果创建的，其中会带有（NLP）的信息。**EventRequest**是在当有某种事件发生时产生的，通过_CloudAppClient_转发给当前的_CloudApp_，比如互动游戏中用户5秒无任何输入会产生一个超时事件，当前的_CloudApp_可以选择处理或者不处理。
 
 #### 2.1 协议概览
 
