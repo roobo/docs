@@ -143,6 +143,12 @@ Accept-Charset : utf-8
     {
       "outputSpeech": {
         "items": [
+					{
+	          "type": "EnabledEvent",
+	          "source": {
+							"name": "@sys.event.TimeoutEvent"
+						}
+	        },
           {
             "type": "PlainText",
             "source": "北京今天晴，气温23度到35度，东南风2级"
@@ -157,36 +163,13 @@ Accept-Charset : utf-8
           }
         ]
       },
-      "outputMultimodal": {
+	    "outputScript": {
 				"items": [
 					{
-						"type": "Emotion",
+						"type": "Script.H5",
 						"source": {
-							"list": [
-								{
-			              "type": "answer",
-			              "level": 0,
-			              "code": "A001"
-			          }
-							]
+							"url": "http://xx.h5"
 						}
-					},
-	        {
-	          "type": "Event",
-	          "source": {
-	            "name": "@sys.event.TimeoutEvent",
-							"params": {
-								"period": 10000
-							}
-	          }
-	        }
-				]
-      },
-			"suggestedInteracts": {
-				"items": [
-					{
-						"type": "H5",
-						"source": "http://xx.h5"
 					}
 				]
 			},
@@ -195,7 +178,7 @@ Accept-Charset : utf-8
         "date": "2018-06-21",
         "weather": "晴",
         "quality": "轻度污染",
-    	"temperature": "33"
+    		"temperature": "33"
       },
       "emotions": [
           {
@@ -217,11 +200,19 @@ Results 中每一个元素是一个Result object
 
 | Parameter    | Description  | type    | required |
 | ------------ | ----------------- | ---------------- | -------- |
-| outputSpeech | 语音回复 | object  | false |
-| directives | 针对给定接口的设备级响应的指令数组，如Display.Customized.H5 | directive object array | false |
 | hint    | 语音回复，后续语音输出建议使用outputSpeech | string   | false |
-| emotion | emotion object数组。情感识别结果 | string   | false |
-| data | bot返回的所有原始数据 | object  | false  |
+| outputSpeech | 多模交互的 回复 | object  | false |
+| emotions | []emotion object，情感识别结果 | object   | false |
+| data | 基础数据 | object  | false  |
+
+### outputSpeech Object
+
+包含这一次response需要语音输出的所有资源，其中items是一个 Object Array.
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type | type支持"PlainText", "Audio", "EnabledEvent" |  string | true
+source | 相关支持 | string | true
 
 ### emotion Object
 
@@ -239,15 +230,6 @@ simple card example:
 		"code": "B001"
 }
 ```
-
-### outputSpeech Object
-
-包含这一次response需要语音输出的所有资源，其中items是一个 Object Array.
-
-Parameter  | Description  |  type | required
---|--|--|--
-type | 表示output speech的type, 有效的type: "PlainText", "Audio" |  string | true
-source | output speech 的内容，根据type来解析<br>- PlainText: 输出tts;<br>- Audio: 输出音频文件 | string | true
 
 ### display directive object
 
