@@ -114,7 +114,7 @@ Accept-Charset : utf-8
 | version | String | 协议版本号 | Required |
 | status | Status Object | [Status](status.md) | Required |
 | context | Context Object | [Context](#Context-Object) | Required |
-| results | Results Object | [Results](text-request-dev-protocol.md) | Optional |
+| results | Results Object | [Results](text-request-dev-protocol.md#33-Results-Array) | Optional |
 
 ```json
 {
