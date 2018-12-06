@@ -11,16 +11,6 @@
 	- [Response Body Syntax:](#response-body-syntax)
 		- [Results Array](#results-array)
 		- [Result Object](#result-object)
-		- [outputSpeech Object](#outputspeech-object)
-		- [display directive Object](#display-directive-object)
-		  - [文本卡片](#文本卡片)
-		  - [标准卡片](#标准卡片)
-            - [图片对象](#图片对象)
-            - [弹幕对象](#弹幕对象)
-		  - [图片卡片](#图片卡片)
-		  - [列表卡片](#列表卡片)
-		  - [Suggestions Object](#Suggestions-Object)
-		- [event directive object](#event-directive-object)
 
 <!-- /TOC -->
 
@@ -232,8 +222,14 @@ Parameter  | Description  |  type | required
 type | type支持"PlainText", "Audio", "EnabledEvent" |  string | true
 source | 上面相应type相关数据 | object | true
 
-#### PlainText / Audio
-#### EnabledEvent
+#### [type = PlainText / Audio]
+
+type | required
+--|--
+string | true
+
+#### [type = EnabledEvent]
+
 Parameter  | Description  |  type | required
 --|--|--|--
 name  | 事件名称  |  string | true
@@ -248,7 +244,7 @@ Parameter  | Description  |  type | required
 type | type支持"Script.H5" |  string | true
 source | 上面相应type相关数据 | object | true
 
-#### Script.H5
+#### [type = Script.H5]
 
 Parameter  | Description  |  type | required
 --|--|--|--
