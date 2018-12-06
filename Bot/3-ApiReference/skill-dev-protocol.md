@@ -143,12 +143,12 @@ Accept-Charset : utf-8
     {
       "outputSpeech": {
         "items": [
-					{
-	          "type": "EnabledEvent",
-	          "source": {
-							"name": "@sys.event.TimeoutEvent"
-						}
-	        },
+          {
+            "type": "EnabledEvent",
+            "source": {
+              "name": "@sys.event.TimeoutEvent"
+            }
+          },
           {
             "type": "PlainText",
             "source": "北京今天晴，气温23度到35度，东南风2级"
@@ -163,16 +163,16 @@ Accept-Charset : utf-8
           }
         ]
       },
-	    "outputScript": {
-				"items": [
-					{
-						"type": "Script.H5",
-						"source": {
-							"url": "http://xx.h5"
-						}
-					}
-				]
-			},
+      "outputScript": {
+        "items": [
+	  {
+            "type": "Script.H5",
+            "source": {
+              "url": "http://xx.h5"
+            }
+          }
+        ]
+      },
       "data": {
         "city": "北京",
         "date": "2018-06-21",
@@ -201,18 +201,10 @@ Results 中每一个元素是一个Result object
 | Parameter    | Description  | type    | required |
 | ------------ | ----------------- | ---------------- | -------- |
 | hint    | 语音回复，后续语音输出建议使用outputSpeech | string   | false |
-| outputSpeech | 多模交互的 回复 | object  | false |
+| outputSpeech | 建议VUI回复 | object  | false |
+| outputScript | 建议GUI+VUI回复 | object  | false |
 | emotions | []emotion object，情感识别结果 | object   | false |
 | data | 基础数据 | object  | false  |
-
-### outputSpeech Object
-
-包含这一次response需要语音输出的所有资源，其中items是一个 Object Array.
-
-Parameter  | Description  |  type | required
---|--|--|--
-type | type支持"PlainText", "Audio", "EnabledEvent" |  string | true
-source | 相关支持 | string | true
 
 ### emotion Object
 
@@ -225,157 +217,39 @@ code  | [情感值定义-二级情绪](emotion.md) |  string | true
 simple card example:
 ```
 {
-		"type": "answer",
-		"level": "1",
-		"code": "B001"
+  "type": "answer",
+  "level": "1",
+  "code": "B001"
 }
 ```
 
-### display directive object
+### outputSpeech Object
 
-显示指令(display directive Object)在directives字段里只允许有一个
-
-Parameter  | Description  |  type | required
---|--|--|--
-type | 指定该directive的类型 |  string | true
-hint | 屏幕上显示的提示文字 | string | false
-card  | type支持“Text“, “Standard“, "Images", "List", "Timer" (待续...) | object | false
-suggestions | Suggestion片段, 最多8片, 每片最长25个char, 仅支持文本 | string array | false
-
-<br>
-**Notes**:<br>
-每次交互，云端返回给端上的response，不一定都会带上card。<br>
-对于不带card的response，端上不要清除上一次交互返回的response里的card展示，以做到状态保持。<br>
-对于端上接收到带card的response，端上替换目前在展示的card展示。
-
-### event directive object
+包含这一次response需要VUI输出的所有资源，其中items是一个 Object Array.
 
 Parameter  | Description  |  type | required
 --|--|--|--
-type | 指定该directive的类型,固定值为“ROSAI.EVENT” |  string | true
-event | event对象，包含事件名(name)和端上处理事件的等待时间(period，单位ms) | [event object](#event object) | true
+type | type支持"PlainText", "Audio", "EnabledEvent" |  string | true
+source | 上面相应type相关数据 | object | true
 
-#### event object
+#### PlainText / Audio
+#### EnabledEvent
+Parameter  | Description  |  type | required
+--|--|--|--
+name  | 事件名称  |  string | true
+
+
+### outputScript Object
+
+包含这一次response需要GUI+VUI输出的所有资源，其中items是一个 Object Array.
 
 Parameter  | Description  |  type | required
 --|--|--|--
-name | 事件名,该事件需在事件引擎已注册 |  string | true
-period | 端上处理事件的等待时间 | int | true
+type | type支持"Script.H5" |  string | true
+source | 上面相应type相关数据 | object | true
 
-#### 文本卡片
-
-Parameter  | Description  |  type | required
---|--|--|--
-type  | 卡片类型，固定值为"Text"  |  string | true
-title  | 卡片标题 |  string | true
-content  | 卡片内容  | string  | true
-
-simple card example:
-```
-"card": {
-  "type": "Text",
-  "title": "北京天气",
-  "content": "多云，气温23度到35度，东南风2级"
-}
-```
-
-#### 标准卡片
+#### Script.H5
 
 Parameter  | Description  |  type | required
 --|--|--|--
-type  | 卡片类型，固定值为"Standard"  |  string | true
-title  | 卡片标题 |  string | true
-content  | 卡片内容  | string  | true
-image  | 图片对象  | [image object](#图片对象) |  true
-
-Standard card example:
-```
-"card": {
-  "type": "Standard",
-  "title": "东风破",
-  "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
-  "image": {
-    "url": "https://ai.roobo.com/image/东风破.jpg",
-    "bulletScreen": {
-      "period": 3000,
-      "imageUrl": "https://ai.roobo.com/image/upvote.jpg",
-      "text": "十二个赞"
-    }
-  }
-}
-```
-
-##### 图片对象
-
-Parameter  | Description  |  type | required
---|--|--|--
-url  | 图片url |  string | true
-bulletScreen  | 弹幕信息  | [bulletScreen](#弹幕对象) object  |  false
-
-##### 弹幕对象
-
-Parameter  | Description  |  type | required
---|--|--|--
-imageUrl  | 弹幕图片url |  string | false
-text  | 弹幕文字  | string  |  false
-imagePosition  | 图片弹幕位置，支持 “top”, "bottom", "left", "right", "center", "full", "top-left", "top-right", "bottom-left", "bottom-right", 默认是"bottom"（如果是"full"，建议端上做到50%透明度） | string |  false
-textPosition  | 文字弹幕位置  |  string |  false
-period  | 弹幕显示时间，单位为ms, 0代表不消失 | int  |  false
-
-#### 图片卡片
-
-Parameter  | Description  |  type | required
---|--|--|--
-type  | 卡片类型，固定值为"Images"  |  string | true
-list  | 图片对象数组  | [image object](#图片对象) array |  true
-
-images card example:
-```
-"card": {
-  "type": "Images",
-  "list": [
-    {
-      "url": "https://ai.roobo.com/image/东风破.jpg"
-    }，
-    {
-      "url": "https://ai.roobo.com/image/小夜曲.jpg"
-    }
-  ]
-}
-```
-
-#### 列表卡片
-
-Parameter  | Description  |  type | required
---|--|--|--
-type  | 卡片类型，固定值为"List"  |  string | true
-list  | 标准卡片对象数组  | [标准卡片](#标准卡片) array |  true
-
-List card example:
-```
-"card": {
-  "type": "List",
-  "list": [
-    {
-      "type": "Standard",
-      "title": "东风破",
-      "content": "《东风破》是中国台湾流行音乐男歌手周杰伦演唱的一首歌曲，由周杰伦谱曲，方文山填词，收录在周杰伦2003年7月31日发行的个人第四张国语专辑《叶惠美》中。",
-      "image": {
-        "url": "https://ai.roobo.com/image/东风破.jpg"
-      }
-    },
-    {
-      "type": "Standard",
-      "title": "祝福",
-      "content": "《祝福》是由丁晓雯作词，郭子作曲，张学友演唱的一首歌曲，收录于1993年12月11日发行的专辑《祝福》中。",
-      "image": {
-        "url": "https://ai.roobo.com/image/张学友_祝福.jpg"
-      }
-    }
-  ]
-}
-```
-
-#### Suggestions Object
-
-引导用户进行下一轮对话的提示样例。
+url  | H5地址  |  string | true
