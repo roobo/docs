@@ -8,16 +8,16 @@
 
 * [简介](#1-简介)
   * [一些概念](#11-一些概念)
-* [Request](#2-reques
-  * [协议概览](#21-协议概览)
-  * [Context定义](#22-context-定义)
-  * [Location定义](#23-location-定义)
-  * [Lang定义](#24-lang定义)
-* [Response](#3-response)
-  * [协议概览](#31-协议概览)
-  * [Status定义](#32-status定义)
-  * [Semantic定义](#33-semantic定义)
-  * [Results定义](#34-results定义)
+* [Request](#2-Intent-Request)
+  * [Request Body Syntax](#21-Request-Body-Syntax)
+  * [Context Object](#22-Context-Object)
+  * [Location Object](#23-Location-Object)
+    * [Address Object](#231-Address-Object)
+  * [Lang Object](#24-Lang-Object)
+* [Response](#3-Intent-Response)
+  * [Response Body Syntax](#31-Response-Body-Syntax)
+  * [Semantic Object](#32-Semantic-Object)
+  * [Results Object](#33-Results-Array)
 
 ### 1. 简介
 
@@ -32,11 +32,11 @@
 * **CloudClient** - 用于处理 CloudDispatcher 返回结果的设备端的执行容器。
 * **TTS** - **T**ext **T**o **S**peech的缩写，这是机器人的语音表达方式。
 
-### 2. Request
+### 2. Intent Request
 
 _Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返回结果的请求。目前有两种类型的请求：一种是**IntentRequest**，一种是**EventRequest**。**IntentRequest** 根据语音识别和语义理解（_NLP_）的结果创建的，其中会带有（NLP）的信息。**EventRequest**是在当有某种事件发生时产生的，通过_CloudAppClient_转发给当前的_CloudApp_，比如互动游戏中用户5秒无任何输入会产生一个超时事件，当前的_CloudApp_可以选择处理或者不处理。
 
-#### 2.1 协议概览
+#### 2.1 Request Body Syntax
 
 _Request_ 的整体协议定义如下所示：
 
@@ -86,7 +86,7 @@ _Request_ 的整体协议定义如下所示：
 }
 ```
 
-#### 2.2 Context 定义
+#### 2.2 Context Object
 
 _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息和应用状态，用以帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。
 
@@ -96,7 +96,7 @@ _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息�
 | context | String | 上文名称 | Optional |
 | parameters  | Map | [Param定义](/Bot/3-ApiReference/rosai-skills-development-protocol.md) | Optional |
 
-#### 2.3 Location 定义
+#### 2.3 Location Object
 
 __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，用于帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。期望key 统一为 location
 
@@ -106,7 +106,7 @@ __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，�
 |longitude|float|经度| Required |
 |latitude|float|纬度| Required |
 
-##### 2.3.1 address定义
+##### 2.3.1 Address Object
 
 | Name | Type | Description | Required |
 |--|--|--|--|
@@ -115,34 +115,23 @@ __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，�
 |city|String|所在的城市| Optional |
 |detail|String|详细的地址信息| Optional |
 
-
-#### 2.4 Lang 定义
+#### 2.4 Lang Object
 
 __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只支持两类中文（__zh__），英文（__en__）。
 
-#### 2.5 Callback 定义
-
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| service | String | 服务名 | Required |
-| action | String | 动作 | Required |
-
-### 3. Response
+### 3. Intent Response
 
 根据之前的描述，Response是 _CloudApp_ 返回给CloudAppClient的结果。
 
-#### 3.1 协议概览
-
-_Response_ 的整体协议定义如下所示：
+#### 3.1 Response Body Syntax
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | reqId | String | 请求的唯一ID | Required |
-| status | Status 对象 | [Status](status.md) | Required |
+| status | Status Object | [Status](status.md) | Required |
 | query | String | 纠错后的Text query | Required |
-| semantic | Semantic 对象 | 语义部分 | Optional |
-| results | Result 对象 | [Result](rosai-skills-development-protocol.md#results-array) | Optional |
-| timeout | Timeout 对象 | 超时参数,deprecated | Optional |
+| semantic | Semantic Object | 语义部分 | Optional |
+| results | Result Object | [Result](#34-results定义) | Optional |
 
 ```
 {
@@ -205,8 +194,7 @@ _Response_ 的整体协议定义如下所示：
   ]
 }
 ```
-
-#### 3.2 semantic定义
+#### 3.2 Semantic Object
 
 _Text query_的语义理解（_NLP_）的结果。
 
@@ -218,9 +206,17 @@ _Text query_的语义理解（_NLP_）的结果。
 | inputContext | Context 对象 | 输入上文 | Optional |
 | outputContext | Context 对象 | 输出下文 | Optional |
 
-#### 3.3 Timeout 定义
+#### 3.3 Results Array
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| timeInMs | String | 超时时间（ms） | Required |
-| action | String | 动作 | Required |
+Results 中每一个元素是一个Result object
+
+##### 3.3.1 Result Object
+
+| Parameter    | Description  | type    | required |
+| ------------ | ----------------- | ---------------- | -------- |
+| hint    | 语音回复，后续语音输出建议使用outputSpeech | string   | false |
+| outputSpeech | 建议VUI回复 | object  | false |
+| outputScript | 建议GUI+VUI回复 | object  | false |
+| emotions | []emotion object，情感识别结果 | object   | false |
+| data | 基础数据 | object  | false  |
+
