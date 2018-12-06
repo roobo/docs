@@ -1,24 +1,27 @@
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+## 技能开发协议
 
-- [Intent Request](#intent-request)
-	- [Request format](#request-format)
-		- [HTTP Header](#http-header)
-		- [Intent Request Body Syntax:](#intent-request-body-syntax)
-		- [Intent Request Body Parameters](#intent-request-body-parameters)
-		- [Context Object](#context-object)
-		- [System Object](#system-object)
-- [Intent Response](#intent-response)
-	- [Response Body Syntax:](#response-body-syntax)
-		- [Results Array](#results-array)
-		- [Result Object](#result-object)
+版本：2.0.0
+
+### 大纲
+
+- [Intent Request](#1-intent-request)
+	- [Request format](#11-request-format)
+		- [HTTP Header](#111-http-header)
+		- [Intent Request Body Syntax:](#112-intent-request-body-syntax)
+		- [Intent Request Body Parameters](#113-intent-request-body-parameters)
+		- [Context Object](#114-context-object)
+		- [System Object](#115-system-object)
+- [Intent Response](#2-intent-response)
+	- [Response Body Syntax:](#21-response-body-syntax)
 
 <!-- /TOC -->
 
-# Intent Request
+# 1. Intent Request
 
-## Request format
+## 1.1 Request format
 
-### HTTP Header
+### 1.1.1 HTTP Header
 
 ```
 POST / HTTP/1.1
@@ -29,7 +32,7 @@ Accept : application/json
 Accept-Charset : utf-8
 ```
 
-###  Intent Request Body Syntax:
+### 1.1.2 Intent Request Body Syntax:
 
 ```json
 {
@@ -78,7 +81,7 @@ Accept-Charset : utf-8
 }
 ```
 
-###  Intent Request Body Parameters
+### 1.1.3 Intent Request Body Parameters
 
 | Parameter | Description                                                  | type   | required |
 | --------- | ------------------------------------------------------------ | ------ | -------- |
@@ -86,7 +89,7 @@ Accept-Charset : utf-8
 | context   | 为你的技能提供请求关联的设备信息和与rosai交互的当前状态及上下文信息 | object | true     |
 | request   | 用户请求的详细信息                                           | object | true     |
 
-### Context Object
+### 1.1.4 Context Object
 
 | Parameter    | Description                               | type                    | required |
 | ------------ | ----------------------------------------- | ----------------------- | -------- |
@@ -95,7 +98,7 @@ Accept-Charset : utf-8
 | lifespanInMs | 上下文有效时间                            | int64                   | false    |
 | parameters   | 与该技能相关的参数信息                    | map<string, *slu.Value> | false    |
 
-### System Object
+### 1.1.5 System Object
 
 ### slu.Value
 
@@ -105,9 +108,9 @@ Accept-Charset : utf-8
 | normType    | 值类型    | string，可枚举值，包括：<br> Int, Bool, Float, String, StrArray   | true    |
 | norm        | 归一化后的值    | 由normType指定   | true    |
 
-# Intent Response
+# 2. Intent Response
 
-## Response Body Syntax:
+## 2.1 Response Body Syntax:
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |

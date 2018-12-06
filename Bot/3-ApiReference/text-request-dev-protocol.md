@@ -1,18 +1,17 @@
 ## IntentRequest 开发协议
 
-### Roobo 开放平台
-
 版本：1.0.3
 
 ### 大纲
 
 * [简介](#1-简介)
 * [Request](#2-Intent-Request)
-  * [Request Body Syntax](#21-Request-Body-Syntax)
-  * [Context Object](#22-Context-Object)
-  * [Location Object](#23-Location-Object)
-    * [Address Object](#231-Address-Object)
-  * [Lang Object](#24-Lang-Object)
+  * [HTTP Header](#21-http-header)
+  * [Request Body Syntax](#22-Request-Body-Syntax)
+  * [Context Object](#23-Context-Object)
+  * [Location Object](#24-Location-Object)
+    * [Address Object](#241-Address-Object)
+  * [Lang Object](#25-Lang-Object)
 * [Response](#3-Intent-Response)
   * [Response Body Syntax](#31-Response-Body-Syntax)
   * [Semantic Object](#32-Semantic-Object)
@@ -28,7 +27,18 @@
 
 ### 2. Intent Request
 
-#### 2.1 Request Body Syntax
+### 2.1 HTTP Header
+
+```
+POST / HTTP/1.1
+Content-Type : application/json;charset=UTF-8
+Host : your.application.endpoint
+Content-Length :
+Accept : application/json
+Accept-Charset : utf-8
+```
+
+#### 2.2 Request Body Syntax
 
 _Request_ 的整体协议定义如下所示：
 
@@ -77,7 +87,7 @@ _Request_ 的整体协议定义如下所示：
 }
 ```
 
-#### 2.2 Context Object
+#### 2.3 Context Object
 
 _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息和应用状态，用以帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。
 
@@ -87,7 +97,7 @@ _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息�
 | context | String | 上文名称 | Optional |
 | parameters  | Map | [Param定义](/Bot/3-ApiReference/rosai-skills-development-protocol.md) | Optional |
 
-#### 2.3 Location Object
+#### 2.4 Location Object
 
 __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，用于帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。期望key 统一为 location
 
@@ -97,7 +107,7 @@ __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，�
 |longitude|float|经度| Required |
 |latitude|float|纬度| Required |
 
-##### 2.3.1 Address Object
+##### 2.4.1 Address Object
 
 | Name | Type | Description | Required |
 |--|--|--|--|
@@ -106,7 +116,7 @@ __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，�
 |city|String|所在的城市| Optional |
 |detail|String|详细的地址信息| Optional |
 
-#### 2.4 Lang Object
+#### 2.5 Lang Object
 
 __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只支持两类中文（__zh__），英文（__en__）。
 
