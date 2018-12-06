@@ -18,6 +18,10 @@
   * [Response Body Syntax](#31-Response-Body-Syntax)
   * [Semantic Object](#32-Semantic-Object)
   * [Results Object](#33-Results-Array)
+    * [Result Object](#331-Result-Object)
+      * [Emotion Object](#3311-Emotion-Object)
+      * [outputSpeech Object](#3312-outputSpeech-Object)
+      * [outputScript Object](#3313-outputScript-Object)
 
 ### 1. 简介
 
@@ -129,9 +133,9 @@ __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只�
 | --- | --- | --- | --- |
 | reqId | String | 请求的唯一ID | Required |
 | status | Status Object | [Status](status.md) | Required |
-| query | String | 纠错后的Text query | Required |
+| query | String | 纠错后的text query | Required |
 | semantic | Semantic Object | 语义部分 | Optional |
-| results | Result Object | [Result](#34-results定义) | Optional |
+| results | Results Object | [Results](#33-Results-Array) | Optional |
 
 ```
 {
@@ -140,28 +144,20 @@ __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只�
     "code": 0,
     "errorType": "success"
   },
-  "query": "唱首周杰伦的歌",
+  "query": "北京今天天气",
   "semantic": {
-    "service": "Music",
-    "action": "Play",
+    "service": "Weather",
+    "action": "WeatherForADay",
     "params": {
-      "artist": {
-        "orgin": [
-          "周杰伦"
-        ],
-        "normType": "StrArray",
-        "norm": [
-          "周杰伦"
-        ]
+      "city": {
+        "orgin": null,
+        "normType": "String",
+        "norm": "北京"
       },
-      "category": {
-        "orgin": [
-          "歌"
-        ],
-        "normType": "StrArray",
-        "norm": [
-          "音乐"
-        ]
+      "date": {
+        "orgin": null,
+        "normType": "String",
+        "norm": "2018-06-21"
       }
     },
     "outputContext": {
@@ -171,29 +167,57 @@ __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只�
   },
   "results": [
     {
-      "hint": "为您播放 周杰伦 枫",
-      "data": {
-        "album": "十一月的萧邦",
-        "artist": "周杰伦",
-        "audio": "http://...",
-        "extra": null,
-        "hqAudio": "",
-        "hqImage": "http://...",
-        "image": "http://...",
-        "length": 275,
-        "name": "枫",
-        "playMode": "",
-        "resId": "music:4042292",
-        "sid": "1996138142-1531449288105",
-        "size": 4416200,
-        "start": 0,
-        "type": "MUSIC"
+      "outputSpeech": {
+        "items": [
+          {
+            "type": "EnabledEvent",
+            "source": {
+              "name": "@sys.event.TimeoutEvent"
+            }
+          },
+          {
+            "type": "PlainText",
+            "source": "北京今天晴，气温23度到35度，东南风2级"
+          },
+          {
+            "type": "Audio",
+            "source": "https://ai.roobo.com/weather/wind_2.mp3"
+          },
+          {
+            "type": "PlainText",
+            "source": "您还可以跟我说 北京空气质量?"
+          }
+        ]
       },
-      "formatType": "audio"
+      "outputScript": {
+        "items": [
+          {
+            "type": "Script.H5",
+            "source": {
+              "url": "http://weather-template.h5"
+            }
+          }
+        ]
+      },
+      "data": {
+        "city": "北京",
+        "date": "2018-06-21",
+        "weather": "晴",
+        "quality": "轻度污染",
+    		"temperature": "33"
+      },
+      "emotions": [
+          {
+              "type": "answer",
+              "level": 0,
+              "code": "A001"
+          }
+      ]
     }
   ]
 }
 ```
+
 #### 3.2 Semantic Object
 
 _Text query_的语义理解（_NLP_）的结果。
@@ -220,3 +244,56 @@ Results 中每一个元素是一个Result object
 | emotions | []emotion object，情感识别结果 | object   | false |
 | data | 基础数据 | object  | false  |
 
+###### 3.3.1.1 Emotion Object
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type  | 情感识别对象，枚举类型["answer"-语音回复的情绪]  |  string | true
+level  | [情感值定义-一级情绪](emotion.md) |  int | true
+code  | [情感值定义-二级情绪](emotion.md) |  string | true
+
+simple card example:
+```
+{
+  "type": "answer",
+  "level": "1",
+  "code": "B001"
+}
+```
+
+###### 3.3.1.2 outputSpeech Object
+
+包含这一次response需要VUI输出的所有资源，其中items是一个 Object Array.
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type | type支持"PlainText", "Audio", "EnabledEvent" |  string | true
+source | 上面相应type相关数据 | object | true
+
+####### [type = PlainText / Audio]
+
+type | required
+--|--
+string | true
+
+####### [type = EnabledEvent]
+
+Parameter  | Description  |  type | required
+--|--|--|--
+name  | 事件名称  |  string | true
+
+
+###### 3.3.1.3 outputScript Object
+
+包含这一次response需要GUI+VUI输出的所有资源，其中items是一个 Object Array.
+
+Parameter  | Description  |  type | required
+--|--|--|--
+type | type支持"Script.H5" |  string | true
+source | 上面相应type相关数据 | object | true
+
+####### [type = Script.H5]
+
+Parameter  | Description  |  type | required
+--|--|--|--
+url  | H5地址  |  string | true

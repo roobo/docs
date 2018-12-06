@@ -109,6 +109,13 @@ Accept-Charset : utf-8
 
 ## Response Body Syntax:
 
+| Name | Type | Description | Required |
+| --- | --- | --- | --- |
+| version | String | 协议版本号 | Required |
+| status | Status Object | [Status](status.md) | Required |
+| context | Context Object | [Context](#Context-Object) | Required |
+| results | Results Object | [Results](text-request-dev-protocol.md) | Optional |
+
 ```json
 {
   "version": "2.0",
@@ -155,7 +162,7 @@ Accept-Charset : utf-8
       },
       "outputScript": {
         "items": [
-	  {
+          {
             "type": "Script.H5",
             "source": {
               "url": "http://xx.h5"
@@ -181,71 +188,3 @@ Accept-Charset : utf-8
   ]
 }
 ```
-
-### Results Array
-
-Results 中每一个元素是一个Result object
-
-### Result Object
-
-| Parameter    | Description  | type    | required |
-| ------------ | ----------------- | ---------------- | -------- |
-| hint    | 语音回复，后续语音输出建议使用outputSpeech | string   | false |
-| outputSpeech | 建议VUI回复 | object  | false |
-| outputScript | 建议GUI+VUI回复 | object  | false |
-| emotions | []emotion object，情感识别结果 | object   | false |
-| data | 基础数据 | object  | false  |
-
-### emotion Object
-
-Parameter  | Description  |  type | required
---|--|--|--
-type  | 情感识别对象，枚举类型["answer"-语音回复的情绪]  |  string | true
-level  | [情感值定义-一级情绪](emotion.md) |  int | true
-code  | [情感值定义-二级情绪](emotion.md) |  string | true
-
-simple card example:
-```
-{
-  "type": "answer",
-  "level": "1",
-  "code": "B001"
-}
-```
-
-### outputSpeech Object
-
-包含这一次response需要VUI输出的所有资源，其中items是一个 Object Array.
-
-Parameter  | Description  |  type | required
---|--|--|--
-type | type支持"PlainText", "Audio", "EnabledEvent" |  string | true
-source | 上面相应type相关数据 | object | true
-
-#### [type = PlainText / Audio]
-
-type | required
---|--
-string | true
-
-#### [type = EnabledEvent]
-
-Parameter  | Description  |  type | required
---|--|--|--
-name  | 事件名称  |  string | true
-
-
-### outputScript Object
-
-包含这一次response需要GUI+VUI输出的所有资源，其中items是一个 Object Array.
-
-Parameter  | Description  |  type | required
---|--|--|--
-type | type支持"Script.H5" |  string | true
-source | 上面相应type相关数据 | object | true
-
-#### [type = Script.H5]
-
-Parameter  | Description  |  type | required
---|--|--|--
-url  | H5地址  |  string | true
