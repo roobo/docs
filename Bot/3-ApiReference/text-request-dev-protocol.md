@@ -7,7 +7,6 @@
 ### 大纲
 
 * [简介](#1-简介)
-  * [一些概念](#11-一些概念)
 * [Request](#2-Intent-Request)
   * [Request Body Syntax](#21-Request-Body-Syntax)
   * [Context Object](#22-Context-Object)
@@ -25,20 +24,9 @@
 
 ### 1. 简介
 
-本文是对在[_Roobo开放平台_](https://ros.ai)上开发Client的IntentRequest协议的详细描述。
-
-#### 1.1 一些概念
-
-在了解本文所描述协议之前，需要对一下概念作如下说明：
-
-* **CloudApp** - 在[_Roobo开放平台_](https://ros.ai)上接入某种云端服务或小应用。
-* **CloudDispatcher** - 用于向 CloudApp 传递请求和分发 CloudApp 返回结果的云端模块。
-* **CloudClient** - 用于处理 CloudDispatcher 返回结果的设备端的执行容器。
-* **TTS** - **T**ext **T**o **S**peech的缩写，这是机器人的语音表达方式。
+本文是对在[_Roobo开放平台_](https://ros.ai)上技能请求协议的详细描述。
 
 ### 2. Intent Request
-
-_Request_是由CloudAppClient产生的用于向 CloudDispatcher 获取对应返回结果的请求。目前有两种类型的请求：一种是**IntentRequest**，一种是**EventRequest**。**IntentRequest** 根据语音识别和语义理解（_NLP_）的结果创建的，其中会带有（NLP）的信息。**EventRequest**是在当有某种事件发生时产生的，通过_CloudAppClient_转发给当前的_CloudApp_，比如互动游戏中用户5秒无任何输入会产生一个超时事件，当前的_CloudApp_可以选择处理或者不处理。
 
 #### 2.1 Request Body Syntax
 
@@ -51,10 +39,9 @@ _Request_ 的整体协议定义如下所示：
 | sessionId | String | 会话id，如果有clientIId，一般同clientId即可 | Required |
 | query | String | 输入query | Required |
 | clientId | String | 设备id | Optional |
-| lang | Lang | 语种，默认中文 | Optional |
-| contexts | Context 对象 | 上文 | Optional |
-| location | Location 对象 | 地理位置 | Optional |
-| callback | Callback 对象 | 回调参数,deprecated | Optional |
+| lang | Lang Object | [Lang](#24-Lang-Object) | Optional |
+| contexts | []Context Object | [Lang](#22-Context-Object) | Optional |
+| location | Location Object | [Lang](#23-Location-Object) | Optional |
 
 ```
 {
@@ -106,7 +93,7 @@ __Location__ 向所请求的CloudApp提供了当前的设备的地理信息，�
 
 | Name | Type | Description | Required |
 |--|--|--|--|
-|address|object| [address定义](#231-address定义)| Optional |
+|address|object| [address](#231-address定义)| Optional |
 |longitude|float|经度| Required |
 |latitude|float|纬度| Required |
 
