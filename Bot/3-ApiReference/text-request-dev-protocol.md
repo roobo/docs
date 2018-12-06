@@ -167,12 +167,6 @@ __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只�
       "outputSpeech": {
         "items": [
           {
-            "type": "EnabledEvent",
-            "source": {
-              "name": "@sys.event.TimeoutEvent"
-            }
-          },
-          {
             "type": "PlainText",
             "source": "北京今天晴，气温23度到35度，东南风2级"
           },
@@ -264,7 +258,7 @@ simple card example:
 
 Parameter  | Description  |  type | required
 --|--|--|--
-type | type支持"PlainText", "Audio", "EnabledEvent" |  string | true
+type | type支持"PlainText", "Audio" |  string | true
 source | 上面相应type相关数据 | object | true
 
 ####### [type = PlainText / Audio]
@@ -272,12 +266,6 @@ source | 上面相应type相关数据 | object | true
 type | required
 --|--
 string | true
-
-####### [type = EnabledEvent]
-
-Parameter  | Description  |  type | required
---|--|--|--
-name  | 事件名称  |  string | true
 
 
 ###### 3.3.1.3 outputScript Object
