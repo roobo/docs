@@ -1,22 +1,34 @@
-## 事件请求开发协议
+# 事件请求开发协议
 
 版本：2.0.0
 
-### 大纲
+## 大纲
 
 * [简介](#1-简介)
-* [Request](#2-request)
-  * [协议概览](#21-协议概览)
-  * [Event定义](#22-event-定义)
-  * [Event命名规范](#23-命名规范)
+* [Event Request](#2-Event-Request)
+  * [HTTP-Header](#21-HTTP-Header)
+  * [Request Body Syntax](#22-Request-Body-Syntax)
+    * [Event Object](#221-Event-Object)
+* [Event 命名规范](#23-Event-命名规范)
 
-### 1. 简介
+## 1. 简介
 
 本文是对在[_Roobo开放平台_](https://ros.ai)上事件请求开发协议的详细描述。在当有某种事件发生时产生的，将事件转发给云端的AI策略引擎进行计算。
 
-### 2. Request
+## 2. Event Request
 
-#### 2.1 协议概览
+### 2.1 HTTP Header
+
+```
+POST / HTTP/1.1
+Content-Type : application/json;charset=UTF-8
+Host : your.application.endpoint
+Content-Length :
+Accept : application/json
+Accept-Charset : utf-8
+```
+
+### 2.2 Request Body Syntax
 
 _Request_ 的整体协议定义如下所示：
 
@@ -72,7 +84,7 @@ _Request_ 的整体协议定义如下所示：
 }
 ```
 
-#### 2.2 Event 定义
+#### 2.2.1 Event Object
 
 __Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包含事件名和事件参数
 
@@ -81,15 +93,28 @@ __Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包�
 | name | string | 事件名 | true |
 | params | Map | 事件参数 | true |
 
-#### 2.3 Event 命名规范
+## 3 Event 命名规范
 
-| 事件名称 | 事件含义 | 参数 | 举例 | deprecated |
-| --- | --- | --- | --- | --- |
-| sys.event.device_power_on  | 开机 | | | PowerOnEvent |
-| sys.event.device_idle | 设备空闲 | | | IdleEvent |
-| sys.event.bot_enter | 进入场景 |  | | ROSAI.EnterEvent |
-| sys.event.camera_humanface_wakeup | 人脸唤醒 | "params": {<br>&nbsp;&nbsp;"isChild": bool //是否是小孩<br>&nbsp;&nbsp;"userId":string //userId<br>} | | DeviceHumanFaceEvent |
-| sys.event.voice_wakeup | 语音唤醒 |  | | DeviceWakeUpBotEvent |
-| sys.event.screen_touch_item | 触摸交互元素 | "params": {<br>&nbsp;&nbsp;"url": string //被交互元素url标识<br>} | | ROSAI.TouchEvent |
-| event.screen_touch_5_times | 触摸5次 |  | | Touch5Times |
-| sys.event.cloud_query | 云端query事件 |  | | CloudBotEvent |
+### 系统事件
+
+系统事件名称规则：@sys.event.event_name
+
+| 分段 | 含义 |
+| --- | --- |
+| @sys.evnet. | 系统事件前缀 |
+| event_name  | 事件名，命名规范同C语言变量 |
+
+开放系统事件列表
+
+| 事件名称 | 事件含义 | 参数 |
+| --- | --- | --- |
+| sys.event.device_power_on  | 开机 | {} |
+
+### 自定义事件
+
+自定义事件名称规则：@event.event_name
+
+| 分段 | 含义 |
+| --- | --- |
+| @evnet. | 自定义事件前缀 |
+| event_name  | 事件名，命名规范同C语言变量 |
