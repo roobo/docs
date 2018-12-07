@@ -230,8 +230,10 @@ Results 中每一个元素是一个Result object
 | Parameter    | Description  | type    | required |
 | ------------ | ----------------- | ---------------- | -------- |
 | hint    | 语音回复，后续语音输出建议使用outputSpeech | string   | false |
-| outputSpeech | 建议VUI回复 | object  | false |
-| outputScript | 建议GUI+VUI回复 | object  | false |
+| outputSpeech | 建议语音回复 | object  | true |
+| outputDisplay | 建议展示，待定 | object  | false |
+| outputEnableEvent | 建议开启事件，待定 | object  | false |
+| script | 建议交互脚本 | object  | false |
 | emotions | []emotion object，情感识别结果 | object   | false |
 | data | 基础数据 | object  | false  |
 
@@ -240,8 +242,8 @@ Results 中每一个元素是一个Result object
 Parameter  | Description  |  type | required
 --|--|--|--
 type  | 情感识别对象，枚举类型["answer"-语音回复的情绪]  |  string | true
-level  | [情感值定义-一级情绪](emotion.md) |  int | true
-code  | [情感值定义-二级情绪](emotion.md) |  string | true
+level  | [情感值定义-一级情绪](emotion.md#Level定义) |  int | true
+code  | [情感值定义-二级情绪](emotion.md#Code定义) |  string | true
 
 simple card example:
 ```
@@ -260,12 +262,6 @@ Parameter  | Description  |  type | required
 --|--|--|--
 type | type支持"PlainText", "Audio" |  string | true
 source | 上面相应type相关数据 | object | true
-
-####### [type = PlainText / Audio]
-
-type | required
---|--
-string | true
 
 
 ###### 3.3.1.3 outputScript Object

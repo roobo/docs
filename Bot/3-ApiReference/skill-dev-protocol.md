@@ -144,12 +144,6 @@ Accept-Charset : utf-8
       "outputSpeech": {
         "items": [
           {
-            "type": "EnabledEvent",
-            "source": {
-              "name": "@sys.event.TimeoutEvent"
-            }
-          },
-          {
             "type": "PlainText",
             "source": "北京今天晴，气温23度到35度，东南风2级"
           },
@@ -160,16 +154,6 @@ Accept-Charset : utf-8
           {
             "type": "PlainText",
             "source": "您还可以跟我说 北京空气质量?"
-          }
-        ]
-      },
-      "outputScript": {
-        "items": [
-          {
-            "type": "Script.H5",
-            "source": {
-              "url": "http://xx.h5"
-            }
           }
         ]
       },
