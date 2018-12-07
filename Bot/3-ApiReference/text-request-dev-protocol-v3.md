@@ -183,10 +183,8 @@ __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只�
       "script": {
         "items": [
           {
-            "type": "Script.H5",
-            "source": {
-              "url": "http://weather-template.h5"
-            }
+            "type": "H5",
+            "source": "http://weather-template.h5"
           }
         ]
       },
@@ -261,20 +259,14 @@ simple card example:
 Parameter  | Description  |  type | required
 --|--|--|--
 type | type支持"PlainText", "Audio" |  string | true
-source | 上面相应type相关数据 | object | true
+source | 上面相应type相关数据 | string | true
 
 
-###### 3.3.1.3 outputScript Object
+###### 3.3.1.3 script Object
 
 包含这一次response需要GUI+VUI输出的所有资源，其中items是一个 Object Array.
 
 Parameter  | Description  |  type | required
 --|--|--|--
-type | type支持"Script.H5" |  string | true
-source | 上面相应type相关数据对象 | object | true
-
-source Object IF [[ $type = "Script.H5" ]]
-
-Parameter  | Description  |  type | required
---|--|--|--
-url  | H5地址  |  string | true
+type | type支持"H5" |  string | true
+source | 上面相应type相关数据 | string | true
