@@ -40,8 +40,8 @@ _Request_ 的整体协议定义如下所示：
     "lang": "zh",
     "contexts": [
         {
-            "context": "coffee",
             "service": "OrderCoffee",
+            "context": "coffee",
             "parameters": {
                 "contactId": {
                     "orgin":null,
@@ -64,7 +64,7 @@ _Request_ 的整体协议定义如下所示：
     "events": [
         {
             "name": "事件名",
-            "parameters": {
+            "params": {
                 // 事件参数
             }
         }
@@ -79,7 +79,7 @@ __Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包�
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | name | string | 事件名 | true |
-| parameters | Map | 事件参数 | true |
+| params | Map | 事件参数 | true |
 
 #### 2.3 Event 命名规范
 

@@ -211,7 +211,7 @@ __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只�
 
 #### 3.2 Semantic Object
 
-_Text query_的语义理解（_NLP_）的结果。
+语义结果输出。核心是技能名+意图名+槽位列表。
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
@@ -223,7 +223,7 @@ _Text query_的语义理解（_NLP_）的结果。
 
 #### 3.3 Results Array
 
-Results 中每一个元素是一个Result object
+数据结果输出。Results 中每一个元素是一个Result object，除极个别特殊技能外，大部分技能的Results长度都为1。
 
 ##### 3.3.1 Result Object
 
@@ -271,9 +271,9 @@ source | 上面相应type相关数据 | object | true
 Parameter  | Description  |  type | required
 --|--|--|--
 type | type支持"Script.H5" |  string | true
-source | 上面相应type相关数据 | object | true
+source | 上面相应type相关数据对象 | object | true
 
-####### [type = Script.H5]
+source Object IF [[ $type = "Script.H5" ]]
 
 Parameter  | Description  |  type | required
 --|--|--|--
