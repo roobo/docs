@@ -180,7 +180,7 @@ __Lang__ 向所请求的CloudApp标明应用所选择的_NLP_类型。目前只�
           }
         ]
       },
-      "outputScript": {
+      "script": {
         "items": [
           {
             "type": "Script.H5",
