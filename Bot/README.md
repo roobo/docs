@@ -10,9 +10,9 @@
         * [实体](2-RosAiDocument/1-SkillsKit/important-concept/entity.md)
         * [槽位](2-RosAiDocument/1-SkillsKit/important-concept/slot.md)
     * [开发协议](3-ApiReference/README.md)
-        * [技能开发协议](3-ApiReference/rosai-skills-development-protocol.md)
-        * [端侧语义请求协议](3-ApiReference/rosai-client-development-protocol-intent.md)
-        * [端侧事件请求协议](3-ApiReference/rosai-client-development-protocol-event.md)
+        * [文本请求协议](3-ApiReference/text-request-dev-protocol-v3.md)
+        * [事件请求协议](3-ApiReference/event-request-dev-protocol-v2.md)
+        * [技能开发协议](3-ApiReference/skill-dev-protocol.md)
     * 技能接入指南
         * [技能接入最佳实践](4-SkillDocument/最佳实践.md)
         * [技能接入文档模板](4-SkillDocument/技能模板.md)
