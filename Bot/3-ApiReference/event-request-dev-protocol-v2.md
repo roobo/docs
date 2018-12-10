@@ -9,7 +9,7 @@
   * [HTTP-Header](#21-HTTP-Header)
   * [Request Body Syntax](#22-Request-Body-Syntax)
     * [Event Object](#221-Event-Object)
-* [Event 命名规范](#23-Event-命名规范)
+* [Event 命名规范](#3-Event-命名规范)
 
 ## 1. 简介
 
@@ -37,7 +37,7 @@ _Request_ 的整体协议定义如下所示：
 | agentId | String | Access Key | Required |
 | token | String | Token | Required |
 | sessionId | String | 会话id，如果有clientIId，一般同clientId即可 | Required |
-| events | [Event](#22-event-定义) | 事件列表 | Required |
+| events | [[]Event](#221-Event-Object) | 事件列表 | Required |
 | clientId | String | 设备id | Optional |
 | lang | Lang | 语种，默认"zh" | Optional |
 | contexts | Context 对象 | 上文 | Optional |
@@ -91,7 +91,7 @@ __Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包�
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | name | string | 事件名 | true |
-| params | Map | 事件参数 | true |
+| params | Map | 事件参数Key:Value结构，（Value只支持String,Int,Float,Bool） | true |
 
 ## 3 Event 命名规范
 
@@ -108,7 +108,7 @@ __Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包�
 
 | 事件名称 | 事件含义 | 参数 |
 | --- | --- | --- |
-| sys.event.device_power_on  | 开机 | {} |
+| @sys.event.device_power_on  | 开机 | {} |
 
 ### 自定义事件
 

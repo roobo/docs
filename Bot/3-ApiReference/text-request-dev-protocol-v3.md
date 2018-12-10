@@ -19,7 +19,7 @@
     * [Result Object](#331-Result-Object)
       * [Emotion Object](#3311-Emotion-Object)
       * [outputSpeech Object](#3312-outputSpeech-Object)
-      * [outputScript Object](#3313-outputScript-Object)
+      * [script Object](#3313-script-Object)
 
 ### 1. 简介
 
