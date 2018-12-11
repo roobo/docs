@@ -10,6 +10,8 @@
   * [Request Body Syntax](#22-Request-Body-Syntax)
     * [Event Object](#221-Event-Object)
 * [Event 命名规范](#3-Event-命名规范)
+  * [Event Name](#31-Event-Name)
+  * [ROSAI Events](#32-ROSAI-Events)
 
 ## 1. 简介
 
@@ -95,26 +97,20 @@ __Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包�
 
 ## 3 Event 命名规范
 
-### 系统事件
+### 3.1 Event Name
 
-系统事件名称规则：@sys.event.event_name
+四段式命名规则，中间使用"."号分隔，每段命名规则同C变量。
+{$developer}.{$source}.{$module}.{$eventname}
 
-| 分段 | 含义 |
+| Name | Description |
 | --- | --- |
-| @sys.evnet. | 系统事件前缀 |
-| event_name  | 事件名，命名规范同C语言变量 |
+| {$developer}  | 开发商，例如ROSAI |
+| {$source} | 事件来源，枚举类型[local, cloud] |
+| {$module} | 模块，例如：audio_player |
+| {$eventname} | 具体事件名，例如：PlaybackStarted |
 
-开放系统事件列表
+### 3.2 ROSAI Events
 
 | 事件名称 | 事件含义 | 参数 |
 | --- | --- | --- |
-| @sys.event.device_power_on  | 开机 | {} |
-
-### 自定义事件
-
-自定义事件名称规则：@event.event_name
-
-| 分段 | 含义 |
-| --- | --- |
-| @evnet. | 自定义事件前缀 |
-| event_name  | 事件名，命名规范同C语言变量 |
+| ROSAI.local.image.human_face_detection | 图像事件 | ```{"yaw":-6.595666885375977,"pitch":17.07350730895996,"roll":-1.699707269668579}``` |

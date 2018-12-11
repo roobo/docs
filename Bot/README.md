@@ -27,3 +27,4 @@
             * [单位换算](4-SkillDocument/生活场景/单位换算.md)
         * [系统设置类](4-SkillDocument/系统设置/README.md)
             * [闹钟](4-SkillDocument/系统设置/闹钟.md)
+            * [音量控制](4-SkillDocument/系统设置/音量控制.md)
