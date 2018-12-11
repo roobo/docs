@@ -1,8 +1,8 @@
-# 事件请求开发协议
+## 事件请求开发协议
 
 版本：2.0.0
 
-## 大纲
+### 大纲
 
 * [简介](#1-简介)
 * [Event Request](#2-Event-Request)
@@ -13,13 +13,13 @@
   * [Event Name](#31-Event-Name)
   * [ROSAI Events](#32-ROSAI-Events)
 
-## 1. 简介
+### 1. 简介
 
 本文是对在[_Roobo开放平台_](https://ros.ai)上事件请求开发协议的详细描述。在当有某种事件发生时产生的，将事件转发给云端的AI策略引擎进行计算。
 
-## 2. Event Request
+### 2. Event Request
 
-### 2.1 HTTP Header
+#### 2.1 HTTP Header
 
 ```
 POST / HTTP/1.1
@@ -30,7 +30,7 @@ Accept : application/json
 Accept-Charset : utf-8
 ```
 
-### 2.2 Request Body Syntax
+#### 2.2 Request Body Syntax
 
 _Request_ 的整体协议定义如下所示：
 
@@ -86,7 +86,7 @@ _Request_ 的整体协议定义如下所示：
 }
 ```
 
-#### 2.2.1 Event Object
+##### 2.2.1 Event Object
 
 __Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包含事件名和事件参数
 
@@ -95,9 +95,9 @@ __Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包�
 | name | string | 事件名 | true |
 | params | Map | 事件参数Key:Value结构，（Value只支持String,Int,Float,Bool） | true |
 
-## 3 Event 命名规范
+### 3 Event 命名规范
 
-### 3.1 Event Name
+#### 3.1 Event Name
 
 四段式命名规则，中间使用"."号分隔，每段命名规则同C变量。
 {$developer}.{$source}.{$module}.{$eventname}
@@ -109,7 +109,7 @@ __Event__ 向所请求的CloudApp提供了当前的发生的事件信息，包�
 | {$module} | 模块，例如：audio_player |
 | {$eventname} | 具体事件名，例如：PlaybackStarted |
 
-### 3.2 ROSAI Events
+#### 3.2 ROSAI Events
 ```
 // 图像人脸检测事件
 {

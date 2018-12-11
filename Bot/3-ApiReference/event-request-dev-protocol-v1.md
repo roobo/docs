@@ -1,8 +1,8 @@
-# 事件请求开发协议
+## 事件请求开发协议
 
 版本：1.0.1 （已停止升级）
 
-## 大纲
+### 大纲
 
 * [简介](#1-简介)
 * [Event Request](#2-Event-Request)
@@ -13,13 +13,13 @@
 * [Response](#3-Intent-Response)
   * [Response Body Syntax](#31-Response-Body-Syntax)
 
-## 1. 简介
+### 1. 简介
 
 本文是对在[_Roobo开放平台_](https://ros.ai)上事件请求开发协议的详细描述。在当有某种事件发生时产生的，将事件转发给云端的AI策略引擎进行计算。
 
-## 2. Event Request
+### 2. Event Request
 
-### 2.1 HTTP Header
+#### 2.1 HTTP Header
 
 ```
 POST / HTTP/1.1
@@ -30,7 +30,7 @@ Accept : application/json
 Accept-Charset : utf-8
 ```
 
-### 2.2 Request Body Syntax
+#### 2.2 Request Body Syntax
 
 **_Request_ 的整体协议定义如下所示：**
 
@@ -78,7 +78,7 @@ Accept-Charset : utf-8
 }
 ```
 
-#### 2.2.1 Event Object
+##### 2.2.1 Event Object
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ Accept-Charset : utf-8
 | type | string | 可枚举值，可选值有：<br>- dedicated: 有Skill响应的事件 <br>- general: 通用事件，例如Touch, HumanFace | true |
 | data | object | 当type==dedicated时，才会有这个字段，描述如下。data用来描述需要由哪个skill来接收此事件，以及相关的槽位信息 | false |
 
-#### 2.2.2 Data Object
+##### 2.2.2 Data Object
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
@@ -95,11 +95,11 @@ Accept-Charset : utf-8
 
   [03272349]: https://github.com/roobo/docs/blob/master/Bot/3-ApiReference/rosai-skills-development-protocol.md#system-object "slu.Value"
 
-## 3. Event Response
+### 3. Event Response
 
 根据之前的描述，Response是 _CloudApp_ 向客户端的返回结果。
 
-### 3.1 Response Body Syntax
+#### 3.1 Response Body Syntax
 
 _Response_ 的整体协议定义如下所示：
 
@@ -168,7 +168,7 @@ legacy response (deprecated)
 }
 ```
 
-## 4. 老版本的Event事件集合，新版本Event命名规范请参考event request v2版本
+### 4. 老版本的Event事件集合，新版本Event命名规范请参考event request v2版本
 
 | 事件名称 | 事件含义 | 参数 | 举例 | deprecated |
 | --- | --- | --- | --- | --- |
