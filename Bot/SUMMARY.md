@@ -15,6 +15,8 @@
         * [文本请求协议](3-ApiReference/text-request-dev-protocol-v3.md)
         * [事件请求协议](3-ApiReference/event-request-dev-protocol-v2.md)
         * [技能开发协议](3-ApiReference/skill-dev-protocol.md)
+        * [status](3-ApiReference/status.md)
+        * [emotion](3-ApiReference/emotion.md)
     * 技能接入指南
         * [技能接入最佳实践](4-SkillDocument/最佳实践.md)
         * [技能接入文档模板](4-SkillDocument/技能模板.md)
