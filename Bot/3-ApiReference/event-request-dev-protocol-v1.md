@@ -12,7 +12,6 @@
     * [Data Object](#222-Data-Object)
 * [Response](#3-Intent-Response)
   * [Response Body Syntax](#31-Response-Body-Syntax)
-* [Event 命名规范](#4-Event 命名规范)
 
 ## 1. 简介
 
@@ -169,7 +168,7 @@ legacy response (deprecated)
 }
 ```
 
-## 4. Event 命名规范
+## 4. 老版本的Event事件集合，新版本Event命名规范请参考event request v2版本
 
 | 事件名称 | 事件含义 | 参数 | 举例 | deprecated |
 | --- | --- | --- | --- | --- |

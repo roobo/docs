@@ -28,3 +28,4 @@
         * [系统设置类](4-SkillDocument/系统设置/README.md)
             * [闹钟](4-SkillDocument/系统设置/闹钟.md)
             * [音量控制](4-SkillDocument/系统设置/音量控制.md)
+            * [休眠控制](4-SkillDocument/系统设置/休眠控制.md)
