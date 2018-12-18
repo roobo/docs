@@ -96,7 +96,7 @@ _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息�
 | :--- | :--- | :--- | :--- |
 | service | String | 服务名 | Required |
 | context | String | 上文名称 | Optional |
-| parameters  | map<string, *Value> | 上文相关的参数信息 | Optional |
+| parameters  | map&lt;string, *[Value](#231-value-object)&gt; | 上文相关的参数信息 | Optional |
 
 ##### 2.3.1 Value Object
 
