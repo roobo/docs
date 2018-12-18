@@ -5,21 +5,22 @@
 ### 大纲
 
 * [简介](#1-简介)
-* [Request](#2-Intent-Request)
+* [Intent Request](#2-intent-request)
   * [HTTP Header](#21-http-header)
-  * [Request Body Syntax](#22-Request-Body-Syntax)
-  * [Context Object](#23-Context-Object)
-  * [Location Object](#24-Location-Object)
-    * [Address Object](#241-Address-Object)
-  * [Lang Object](#25-Lang-Object)
-* [Response](#3-Intent-Response)
-  * [Response Body Syntax](#31-Response-Body-Syntax)
-  * [Semantic Object](#32-Semantic-Object)
-  * [Results Object](#33-Results-Array)
-    * [Result Object](#331-Result-Object)
-      * [Emotion Object](#3311-Emotion-Object)
-      * [outputSpeech Object](#3312-outputSpeech-Object)
-      * [script Object](#3313-script-Object)
+  * [Request Body Syntax](#22-request-body-syntax)
+  * [Context Object](#23-context-object)
+    * [Value Object](#231-value-object)
+  * [Location Object](#24-location-object)
+    * [Address Object](#241-address-object)
+  * [Lang Object](#25-lang-object)
+* [Intent Response](#3-intent-response)
+  * [Response Body Syntax](#31-response-body-syntax)
+  * [Semantic Object](#32-semantic-object)
+  * [Results Object](#33-results-array)
+    * [Result Object](#331-result-object)
+      * [Emotion Object](#3311-emotion-object)
+      * [outputSpeech Object](#3312-outputspeech-object)
+      * [script Object](#3313-script-object)
 
 ### 1. 简介
 
@@ -49,9 +50,9 @@ _Request_ 的整体协议定义如下所示：
 | sessionId | String | 会话id，如果有clientIId，一般同clientId即可 | Required |
 | query | String | 输入query | Required |
 | clientId | String | 设备id | Optional |
-| lang | Lang Object | [Lang](#24-Lang-Object) | Optional |
-| contexts | []Context Object | [Lang](#22-Context-Object) | Optional |
-| location | Location Object | [Lang](#23-Location-Object) | Optional |
+| lang | [Lang](#25-lang-object) | Nlu语言设置 | Optional |
+| contexts | [][Context](#23-context-object) | 上下文 | Optional |
+| location | [Location](#24-location-object) | 地址信息 | Optional |
 
 ```
 {
@@ -95,7 +96,15 @@ _Context_ 向所请求的CloudApp提供了当前的设备信息，用户信息�
 | :--- | :--- | :--- | :--- |
 | service | String | 服务名 | Required |
 | context | String | 上文名称 | Optional |
-| parameters  | Map | [Param定义](/Bot/3-ApiReference/rosai-skills-development-protocol.md) | Optional |
+| parameters  | map<string, *Value> | 上文相关的参数信息 | Optional |
+
+##### 2.3.1 Value Object
+
+| Parameter    | Description     | type      | required |
+| ------------ | --------------- | --------- | -------- |
+| orgin       | value 的synonym，原值 | object | false     |
+| normType    | 值类型    | string，可枚举值，包括：<br> Int, Bool, Float, String, StrArray   | true    |
+| norm        | 归一化后的值    | 由normType指定   | true    |
 
 #### 2.4 Location Object
 

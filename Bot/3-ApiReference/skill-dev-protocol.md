@@ -17,11 +17,11 @@
 
 <!-- /TOC -->
 
-# 1. Intent Request
+### 1. Intent Request
 
-## 1.1 Request format
+#### 1.1 Request format
 
-### 1.1.1 HTTP Header
+##### 1.1.1 HTTP Header
 
 ```
 POST / HTTP/1.1
@@ -32,7 +32,7 @@ Accept : application/json
 Accept-Charset : utf-8
 ```
 
-### 1.1.2 Intent Request Body Syntax:
+##### 1.1.2 Intent Request Body Syntax:
 
 ```json
 {
@@ -81,7 +81,7 @@ Accept-Charset : utf-8
 }
 ```
 
-### 1.1.3 Intent Request Body Parameters
+##### 1.1.3 Intent Request Body Parameters
 
 | Parameter | Description                                                  | type   | required |
 | --------- | ------------------------------------------------------------ | ------ | -------- |
@@ -89,35 +89,27 @@ Accept-Charset : utf-8
 | context   | 为你的技能提供请求关联的设备信息和与rosai交互的当前状态及上下文信息 | object | true     |
 | request   | 用户请求的详细信息                                           | object | true     |
 
-### 1.1.4 Context Object
+##### 1.1.4 Context Object
 
 | Parameter    | Description                               | type                    | required |
 | ------------ | ----------------------------------------- | ----------------------- | -------- |
 | system       | 提供当前rosai和设备与该技能交互的状态信息 | object                  | true     |
 | context      | 当前技能与多轮相关的上下文信息            | string                  | false    |
 | lifespanInMs | 上下文有效时间                            | int64                   | false    |
-| parameters   | 与该技能相关的参数信息                    | map<string, *slu.Value> | false    |
+| parameters   | 与该技能相关的参数信息                    | map<string, *[Value](text-request-dev-protocol-v3.md#231-value-object)> | false    |
 
-### 1.1.5 System Object
+##### 1.1.5 System Object
 
-### slu.Value
+### 2. Intent Response
 
-| Parameter    | Description     | type      | required |
-| ------------ | --------------- | --------- | -------- |
-| orgin       | value 的synonym，原值 | object | false     |
-| normType    | 值类型    | string，可枚举值，包括：<br> Int, Bool, Float, String, StrArray   | true    |
-| norm        | 归一化后的值    | 由normType指定   | true    |
-
-# 2. Intent Response
-
-## 2.1 Response Body Syntax:
+#### 2.1 Response Body Syntax:
 
 | Name | Type | Description | Required |
 | --- | --- | --- | --- |
 | version | String | 协议版本号 | Required |
 | status | Status Object | [Status](status.md) | Required |
-| context | Context Object | [Context](#Context-Object) | Required |
-| results | Results Object | [Results](text-request-dev-protocol.md#33-Results-Array) | Optional |
+| context | Context Object | [Context](#114-context-object) | Required |
+| results | Results Object | [Results](text-request-dev-protocol-v3.md#33-results-array) | Optional |
 
 ```json
 {
