@@ -202,8 +202,8 @@ AITeacher 安装在ai老师项目个人账号下，提供语义解析和英文�
   <td >Distracted</td>
 
   <td >Distracted</td>
- <td >不集中，由事件端触发</td>
-  <td >不集中，由事件端触发</td>
+ <td ></td>
+  <td ></td>
 
 </tr>
 
