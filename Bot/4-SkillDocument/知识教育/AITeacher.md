@@ -226,7 +226,7 @@ AITeacher 安装在ai老师项目个人账号下，提供语义解析和英文�
 | ------------ | ------------ | ------------ | ------------ |------------ |
 | image | 资源的图片信息 | http://xxx/xxx.png | string |Required|
 | desc | 资源的描述信息 | this is train.train is a transport. | string |Optional|
-| audio | 资源的视频信息 | http://xxxx/xx.mp3 | string |Optional|
+| courseWords | 课程词汇 | pizza | string |Required|
 
 # 6.语义测试
 运行语义测试前请确保：
