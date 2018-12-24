@@ -39,6 +39,22 @@ AITeacher 安装在ai老师项目个人账号下，提供语义解析和英文�
 
 <tr>
 
+<td>Open</td>
+
+  <td >Open</td>
+
+   <td >场景启动指令</td>
+
+   <td>a.我要打开多纳</br>b.我要学多纳英语</td>
+   
+   <td>无</td>
+   
+ <td>上文：无</br>下文：ai_teacher</td>
+
+</tr>
+
+<tr>
+
 <td>Start</td>
 
   <td >Start</td>
