@@ -181,19 +181,6 @@ AITeacher 安装在ai老师项目个人账号下，提供语义解析和英文�
 
 </tr>
 
-<tr>
-
-  <td >Exit</td>
-
-  <td >Exit</td>
-
-   <td >退出</td>
-
-   <td>a.退出<br/>b.quit</td>
-  <td >无</td>
-   <td>上文：ai_teacher</br>下文：无</td>
-
-</tr>
 
 </table>
 
