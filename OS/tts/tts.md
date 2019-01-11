@@ -11,29 +11,40 @@
 ```java
 
 //播放
-TtsService.playText(cobtext, "播放语音", new TtsListener() {
+int sessionId = TtsService.tts(cobtext, "播放语音", new TtsListener() {
             @Override
             public void onSpeakBegin() throws RemoteException {
                 super.onSpeakBegin();
-            }
-
-            @Override
-            public void onSpeakPaused() throws RemoteException {
-                super.onSpeakPaused();
-            }
-
-            @Override
-            public void onSpeakResumed() throws RemoteException {
-                super.onSpeakResumed();
+                //tts播放开始
             }
 
             @Override
             public void onCompleted() throws RemoteException {
                 super.onCompleted();
+                //tts播放结束
+            }
+
+            @Override
+            public void onSpeakStopped() throws RemoteException {
+                super.onSpeakStopped();
+                //tts异常终止
+            }
+
+            @Override
+            public void onSpeakFailed() throws RemoteException {
+                super.onSpeakFailed();
+                //tts失败
             }
         });
 
-//停止
+if (sessionId < 0) {
+    //请求失败
+}
+
+//停止特定session id对应的tts
+TtsService.stopTts(context, sessionId);
+
+//停止所有tts
 TtsService.stopTts(context);
 
 //是否正在播放
