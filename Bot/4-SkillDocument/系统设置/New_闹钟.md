@@ -275,5 +275,28 @@ Clock(闹钟) , 可以帮用户设置闹钟和提醒。
  
  </tr>
  
+ # 5.返回字段说明
+
+（预留 周一 周二 周三 周四 周五 周六 周日），例如00100000代表的数字是32，代表每周二
+| **result** | **Description** | **value** | **type** |**Required** |
+| ------------ | ------------ | ------------ | ------------ |------------ |
+| id | 闹钟的id | 8581 | int |Required|
+| alarm_time | 闹钟的时间 | 2019-01-22 18:00:00 | string |Required|
+| content | 时间提醒内容（闹钟时该字段为空） | 吃饭 | string |Optional|
+| operation | 操作项 set为新增</br>list为列表/br>delete为删除/br>update为修改</br>hibernate为定时休眠</br>cancelHibernate取消定时休眠| 医疗保健服务;综合医院;卫生院 | string |Optional|
+| repeat_mode |提醒模式，为0表示特定时刻闹钟，非0表示重复闹钟，按日提醒格式从左到右为
+
+（预留 周一 周二 周三 周四 周五 周六 周日），例如00100000代表的数字是32，代表每周二 | 1 | int |Required|
+
+
+
+# 6.语义测试
+运行语义测试前请确保：
+
+1.拥有ros.ai 开发平台账号
+
+2.确认该账号下要测试的场景已经打开
+
+[语意测试连接](https://passport.ros.ai/#/login)
  
  
