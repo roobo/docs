@@ -237,7 +237,7 @@ Clock(闹钟) , 可以帮用户设置闹钟和提醒。
 
    <td>a.查询闹钟</br>b.查询今天的闹钟</td>
    
-   <td rowspan="3">date</br>date_time</br>time_period</td>
+   <td rowspan="1">date</br>date_time</br>time_period</td>
    
  <td>无</td>
  </tr>
