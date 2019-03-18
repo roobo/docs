@@ -91,9 +91,23 @@ AITeacher 安装在ai老师项目个人账号下，提供语义解析和英文�
 
    <td>a.我要玩topic one字母游戏<</td>
    
-   <td>topic</td>
+   <td>topic，module</td>
 
 </tr>
+
+<tr>
+
+  <td >ChangeModuleByAnswer</td>
+
+   <td >选择学习模块</td>
+
+   <td>1.我要学多纳英语->我要学绘本->字母游戏<</td>
+   
+   <td>module</td>
+
+</tr>
+
+
 
 <tr>
 
@@ -161,7 +175,7 @@ AITeacher 安装在ai老师项目个人账号下，提供语义解析和英文�
 
    <td>a.我要看第一页<br/>b.turn to page one</td>
    
-   <td>无</td>
+   <td>page_number</td>
 
 </tr>
 
