@@ -71,7 +71,7 @@ AITeacher 安装在ai老师项目个人账号下，提供语义解析和英文�
 
 <tr>
 
-<td rowspan="2">ChangeModule</td>
+<td rowspan="3">ChangeModule</td>
 
   <td >ChangeModule</td>
 
