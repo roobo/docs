@@ -233,9 +233,17 @@ AITeacher 安装在ai老师项目个人账号下，提供语义解析和英文�
 
 | **result** | **Description** | **value** | **type** |**Required** |
 | ------------ | ------------ | ------------ | ------------ |------------ |
-| image | 资源的图片信息 | http://xxx/xxx.png | string |Required|
+| image | 资源的图片信息 | http://xxx/xxx.png | string |Optional|
 | desc | 资源的描述信息 | this is train.train is a transport. | string |Optional|
-| courseWords | 课程词汇 | pizza | string |Required|
+| courseWords | 课程词汇 | pizza | string |Optional|
+| isexist | 是否搜索到模块 0 未搜到 1表示搜到 | 1 | int |Optional|
+| switchState | 是否解锁 0 未解锁 1表示解锁 | 1 | int |Optional|
+| themeId | 主题id | 1 | int |Optional|
+| contentId | 课程id | 1 | int |Optional|
+| materialId | 模块id | 1 | int |Optional|
+| tips | 提示信息 | 不要着急，您还没学到这里 | int |Optional|
+
+
 
 # 6.语义测试
 运行语义测试前请确保：
