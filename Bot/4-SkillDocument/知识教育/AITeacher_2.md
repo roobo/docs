@@ -16,7 +16,6 @@ AITeacher 安装在ai老师项目个人账号下，提供语义解析和英文�
 | topic | 学习的主题名 | 我要学习topic one的字母跟读 | topic one | String |
 | course | 学习的主题名 | 我要学习topic one里面的第一个课 | 第一个课  | String |
 | module | 学习的模块名 | 我要学习字母跟读 | 字母跟读 | String |
-
 | page_number | 翻页的页码 | a.我要看第10页<br/>b.trun to page ten | a.10<br/>b.ten | String |
 
 # 4.返回意图说明
