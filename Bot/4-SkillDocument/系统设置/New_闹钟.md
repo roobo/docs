@@ -11,6 +11,8 @@ Clock(闹钟) , 可以帮用户设置闹钟和提醒。
 | 无屏设备 | 否 |  仅靠 outputSpeech完成交互体验较差，期望有UI配合展示 [详情查阅](/Bot/4-SkillDocument/最佳实践.md) |
 
 # 3.返回槽位说明
+无
+<!-- 
 | **Slot** | **Description** | **Example** |**Value** | **Type** |
 | ------------ | ------------ | ------------ | ------------ | ------- |
 | num | 选项数字 | a.第一个| a.1 | String |
@@ -26,7 +28,7 @@ Clock(闹钟) , 可以帮用户设置闹钟和提醒。
 | date_time_to | 日期时间与date_time内容一致 | 14点的闹钟修为15点| a.{\"date\":\"\",\"time\":\"03:00:00\",\"meridian\":\"pm\",\"illegal\":0} | Map |
 | time_repeat_from | 可重复的日期时间与time_repeat内容一致 | a.每天下午一点的闹钟修改为每天下午两点</br> | a.{\"date\":\"1,2,3,4,5,6,7 每天\",\"time\":\"01:00:00\",\"meridian\":\"pm\",\"illegal\":0} | Map |
 | time_repeat_to | 可重复的日期时间与time_repeat内容一致 | a.每天下午一点的闹钟修改为每天下午两点</br> | a.{\"date\":\"1,2,3,4,5,6,7 每天\",\"time\":\"02:00:00\",\"meridian\":\"pm\",\"illegal\":0} | Map |
-
+-->
 # 4.返回意图说明
 
 
